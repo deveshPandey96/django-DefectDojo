@@ -273,12 +273,8 @@
                                     {% if finding.cwe > 0 %}
                                         <th>CWE</th>
                                     {% endif %}
-                                    {% if finding.component_name %}
-                                        <th>Component</th>
-                                    {% endif %}
-                                    {% if finding.cvssv4_score %}
-                                        <th>CVSS v4</th>
-                                    {% endif %}
+                                    <th>Component</th>
+                                    <th>CVSS v4</th>
                                     <th>Dojo ID</th>
                                 </tr>
                                 <tr>
@@ -321,12 +317,8 @@
                                             </a>
                                         </td>
                                     {% endif %}
-                                    {% if finding.component_name %}
-                                        <td>{{ finding.component_name }}{% if finding.component_version %} v{{ finding.component_version }}{% endif %}</td>
-                                    {% endif %}
-                                    {% if finding.cvssv4_score %}
-                                        <td>{{ finding.cvssv4_score }}</td>
-                                    {% endif %}
+                                    <td>{{ finding.component_name }}{% if finding.component_version %} v{{ finding.component_version }}{% endif %}</td>
+                                    <td>{{ finding.cvssv4_score|default:"" }}</td>
                                     <td>{{ finding.id }}</td>
                                 </tr>
                             </table>
@@ -405,13 +397,14 @@
                         {% endif %}
                     {% endif %}
 
-                    {% if finding.scanner_confidence %}
+                    {% if finding.scanner_confidence or finding.service %}
                         <h6>Scanner Information</h6>
-                        <strong>Scanner Confidence:</strong> {{ finding.scanner_confidence }}%<br>
-                    {% endif %}
-
-                    {% if finding.service %}
-                        <strong>Service:</strong> {{ finding.service }}<br>
+                        {% if finding.scanner_confidence %}
+                            <strong>Scanner Confidence:</strong> {{ finding.scanner_confidence }}%<br>
+                        {% endif %}
+                        {% if finding.service %}
+                            <strong>Service:</strong> {{ finding.service }}<br>
+                        {% endif %}
                     {% endif %}
 
                     {% if finding.unique_id_from_tool or finding.vuln_id_from_tool %}
