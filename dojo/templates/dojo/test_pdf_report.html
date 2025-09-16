@@ -273,6 +273,8 @@
                                     {% if finding.cwe > 0 %}
                                         <th>CWE</th>
                                     {% endif %}
+                                    <th>Component</th>
+                                    <th>CVSS v4</th>
                                     <th>Dojo ID</th>
                                 </tr>
                                 <tr>
@@ -296,7 +298,7 @@
                                         {% comment %} for some reason the font-awesome icons don't work with the report template{% endcomment %}
                                         {% for ra in finding.risk_acceptance_set.all|slice:":5" %}
                                             <a href="{% url 'view_risk_acceptance' finding.test.engagement.id ra.id %}"
-                                            class="{% if ra.is_expired %}lightgrey{% endif%}">acceptance</a>&nbsp;
+                                            class="{% if ra.is_expired %}lightgrey{% endif %}">acceptance</a>&nbsp;
                                         {% endfor %}
                                     </td>
                                     {% endif %}
@@ -315,6 +317,8 @@
                                             </a>
                                         </td>
                                     {% endif %}
+                                    <td>{{ finding.component_name }}{% if finding.component_version %} v{{ finding.component_version }}{% endif %}</td>
+                                    <td>{{ finding.cvssv4_score|default:"" }}</td>
                                     <td>{{ finding.id }}</td>
                                 </tr>
                             </table>
@@ -323,9 +327,103 @@
 
                     {% include "dojo/snippets/endpoints.html" with finding=finding destination="Report" %}
 
+                    {# Enhanced vulnerability details section #}
+                    {% if finding.vulnerability_ids %}
+                        <h6>Vulnerability IDs</h6>
+                        <ul>
+                            {% for vuln_id in finding.vulnerability_ids %}
+                                <li>{{ vuln_id }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+
                     {% if finding.cvssv3 %}
                         <h6>CVSS v3</h6>
                         <pre>{{ finding.cvssv3|markdown_render }}</pre>
+                    {% endif %}
+
+                    {% if finding.cvssv4 %}
+                        <h6>CVSS v4</h6>
+                        <pre>{{ finding.cvssv4|markdown_render }}</pre>
+                        {% if finding.cvssv4_score %}
+                            <strong>CVSS v4 Score:</strong> {{ finding.cvssv4_score }}
+                        {% endif %}
+                    {% endif %}
+
+                    {% if finding.component_name or finding.component_version %}
+                        <h6>Component Information</h6>
+                        {% if finding.component_name %}
+                            <strong>Component:</strong> {{ finding.component_name }}<br>
+                        {% endif %}
+                        {% if finding.component_version %}
+                            <strong>Version:</strong> {{ finding.component_version }}<br>
+                        {% endif %}
+                    {% endif %}
+
+                    {% if finding.file_path or finding.line %}
+                        <h6>File Location</h6>
+                        {% if finding.file_path %}
+                            <strong>File Path:</strong> {{ finding.file_path }}<br>
+                        {% endif %}
+                        {% if finding.line %}
+                            <strong>Line Number:</strong> {{ finding.line }}<br>
+                        {% endif %}
+                    {% endif %}
+
+                    {% if finding.sast_source_file_path or finding.sast_source_line or finding.sast_source_object or finding.sast_sink_object %}
+                        <h6>SAST Details</h6>
+                        {% if finding.sast_source_file_path %}
+                            <strong>Source File:</strong> {{ finding.sast_source_file_path }}<br>
+                        {% endif %}
+                        {% if finding.sast_source_line %}
+                            <strong>Source Line:</strong> {{ finding.sast_source_line }}<br>
+                        {% endif %}
+                        {% if finding.sast_source_object %}
+                            <strong>Source Object:</strong> {{ finding.sast_source_object }}<br>
+                        {% endif %}
+                        {% if finding.sast_sink_object %}
+                            <strong>Sink Object:</strong> {{ finding.sast_sink_object }}<br>
+                        {% endif %}
+                    {% endif %}
+
+                    {% if finding.param or finding.payload %}
+                        <h6>Attack Vector Details</h6>
+                        {% if finding.param %}
+                            <strong>Parameter:</strong> {{ finding.param }}<br>
+                        {% endif %}
+                        {% if finding.payload %}
+                            <strong>Payload:</strong>
+                            <pre>{{ finding.payload }}</pre>
+                        {% endif %}
+                    {% endif %}
+
+                    {% if finding.scanner_confidence or finding.service %}
+                        <h6>Scanner Information</h6>
+                        {% if finding.scanner_confidence %}
+                            <strong>Scanner Confidence:</strong> {{ finding.scanner_confidence }}%<br>
+                        {% endif %}
+                        {% if finding.service %}
+                            <strong>Service:</strong> {{ finding.service }}<br>
+                        {% endif %}
+                    {% endif %}
+
+                    {% if finding.unique_id_from_tool or finding.vuln_id_from_tool %}
+                        <h6>Tool-specific IDs</h6>
+                        {% if finding.unique_id_from_tool %}
+                            <strong>Unique ID from Tool:</strong> {{ finding.unique_id_from_tool }}<br>
+                        {% endif %}
+                        {% if finding.vuln_id_from_tool %}
+                            <strong>Vulnerability ID from Tool:</strong> {{ finding.vuln_id_from_tool }}<br>
+                        {% endif %}
+                    {% endif %}
+
+                    {% if finding.publish_date %}
+                        <h6>Vulnerability Publication</h6>
+                        <strong>Published:</strong> {{ finding.publish_date }}<br>
+                    {% endif %}
+
+                    {% if finding.nb_occurences %}
+                        <strong>Number of Occurrences:</strong> {{ finding.nb_occurences }}<br>
                     {% endif %}
 
                     <h6>Description</h6>
@@ -585,5 +683,6 @@
 
             document.getElementById("toc").innerHTML += toc;
         };
+        {% endif %}
     </script>
 {% endblock %}
