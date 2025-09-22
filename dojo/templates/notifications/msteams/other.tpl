@@ -8,7 +8,7 @@
     "sections": [
         {
             "activityTitle": "DefectDojo",
-            "activityImage": "https://raw.githubusercontent.com/DefectDojo/django-DefectDojo/master/dojo/static/dojo/img/chop.png",
+            "activityImage": "https://raw.githubusercontent.com/DefectDojo/django-DefectDojo/master/dojo/static/dojo/img/logo.svg",
             "text": "{% autoescape on %} {{ description }} {% endautoescape %}"
         }
         {% if system_settings.disclaimer_notifications and system_settings.disclaimer_notifications.strip %}
