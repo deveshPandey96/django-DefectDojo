@@ -11,7 +11,7 @@
     {{ block.super }}
     <h3> Add Tests</h3>
 	<p>
-		<a href="https://docs.exposurex.com/en/connecting_your_tools/import_scan_files/import_scan_ui/">Documentation</a>
+		<a href="https://docs.defectdojo.com/en/connecting_your_tools/import_scan_files/import_scan_ui/">Documentation</a>
 	</p>
     <form class="form-horizontal" action="" enctype="multipart/form-data" method="post">
 	{% csrf_token %}
@@ -47,7 +47,7 @@
 	<p>Upload your third party tool scan results and all the findings
 	    will be imported automatically.</p>
 
-	<p>ExposureX accepts:</p>
+	<p>DefectDojo accepts:</p>
     <ul>
 {% for k, v in scan_types %}  
     <li><b>{{ k }}</b> - {{ v }}</li>

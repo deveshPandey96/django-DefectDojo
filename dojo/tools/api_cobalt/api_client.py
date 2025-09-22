@@ -112,7 +112,7 @@ class CobaltAPI:
         headers = {
             "accept": "application/vnd.cobalt.v1+json",
             "Authorization": f"Bearer {self.api_token}",
-            "User-Agent": "ExposureX",
+            "User-Agent": "DefectDojo",
         }
 
         if self.org_token is not None:

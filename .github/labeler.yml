@@ -15,8 +15,8 @@ docker:
 helm:
   - changed-files:
     - any-glob-to-any-file:
-      - helm/exposurex/*
-      - helm/exposurex/**/*
+      - helm/defectdojo/*
+      - helm/defectdojo/**/*
 
 "New Migration":
   - changed-files:

@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='system_settings',
             name='false_positive_history',
-            field=models.BooleanField(default=False, help_text='ExposureX will automatically mark the finding as a false positive if the finding has been previously marked as a false positive. Not needed when using deduplication, advised to not combine these two.'),
+            field=models.BooleanField(default=False, help_text='DefectDojo will automatically mark the finding as a false positive if the finding has been previously marked as a false positive. Not needed when using deduplication, advised to not combine these two.'),
         ),
         migrations.AddIndex(
             model_name='finding',

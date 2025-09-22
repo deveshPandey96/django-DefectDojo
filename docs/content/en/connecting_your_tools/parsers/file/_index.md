@@ -1,6 +1,6 @@
 ---
 title: "Files"
-description: "Report uploaded to ExposureX as files"
+description: "Report uploaded to DefectDojo as files"
 weight: 3
 chapter: true
 sidebar:

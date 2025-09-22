@@ -8,7 +8,7 @@ exclude_search: false
 
 ## Tags
 
-In ExposureX, tags are a first class citizen and are recognized as the facilitators
+In DefectDojo, tags are a first class citizen and are recognized as the facilitators
 of organization within each level of the [data model](../models). Tags are
 ideal for grouping objects in a manner that can be filtered out into smaller, more
 digestible chunks.
@@ -182,7 +182,7 @@ deduplication on engagement and deduplication on product level:
 
 ![Deduplication on product and engagement level](images/deduplication.png)
 
-Upon saving a finding, ExposureX will look at the other findings in the
+Upon saving a finding, DefectDojo will look at the other findings in the
 product or the engagement (depending on the configuration) to find
 duplicates
 
@@ -200,7 +200,7 @@ Deduplicate vulnerabilities in the same build/release. The vulnerabilities may b
     detecting duplicates across scanners is not trivial as it
     requires a certain standardization.
 
-Track unique vulnerabilities across builds/releases so that ExposureX knows when it finds a vulnerability that has seen it before.
+Track unique vulnerabilities across builds/releases so that DefectDojo knows when it finds a vulnerability that has seen it before.
 
 :   this allows you keep information attached to a given finding
     in a unique place: all further duplicate findings will point
@@ -349,7 +349,7 @@ Tips:
 When you change the hashcode configuration, it is needed to regenerated the hashcodes for all findings,
 or at least those findings found by scanners for which the configuration was updated.
 
-This is sometimes also needed after an upgrade to a new ExposureX version, for example when we made changes
+This is sometimes also needed after an upgrade to a new DefectDojo version, for example when we made changes
 to the hashcode configuration or calculation logic. We will mention this in the upgrade notes.
 
 To regenerate the hashcodes, use the `dedupe` management command:
@@ -415,12 +415,12 @@ Similar Findings
 
 ## Service Level Agreement (SLA)
 
-ExposureX allows you to maintain your security SLAs and automatically
+DefectDojo allows you to maintain your security SLAs and automatically
 remind teams whenever a SLA is about to get breached, or is breached.
 
 To apply SLAs to Findings, open the `System Settings` page and check 'Enable Finding SLAs'.
 
-You will then need to create one or more SLA Configurations, from the SLA Configuration menu (your-exposurex.com/sla_config).  
+You will then need to create one or more SLA Configurations, from the SLA Configuration menu (your-defectdojo.com/sla_config).  
 
 ![SLA configuration screen](images/sla_settings.png)
 
@@ -529,11 +529,11 @@ Custom reports, generated with the Report Builder, allow you to select specific 
 5.  Vulnerable Endpoints
 6.  Page Breaks
 
-ExposureX's reports can be generated in HTML.
+DefectDojo's reports can be generated in HTML.
 
 ## Metrics
 
-ExposureX provides a number of metrics visualization in order to help
+DefectDojo provides a number of metrics visualization in order to help
 with reporting, awareness and to be able to quickly communicate a
 products/product type\'s security stance.
 
@@ -581,14 +581,14 @@ Metrics Dashboard
 
 ## Users
 
-ExposureX users inherit from
+DefectDojo users inherit from
 [django.contrib.auth.models.User](https://docs.djangoproject.com/en/3.1/topics/auth/default/#user-objects).
 
 A username, first name, last name, and email address can be associated
 with each user. Additionally the following attributes describe the type of users:
 
 Active
-:   Designates whether this user should be treated as active and can login to ExposureX.
+:   Designates whether this user should be treated as active and can login to DefectDojo.
     Unselect this instead of deleting accounts.
 
 Superuser status
@@ -599,7 +599,7 @@ A superuser may force a password reset for any user at any given time. This
 can be set when creating a new user, or when editing an existing one, requiring
 the user to change their password upon their next login.
 
-ExposureX enforces the following password rules for all users:
+DefectDojo enforces the following password rules for all users:
 *   Must meet a length requirement of 9 characters
 *   Must be unique (not commonly used)
 *   Must contain one of each of the following: a number (0-9), uppercase letter
@@ -615,7 +615,7 @@ respective engagement or test view page.
 
 ![OWASP ASVS Benchmarks](images/owasp_asvs.png)
 
-ExposureX utilizes the OWASP ASVS Benchmarks to benchmark a product to
+DefectDojo utilizes the OWASP ASVS Benchmarks to benchmark a product to
 ensure the product meets your application technical security controls.
 Benchmarks can be defined per the organizations policy for secure
 development and multiple benchmarks can be applied to a product.
@@ -645,7 +645,7 @@ a future release this will be brought out to the UI.
 ## Endpoint Meta Importer
 
 For heavy infrastructure scanning organizations, endpoints need to be as 
-flexible as possible to get the most of ExposureX. This flexibility comes
+flexible as possible to get the most of DefectDojo. This flexibility comes
 in the form of Tags and custom fields. Tags allow users to filter, sort, and
 report objects in ways the base object is not totally proficient in doing.
 

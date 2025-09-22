@@ -7,7 +7,7 @@ When developing documentation, there are steps to take before submitting a pull 
 
 ## Development with Hot Reloading
 
-This method performs the following from the `django-ExposureX/docs` directory:
+This method performs the following from the `django-DefectDojo/docs` directory:
 
 1. Remove any existing packages to perform a fresh install each time: `rm -rf public node_modules`
 2. Install all packages: `npm install`
@@ -32,14 +32,14 @@ npm run dev
 
 ## Mimic Production Environment
 
-This method performs the following from the `django-ExposureX/docs` directory:
+This method performs the following from the `django-DefectDojo/docs` directory:
 
 1. Remove any existing packages to perform a fresh install each time: `rm -rf public node_modules`
 2. Install all packages in CI mode to only install from `package-lock.json`: `npm ci`
 3. Run Hugo to build the site in the way the CI job does, but in development environment to point at `localhost` for integrity checks : `npm run build -- --environment development`
 4. Change directory to the new `public` directory to run the site locally: `cd public`
 5. Run a light weight webserver to server the files, and [access the site at http://localhost:8080](http://localhost:8080): `python3 -m http.server 8080`
-6. After killing the webserver process, navigate back to the `django-ExposureX/docs` directory: `cd ../`
+6. After killing the webserver process, navigate back to the `django-DefectDojo/docs` directory: `cd ../`
 
 ### Execution List
 

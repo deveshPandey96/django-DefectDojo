@@ -9,7 +9,7 @@ An event `ping` is sent during Webhook setup to test whether the endpoint is up 
 
 ## Event HTTP header
 ```yaml
-X-ExposureX-Event: ping
+X-DefectDojo-Event: ping
 ```
 
 ## Event HTTP body
@@ -19,7 +19,7 @@ X-ExposureX-Event: ping
     "title": "",
     "user": {
         "id": 1,
-        "email": "admin@exposurex.local",
+        "email": "admin@defectdojo.local",
         "first_name": "Admin",
         "last_name": "User",
         "username": "admin",

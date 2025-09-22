@@ -4,7 +4,7 @@
         "code":"DL3008",
         "message":"Pin versions in apt get install. Instead of `apt-get install <package>` use `apt-get install <package>=<version>`",
         "column":1,
-        "file":"django-ExposureX\\Dockerfile.django",
+        "file":"django-DefectDojo\\Dockerfile.django",
         "level":"warning"
         },
     {
@@ -12,7 +12,7 @@
         "code":"DL3015",
         "message":"Avoid additional packages by specifying `--no-install-recommends`",
         "column":1,
-        "file":"django-ExposureX\\Dockerfile.django",
+        "file":"django-DefectDojo\\Dockerfile.django",
         "level":"info"
         },
     {
@@ -20,7 +20,7 @@
         "code":"DL3008",
         "message":"Pin versions in apt get install. Instead of `apt-get install <package>` use `apt-get install <package>=<version>`",
         "column":1,
-        "file":"django-ExposureX\\Dockerfile.django",
+        "file":"django-DefectDojo\\Dockerfile.django",
         "level":"warning"
         },
     {
@@ -28,7 +28,7 @@
         "code":"DL3013",
         "message":"Pin versions in pip. Instead of `pip install <package>` use `pip install <package>==<version>`",
         "column":1,
-        "file":"django-ExposureX\\Dockerfile.django",
+        "file":"django-DefectDojo\\Dockerfile.django",
         "level":"warning"
         },
     {
@@ -36,7 +36,7 @@
         "code":"DL3008",
         "message":"Pin versions in apt get install. Instead of `apt-get install <package>` use `apt-get install <package>=<version>`",
         "column":1,
-        "file":"django-ExposureX\\Dockerfile.nginx",
+        "file":"django-DefectDojo\\Dockerfile.nginx",
         "level":"warning"
         },
     {
@@ -44,7 +44,7 @@
         "code":"DL3015",
         "message":"Avoid additional packages by specifying `--no-install-recommends`",
         "column":1,
-        "file":"django-ExposureX\\Dockerfile.nginx",
+        "file":"django-DefectDojo\\Dockerfile.nginx",
         "level":"info"
         },
     {
@@ -52,7 +52,7 @@
         "code":"DL3002",
         "message":"Last USER should not be root",
         "column":1,
-        "file":"django-ExposureX\\Dockerfile.nginx",
+        "file":"django-DefectDojo\\Dockerfile.nginx",
         "level":"warning"
         },
     {
@@ -60,7 +60,7 @@
         "code":"DL3008",
         "message":"Pin versions in apt get install. Instead of `apt-get install <package>` use `apt-get install <package>=<version>`",
         "column":1,
-        "file":"django-ExposureX\\Dockerfile.nginx",
+        "file":"django-DefectDojo\\Dockerfile.nginx",
         "level":"warning"
         },
     {
@@ -68,7 +68,7 @@
         "code":"DL3015",
         "message":"Avoid additional packages by specifying `--no-install-recommends`",
         "column":1,
-        "file":"django-ExposureX\\Dockerfile.nginx",
+        "file":"django-DefectDojo\\Dockerfile.nginx",
         "level":"info"
         },
     {
@@ -76,7 +76,7 @@
         "code":"DL4006",
         "message":"Set the SHELL option -o pipefail before RUN with a pipe in it",
         "column":1,
-        "file":"django-ExposureX\\Dockerfile.nginx",
+        "file":"django-DefectDojo\\Dockerfile.nginx",
         "level":"warning"
         },
     {
@@ -84,7 +84,7 @@
         "code":"DL3003",
         "message":"Use WORKDIR to switch to a directory",
         "column":1,
-        "file":"django-ExposureX\\Dockerfile.nginx",
+        "file":"django-DefectDojo\\Dockerfile.nginx",
         "level":"warning"
         },
     {
@@ -92,7 +92,7 @@
         "code":"DL3006",
         "message":"Always tag the version of an image explicitly",
         "column":1,
-        "file":"django-ExposureX\\Dockerfile.nginx",
+        "file":"django-DefectDojo\\Dockerfile.nginx",
         "level":"warning"
     }
 ]

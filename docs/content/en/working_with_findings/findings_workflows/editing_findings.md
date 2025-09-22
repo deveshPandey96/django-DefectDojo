@@ -24,7 +24,7 @@ This will open the **Edit Finding** form, where you can edit the metadata, chang
 ​
 * **Title** is created from the scan report, but you can edit this title to be more meaningful if you need to. Note that this may affect Deduplication, as Deduplication generally uses the titles of Findings to identify duplicates.  
 ​
-* **Date** is meant to represent the date the Finding was uncovered by the scanner \- not necessarily the date the Finding was imported into ExposureX. This date is pulled from the scan report, but you can update this date to be more accurate if you need to (for example, if working with historical data, or if using a scanning tool which does not log discovery dates).  
+* **Date** is meant to represent the date the Finding was uncovered by the scanner \- not necessarily the date the Finding was imported into DefectDojo. This date is pulled from the scan report, but you can update this date to be more accurate if you need to (for example, if working with historical data, or if using a scanning tool which does not log discovery dates).  
 ​
 * **Description** is the description of a Finding provided by the scan tool. You can add or remove information from the Finding Description if you wish.  
 ​

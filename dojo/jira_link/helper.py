@@ -705,7 +705,7 @@ def jira_description(obj, **kwargs):
     description = render_to_string(template, kwargs)
     defect_dojo_obj_url = get_full_url(obj.get_absolute_url())
     max_length = getattr(settings, "JIRA_DESCRIPTION_MAX_LENGTH", 32767)
-    suffix = f"\n\nIssue Description Too Long: See [ExposureX|{defect_dojo_obj_url}] for full description."
+    suffix = f"\n\nIssue Description Too Long: See [DefectDojo|{defect_dojo_obj_url}] for full description."
     if len(description) > max_length:
         # suffix can be longer after rendering do to urlenocoding, so we take twice the length of the suffix as a buffer
         description = description[:max_length - (2 * len(suffix))] + suffix
@@ -1052,7 +1052,7 @@ def update_jira_issue(obj, *args, **kwargs):
 
     # Only Finding Groups will have their priority synced on updates.
     # For Findings we resepect any priority change made in JIRA
-    # https://github.com/ExposureX/django-ExposureX/pull/9571 and https://github.com/ExposureX/django-ExposureX/pull/12475
+    # https://github.com/DefectDojo/django-DefectDojo/pull/9571 and https://github.com/DefectDojo/django-DefectDojo/pull/12475
     jira_priority_name = None
     if isinstance(obj, Finding_Group):
         jira_priority_name = jira_priority(obj)
@@ -1477,8 +1477,8 @@ def add_epic(engagement, **kwargs):
             error = str(e)
             message = ""
             if "customfield" in error:
-                message = "The 'Epic name id' in your ExposureX Jira Configuration does not appear to be correct. Please visit, " + jira_instance.url + \
-                    "/rest/api/2/field and search for Epic Name. Copy the number out of cf[number] and place in your ExposureX settings for Jira and try again. For example, if your results are cf[100001] then copy 100001 and place it in 'Epic name id'. (Your Epic Id will be different.) \n\n"
+                message = "The 'Epic name id' in your DefectDojo Jira Configuration does not appear to be correct. Please visit, " + jira_instance.url + \
+                    "/rest/api/2/field and search for Epic Name. Copy the number out of cf[number] and place in your DefectDojo settings for Jira and try again. For example, if your results are cf[100001] then copy 100001 and place it in 'Epic name id'. (Your Epic Id will be different.) \n\n"
             logger.exception(message)
 
             log_jira_generic_alert("Jira Engagement/Epic Creation Error",

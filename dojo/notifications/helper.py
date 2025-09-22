@@ -512,9 +512,9 @@ class WebhookNotificationManger(NotificationManagerHelpers):
         **kwargs: dict,
     ) -> tuple[dict, dict]:
         headers = {
-            "User-Agent": f"ExposureX-{dd_version}",
-            "X-ExposureX-Event": event,
-            "X-ExposureX-Instance": settings.SITE_URL,
+            "User-Agent": f"DefectDojo-{dd_version}",
+            "X-DefectDojo-Event": event,
+            "X-DefectDojo-Instance": settings.SITE_URL,
             "Accept": "application/json",
         }
         if endpoint.header_name is not None:
@@ -816,7 +816,7 @@ class NotificationManager(NotificationManagerHelpers):
             )
 
         # Some errors should not be pushed to all channels, only to alerts.
-        # For example reasons why JIRA Issues: https://github.com/ExposureX/django-ExposureX/issues/11575
+        # For example reasons why JIRA Issues: https://github.com/DefectDojo/django-DefectDojo/issues/11575
         if not alert_only:
             if self.system_settings.enable_slack_notifications and "slack" in getattr(
                 notifications,

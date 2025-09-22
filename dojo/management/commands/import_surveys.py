@@ -7,7 +7,7 @@ from dojo.models import TextQuestion
 
 """
 Author: Cody Maffucci
-This script will import initial surverys and questions into ExposureX:
+This script will import initial surverys and questions into DefectDojo:
 """
 
 

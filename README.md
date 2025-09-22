@@ -1,4 +1,4 @@
-# ExposureX
+# DefectDojo
 
 <table>
     <tr styl="margin: 0; position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%);">
@@ -10,27 +10,32 @@
         </th>
         <th>
             <p>
-                <img src="https://img.shields.io/badge/owasp-flagship%20project-orange.svg" alt="OWASP Flagship">
-                <img src="https://img.shields.io/github/release/deveshPandey96/django-ExposureX.svg" alt="GitHub release">
-                <img src="https://img.shields.io/badge/youtube-subscribe-%23c4302b.svg" alt="YouTube Subscribe">
+                <a href="https://www.owasp.org/index.php/OWASP_DefectDojo_Project"><img src="https://img.shields.io/badge/owasp-flagship%20project-orange.svg" alt="OWASP Flagship"></a>
+                <a href="https://github.com/DefectDojo/django-DefectDojo/releases/latest"><img src="https://img.shields.io/github/release/DefectDojo/django-DefectDojo.svg" alt="GitHub release"></a>
+                <a href="https://www.youtube.com/channel/UCWw9qzqptiIvTqSqhOFuCuQ"><img src="https://img.shields.io/badge/youtube-subscribe-%23c4302b.svg" alt="YouTube Subscribe"></a>
+                <a href="https://twitter.com/defectdojo/"><img src="https://img.shields.io/twitter/follow/defectdojo.svg?style=social&amp;label=Follow" alt="Twitter Follow"></a>
             </p>
             <p>
-                <img src="https://github.com/deveshPandey96/django-ExposureX/actions/workflows/unit-tests.yml/badge.svg?branch=master" alt="Unit Tests">
-                <img src="https://github.com/deveshPandey96/django-ExposureX/actions/workflows/integration-tests.yml/badge.svg?branch=master" alt="Integration Tests">
-                <img src="https://bestpractices.coreinfrastructure.org/projects/2098/badge" alt="CII Best Practices">
+                <a href="https://github.com/DefectDojo/django-DefectDojo/actions"><img src="https://github.com/DefectDojo/django-DefectDojo/actions/workflows/unit-tests.yml/badge.svg?branch=master" alt="Unit Tests"></a>
+                <a href="https://github.com/DefectDojo/django-DefectDojo/actions"><img src="https://github.com/DefectDojo/django-DefectDojo/actions/workflows/integration-tests.yml/badge.svg?branch=master" alt="Integration Tests"></a>
+                <a href="https://bestpractices.coreinfrastructure.org/projects/2098"><img src="https://bestpractices.coreinfrastructure.org/projects/2098/badge" alt="CII Best Practices"></a>
             </p>
         </th>
     </tr>
  </table>
 
-ExposureX is a DevSecOps, ASPM (application security posture management), and
-vulnerability management tool. ExposureX orchestrates end-to-end security testing, vulnerability tracking,
+[DefectDojo](https://www.defectdojo.com/) is a DevSecOps, ASPM (application security posture management), and
+vulnerability management tool.  DefectDojo orchestrates end-to-end security testing, vulnerability tracking,
 deduplication, remediation, and reporting.
 
 ## Demo
 
-ExposureX is available for testing and demonstration purposes. Please note that demo environments are publicly accessible
-and reset regularly. Do not put sensitive data in demo environments. An easy way to test ExposureX is to upload some sample scan reports.
+Pro Edition: [pro.demo.defectdojo.com](https://pro.demo.defectdojo.com)
+
+Community Edition: [demo.defectdojo.org](https://demo.defectdojo.org)
+
+Either demo enviornment can be logged into with username `admin` and password `1Defectdojo@demo#appsec`. Please note that the demos are publicly accessible
+and reset every day. Do not put sensitive data in the demo. An easy way to test DefectDojo is to upload some [sample scan reports](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans).
 
 ## Quick Start for Compose V2
 
@@ -42,8 +47,8 @@ docker-compose features and flags. You can run Compose V2 by replacing the hyphe
 
 ```sh
 # Clone the project
-git clone https://github.com/deveshPandey96/django-ExposureX
-cd django-ExposureX
+git clone https://github.com/DefectDojo/django-DefectDojo
+cd django-DefectDojo
 
 # Check if your installed toolkit is compatible
 ./docker/docker-compose-check.sh
@@ -52,7 +57,7 @@ cd django-ExposureX
 docker compose build
 
 # Run the application (for other profiles besides postgres-redis see  
-# https://github.com/deveshPandey96/django-ExposureX/blob/dev/readme-docs/DOCKER.md)
+# https://github.com/DefectDojo/django-DefectDojo/blob/dev/readme-docs/DOCKER.md)
 docker compose up -d
 
 # Obtain admin credentials. The initializer can take up to 3 minutes to run.
@@ -75,27 +80,49 @@ Navigate to `http://localhost:8080` to see your new instance!
 
 ## Documentation
 
-* [Project Documentation](docs/README.md)
-* [REST APIs](docs/api-docs.md)
-* [Supported tools](docs/supported-tools.md)
+* [Official Docs](https://docs.defectdojo.com/)
+* [REST APIs](https://docs.defectdojo.com/en/open_source/api-v2-docs/)
+* [Client APIs and Wrappers](https://docs.defectdojo.com/en/open_source/api-v2-docs/#clients--api-wrappers)
+* Authentication options:
+    * [OAuth2/SAML2](https://docs.defectdojo.com/en/open_source/archived_docs/integrations/social-authentication/)
+    * [LDAP](https://docs.defectdojo.com/en/open_source/ldap-authentication/)
+* [Supported tools](https://docs.defectdojo.com/en/connecting_your_tools/parsers/)
 * [How to Write Documentation Locally](/docs/README.md)
 
 ## Supported Installation Options
 
+* [SaaS](https://cloud.defectdojo.com/accounts/onboarding/plg_step_1) - New UI, addittional features, includes support & supports the project
 * [Docker / Docker Compose](readme-docs/DOCKER.md)
 
 
 ## Community, Getting Involved, and Updates
 
-ExposureX welcomes community involvement and contributions. Please see our contributing guidelines for details on how to get involved.
+[<img src="https://raw.githubusercontent.com/DefectDojo/django-DefectDojo/dev/docs/assets/images/slack-logo-icon.png" alt="Slack" height="50"/>](https://owasp.org/slack/invite)
+[<img src="https://raw.githubusercontent.com/DefectDojo/django-DefectDojo/dev/docs/assets/images/Linkedin-logo-icon-png.png" alt="LinkedIn" height="50"/>](https://www.linkedin.com/company/defectdojo)
+[<img src="https://raw.githubusercontent.com/DefectDojo/django-DefectDojo/dev/docs/assets/images/Twitter_Logo.png" alt="Twitter" height="50"/>](https://twitter.com/defectdojo)
+[<img src="https://raw.githubusercontent.com/DefectDojo/django-DefectDojo/dev/docs/assets/images/YouTube-Emblem.png" alt="Youtube" height="50"/>](https://www.youtube.com/channel/UCWw9qzqptiIvTqSqhOFuCuQ)
+
+[Join the OWASP Slack Community](https://owasp.org/slack/invite) and participate in the discussion! You can find us in
+our channel there, [#defectdojo](https://owasp.slack.com/channels/defectdojo). Follow DefectDojo on
+[Twitter](https://twitter.com/defectdojo), [LinkedIn](https://www.linkedin.com/company/defectdojo), and
+[YouTube](https://www.youtube.com/channel/UCWw9qzqptiIvTqSqhOFuCuQ) for project updates!
 
 ## Contributing
 
 Please see our [contributing guidelines](readme-docs/CONTRIBUTING.md) for details and standards on contributing __before__ considering or submitting a pull request.
 
+## Pro Edition
+
+[Upgrade to DefectDojo Pro!](https://defectdojo.com/pricing) Pro transcends the do-it-yourself approach of open-source: A new UI, incredibile scalability, API connectors, ServiceNow, GitHub, GitLab, Azure DevOps, automatic data enrichment, prioritization, and more! See all the differentiators at the bottom of our pricing page: [defectdojo.com/pricing](https://defectdojo.com/pricing).
+
+Alternatively, for information please email hello@defectdojo.com
+
 ## About Us
 
-ExposureX is maintained by the development community.
+DefectDojo is maintained by:
+* Greg Anderson ([@devGregA](https://github.com/devgrega) | [LinkedIn](https://www.linkedin.com/in/g-anderson/))
+* Matt Tesauro ([@mtesauro](https://github.com/mtesauro) | [LinkedIn](https://www.linkedin.com/in/matttesauro/) |
+  [@matt_tesauro](https://twitter.com/matt_tesauro))
 
 Core Moderators can help you with pull requests or feedback on dev ideas:
 * Cody Maffucci ([@Maffooch](https://github.com/maffooch) | [LinkedIn](https://www.linkedin.com/in/cody-maffucci))
@@ -106,7 +133,7 @@ Moderators can help you with pull requests or feedback on dev ideas:
 
 ## Hall of Fame
 * Jannik Jürgens ([@alles-klar](https://github.com/alles-klar)) - Jannik was a long time contributor and moderator for 
-  ExposureX and made significant contributions to many areas of the platform. Jannik was instrumental in pioneering 
+  DefectDojo and made significant contributions to many areas of the platform. Jannik was instrumental in pioneering 
   and optimizing deployment methods.
 * Valentijn Scholten ([@valentijnscholten](https://github.com/valentijnscholten) |
   [Sponsor](https://github.com/sponsors/valentijnscholten) |
@@ -115,10 +142,10 @@ Moderators can help you with pull requests or feedback on dev ideas:
   codebase. He consistently fielded questions, provided feedback on pull requests, and provided a helping hand wherever
   it was needed.
 * Fred Blaise ([@madchap](https://github.com/madchap) | [LinkedIn](https://www.linkedin.com/in/fredblaise/)) - Fred
-  served as a core moderator during a critical time for ExposureX. He contributed code, helped the team stay organized,
+  served as a core moderator during a critical time for DefectDojo. He contributed code, helped the team stay organized,
   and architected important policies and procedures.
 * Aaron Weaver ([@aaronweaver](https://github.com/aaronweaver) | [LinkedIn](https://www.linkedin.com/in/aweaver/)) -
-  Aaron has been a long time contributor and user of ExposureX. He did the second major UI overhaul and his
+  Aaron has been a long time contributor and user of DefectDojo. He did the second major UI overhaul and his
   contributions include automation enhancements, CI/CD engagements, increased metadata at the product level, and many
   more.
 
@@ -128,4 +155,4 @@ Please report Security issues via our [disclosure policy](readme-docs/SECURITY.m
 
 ## License
 
-ExposureX is licensed under the [BSD 3-Clause License](LICENSE.md)
+DefectDojo is licensed under the [BSD 3-Clause License](LICENSE.md)

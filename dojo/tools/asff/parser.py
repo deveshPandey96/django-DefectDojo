@@ -95,7 +95,7 @@ class AsffParser:
                         #    resources from the EC2 instances and can change (e.g., when an EC2 instance stops and starts).
                         #
                         # 2. **Reliability**: By focusing on private IP addresses, we reduce potential ambiguities.
-                        #    If we were to include every IP address, ExposureX would create an endpoint for each,
+                        #    If we were to include every IP address, DefectDojo would create an endpoint for each,
                         #    leading to potential redundancies and confusion.
                         #
                         # By limiting our endpoints to private IP addresses, we're ensuring that the data remains

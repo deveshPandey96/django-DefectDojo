@@ -1,6 +1,6 @@
 ---
 title: "Installation (Open-Source)"
-description: "ExposureX supports various installation options."
+description: "DefectDojo supports various installation options."
 draft: false
 weight: 2
 ---
@@ -10,22 +10,22 @@ weight: 2
 
 ### Docker Compose
 
-See instructions in [DOCKER.md](<https://github.com/ExposureX/django-ExposureX/blob/dev/readme-docs/DOCKER.md>)
+See instructions in [DOCKER.md](<https://github.com/DefectDojo/django-DefectDojo/blob/dev/readme-docs/DOCKER.md>)
 
 ### SaaS (Includes Support & Supports the Project)
 
-[SaaS link](https://exposurex.com/platform)
+[SaaS link](https://defectdojo.com/platform)
 
 ---
 ## **Options for the brave (not officially supported)**
 ---
 ### Kubernetes
 
-See instructions in [KUBERNETES.md](<https://github.com/ExposureX/django-ExposureX/blob/dev/readme-docs/KUBERNETES.md>)
+See instructions in [KUBERNETES.md](<https://github.com/DefectDojo/django-DefectDojo/blob/dev/readme-docs/KUBERNETES.md>)
 
 ### Local install with godojo
 
-See instructions in [README.md](<https://github.com/ExposureX/godojo/blob/master/README.md>)
+See instructions in [README.md](<https://github.com/DefectDojo/godojo/blob/master/README.md>)
 in the godojo repository
 
 ---

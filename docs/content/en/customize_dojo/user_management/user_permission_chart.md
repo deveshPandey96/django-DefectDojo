@@ -70,7 +70,7 @@ The majority of Configuration Permissions give users access to certain pages in 
 | Test Types | n/a | Add a new Test Type (under **Engagements \> Test Types**) | Edit an existing Test Type | n/a |
 | Tool Configuration | Access the **⚙️Configuration \> Tool Configuration** page | Add a new Tool Configuration | Edit an existing Tool Configuration | Delete a Tool Configuration |
 | Tool Types | Access the **⚙️Configuration \> Tool Types** page | Add a new Tool Type | Edit an existing Tool Type | Delete a Tool Type |
-| Users | Access the **👤Users \> Users** page | Add a new User to ExposureX | Edit an existing User | Delete a User |
+| Users | Access the **👤Users \> Users** page | Add a new User to DefectDojo | Edit an existing User | Delete a User |
 
 1. Access to the Finding Templates page also requires the **Writer, Maintainer** or **Owner** Global Role for this user.
 

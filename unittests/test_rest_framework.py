@@ -402,7 +402,7 @@ class BaseClass:
             response = self.client.get(relative_url)
             self.assertEqual(200, response.status_code, response.content[:1000])
             # sensitive data must be set to write_only so those are not returned in the response
-            # https://github.com/ExposureX/django-ExposureX/security/advisories/GHSA-8q8j-7wc4-vjg5
+            # https://github.com/DefectDojo/django-DefectDojo/security/advisories/GHSA-8q8j-7wc4-vjg5
             self.assertNotIn("password", response.data)
             self.assertNotIn("ssh", response.data)
             self.assertNotIn("api_key", response.data)
@@ -1949,7 +1949,7 @@ class UserContactInfoTest(BaseClass.BaseClassTest):
             "title": "Sir",
             "phone_number": "+999999999",
             "cell_number": "+999999999",
-            "twitter_username": "exposurex",
+            "twitter_username": "defectdojo",
         }
         self.update_fields = {"title": "Lady"}
         self.test_type = TestType.STANDARD

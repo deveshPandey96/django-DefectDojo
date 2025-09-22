@@ -3,7 +3,7 @@ title: "Checkov Report"
 toc_hide: true
 ---
 ### File Types
-ExposureX parser accepts Checkov scan data as a .JSON file.
+DefectDojo parser accepts Checkov scan data as a .JSON file.
 
 JSON files can be created from the Checkov CLI: https://www.checkov.io/2.Basics/CLI%20Command%20Reference.html
 
@@ -49,10 +49,10 @@ JSON files can be created from the Checkov CLI: https://www.checkov.io/2.Basics/
 ~~~
 
 ### Sample Scan Data
-Sample Checkov scans can be found [here](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/checkov).
+Sample Checkov scans can be found [here](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/checkov).
 
 ### Default Deduplication Hashcode Fields
-By default, ExposureX identifies duplicate Findings using these [hashcode fields](https://docs.exposurex.com/en/working_with_findings/finding_deduplication/about_deduplication/):
+By default, DefectDojo identifies duplicate Findings using these [hashcode fields](https://docs.defectdojo.com/en/working_with_findings/finding_deduplication/about_deduplication/):
 
 - title
 - cwe

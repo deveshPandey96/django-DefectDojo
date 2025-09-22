@@ -15,4 +15,4 @@ Static files for the webside are build with github actions and are publish in th
 3. To run the Docs local server, `cd docs` to switch to the docs folder, and start the hugo server by running `npm run dev`.  Hot reloading is supported - pages will automatically update with changes while the server is running.
 4. Visit [http://localhost:1313](http://localhost:1313).
 
-ExposureX Docs are built using a variation of the [Doks](https://getdoks.org/) theme.
+DefectDojo Docs are built using a variation of the [Doks](https://getdoks.org/) theme.

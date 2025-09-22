@@ -16,7 +16,7 @@ class TestSarifParser(DojoTestCase):
 
     def test_example_report(self):
         with (
-            get_unit_tests_scans_path("sarif") / "ExposureX_django-ExposureX__2020-12-11_13 42 10__export.sarif"
+            get_unit_tests_scans_path("sarif") / "DefectDojo_django-DefectDojo__2020-12-11_13 42 10__export.sarif"
         ).open(encoding="utf-8") as testfile:
             parser = SarifParser()
             findings = parser.get_findings(testfile, Test())

@@ -2721,7 +2721,7 @@
       "test_name": "blacklist"
     },
     {
-      "code": "5 from lxml import etree\n6 from lxml.etree import XMLSyntaxError\n7 \n8 from .parser_models import AcunetixScanReport, ExposureXFinding\n",
+      "code": "5 from lxml import etree\n6 from lxml.etree import XMLSyntaxError\n7 \n8 from .parser_models import AcunetixScanReport, DefectDojoFinding\n",
       "filename": "dojo/tools/acunetix/parser_helper.py",
       "issue_confidence": "HIGH",
       "issue_severity": "LOW",

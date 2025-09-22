@@ -8,13 +8,13 @@ If you have a CI/CD pipeline, a daily scan process or any kind of repeated incom
 
 1. Create an Engagement to store the CI/CD results for the object you’re running CI/CD on. This could be a code repository where you have CI/CD actions set up to run. Generally, you want a separate Engagement set up for each pipeline so that you can quickly understand where the Finding results are coming from.  
 ​
-2. Each CI/CD action will import data to ExposureX in a separate step, so each of those should be mapped to a separate Test. For example, if each pipeline execution runs an NPM\-audit as well as a dependency scan, each scan result will need to flow into a Test (nested under the Engagement).  
+2. Each CI/CD action will import data to DefectDojo in a separate step, so each of those should be mapped to a separate Test. For example, if each pipeline execution runs an NPM\-audit as well as a dependency scan, each scan result will need to flow into a Test (nested under the Engagement).  
 ​
 3. You do not need to create a new Test each time the CI/CD action runs. Instead, you can **Reimport** data to the same test location.
 
 ## Reimport in action
 
-ExposureX will compare the incoming scan data with the existing scan data, and then apply changes to the Findings contained within your Test as follows:  
+DefectDojo will compare the incoming scan data with the existing scan data, and then apply changes to the Findings contained within your Test as follows:  
 ​
 ### Create Findings
 

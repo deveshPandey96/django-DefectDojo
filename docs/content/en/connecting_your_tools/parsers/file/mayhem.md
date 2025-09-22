@@ -16,4 +16,4 @@ See more below:
 The current implementation is mostly lifted from the existing SARIF parser support. As such, it will also aggregate all the findings in the SARIF file in one single report, and it also supports fingerprint deduplication.
 
 ### Sample Scan Data
-Sample Mayhem SARIF reports can be found [here](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/mayhem).
+Sample Mayhem SARIF reports can be found [here](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/mayhem).

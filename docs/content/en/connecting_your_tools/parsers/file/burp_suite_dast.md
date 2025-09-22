@@ -4,10 +4,10 @@ toc_hide: true
 ---
 
 ## Overview
-The Burp Suite DAST Scan parser processes HTML reports from Burp Suite DAST and imports the findings into ExposureX. The parser extracts vulnerability details, severity ratings, descriptions, remediation steps, and other metadata from the HTML report.
+The Burp Suite DAST Scan parser processes HTML reports from Burp Suite DAST and imports the findings into DefectDojo. The parser extracts vulnerability details, severity ratings, descriptions, remediation steps, and other metadata from the HTML report.
 
 ## Supported File Types
-The parser accepts a Standard Report as an HTML file. To parse an XML file instead, use the [Burp XML parser](https://docs.exposurex.com/en/connecting_your_tools/parsers/file/burp/).
+The parser accepts a Standard Report as an HTML file. To parse an XML file instead, use the [Burp XML parser](https://docs.defectdojo.com/en/connecting_your_tools/parsers/file/burp/).
 
 See the Burp documentation for information on how to export a Standard Report: [Burp Suite DAST Downloading reports](https://portswigger.net/burp/documentation/dast/user-guide/work-with-scan-results/generate-reports)
 
@@ -15,12 +15,12 @@ See the Burp documentation for information on how to export a Standard Report: [
 
 ### Total Fields in HTML
 - Total data fields in Burp Suite DAST Scan HTML output: 15
-- Total data fields parsed into ExposureX finding: 13
+- Total data fields parsed into DefectDojo finding: 13
 - Total data fields NOT parsed: 2
 
 ### Standard Format Field Mapping Details
 
-| Data Field # | Burp Suite DAST Scan Data Field | ExposureX Finding Field | Parser Line # | Notes |
+| Data Field # | Burp Suite DAST Scan Data Field | DefectDojo Finding Field | Parser Line # | Notes |
 |-------------|--------------------------------|--------------------------|--------------|-------|
 | 1 | Title | title | 101, 165 | Extracted from issue container h2 element and table rows with "issue-type-row" class |
 | 2 | Severity | severity | 101, 168 | Extracted from table rows, mapped directly (High/Medium/Low/Info) |
@@ -83,7 +83,7 @@ Finding titles are extracted directly from the h2 elements in issue containers o
 The mitigation field is constructed by combining content from "remediation detail" and "remediation background" sections, with proper formatting.
 
 #### Deduplication
-No explicit deduplication logic is implemented in the parser. ExposureX's standard deduplication will apply based on the hash_code generated from the finding details.
+No explicit deduplication logic is implemented in the parser. DefectDojo's standard deduplication will apply based on the hash_code generated from the finding details.
 
 #### Tags Handling
 No specific tag handling is implemented in the parser.
@@ -101,13 +101,13 @@ This parser has special handling for different section types within the HTML rep
 - It extracts CWE numbers and vulnerability classifications from reference sections
 
 ### Sample Scan Data
-Sample Burp Suite DAST Scan scans can be found [here](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/burp_suite_dast).
+Sample Burp Suite DAST Scan scans can be found [here](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/burp_suite_dast).
 
 ### Link to Tool
 [Burp Suite DAST](https://portswigger.net/burp/dast)
 
 ### Default Deduplication Hashcode Fields
-By default, ExposureX identifies duplicate Findings using these [hashcode fields](https://docs.exposurex.com/en/working_with_findings/finding_deduplication/about_deduplication/):
+By default, DefectDojo identifies duplicate Findings using these [hashcode fields](https://docs.defectdojo.com/en/working_with_findings/finding_deduplication/about_deduplication/):
 
 - title
 - severity

@@ -43,7 +43,7 @@ class SonarQubeAPI:
                 raise Exception(msg)
 
         self.session = requests.Session()
-        self.default_headers = {"User-Agent": "ExposureX"}
+        self.default_headers = {"User-Agent": "DefectDojo"}
         self.sonar_api_url = tool_config.url
         if tool_config.authentication_type == "Password":
             self.session.auth = (
@@ -93,7 +93,7 @@ class SonarQubeAPI:
             f"""
                 'Expected Project "{project_name}", but it returned '
                 '{[x.get('name') for x in response.json().get('components')]}. \n'
-                'Project Name is case sensitive and must match the ExposureX Product Name. \n'
+                'Project Name is case sensitive and must match the DefectDojo Product Name. \n'
                 'Alternatively it can also be specified the Project Key at Product configuration.
                 """
         )

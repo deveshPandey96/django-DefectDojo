@@ -1,7 +1,7 @@
 name: "release-X: Tag docker images with latest tag"
 
 env:
-  GIT_USERNAME: "ExposureX release bot"
+  GIT_USERNAME: "DefectDojo release bot"
   GIT_EMAIL: "dojo-release-bot@users.noreply.github.com"
 
 on:
@@ -48,9 +48,9 @@ jobs:
     - name: Tag with latest tags
       run: |
         set -x
-        docker buildx imagetools create -t "${{ env.DOCKER_ORG }}/exposurex-${{ matrix.docker-image}}:latest" ${{ env.DOCKER_ORG }}/exposurex-${{ matrix.docker-image}}:${{ inputs.release_number }}
+        docker buildx imagetools create -t "${{ env.DOCKER_ORG }}/defectdojo-${{ matrix.docker-image}}:latest" ${{ env.DOCKER_ORG }}/defectdojo-${{ matrix.docker-image}}:${{ inputs.release_number }}
 
       # just for logging
     - name: Inspect default images
       run: |
-          docker buildx imagetools inspect ${{ env.DOCKER_ORG }}/exposurex-${{ matrix.docker-image}}:latest
+          docker buildx imagetools inspect ${{ env.DOCKER_ORG }}/defectdojo-${{ matrix.docker-image}}:latest

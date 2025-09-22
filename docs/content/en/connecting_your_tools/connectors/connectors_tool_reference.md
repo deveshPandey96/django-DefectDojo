@@ -1,22 +1,22 @@
 ---
 title: "Tool-Specific Connector Setup"
-description: "Our list of supported Connector tools, and how to set them up with ExposureX"
+description: "Our list of supported Connector tools, and how to set them up with DefectDojo"
 ---
 
-<span style="background-color:rgba(242, 86, 29, 0.3)">Note: Connectors are a ExposureX Pro-only feature.</span>
+<span style="background-color:rgba(242, 86, 29, 0.3)">Note: Connectors are a DefectDojo Pro-only feature.</span>
 
-When setting up a Connector for a supported tool, you'll need to give ExposureX specific information related to the tool's API. At a base level, you'll need:
+When setting up a Connector for a supported tool, you'll need to give DefectDojo specific information related to the tool's API. At a base level, you'll need:
 
 * **Location** \-a field whichgenerallyrefers to your tool's URL in your network,
 * **Secret** \- generally an API key.
 
-Some tools will require additional API\-related fields beyond **Location** and **Secret**. They may also require you to make changes on their side to accommodate an incoming Connector from ExposureX.
+Some tools will require additional API\-related fields beyond **Location** and **Secret**. They may also require you to make changes on their side to accommodate an incoming Connector from DefectDojo.
 
 ![image](images/connectors_tool_reference.png)
 
-Each tool has a different API configuration, and this guide is intended to help you set up the tool's API so that ExposureX can connect.
+Each tool has a different API configuration, and this guide is intended to help you set up the tool's API so that DefectDojo can connect.
 
-Whenever possible, we recommend creating a new 'ExposureX Bot' account within your Security Tool which will only be used by the Connector. This will help you better differentiate between actions manually taken by your team, and automated actions taken by the Connector.
+Whenever possible, we recommend creating a new 'DefectDojo Bot' account within your Security Tool which will only be used by the Connector. This will help you better differentiate between actions manually taken by your team, and automated actions taken by the Connector.
 
 # **Supported Connectors**
 
@@ -26,7 +26,7 @@ The AWS Security Hub connector uses an AWS access key to interact with the Secur
 
 #### Prerequisites
 
-Rather than use the AWS access key from a team member, we recommend creating an IAM User in your AWS account specifically for ExposureX, with that user's permissions limited to those necessary for interacting with Security Hub.
+Rather than use the AWS access key from a team member, we recommend creating an IAM User in your AWS account specifically for DefectDojo, with that user's permissions limited to those necessary for interacting with Security Hub.
 
 AWS's "**[AWSSecurityHubReadOnlyAccess](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AWSSecurityHubReadOnlyAccess.html)**policy" provides the required level of access for a connector. If you would like to write a custom policy for a Connector, you will need to include the following permissions:
 
@@ -68,11 +68,11 @@ Once you have created your IAM user and assigned it the necessary permissions us
 2. Enter a valid **AWS Access Key** in the **Access Key** field.
 3. Enter a matching **Secret Key** in the **Secret Key** field.
 
-ExposureX can pull Findings from more than one region using Security Hub's **cross\-region aggregation** feature. If [cross\-region aggregation](https://docs.aws.amazon.com/securityhub/latest/userguide/finding-aggregation.html) is enabled, you should supply the API endpoint for your "**Aggregation Region**". Additional linked regions will have ProductRecords created for them in ExposureX based on your AWS account ID and the region name.
+DefectDojo can pull Findings from more than one region using Security Hub's **cross\-region aggregation** feature. If [cross\-region aggregation](https://docs.aws.amazon.com/securityhub/latest/userguide/finding-aggregation.html) is enabled, you should supply the API endpoint for your "**Aggregation Region**". Additional linked regions will have ProductRecords created for them in DefectDojo based on your AWS account ID and the region name.
 
 ## **BurpSuite**
 
-ExposureX’s Burp connector calls Burp’s GraphQL API to fetch data. 
+DefectDojo’s Burp connector calls Burp’s GraphQL API to fetch data. 
 
 #### Prerequisites
 
@@ -89,7 +89,7 @@ See the official [Burp documentation](https://portswigger.net/burp/extensibility
 
 ## **Checkmarx ONE**
 
-ExposureX's Checkmarx ONE connector calls the Checkmarx API to fetch data.
+DefectDojo's Checkmarx ONE connector calls the Checkmarx API to fetch data.
 
 #### **Connector Mappings**
 

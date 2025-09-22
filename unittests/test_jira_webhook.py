@@ -234,7 +234,7 @@ class JIRAWebhookTest(DojoTestCase):
             "self":"https://jira.onpremise.org/rest/api/2/user?username=dojo_user",
             "name":"dojo_user",
             "key":"dojo_user",
-            "emailAddress":"exposurex@isaac.nl",
+            "emailAddress":"defectdojo@isaac.nl",
             "avatarUrls":{
                "48x48":"https://www.gravatar.com/avatar/9637bfb970eff6176357df615f548f1c?d=mm&s=48",
                "24x24":"https://www.gravatar.com/avatar/9637bfb970eff6176357df615f548f1c?d=mm&s=24",
@@ -252,7 +252,7 @@ class JIRAWebhookTest(DojoTestCase):
             "self":"https://jira.onpremise.org/rest/api/2/user?username=dojo_user",
             "name":"dojo_user",
             "key":"dojo_user",
-            "emailAddress":"exposurex@isaac.nl",
+            "emailAddress":"defectdojo@isaac.nl",
             "avatarUrls":{
                "48x48":"https://www.gravatar.com/avatar/9637bfb970eff6176357df615f548f1c?d=mm&s=48",
                "24x24":"https://www.gravatar.com/avatar/9637bfb970eff6176357df615f548f1c?d=mm&s=24",

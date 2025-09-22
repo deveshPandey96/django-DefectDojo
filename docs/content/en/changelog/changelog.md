@@ -1,12 +1,12 @@
 ---
-title: "ExposureX Pro Changelog"
-description: "ExposureX Changelog"
+title: "DefectDojo Pro Changelog"
+description: "DefectDojo Changelog"
 exclude_search: true
 ---
 
-Here are the release notes for **ExposureX Pro (Cloud Version)**. These release notes are focused on UX, so will not include all code changes.
+Here are the release notes for **DefectDojo Pro (Cloud Version)**. These release notes are focused on UX, so will not include all code changes.
 
-For Open Source release notes, please see the [Releases page on GitHub](https://github.com/ExposureX/django-ExposureX/releases), or alternatively consult the Open Source [upgrade notes](/en/open_source/upgrading/upgrading_guide/).
+For Open Source release notes, please see the [Releases page on GitHub](https://github.com/DefectDojo/django-DefectDojo/releases), or alternatively consult the Open Source [upgrade notes](/en/open_source/upgrading/upgrading_guide/).
 
 ## Sept 2025: v2.50
 
@@ -28,7 +28,7 @@ The Pro UI has been significantly reorganized, with changes to page organization
 
 ### August 25: 2.49.3
 
-[Integrations](/en/share_your_findings/integrations/) has been added to ExposureX Pro, adding an Jira-style integrations for Azure DevOps, GitHub and GitLab boards.
+[Integrations](/en/share_your_findings/integrations/) has been added to DefectDojo Pro, adding an Jira-style integrations for Azure DevOps, GitHub and GitLab boards.
 
 * **(API)** Basic Auth Login has been removed from the swagger form.  Only cookieAuth and tokenAuth are accepted.
 * **(API)** When MFA is enabled, an MFA code will be required to use the `/api-token-auth` endpoint.
@@ -60,7 +60,7 @@ The Pro UI has been significantly reorganized, with changes to page organization
 
 ### July 1, 2025: v2.48
 
-- **(Pro UI)** Helptext has been added to the Private Note checkbox to better explain this feature.  Private Notes are Notes that will not appear in Generated Reports - only in the ExposureX UI.  This feature can be used for internal communication that you don't want to include in a Report.
+- **(Pro UI)** Helptext has been added to the Private Note checkbox to better explain this feature.  Private Notes are Notes that will not appear in Generated Reports - only in the DefectDojo UI.  This feature can be used for internal communication that you don't want to include in a Report.
 
 - **(Pro UI)** Pro UI is now set as the default user interface. All new and existing users/instances will be directed to the Pro UI by default. Users can still opt-out of this UI by unchecking this checkbox:
 
@@ -139,7 +139,7 @@ Examples
 - "DoubleQuoted" → DoubleQuoted
 - space separated tag → space_separated_tag
 
-This update improves consistency, enhances ExposureX's search capabilities, and aligns with best practices for tag formatting.
+This update improves consistency, enhances DefectDojo's search capabilities, and aligns with best practices for tag formatting.
 
 We recommend reviewing your current tags to ensure they align with the new format.  Following the deployment of these new behaviors, requests sent to the API or through the UI with any of the violations listed above will result in an error, with the details of the error raised in the response.
 
@@ -147,7 +147,7 @@ We recommend reviewing your current tags to ensure they align with the new forma
 
 - **(Pro Metrics)** Rework of filter menu within insights dashboards to remove cross Product Type and Product filtering capabilities.
 - **(Pro UI)** Clickable links within insights dashboards.
-- **(Pro UI)** You can now differentiate between **AppSec** and **SOC** Test Types, to specify whether Findings in ExposureX were created by an AppSec or SOC process.  You can assign the SOC label by editing a Test Type in the Pro UI:
+- **(Pro UI)** You can now differentiate between **AppSec** and **SOC** Test Types, to specify whether Findings in DefectDojo were created by an AppSec or SOC process.  You can assign the SOC label by editing a Test Type in the Pro UI:
 
 ![image](images/pro_test_types.png)
 
@@ -200,8 +200,8 @@ Hotfix release - no significant feature changes.
 
 ![image](images/risk_table.png)
 
-- **(Pro UI)** Added a link to Universal Importer to the sidebar, which provides access to the [Universal Importer and ExposureX CLI](/en/connecting_your_tools/external_tools/) tools.
-- **(Pro UI)** Added smart Prioritization and Risk fields to ExposureX Pro, which can be used to more easily triage Findings based on the impact of the Product they affect.  See [Priority](/en/working_with_findings/finding_priority/) documentation for more information.
+- **(Pro UI)** Added a link to Universal Importer to the sidebar, which provides access to the [Universal Importer and DefectDojo CLI](/en/connecting_your_tools/external_tools/) tools.
+- **(Pro UI)** Added smart Prioritization and Risk fields to DefectDojo Pro, which can be used to more easily triage Findings based on the impact of the Product they affect.  See [Priority](/en/working_with_findings/finding_priority/) documentation for more information.
 - **(Tools)** Updated Fortify Webinspect parser to handle Fortify's new XML report format.
 
 #### Apr 14, 2025: v2.45.1
@@ -218,7 +218,7 @@ Hotfix release - no significant feature changes.
 
 #### Mar 31, 2025: v2.44.4
 
-- **(Pro UI)** Group and Configuration permissions can now be assigned quickly from a User page.  For more information, see [ExposureX Pro Permissions](/en/customize_dojo/user_management/pro_permissions_overhaul/).
+- **(Pro UI)** Group and Configuration permissions can now be assigned quickly from a User page.  For more information, see [DefectDojo Pro Permissions](/en/customize_dojo/user_management/pro_permissions_overhaul/).
 
 #### Mar 24, 2025: v2.44.3
 
@@ -252,7 +252,7 @@ Hotfix release - no significant feature changes.
 
 #### Feb 19, 2025: v2.43.3
 
-- **(API)** `/audit_log` has been added as an API endpoint for ExposureX Pro, which can return a JSON report of all user activity, or filter by object ID. <span style="background-color:rgba(242, 86, 29, 0.5)">(Pro)</span>
+- **(API)** `/audit_log` has been added as an API endpoint for DefectDojo Pro, which can return a JSON report of all user activity, or filter by object ID. <span style="background-color:rgba(242, 86, 29, 0.5)">(Pro)</span>
 - **(Pro UI)** Vulnerability ID can now be edited for a given Finding, using the Edit Finding page.  This allows users to manually identify duplicates by assigning a matching Vulnerability ID to an additional Finding.
 
 #### Feb 12, 2025: v2.43.2
@@ -268,7 +268,7 @@ Hotfix release - no significant feature changes.
 - **(Pro UI)** Added 'Has Jira' (True/False) as a filter, to filter Findings, Products or Engagements that have associated Jira data.
 - **(Pro UI)** Notes can now be added to Engagement / Findings / Tests from All Engagements / Findings / Tests lists as well as View Engagement / Findings / Tests pages.
 - **(Pro UI)** Added ability to Close Finding from a Finding List, without needing to first open the Edit Finding form.
-- **(CLI Tools)** Improved help text for Universal Importer / ExposureX CLI. Many guides and examples are now in our [docs](/en/connecting_your_tools/external_tools/) instead of being displayed in the CLI itself.
+- **(CLI Tools)** Improved help text for Universal Importer / DefectDojo CLI. Many guides and examples are now in our [docs](/en/connecting_your_tools/external_tools/) instead of being displayed in the CLI itself.
 - **(Tools)** Updated Burp scan to use Hashcode Deduplication.  Default hashcode forms are `title`, `file_path`, `severity`, and `vuln_id_from_tool`.
 - **(Tools)** Corrected issue with AWS Inspector2 OSS parser related to `mitigated date` being handled incorrectly.
 
@@ -360,7 +360,7 @@ curl -X 'GET' \
 
 - **(Pro UI)** Notes can now be added to a Test directly from the Test page.
 - **(Classic UI)** Reviewers are now displayed on Finding pages.
-- **(Docs)** New integrated docs site: https://docs.exposurex.com/
+- **(Docs)** New integrated docs site: https://docs.defectdojo.com/
 
 ## Nov 2024: v2.40
 
@@ -377,7 +377,7 @@ curl -X 'GET' \
 
 #### Nov 17, 2024: v2.40.2
 
-- **(API)** Added an API endpoint to get the ExposureX version number: `/api/v2/version` <span style="background-color:rgba(242, 86, 29, 0.5)">(Pro)</span>
+- **(API)** Added an API endpoint to get the DefectDojo version number: `/api/v2/version` <span style="background-color:rgba(242, 86, 29, 0.5)">(Pro)</span>
 - **(API)**  Multiple Metadata objects can now be added to a single Endpoint, Finding or Product via POST or PATCH to `/api/v2/metadata/` .  Previously, only one Metadata key/value pair could be updated per call.
 - **(Pro UI)**  You can now Clear Alerts in the Pro UI.
 - **(Pro UI)**  Corrected an issue with Pro UI’s form validation when trying to connect a Jira Project with an Engagement.  
@@ -424,7 +424,7 @@ section of the AWS Docs](https://docs.aws.amazon.com/securityhub/latest/userguid
 need to generate an access key and provide the "Access Key" and "Secret Key" components in the relevant connector
 configuration fields.
 * The "Location" field should be populated with the appropriate API endpoint for your region. For example, to retrieve results from the us-east-1 region, you would supply https://securityhub.us-east-1.amazonaws.com.
-* Note that we rely on Security Hub's cross-region aggregation to pull findings from more than one region. If cross-region aggregation is enabled, you should supply the API endpoint for your "Aggregation Region". Additional linked regions will have ProductRecords created for them in ExposureX based on your AWS account IDs and the region names.
+* Note that we rely on Security Hub's cross-region aggregation to pull findings from more than one region. If cross-region aggregation is enabled, you should supply the API endpoint for your "Aggregation Region". Additional linked regions will have ProductRecords created for them in DefectDojo based on your AWS account IDs and the region names.
 
 ## Oct 2024: v2.39
 
@@ -477,7 +477,7 @@ configuration fields.
 
 #### Sept 16, 2024: v2.38.2
 
-- **(Pro UI)**  Jira integration in Pro UI now has parity with Legacy UI.  Ability to Push To Jira has been added, and the Jira ticket view has been added to Findings, Engagements, and all other related objects in ExposureX.
+- **(Pro UI)**  Jira integration in Pro UI now has parity with Legacy UI.  Ability to Push To Jira has been added, and the Jira ticket view has been added to Findings, Engagements, and all other related objects in DefectDojo.
 - **(Finding SLAs)**  Added “Mitigated Within SLA” Finding filter, so that users can now count how many Findings were mitigated on time, and how many were not.  Previously, we were only able to filter Findings that were currently violating SLA or not, rather than ones that had historically violated SLA or not.
 - **(Metrics)**  “Mitigated Within SLA” simple metric added to Remediation Insights page.
 - **(Reports)**  Custom Content text box no longer renders as HTML.
@@ -492,7 +492,7 @@ configuration fields.
 
 - **(Pro UI)**  Clearing a date filter and re-applying it no longer throws a 400 error.
 - **(Dashboard)**  Dashboard Tag Filters now work correctly in both legacy and Pro UIs.  
-- **(MFA)**  When an admin enforced Global MFA on a ExposureX instance, there was a loop state that could occur with new users attempting to set up their accounts.  This issue has been corrected, and new users can set a password before enabling MFA.
+- **(MFA)**  When an admin enforced Global MFA on a DefectDojo instance, there was a loop state that could occur with new users attempting to set up their accounts.  This issue has been corrected, and new users can set a password before enabling MFA.
 - **(Permissions)**  When a user had permission to edit a Product, but not a Product Type, there was a bug where they were unable to submit an ‘Edit Product’ form (due to interaction with the Product Type). This has been corrected.
 - **(Reimport)**  Reimport now correctly records additional vulnerability IDs beyond 1.  In the past, Findings that had more than one Vulnerability ID (a CVE, for example) would have those additional Vulnerability IDs discarded on reimport, so users were potentially losing those additional Vulnerability IDs.
 - **(Tools)**  Threat Composer parser added
@@ -526,7 +526,7 @@ configuration fields.
 - **(Pro UI)**  Enhanced Endpoint View now available in Pro UI.
 - **(Pro UI)**  Jira Instances can now be added and edited via Pro UI.
 - **(Connectors)**  SonarQube / SonarCloud Connector added.  <span style="background-color:rgba(242, 86, 29, 0.5)">(Pro)</span>
-- **(Questionnaires)**  Anonymous Questionnaires can now be added to an Engagement after they are completed.  This solves an issue where users wanted to have their team complete questionnaires related to a Product without giving the user access to the complete Product on ExposureX.
+- **(Questionnaires)**  Anonymous Questionnaires can now be added to an Engagement after they are completed.  This solves an issue where users wanted to have their team complete questionnaires related to a Product without giving the user access to the complete Product on DefectDojo.
 - **(Reports)**  Report issue where images would disappear from reports has been corrected
 - **(SLAs)**  “SLA Violation in _ Days” notifications are no longer being sent for unenforced SLAs.
 - **(Tools)**  New Parser: AppCheck Web Application Scanning
@@ -549,7 +549,7 @@ configuration fields.
 - **(Tools)**  Wizcli Parser released
 - **(Tools)**  Rapplex Parser released
 - **(Tools)**  Kiuwan SCA Parser released
-- **(Tools)**  Test Types can now be set to Inactive so that they won’t appear in menus.  This ‘inactive’ setting can only be applied in the legacy UI, via Engagements > Test Types (or exposurex.com/test_type)
+- **(Tools)**  Test Types can now be set to Inactive so that they won’t appear in menus.  This ‘inactive’ setting can only be applied in the legacy UI, via Engagements > Test Types (or defectdojo.com/test_type)
 
 ## Jul 2024: v2.36.0
 

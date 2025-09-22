@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-ExposureX VAPT Workflow Comprehensive Test Suite
+DefectDojo VAPT Workflow Comprehensive Test Suite
 
-This test suite validates ExposureX as a complete vulnerability assessment and 
+This test suite validates DefectDojo as a complete vulnerability assessment and 
 penetration testing (VAPT) platform, covering the entire workflow:
 Scan → Import → Assign → Remediation → Verification → Closure → Reporting
 
@@ -30,9 +30,9 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException
 
 class VAPTWorkflowComprehensiveTest(BaseTestCase):
     """
-    Comprehensive VAPT Workflow Test Suite for ExposureX
+    Comprehensive VAPT Workflow Test Suite for DefectDojo
     
-    This test suite validates all aspects of using ExposureX as a 
+    This test suite validates all aspects of using DefectDojo as a 
     vulnerability management platform including:
     - Project and asset management
     - Vulnerability import and discovery
@@ -729,7 +729,7 @@ class VAPTWorkflowComprehensiveTest(BaseTestCase):
         
         # Print summary
         print("\n" + "="*80)
-        print("🎯 EXPOSUREX VAPT WORKFLOW TEST SUMMARY")
+        print("🎯 DEFECTDOJO VAPT WORKFLOW TEST SUMMARY")
         print("="*80)
         print(f"📅 Test Period: {cls.test_report['execution_start']} - {cls.test_report['execution_end']}")
         print(f"🧪 Total Tests: {total_tests}")
@@ -770,6 +770,6 @@ if __name__ == '__main__':
     print(f"Results: {result.testsRun - len(result.failures) - len(result.errors)}/{result.testsRun} tests passed")
     
     if result.failures or result.errors:
-        print("\n⚠️  Some tests failed - review ExposureX configuration")
+        print("\n⚠️  Some tests failed - review DefectDojo configuration")
     else:
-        print("\n✅ All tests passed - ExposureX is ready for VAPT workflows!")
+        print("\n✅ All tests passed - DefectDojo is ready for VAPT workflows!")

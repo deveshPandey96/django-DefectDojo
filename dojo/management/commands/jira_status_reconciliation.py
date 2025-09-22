@@ -146,7 +146,7 @@ def jira_status_reconciliation(*args, **kwargs):
 
                 status_changed = jira_helper.process_resolution_from_jira(find, resolution_id, resolution_name, assignee_name, issue_from_jira.fields.updated, find.jira_issue) if not dryrun else "dryrun"
                 if status_changed:
-                    message = f"{find.jira_issue.jira_key}; {settings.SITE_URL}/finding/{find.id};{find.status()};{resolution_name};{flag1};{flag2};{flag3};{find.jira_issue.jira_change};{issue_from_jira.fields.updated};{find.last_status_update};{issue_from_jira.fields.updated};{find.last_reviewed};{issue_from_jira.fields.updated};{message_action} finding in exposurex;{status_changed}"
+                    message = f"{find.jira_issue.jira_key}; {settings.SITE_URL}/finding/{find.id};{find.status()};{resolution_name};{flag1};{flag2};{flag3};{find.jira_issue.jira_change};{issue_from_jira.fields.updated};{find.last_status_update};{issue_from_jira.fields.updated};{find.last_reviewed};{issue_from_jira.fields.updated};{message_action} finding in defectdojo;{status_changed}"
                     messages.append(message)
                     logger.info(message)
                 else:

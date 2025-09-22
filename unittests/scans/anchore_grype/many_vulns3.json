@@ -32513,12 +32513,12 @@
  "source": {
   "type": "image",
   "target": {
-   "userInput": "exposurex/exposurex-django:1.13.1",
+   "userInput": "defectdojo/defectdojo-django:1.13.1",
    "imageID": "sha256:6132ee54d5553df52183325a70c37c1edbd028b86616ed57e3e0622809235e47",
    "manifestDigest": "sha256:91bc0f1478c6d26e04da5c2a59ac20262ec2661942418e2a3e7c77245d872658",
    "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
    "tags": [
-    "exposurex/exposurex-django:1.13.1"
+    "defectdojo/defectdojo-django:1.13.1"
    ],
    "imageSize": 634180194,
    "scope": "Squashed",

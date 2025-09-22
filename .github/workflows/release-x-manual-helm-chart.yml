@@ -2,7 +2,7 @@
 name: "release-X: Release helm chart"
 
 env:
-  GIT_USERNAME: "ExposureX release bot"
+  GIT_USERNAME: "DefectDojo release bot"
   GIT_EMAIL: "dojo-release-bot@users.noreply.github.com"
 on:
   workflow_dispatch:
@@ -67,8 +67,8 @@ jobs:
       - name: Configure HELM repos
         run: |-
              helm repo add bitnami https://charts.bitnami.com/bitnami
-             helm dependency list ./helm/exposurex
-             helm dependency update ./helm/exposurex
+             helm dependency list ./helm/defectdojo
+             helm dependency update ./helm/defectdojo
 
       - name: Add yq
         uses: mikefarah/yq@f03c9dc599c37bfcaf533427211d05e51e6fee64 # v4.47.1
@@ -77,14 +77,14 @@ jobs:
         id: pin_image
         run: |-
           yq --version
-          yq -i '.tag="${{ inputs.release_number }}"'  helm/exposurex/values.yaml
-          echo "Current image tag:`yq -r '.tag' helm/exposurex/values.yaml`"
+          yq -i '.tag="${{ inputs.release_number }}"'  helm/defectdojo/values.yaml
+          echo "Current image tag:`yq -r '.tag' helm/defectdojo/values.yaml`"
 
       - name: Package Helm chart
         id: package-helm-chart
         run: |
           mkdir build
-          helm package helm/exposurex/ --destination ./build
+          helm package helm/defectdojo/ --destination ./build
           echo "chart_version=$(ls build | cut -d '-' -f 2,3 | sed 's|\.tgz||')" >> $GITHUB_ENV
 
       - name: Create release ${{ inputs.release_number }}
@@ -96,10 +96,10 @@ jobs:
           draft: ${{ inputs.make_draft }}
           prerelease: ${{ inputs.make_prerelease }}
           make_latest: ${{ inputs.make_latest }}
-          files: ./build/exposurex-${{ env.chart_version }}.tgz
+          files: ./build/defectdojo-${{ env.chart_version }}.tgz
           token: ${{ secrets.GITHUB_TOKEN }}
         env:
-          GITHUB_REPOSITORY: ExposureX/django-ExposureX
+          GITHUB_REPOSITORY: DefectDojo/django-DefectDojo
 
       - name: Update Helm repository index
         id: update-helm-repository-index

@@ -9,12 +9,12 @@ Event `scan_added_empty` describes a situation when reimport did not affect the 
 
 ## Event HTTP header for scan_added
 ```yaml
-X-ExposureX-Event: scan_added
+X-DefectDojo-Event: scan_added
 ```
 
 ## Event HTTP header for scan_added_empty
 ```yaml
-X-ExposureX-Event: scan_added_empty
+X-DefectDojo-Event: scan_added_empty
 ```
 
 ## Event HTTP body
@@ -89,7 +89,7 @@ X-ExposureX-Event: scan_added_empty
     "url_ui": "http://localhost:8080/test/90",
     "user": {
         "id": 1,
-        "email": "admin@exposurex.local",
+        "email": "admin@defectdojo.local",
         "first_name": "Admin",
         "last_name": "User",
         "username": "admin",

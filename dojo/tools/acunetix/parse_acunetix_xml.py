@@ -197,7 +197,7 @@ class AcunetixXMLParser:
 
     def get_severity(self, severity):
         """
-            Returns Severity as per ExposureX standards.
+            Returns Severity as per DefectDojo standards.
         :param severity:
         :return:
         """
@@ -213,7 +213,7 @@ class AcunetixXMLParser:
 
     def get_false_positive(self, false_p):
         """
-            Returns True, False for false positive as per ExposureX standards.
+            Returns True, False for false positive as per DefectDojo standards.
         :param false_p:
         :return:
         """

@@ -3,24 +3,24 @@ title: "Create an automated import pipeline via API"
 description: ""
 ---
 
-ExposureX’s API allows for robust pipeline solutions, which automatically ingest new scans to your instance. Automation like this can take a few different forms:
+DefectDojo’s API allows for robust pipeline solutions, which automatically ingest new scans to your instance. Automation like this can take a few different forms:
 
-* A daily import which scans your environment on a daily basis, and then imports the results of the scan to ExposureX (similar to our **Connectors** feature)
-* A CI/CD pipeline which scans new code as it is deployed, and imports the results to ExposureX as a triggered action
+* A daily import which scans your environment on a daily basis, and then imports the results of the scan to DefectDojo (similar to our **Connectors** feature)
+* A CI/CD pipeline which scans new code as it is deployed, and imports the results to DefectDojo as a triggered action
 
 These pipelines can be created by directly calling our API **/reimport** endpoint with an attached scan file in a way that closely resembles our **Import Scan Form**. 
 
 #### Universal Importer: out of the box automation
 
-ExposureX Inc. maintains a **Universal Importer** which can be set up with existing CI/CD pipelines, triggered via GitHub actions, or run in any other automated context.
+DefectDojo Inc. maintains a **Universal Importer** which can be set up with existing CI/CD pipelines, triggered via GitHub actions, or run in any other automated context.
 
 This external tool is a useful way to build a pipeline directly from the command line: a much faster solution than writing your own code.
 
-See our guide to [external tools](../../external_tools) to learn more.  External tools are available for **ExposureX Pro** users only.
+See our guide to [external tools](../../external_tools) to learn more.  External tools are available for **DefectDojo Pro** users only.
 
-## ExposureX’s API
+## DefectDojo’s API
 
-ExposureX’s API is documented in\-app using the OpenAPI framework. You can access this documentation from the User Menu in the top right\-hand corner, under **‘API v2 OpenAPI3’**.
+DefectDojo’s API is documented in\-app using the OpenAPI framework. You can access this documentation from the User Menu in the top right\-hand corner, under **‘API v2 OpenAPI3’**.
 
 \- The documentation can be used to test API calls with various parameters, and does so using your own user’s API Token.
 
@@ -30,9 +30,9 @@ If you need to access an API token for a script or another integration, you can 
 
 ### General API Considerations
 
-* Although our OpenAPI documentation is detailed regarding the parameters that can be used with each endpoint, it assumes that the reader has a solid understanding of ExposureX’s key concepts. (Product Hierarchy, Findings, Deduplication, etc).
-* Users who want a working import integration but are less familiar with ExposureX as a whole should consider our **Universal Importer**.
-* ExposureX’s API can sometimes create unintended data objects, particularly if ‘Auto\-Create Context’ is used on the **/import** or **/reimport** endpoint.
+* Although our OpenAPI documentation is detailed regarding the parameters that can be used with each endpoint, it assumes that the reader has a solid understanding of DefectDojo’s key concepts. (Product Hierarchy, Findings, Deduplication, etc).
+* Users who want a working import integration but are less familiar with DefectDojo as a whole should consider our **Universal Importer**.
+* DefectDojo’s API can sometimes create unintended data objects, particularly if ‘Auto\-Create Context’ is used on the **/import** or **/reimport** endpoint.
 * Fortunately, it is very difficult to accidentally delete data using the API. Most objects can only be removed using a dedicated **DELETE** call to the relevant endpoint.
 
 ### Specific notes on /import and /reimport endpoints
@@ -43,7 +43,7 @@ However, the **/import** endpoint can instead be used for a pipeline where you a
 
 ### Using the Scan Completion Date (API: `scan_date`) field
 
-ExposureX offers a plethora of supported scanner reports, but not reports them contain the information most important to a user. The `scan_date` field is a flexible smart feature that allows users to set the completion date of the a given scan report, and have it propagate down to all the findings imported.
+DefectDojo offers a plethora of supported scanner reports, but not reports them contain the information most important to a user. The `scan_date` field is a flexible smart feature that allows users to set the completion date of the a given scan report, and have it propagate down to all the findings imported.
 
 This field is **not** mandatory, but the default value for this field is the date of import (whenever the request is processed and a successful response is returned).
 

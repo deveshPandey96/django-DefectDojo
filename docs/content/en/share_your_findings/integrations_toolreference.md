@@ -4,7 +4,7 @@ description: "Beta Feature"
 weight: 1
 ---
 
-Here are specific instructions detailing how to set up a ExposureX Integration with a third party Issue Tracker.
+Here are specific instructions detailing how to set up a DefectDojo Integration with a third party Issue Tracker.
 
 ## Azure DevOps Boards
 
@@ -19,7 +19,7 @@ with permissions set to "Read, Write and Manage" for "Work Items" for the Azure 
 
 ### Issue Tracker Mapping
 
-These details dictate how ExposureX will map Finding or Finding Group attributes to a given Project in Azure DevOps:
+These details dictate how DefectDojo will map Finding or Finding Group attributes to a given Project in Azure DevOps:
 
 #### Issue Tracker Mapping Details
 
@@ -70,7 +70,7 @@ Personal access tokens for GitHub can be created at https://github.com/settings/
 **In order to set up the integration, the Project MUST have a custom field created to represent Issue Priority, otherwise Severity will not be mapped correctly and Issues will not push to GitHub.**
 
 Follow this guide to create a [custom field](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/quickstart-for-projects#creating-a-field-to-track-priority).
-Each Severity will need to have a corresponding single-select option available.  For example, out of the box ExposureX suggests P0, P1, P2, P3, P4 as possible Priority values, and each of those will need to be added to the Priority custom field.
+Each Severity will need to have a corresponding single-select option available.  For example, out of the box DefectDojo suggests P0, P1, P2, P3, P4 as possible Priority values, and each of those will need to be added to the Priority custom field.
 
 - **Severity Field Name**: `Priority`
 - **Info Mapping**: `P0`

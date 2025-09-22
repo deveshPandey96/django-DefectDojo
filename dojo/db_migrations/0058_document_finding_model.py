@@ -32,7 +32,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='finding',
             name='created',
-            field=models.DateTimeField(auto_now_add=True, help_text='The date the finding was created inside ExposureX.', null=True, verbose_name='Created'),
+            field=models.DateTimeField(auto_now_add=True, help_text='The date the finding was created inside DefectDojo.', null=True, verbose_name='Created'),
         ),
         migrations.AlterField(
             model_name='finding',

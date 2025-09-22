@@ -18,6 +18,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='jira_project',
             name='push_all_issues',
-            field=models.BooleanField(blank=True, default=False, help_text='Automatically create JIRA tickets for verified findings, assuming enforce_verified_status is True, or for all findings otherwise. Once linked, the JIRA ticket will continue to sync, regardless of status in ExposureX.'),
+            field=models.BooleanField(blank=True, default=False, help_text='Automatically create JIRA tickets for verified findings, assuming enforce_verified_status is True, or for all findings otherwise. Once linked, the JIRA ticket will continue to sync, regardless of status in DefectDojo.'),
         ),
     ]

@@ -1,15 +1,15 @@
 ---
 title: "Supported Report Types"
-description: "ExposureX has the ability to import scan reports from a large number of security tools."
+description: "DefectDojo has the ability to import scan reports from a large number of security tools."
 draft: false
 weight: 5
 exclude_search: true
 ---
 
-ExposureX can parse data from 180+ security reports and counting.
+DefectDojo can parse data from 180+ security reports and counting.
 
-## ExposureX Pro Methods
-<span style="background-color:rgba(242, 86, 29, 0.3)">ExposureX Pro</span> users have enhanced methods of import available for certain tools.
+## DefectDojo Pro Methods
+<span style="background-color:rgba(242, 86, 29, 0.3)">DefectDojo Pro</span> users have enhanced methods of import available for certain tools.
 
 **Connectors** allow you to automatically import and sync vulnerabilities from certain tools.
 
@@ -23,6 +23,6 @@ ExposureX can parse data from 180+ security reports and counting.
 
 All of these listed reports can be ingested via [Import/Reimport](../import_intro) methods. This means that they can be imported to both Open-Source and Pro instances using the UI or API.
 
-If your tool is not in this list, there's a good chance that ExposureX can still import a report from the tool.  Consider the [Generic Findings Import](./generic_findings_import/) method.
+If your tool is not in this list, there's a good chance that DefectDojo can still import a report from the tool.  Consider the [Generic Findings Import](./generic_findings_import/) method.
 
-<span style="background-color:rgba(242, 86, 29, 0.3)">ExposureX Pro</span> users can import any JSON or CSV report using the [Universal Parser](./universal_parser).
+<span style="background-color:rgba(242, 86, 29, 0.3)">DefectDojo Pro</span> users can import any JSON or CSV report using the [Universal Parser](./universal_parser).

@@ -8,7 +8,7 @@ Import JSON Checkmarx One scanner reports
 
 ## Overview
 
-The Checkmarx One parser for ExposureX supports importing findings from Checkmarx One in JSON format. The parser handles three types of security findings including SAST (Static Application Security Testing), KICS (Kubernetes/Infrastructure as Code Security), and SCA (Software Composition Analysis) scan results, with specialized parsing logic for each type.
+The Checkmarx One parser for DefectDojo supports importing findings from Checkmarx One in JSON format. The parser handles three types of security findings including SAST (Static Application Security Testing), KICS (Kubernetes/Infrastructure as Code Security), and SCA (Software Composition Analysis) scan results, with specialized parsing logic for each type.
 
 ## Supported File Types
 
@@ -28,18 +28,18 @@ The parser can handle several variations of the Checkmarx One JSON output format
 ### Total Fields in JSON
 
 - Total data fields in Checkmarx JSON output: 24 core fields per finding (with nested fields)
-- Total data fields parsed into ExposureX finding: 17 fields
+- Total data fields parsed into DefectDojo finding: 17 fields
 - Total data fields NOT parsed: 7 fields (some fields provide context but aren't directly mapped)
 
 ### Standard Format Field Mapping Details
 
-| Data Field # | Checkmarx Data Field | ExposureX Finding Field | Notes |
+| Data Field # | Checkmarx Data Field | DefectDojo Finding Field | Notes |
 |--------------|----------------------|--------------------------|-------|
 | 1 | type | unsaved_tags | Added as a tag identifying the finding type (sast, kics, sca, etc.) |
 | 2 | id | unique_id_from_tool | Primary unique identifier for the finding |
 | 3 | similarityId | unique_id_from_tool | Used as fallback if id not present |
 | 4 | status | - | Used for state determination but not directly mapped |
-| 5 | state | active, verified, false_p | Maps Checkmarx states to ExposureX fields through determine_state function |
+| 5 | state | active, verified, false_p | Maps Checkmarx states to DefectDojo fields through determine_state function |
 | 6 | severity | severity | Converted to title case (e.g., "HIGH" → "High") |
 | 7 | firstFoundAt | date | Used as finding date if USE_FIRST_SEEN setting is True |
 | 8 | foundAt | date | Used as finding date if USE_FIRST_SEEN setting is False |
@@ -89,7 +89,7 @@ Each vulnerability type has specialized parsing logic:
 
 #### Status Conversion
 - The `determine_state` function handles state conversion for all finding types
-- Maps Checkmarx One states to ExposureX fields:
+- Maps Checkmarx One states to DefectDojo fields:
   - "TO_VERIFY", "PROPOSED_NOT_EXPLOITABLE", "CONFIRMED", "URGENT" → active=True
   - "NOT_EXPLOITABLE", "CONFIRMED", "URGENT" → verified=True
   - "NOT_EXPLOITABLE" → false_p=True
@@ -97,7 +97,7 @@ Each vulnerability type has specialized parsing logic:
 
 #### Severity Conversion
 - Severity values from Checkmarx One ("HIGH", "MEDIUM", "LOW", etc.) are converted to title case
-- The parser takes the severity directly from the Checkmarx One finding and formats it to match ExposureX's expected format
+- The parser takes the severity directly from the Checkmarx One finding and formats it to match DefectDojo's expected format
 - No numerical conversion is performed, as Checkmarx One already provides categorical severity levels
 
 #### Description Construction
@@ -143,14 +143,14 @@ Each vulnerability type has specialized parsing logic:
 - All findings have explicit settings for active, verified, false_p, duplicate, and out_of_scope
 
 ### Sample Scan Data
-Sample Checkmarx One scans can be found [here](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/checkmarx_one).
+Sample Checkmarx One scans can be found [here](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/checkmarx_one).
 
 ### Link To Tool
 - [Checkmarx One](https://checkmarx.com/product/application-security-platform/)
 - [Checkmarx One Documentation](https://checkmarx.com/resource/documents/en/34965-68516-checkmarx-one-documentation-portal.html)
 
 ### Default Deduplication Hashcode Fields
-By default, ExposureX identifies duplicate Findings using these [hashcode fields](https://docs.exposurex.com/en/working_with_findings/finding_deduplication/about_deduplication/):
+By default, DefectDojo identifies duplicate Findings using these [hashcode fields](https://docs.defectdojo.com/en/working_with_findings/finding_deduplication/about_deduplication/):
 
 - vulnerability ids
 - component name

@@ -435,8 +435,8 @@ def vulnerability_id_fix(keyword):
     # problem still remains for other case, i.e. searching for "valentijn-scholten" will return no results because of the hyphen.
     # see:
     # - https://github.com/etianen/django-watson/issues/223
-    # - https://github.com/ExposureX/django-ExposureX/issues/1092
-    # - https://github.com/ExposureX/django-ExposureX/issues/2081
+    # - https://github.com/DefectDojo/django-DefectDojo/issues/1092
+    # - https://github.com/DefectDojo/django-DefectDojo/issues/2081
 
     keyword_parts = keyword.split(",")
     vulnerability_ids = [f"'{keyword_part}'" for keyword_part in keyword_parts

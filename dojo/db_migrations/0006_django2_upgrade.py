@@ -186,7 +186,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='system_settings',
             name='url_prefix',
-            field=models.CharField(blank=True, default='', help_text="URL prefix if ExposureX is installed in it's own virtual subdirectory.", max_length=300),
+            field=models.CharField(blank=True, default='', help_text="URL prefix if DefectDojo is installed in it's own virtual subdirectory.", max_length=300),
         ),
         migrations.AlterField(
             model_name='usercontactinfo',

@@ -61,7 +61,7 @@ class TagTests(DojoAPITestCase):
         product_details["tags"] = ["tag 10"]
         self.patch_product_api(product_id, product_details, expected_status_code=400)
         product_details["tags"] = ["tagA,tagB"]
-        # since https://github.com/ExposureX/django-ExposureX/pull/12434 tags are split again by commas
+        # since https://github.com/DefectDojo/django-DefectDojo/pull/12434 tags are split again by commas
         response = self.patch_product_api(product_id, product_details, expected_status_code=200)
         self.assertEqual(response["tags"], ["tagA", "tagB"])
 
@@ -215,7 +215,7 @@ class TagTests(DojoAPITestCase):
         finding_id = self.create_finding_with_tags(tags)
         response = self.get_finding_tags_api(finding_id)
 
-        # since https://github.com/ExposureX/django-ExposureX/pull/12434 tags are split again by commas
+        # since https://github.com/DefectDojo/django-DefectDojo/pull/12434 tags are split again by commas
         self.assertEqual(["one", "two"], response.get("tags"))
         self.assertEqual(2, len(response.get("tags")))
         self.assertIn("one", str(response["tags"]))

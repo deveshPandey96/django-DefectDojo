@@ -13,13 +13,13 @@ This parser expects a JSON file.
 - \`go list -json -deps ./... | nancy sleuth > nancy.json\`
 
 ### Sample Scan Data
-Sample Nancy scans can be found [here](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/nancy).
+Sample Nancy scans can be found [here](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/nancy).
 
 ### Link To Tool
 See Nancy on GitHub: https://github.com/sonatype-nexus-community/nancy
 
 ### Default Deduplication Hashcode Fields
-By default, ExposureX identifies duplicate Findings using these [hashcode fields](https://docs.exposurex.com/en/working_with_findings/finding_deduplication/about_deduplication/):
+By default, DefectDojo identifies duplicate Findings using these [hashcode fields](https://docs.defectdojo.com/en/working_with_findings/finding_deduplication/about_deduplication/):
 
 - title
 - vuln id from tool

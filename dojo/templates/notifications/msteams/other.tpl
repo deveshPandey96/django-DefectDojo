@@ -7,8 +7,8 @@
     "summary": "{% trans "Event" %}",
     "sections": [
         {
-            "activityTitle": "ExposureX",
-            "activityImage": "https://raw.githubusercontent.com/deveshPandey96/django-ExposureX/master/dojo/static/dojo/img/logo.svg",
+            "activityTitle": "DefectDojo",
+            "activityImage": "https://raw.githubusercontent.com/DefectDojo/django-DefectDojo/master/dojo/static/dojo/img/logo.svg",
             "text": "{% autoescape on %} {{ description }} {% endautoescape %}"
         }
         {% if system_settings.disclaimer_notifications and system_settings.disclaimer_notifications.strip %}

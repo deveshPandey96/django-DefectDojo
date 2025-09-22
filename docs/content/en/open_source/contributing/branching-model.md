@@ -7,21 +7,21 @@ weight: 3
 
 ## Regular releases
 
-The ExposureX team aims to maintain the following cadence: 
+The DefectDojo team aims to maintain the following cadence: 
 
 - Minor releases: at least once a month on the first Monday of the month.
 - Patch/Bugfix: releases every week on Monday.
 - Security releases: will be performed outside of our regular cadence depending on severity.
 
 GitHub Actions are the source of truth. The releases are semi-automated. The steps for a regular release are:
-1. Create the release branch from `dev` or `bugfix` and prepare a PR against `master` ([details](https://github.com/ExposureX/django-ExposureX/blob/master/.github/workflows/new-release-pr.yml))
+1. Create the release branch from `dev` or `bugfix` and prepare a PR against `master` ([details](https://github.com/DefectDojo/django-DefectDojo/blob/master/.github/workflows/new-release-pr.yml))
 --> A maintainer verifies and manually merges the PR
-1. Tag, issue draft release and docker build+push ([details](https://github.com/ExposureX/django-ExposureX/blob/master/.github/workflows/new-release-tag-docker.yml))
+1. Tag, issue draft release and docker build+push ([details](https://github.com/DefectDojo/django-DefectDojo/blob/master/.github/workflows/new-release-tag-docker.yml))
 --> A maintainer massages the release-drafter notes and publishes the release
-1. A PR to merge `master` back to `dev` and `bugfix` is created to re-align the branches ([details](https://github.com/ExposureX/django-ExposureX/blob/master/.github/workflows/new-release-master-into-dev.yml))
+1. A PR to merge `master` back to `dev` and `bugfix` is created to re-align the branches ([details](https://github.com/DefectDojo/django-DefectDojo/blob/master/.github/workflows/new-release-master-into-dev.yml))
 
 ## Security releases
-PRs that relate to security issues are done through [security advisories](https://github.com/ExposureX/django-ExposureX/security/advisories) which provide a way to work privately on code without prematurely disclosing vulnerabilities.
+PRs that relate to security issues are done through [security advisories](https://github.com/DefectDojo/django-DefectDojo/security/advisories) which provide a way to work privately on code without prematurely disclosing vulnerabilities.
 
 ## Release and hotfix model
 ![Schemas](images/branching_model_v2.png)

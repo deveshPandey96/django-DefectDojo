@@ -80,7 +80,7 @@ class TestZapParser(DojoTestCase):
     def test_parse_issue4360(self):
         """
         Report from GitHub issue 4360
-        see: https://github.com/ExposureX/django-ExposureX/issues/4360
+        see: https://github.com/DefectDojo/django-DefectDojo/issues/4360
         """
         with (get_unit_tests_scans_path("zap") / "dvwa_baseline_dojo.xml").open(encoding="utf-8") as testfile:
             parser = ZapParser()
@@ -115,7 +115,7 @@ class TestZapParser(DojoTestCase):
     def test_parse_issue4697(self):
         """
         Report from GitHub issue 4697
-        see: https://github.com/ExposureX/django-ExposureX/issues/4697
+        see: https://github.com/DefectDojo/django-DefectDojo/issues/4697
         """
         with (get_unit_tests_scans_path("zap") / "zap-results-first-scan.xml").open(encoding="utf-8") as testfile:
             parser = ZapParser()

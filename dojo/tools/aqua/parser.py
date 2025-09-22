@@ -66,7 +66,7 @@ class AquaParser:
     #     - title: Created by combining the finding's cve and file_path
     #     - description: Text describing finding
     #     - url: Url associated with the finding
-    #     - severity: Severity rating converted from Aqua's integer format into ExposureX's format.
+    #     - severity: Severity rating converted from Aqua's integer format into DefectDojo's format.
     #       #Jino: On line 106 it calls severity_of instead of aqua_severity_of. get_item v1 uses aqua_severity_of#
     #     - impact: Impact rating of finding. Same as the finding severity.
     #     - mitigation: If solution is true, mitigation equals true. If fix_version is true, mitigation equals 'Upgrade to True'.If neither are true mitigation equals 'No known mitigation'.

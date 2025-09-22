@@ -1,10 +1,10 @@
 ---
 title: "Metrics Dashboards (Pro)"
-description: "How to use ExposureX's Pro Metrics"
+description: "How to use DefectDojo's Pro Metrics"
 weight: 3
 ---
 
-The <span style="background-color:rgba(242, 86, 29, 0.5)">ExposureX Pro UI</span> has many Metrics dashboards which are kept up to date in real-time.  Each Dashboard can render a PDF report to share data with key stakeholders.
+The <span style="background-color:rgba(242, 86, 29, 0.5)">DefectDojo Pro UI</span> has many Metrics dashboards which are kept up to date in real-time.  Each Dashboard can render a PDF report to share data with key stakeholders.
 
 These dashboards include:
 
@@ -33,13 +33,13 @@ This dashboard shows a report of your team's security program, including quarter
 
 ![image](images/pro_dashboards_4.png)
 
-This dashboard tracks your remediation performance, charting time to remediation as well as Risk Acceptance over time.  "Highly Exploitable Findings" uses [EPSS scores](/en/working_with_findings/intro_to_findings/#monitor-current-vulnerabilities-using-cves-and-epss-scores-pro-feature) to estimate the likelihood of a Finding's exploit.  ExposureX Pro comes with a daily-updated EPSS database to which assigns those scores and percentiles to each of your Findings.
+This dashboard tracks your remediation performance, charting time to remediation as well as Risk Acceptance over time.  "Highly Exploitable Findings" uses [EPSS scores](/en/working_with_findings/intro_to_findings/#monitor-current-vulnerabilities-using-cves-and-epss-scores-pro-feature) to estimate the likelihood of a Finding's exploit.  DefectDojo Pro comes with a daily-updated EPSS database to which assigns those scores and percentiles to each of your Findings.
 
 ## Tool Insights
 
 ![image](images/pro_dashboards_5.png)
 
-This dashboard tracks the performance of each security tool used in ExposureX, based on the count and severity of Findings that it reports.
+This dashboard tracks the performance of each security tool used in DefectDojo, based on the count and severity of Findings that it reports.
 
 ## Switching To The Pro UI
 

@@ -4,16 +4,16 @@ toc_hide: true
 ---
 Run [Talisman](https://github.com/thoughtworks/talisman) in CLI mode and use "**--scan**" argument to scan the git commit history along with "**--reportDirectory**" argument to save the scan reports to a directory. The report will be in JSON format.
 
-Additionally, you can set up Git Hooks to automate the scan and then send the generated reports to ExposureX using its API.
+Additionally, you can set up Git Hooks to automate the scan and then send the generated reports to DefectDojo using its API.
 
 Example:
 
 ```bash
 #!/bin/sh
 
-# Set ExposureX API credential and other variables
+# Set DefectDojo API credential and other variables
 DEFECTDOJO_API_KEY="your-api-key"
-DEFECTDOJO_URL="https://your-exposurex-url.com"
+DEFECTDOJO_URL="https://your-defectdojo-url.com"
 TALISMAN_RESULTS_DIR="$HOME"
 
 # Run talisman in CLI mode and output the result in JSON format
@@ -25,7 +25,7 @@ result=$(jq '.results[].filename' "${TALISMAN_RESULTS_DIR}/talisman_reports/data
 
 # Check if result is not empty
 if [ -n "$result" ]; then
-  # If talisman found issues, send the JSON output to ExposureX API endpoint
+  # If talisman found issues, send the JSON output to DefectDojo API endpoint
   curl -X POST \
     -H "Authorization: Token $DEFECTDOJO_API_KEY" \
     -H "Content-Type: application/json" \
@@ -41,10 +41,10 @@ fi
 ```
 
 ### Sample Scan Data
-Sample Talisman scans can be found [here](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/talisman).
+Sample Talisman scans can be found [here](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/talisman).
 
 ### Default Deduplication Hashcode Fields
-By default, ExposureX identifies duplicate Findings using these [hashcode fields](https://docs.exposurex.com/en/working_with_findings/finding_deduplication/about_deduplication/):
+By default, DefectDojo identifies duplicate Findings using these [hashcode fields](https://docs.defectdojo.com/en/working_with_findings/finding_deduplication/about_deduplication/):
 
 - title
 - cwe

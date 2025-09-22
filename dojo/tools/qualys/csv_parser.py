@@ -21,7 +21,7 @@ def get_fields(self) -> list[str]:
     - title: Set to gid and vulnerability name from Qualys Scanner
     - mitigation: Set to solution from Qualys Scanner
     - description: Custom description made from: description, category, QID, port, result evidence, first found, last found, and times found.
-    - severity: Set to severity from Qualys Scanner translated into ExposureX formant.
+    - severity: Set to severity from Qualys Scanner translated into DefectDojo formant.
     - impact: Set to impact from Qualys Scanner.
     - date: Set to datetime from Qualys Scanner.
     - vuln_id_from_tool: Set to gid from Qualys Scanner.
@@ -53,7 +53,7 @@ def get_dedupe_fields(self) -> list[str]:
 
     Fields:
     - title: Set to gid and vulnerability name from Qualys Scanner
-    - severity: Set to severity from Qualys Scanner translated into ExposureX formant.
+    - severity: Set to severity from Qualys Scanner translated into DefectDojo formant.
 
     #NOTE: endpoints is not provided by parser
     """

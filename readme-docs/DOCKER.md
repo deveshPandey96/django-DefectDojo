@@ -1,14 +1,14 @@
 # Running with Docker Compose
 
-The docker-compose.yml file in this repository is fully functional to evaluate ExposureX in your local environment.
+The docker-compose.yml file in this repository is fully functional to evaluate DefectDojo in your local environment.
 
-Although Docker Compose is one of the supported installation methods to deploy a containerized ExposureX in a production environment, the docker-compose.yml file is not intended for production use without first customizing it to your particular situation.
+Although Docker Compose is one of the supported installation methods to deploy a containerized DefectDojo in a production environment, the docker-compose.yml file is not intended for production use without first customizing it to your particular situation.
 
-[Running in Production](https://docs.exposurex.com/en/open_source/installation/running-in-production/) gives advice on which adjustments are useful for performance and operational reliability.
+[Running in Production](https://docs.defectdojo.com/en/open_source/installation/running-in-production/) gives advice on which adjustments are useful for performance and operational reliability.
 
-[Configuration](https://docs.exposurex.com/en/open_source/installation/configuration/) explains the different ways to adjust settings and environment variables.
+[Configuration](https://docs.defectdojo.com/en/open_source/installation/configuration/) explains the different ways to adjust settings and environment variables.
 
-Docker images for `linux/amd64` are published to https://hub.docker.com/u/exposurex. Expiremental builds for `linux/arm64` are available since 2.45.0.
+Docker images for `linux/amd64` are published to https://hub.docker.com/u/defectdojo. Expiremental builds for `linux/arm64` are available since 2.45.0.
 
 
 # Prerequisites
@@ -21,10 +21,10 @@ Docker images for `linux/amd64` are published to https://hub.docker.com/u/exposu
 
 # Setup via Docker Compose - Introduction
 
-ExposureX needs several docker images to run. Two of them depend on ExposureX code:
+DefectDojo needs several docker images to run. Two of them depend on DefectDojo code:
 
-*  django service - exposurex/exposurex-django image
-*  nginx service - exposurex/exposurex-nginx image
+*  django service - defectdojo/defectdojo-django image
+*  nginx service - defectdojo/defectdojo-nginx image
 
 The nginx image is build based on the django image.
 
@@ -32,8 +32,8 @@ Before running the application, it's advised to build local images to make sure 
 When running the application without building images, the application will run based on:
 *  a previously locally built image if it exists in the docker cache
 *  else the images pulled from dockerhub
-    *  https://hub.docker.com/r/exposurex/exposurex-django
-    *  https://hub.docker.com/r/exposurex/exposurex-nginx
+    *  https://hub.docker.com/r/defectdojo/defectdojo-django
+    *  https://hub.docker.com/r/defectdojo/defectdojo-nginx
 
 
 # Setup via Docker Compose
@@ -198,14 +198,14 @@ Building will tag the images with "x.y.z", then you can run the application base
 ```
 $ docker compose images
 CONTAINER               REPOSITORY                     TAG                 IMAGE ID            SIZE
-dd-nginx-1              exposurex/exposurex-nginx    latest              b0a5f30ab01a        193MB
+dd-nginx-1              defectdojo/defectdojo-nginx    latest              b0a5f30ab01a        193MB
 ...
 
 or
 
 $ docker images
 REPOSITORY                     TAG                 IMAGE ID            CREATED             SIZE
-exposurex/exposurex-nginx    1.0.0               bc9c5f7bb4e5        About an hour ago   191MB
+defectdojo/defectdojo-nginx    1.0.0               bc9c5f7bb4e5        About an hour ago   191MB
 ...
 ```
 
@@ -214,14 +214,14 @@ exposurex/exposurex-nginx    1.0.0               bc9c5f7bb4e5        About an ho
 ```
 $ docker compose ps
 NAME                    IMAGE                                 COMMAND                  SERVICE            CREATED              STATUS              PORTS
-dd-nginx-1              exposurex/exposurex-nginx:latest    "/entrypoint-nginx.sh"   nginx              About a minute ago   Up About a minute   0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp,
+dd-nginx-1              defectdojo/defectdojo-nginx:latest    "/entrypoint-nginx.sh"   nginx              About a minute ago   Up About a minute   0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp,
 ...
 
 or
 
 $ docker ps
 CONTAINER ID        IMAGE                                 COMMAND                  CREATED             STATUS              PORTS                                NAMES
-aedc404d6dee        exposurex/exposurex-nginx:1.0.0     "/entrypoint-nginx.sh"   2 minutes ago       Up 2 minutes        80/tcp, 0.0.0.0:8080->8080/tcp       django-defectdojo_nginx_1
+aedc404d6dee        defectdojo/defectdojo-nginx:1.0.0     "/entrypoint-nginx.sh"   2 minutes ago       Up 2 minutes        80/tcp, 0.0.0.0:8080->8080/tcp       django-defectdojo_nginx_1
 ...
 ```
 

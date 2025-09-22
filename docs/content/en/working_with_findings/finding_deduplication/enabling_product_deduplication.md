@@ -18,15 +18,15 @@ Deduplication can be implemented at either a Product level or at a more narrow E
 
 ### Enable Finding Deduplication
 
-**Enable Finding Deduplication** will turn on the Deduplication Algorithm for all Findings. Deduplication will be triggered on all subsequent imports \- when this happens, ExposureX will look at any Findings contained in the destination Product, and deduplicate as per your settings. 
+**Enable Finding Deduplication** will turn on the Deduplication Algorithm for all Findings. Deduplication will be triggered on all subsequent imports \- when this happens, DefectDojo will look at any Findings contained in the destination Product, and deduplicate as per your settings. 
 
 ### Delete Deduplicate Findings
 
-**Delete Deduplicate Findings**, combined with the **Maximum Duplicates** field allows ExposureX to limit the amount of Duplicate Findings stored. When this field is enabled, ExposureX will only keep a certain number of Duplicate Findings.
+**Delete Deduplicate Findings**, combined with the **Maximum Duplicates** field allows DefectDojo to limit the amount of Duplicate Findings stored. When this field is enabled, DefectDojo will only keep a certain number of Duplicate Findings.
 
-Applying **Delete Deduplicate Findings** will begin a deletion process immediately. ExposureX will look at each Finding with Duplicates recorded, and will delete old duplicate Findings until the Maximum Duplicate number has been reached.
+Applying **Delete Deduplicate Findings** will begin a deletion process immediately. DefectDojo will look at each Finding with Duplicates recorded, and will delete old duplicate Findings until the Maximum Duplicate number has been reached.
 
-For more information on how ExposureX determines what to delete, see our guide to **[Deleting Deduplicate Findings](../delete_deduplicates/).**
+For more information on how DefectDojo determines what to delete, see our guide to **[Deleting Deduplicate Findings](../delete_deduplicates/).**
 
 ## Deduplication for Engagements
 

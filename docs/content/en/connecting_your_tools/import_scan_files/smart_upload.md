@@ -4,7 +4,7 @@ description: "Automatically route incoming Findings to the correct Product"
 weight: 3
 ---
 
-<span style="background-color:rgba(242, 86, 29, 0.3)">Note: Smart Upload is only available in ExposureX Pro.</span>
+<span style="background-color:rgba(242, 86, 29, 0.3)">Note: Smart Upload is only available in DefectDojo Pro.</span>
 
 Smart upload is a specialized importer that ingests reports from **infrastructure scanning tools**, including:
 
@@ -22,7 +22,7 @@ Smart Upload handles this by sorting incoming findings based on the Endpoints di
 
 The Smart Upload menu is stored in a collapsible section of the sidebar.
 
-* **Add Findings allows you to import a new scan file, similar to ExposureX’s Import Scan method**
+* **Add Findings allows you to import a new scan file, similar to DefectDojo’s Import Scan method**
 * **Unassigned Findings lists all Findings from Smart Upload which have yet to be assigned to a Product.**
 
 ![image](images/smart_upload.png)

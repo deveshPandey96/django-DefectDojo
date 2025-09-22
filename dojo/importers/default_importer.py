@@ -40,7 +40,7 @@ class DefaultImporterOptions(ImporterOptions):
 class DefaultImporter(BaseImporter, DefaultImporterOptions):
 
     """
-    The classic importer process used by ExposureX
+    The classic importer process used by DefectDojo
 
     This Importer is intended to be used when auditing the history
     of findings at a given point in time is required

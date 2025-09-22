@@ -7,7 +7,7 @@ toc_hide: true
 
 ## Overview
 
-The Nexpose XML 2.0 (Rapid7) parser for ExposureX supports importing vulnerability scan results from Rapid7's Nexpose vulnerability scanner. This parser processes XML reports containing detailed information about vulnerabilities detected across hosts and services in your environment.
+The Nexpose XML 2.0 (Rapid7) parser for DefectDojo supports importing vulnerability scan results from Rapid7's Nexpose vulnerability scanner. This parser processes XML reports containing detailed information about vulnerabilities detected across hosts and services in your environment.
 
 ## Supported File Types
 
@@ -24,12 +24,12 @@ The Nexpose parser accepts XML 2.0 file format. To generate this file:
 ### Total Fields in Nexpose XML
 
 - Total data fields in Nexpose XML: 25 primary elements with nested structures
-- Total data fields parsed into ExposureX finding: 18 key fields mapped
+- Total data fields parsed into DefectDojo finding: 18 key fields mapped
 - Total data fields NOT parsed: 7 (including metadata fields not relevant to findings)
 
 ### Field Mapping Details
 
-| Data Field # | Nexpose Data Field | ExposureX Finding Field | Parser Line # | Notes |
+| Data Field # | Nexpose Data Field | DefectDojo Finding Field | Parser Line # | Notes |
 |--------------|------------|---------------|---------------|-------|
 | 1 | vulnerability.title | title | 323 | Direct mapping to finding title |
 | 2 | vulnerability.description | description | 324-325 | Converted from HTML to text |
@@ -63,7 +63,7 @@ The Nexpose parser accepts XML 2.0 file format. To generate this file:
 
 #### Severity Conversion
 - Nexpose uses a numeric severity scale from 0-10
-- The parser converts this to ExposureX's text-based severity levels (lines 316-320):
+- The parser converts this to DefectDojo's text-based severity levels (lines 316-320):
   - 9-10: Critical
   - 7-8: High
   - 4-6: Medium
@@ -103,14 +103,14 @@ The Nexpose parser accepts XML 2.0 file format. To generate this file:
 - All findings are set to false_p=False and duplicate=False (lines 342-343)
 
 ### Sample Scan Data
-Sample Nexpose XML 2.0 (Rapid7) scans can be found in the [unit test example scans folder](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/nexpose).
+Sample Nexpose XML 2.0 (Rapid7) scans can be found in the [unit test example scans folder](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/nexpose).
 
 ### Link To Tool
 - [Rapid7 Nexpose](https://www.rapid7.com/products/nexpose/)
 - [Nexpose Documentation](https://docs.rapid7.com/nexpose/)
 
 ### Default Deduplication Hashcode Fields
-By default, ExposureX identifies duplicate Findings using these [hashcode fields](https://docs.exposurex.com/en/working_with_findings/finding_deduplication/about_deduplication/):
+By default, DefectDojo identifies duplicate Findings using these [hashcode fields](https://docs.defectdojo.com/en/working_with_findings/finding_deduplication/about_deduplication/):
 
 - title
 - severity

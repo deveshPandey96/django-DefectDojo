@@ -3,11 +3,11 @@ title: "Managing Operations"
 description: "Check the status of your Connector's Discover & Sync Operations"
 ---
 
-<span style="background-color:rgba(242, 86, 29, 0.3)">Note: Connectors are a ExposureX Pro-only feature.</span>
+<span style="background-color:rgba(242, 86, 29, 0.3)">Note: Connectors are a DefectDojo Pro-only feature.</span>
 
 Once an API connector is set up, it will run two Operations on a recurring basis:
 
-* **Discover** will learn the connected tool's structure, and will create records in ExposureX of any unmapped data;
+* **Discover** will learn the connected tool's structure, and will create records in DefectDojo of any unmapped data;
 * **Sync** will import new Findings from the tool based on your mappings.
 
 Both of these Operations are managed on the Operations page of a Connector. The table will also track past runs of these Operations so that you can ensure your Connector is up to date.
@@ -26,18 +26,18 @@ Each entry on the Operations Page's table is a record of an operation event, wit
 
 * **Type** describes whether the event was a **Sync** or a **Discover** operation.
 * **Status** describes whether the event ran successfully.
-* **Trigger** describes how the event was triggered \- was it a **Scheduled** operation which ran automatically, or a **Manual** operation which was triggered by a ExposureX user?
+* **Trigger** describes how the event was triggered \- was it a **Scheduled** operation which ran automatically, or a **Manual** operation which was triggered by a DefectDojo user?
 * The **Start \& End Time** of each operation is recorded here, along with the **Duration**.
 
 ## Discover Operations
 
-The first step a ExposureX Connector needs to take is to **Discover** your tool's environment to see how you're organizing your scan data.
+The first step a DefectDojo Connector needs to take is to **Discover** your tool's environment to see how you're organizing your scan data.
 
-Let's say you have a BurpSuite tool, which is set up to scan five different repositories for vulnerabilities. Your Connector will take note of this organizational structure and set up **Records** to help you translate those separate repositories into ExposureXs Product/Engagement/Test hierarchy.
+Let's say you have a BurpSuite tool, which is set up to scan five different repositories for vulnerabilities. Your Connector will take note of this organizational structure and set up **Records** to help you translate those separate repositories into DefectDojos Product/Engagement/Test hierarchy.
 
 ### Creating New Records
 
-Each time your Connector runs a **Discover** operation, it will look for new **Vendor\-Equivalent\-Products (VEPs)**. ExposureX looks at the way the Vendor tool is set up and will create **Records** of VEPs based on how your tool is organized.
+Each time your Connector runs a **Discover** operation, it will look for new **Vendor\-Equivalent\-Products (VEPs)**. DefectDojo looks at the way the Vendor tool is set up and will create **Records** of VEPs based on how your tool is organized.
 
 ![image](images/operations_discover_2.png)
 
@@ -51,11 +51,11 @@ To learn more about working with records and setting up mappings to Products, se
 
 ## Sync Operations
 
-On a daily basis, ExposureX will look at each **Mapped Record** for new scan data. ExposureX will then run a **Reimport**, which compares the state of existing scan data to an incoming report.
+On a daily basis, DefectDojo will look at each **Mapped Record** for new scan data. DefectDojo will then run a **Reimport**, which compares the state of existing scan data to an incoming report.
 
 ### Where is vulnerability data stored?
 
-* ExposureX will create an **Engagement** nested under the Product specified in the **Record Mapping**. This Engagement will be called **Global Connectors**.
+* DefectDojo will create an **Engagement** nested under the Product specified in the **Record Mapping**. This Engagement will be called **Global Connectors**.
 * The **Global Connectors** Engagement will track each separate Connection associated with the Product as a **Test**.
 * On this sync, and each subsequent sync, the **Test** will store each vulnerability found by the tool as a **Finding**.
 
@@ -70,7 +70,7 @@ To learn more about Products, Engagements, Tests and Findings, see our [Product 
 
 ### Running Sync Manually
 
-To have ExposureX run a Sync operation off\-schedule:
+To have DefectDojo run a Sync operation off\-schedule:
 
 1. Navigate to the **Manage Records \& Operations** page for the connector you want to use. From the **API Connectors** page, click the drop\-down menu on the Connector you wish to work with, and select Manage Records \& Operations.  
 ​

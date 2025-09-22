@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 """
 Author: Aaron Weaver
-This script will update the hashcode and dedupe findings in ExposureX:
+This script will update the hashcode and dedupe findings in DefectDojo:
 """
 
 

@@ -1,20 +1,20 @@
 ---
 title: "Filter Index"
-description: "Reference for all filters in ExposureX"
+description: "Reference for all filters in DefectDojo"
 weight: 5
 ---
 
-**Note: Currently this article only covers Finding Filters available in the ExposureX Pro UI, but this article will be expanded in the future to govern more object types, along with Open-Source filters.** 
+**Note: Currently this article only covers Finding Filters available in the DefectDojo Pro UI, but this article will be expanded in the future to govern more object types, along with Open-Source filters.** 
 
-Here is a list of filters that can be applied in the ExposureX Pro UI to sort lists of Findings.  ExposureX Filters can be used to assist with navigating through lists of Objects, creating custom [Dashboard Tiles](/en/customize_dojo/dashboards/about_custom_dashboard_tiles/), or creating automation via [Rules Engine](/en/customize_dojo/rules_engine/).
+Here is a list of filters that can be applied in the DefectDojo Pro UI to sort lists of Findings.  DefectDojo Filters can be used to assist with navigating through lists of Objects, creating custom [Dashboard Tiles](/en/customize_dojo/dashboards/about_custom_dashboard_tiles/), or creating automation via [Rules Engine](/en/customize_dojo/rules_engine/).
 
 ## Findings
-These fields are specific to ExposureX Findings and are used to organize a Finding.  Each of these filters is a separate column in the All Findings table.
+These fields are specific to DefectDojo Findings and are used to organize a Finding.  Each of these filters is a separate column in the All Findings table.
 
-Findings in ExposureX can be filtered by:
+Findings in DefectDojo can be filtered by:
 
-### ExposureX Metadata
-These Filters are related directly to ExposureX core functionality.
+### DefectDojo Metadata
+These Filters are related directly to DefectDojo core functionality.
 
 ##### Cannot be modified
 These Filters are assigned at the time of issue creation, and cannot be directly modified via Edit Finding.
@@ -42,7 +42,7 @@ These fields are set when an issue is created, but can be modified as an issue p
 * Mitigated (True or False)
 
 ##### Additional Model Functions
-These ExposureX functions can be used to further organize your Findings or track remediation.
+These DefectDojo functions can be used to further organize your Findings or track remediation.
 
 * Finding Tags
 * Reviewers (Assigned User)
@@ -51,7 +51,7 @@ These ExposureX functions can be used to further organize your Findings or track
 * Risk Acceptance (select one or more existing Risk Acceptances from the list)
 
 ### Tool-Specific Metadata
-These fields have no direct impact on the functionality of ExposureX, but provide additional information to help explain and mitigate issues.  They can be set when a Finding is initially created (using information in an incoming report), or they can be changed by a user.
+These fields have no direct impact on the functionality of DefectDojo, but provide additional information to help explain and mitigate issues.  They can be set when a Finding is initially created (using information in an incoming report), or they can be changed by a user.
 
 * CWE Value
 * Vulnerability ID (usually a CVE)

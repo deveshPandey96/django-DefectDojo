@@ -66,7 +66,7 @@ class GitlabSecretDetectionReportParser:
 
     def normalise_severity(self, severity):
         """
-        Normalise GitLab's severity to ExposureX's
+        Normalise GitLab's severity to DefectDojo's
         (Critical, High, Medium, Low, Unknown, Info) -> (Critical, High, Medium, Low, Info)
         """
         return "Info" if severity == "Unknown" else severity

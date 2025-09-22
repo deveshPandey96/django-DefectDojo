@@ -91,7 +91,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='risk_acceptance',
             name='owner',
-            field=models.ForeignKey(help_text='User in ExposureX owning this acceptance. Only the owner and staff users can edit the risk acceptance.', on_delete=django.db.models.deletion.RESTRICT, to='dojo.dojo_user'),
+            field=models.ForeignKey(help_text='User in DefectDojo owning this acceptance. Only the owner and staff users can edit the risk acceptance.', on_delete=django.db.models.deletion.RESTRICT, to='dojo.dojo_user'),
         ),
         migrations.AlterField(
             model_name='stub_finding',
