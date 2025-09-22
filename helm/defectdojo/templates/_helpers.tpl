@@ -2,7 +2,7 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "defectdojo.name" -}}
+{{- define "exposurex.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 
@@ -11,7 +11,7 @@ Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 If release name contains chart name it will be used as a full name.
 */}}
-{{- define "defectdojo.fullname" -}}
+{{- define "exposurex.fullname" -}}
 {{- if .Values.fullnameOverride -}}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" -}}
 {{- else -}}
@@ -27,18 +27,18 @@ If release name contains chart name it will be used as a full name.
 {{/*
 Create chart name and version as used by the chart label.
 */}}
-{{- define "defectdojo.chart" -}}
+{{- define "exposurex.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 
 {{/*
 Create the name of the service account to use
 */}}
-{{- define "defectdojo.serviceAccountName" -}}
+{{- define "exposurex.serviceAccountName" -}}
 {{- if .Values.serviceAccount.create -}}
-    {{ default (include "defectdojo.fullname" .) .Values.serviceAccount.name }}
+    {{ default (include "exposurex.fullname" .) .Values.serviceAccount.name }}
 {{- else -}}
-    {{ default "defectdojo" .Values.serviceAccount.name }}
+    {{ default "exposurex" .Values.serviceAccount.name }}
 {{- end -}}
 {{- end -}}
 
@@ -85,19 +85,19 @@ Create the name of the service account to use
   Builds the repository names for use with local or private registries
 */}}
 {{- define "celery.repository" -}}
-{{- printf "%s" .Values.repositoryPrefix -}}/defectdojo-django
+{{- printf "%s" .Values.repositoryPrefix -}}/exposurex-django
 {{- end -}}
 
 {{- define "django.nginx.repository" -}}
-{{- printf "%s" .Values.repositoryPrefix -}}/defectdojo-nginx
+{{- printf "%s" .Values.repositoryPrefix -}}/exposurex-nginx
 {{- end -}}
 
 {{- define "django.uwsgi.repository" -}}
-{{- printf "%s" .Values.repositoryPrefix -}}/defectdojo-django
+{{- printf "%s" .Values.repositoryPrefix -}}/exposurex-django
 {{- end -}}
 
 {{- define "initializer.repository" -}}
-{{- printf "%s" .Values.repositoryPrefix -}}/defectdojo-django
+{{- printf "%s" .Values.repositoryPrefix -}}/exposurex-django
 {{- end -}}
 
 {{- define "initializer.jobname" -}}
@@ -160,7 +160,7 @@ Create the name of the service account to use
   - name: DD_DATABASE_PASSWORD
     valueFrom:
       secretKeyRef:
-        name: {{ .Values.postgresql.auth.existingSecret | default "defectdojo-postgresql-specific" }}
+        name: {{ .Values.postgresql.auth.existingSecret | default "exposurex-postgresql-specific" }}
         key: {{ .Values.postgresql.auth.secretKeys.userPasswordKey | default "postgresql-password" }}
   {{- if .Values.extraEnv }}
   {{- toYaml .Values.extraEnv | nindent 2 }}

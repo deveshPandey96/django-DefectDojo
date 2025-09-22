@@ -1,14 +1,14 @@
-{{- $fullName := include "defectdojo.fullname" . -}}
+{{- $fullName := include "exposurex.fullname" . -}}
 apiVersion: v1
 kind: Service
 metadata:
   name: {{ $fullName }}-django
   labels:
-    defectdojo.org/component: django
-    app.kubernetes.io/name: {{ include "defectdojo.name" . }}
+    exposurex.org/component: django
+    app.kubernetes.io/name: {{ include "exposurex.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
-    helm.sh/chart: {{ include "defectdojo.chart" . }}
+    helm.sh/chart: {{ include "exposurex.chart" . }}
     {{- with .Values.extraLabels }}
       {{- toYaml . | nindent 4 }}
     {{- end }}
@@ -20,8 +20,8 @@ metadata:
 {{- end }}
 spec:
   selector:
-    defectdojo.org/component: django
-    app.kubernetes.io/name: {{ include "defectdojo.name" . }}
+    exposurex.org/component: django
+    app.kubernetes.io/name: {{ include "exposurex.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
   ports:
   - name: http

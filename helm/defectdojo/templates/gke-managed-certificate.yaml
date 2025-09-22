@@ -1,5 +1,5 @@
 {{- if .Values.gke.useManagedCertificate }}
-{{- $fullName := include "defectdojo.fullname" . -}}
+{{- $fullName := include "exposurex.fullname" . -}}
 apiVersion: networking.gke.io/v1
 kind: ManagedCertificate
 metadata:

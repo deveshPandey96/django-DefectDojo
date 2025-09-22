@@ -1,14 +1,14 @@
-{{- $fullName := include "defectdojo.fullname" . -}}
+{{- $fullName := include "exposurex.fullname" . -}}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ $fullName }}-django
   labels:
-    defectdojo.org/component: django
-    app.kubernetes.io/name: {{ include "defectdojo.name" . }}
+    exposurex.org/component: django
+    app.kubernetes.io/name: {{ include "exposurex.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
-    helm.sh/chart: {{ include "defectdojo.chart" . }}
+    helm.sh/chart: {{ include "exposurex.chart" . }}
     {{- with .Values.extraLabels }}
       {{- toYaml . | nindent 4 }}
     {{- end }}
@@ -29,14 +29,14 @@ spec:
   {{- end }}
   selector:
     matchLabels:
-      defectdojo.org/component: django
-      app.kubernetes.io/name: {{ include "defectdojo.name" . }}
+      exposurex.org/component: django
+      app.kubernetes.io/name: {{ include "exposurex.name" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        defectdojo.org/component: django
-        app.kubernetes.io/name: {{ include "defectdojo.name" . }}
+        exposurex.org/component: django
+        app.kubernetes.io/name: {{ include "exposurex.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
         {{- with .Values.extraLabels }}
           {{- toYaml . | nindent 8 }}
@@ -60,7 +60,7 @@ spec:
         checksum/esecret: {{ include (print $.Template.BasePath "/extra-secret.yaml") . | sha256sum }}
       {{- end }}
     spec:
-      serviceAccountName: {{ include "defectdojo.serviceAccountName" . }}
+      serviceAccountName: {{ include "exposurex.serviceAccountName" . }}
       {{- if .Values.imagePullSecrets }}
       imagePullSecrets:
       - name: {{ .Values.imagePullSecrets }}
@@ -156,7 +156,7 @@ spec:
         {{- end }}
         volumeMounts:
         - name: run
-          mountPath: /run/defectdojo
+          mountPath: /run/exposurex
         {{- if  .Values.localsettingspy }}
         - name: localsettingspy
           readOnly: true
@@ -194,7 +194,7 @@ spec:
           valueFrom:
             secretKeyRef:
             {{- if eq .Values.celery.broker "redis" }}
-              name: {{ .Values.redis.auth.existingSecret | default "defectdojo-redis-specific" }}
+              name: {{ .Values.redis.auth.existingSecret | default "exposurex-redis-specific" }}
               key: {{ .Values.redis.auth.existingSecretPasswordKey | default "redis-password" }}
             {{- end }}
         {{- if .Values.django.uwsgi.enableDebug }}
@@ -204,7 +204,7 @@ spec:
         - name: DD_DATABASE_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: {{ .Values.postgresql.auth.existingSecret | default "defectdojo-postgresql-specific" }}
+              name: {{ .Values.postgresql.auth.existingSecret | default "exposurex-postgresql-specific" }}
               key: {{ .Values.postgresql.auth.secretKeys.userPasswordKey | default "postgresql-password" }}
         - name: DD_SECRET_KEY
           valueFrom:
@@ -248,7 +248,7 @@ spec:
         {{- end }}
         volumeMounts:
         - name: run
-          mountPath: /run/defectdojo
+          mountPath: /run/exposurex
         {{- range .Values.django.extraVolumes }}
         {{- if (eq .container "nginx") }}
         - name: userconfig-{{ .name }}

@@ -2,12 +2,12 @@
 kind: ServiceAccount
 apiVersion: v1
 metadata:
-  name: {{ include "defectdojo.serviceAccountName" . }}
+  name: {{ include "exposurex.serviceAccountName" . }}
   labels:
-    app.kubernetes.io/name: {{ include "defectdojo.name" . }}
+    app.kubernetes.io/name: {{ include "exposurex.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
-    helm.sh/chart: {{ include "defectdojo.chart" . }}
+    helm.sh/chart: {{ include "exposurex.chart" . }}
     {{- with .Values.extraLabels }}
       {{- toYaml . | nindent 4 }}
     {{- end }}

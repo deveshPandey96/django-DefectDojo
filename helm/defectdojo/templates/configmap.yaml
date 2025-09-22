@@ -1,13 +1,13 @@
-{{- $fullName := include "defectdojo.fullname" . -}}
+{{- $fullName := include "exposurex.fullname" . -}}
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {{ $fullName }}
   labels:
-    app.kubernetes.io/name: {{ include "defectdojo.name" . }}
+    app.kubernetes.io/name: {{ include "exposurex.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
-    helm.sh/chart: {{ include "defectdojo.chart" . }}
+    helm.sh/chart: {{ include "exposurex.chart" . }}
     {{- with .Values.extraLabels }}
       {{- toYaml . | nindent 4 }}
     {{- end }}
@@ -19,7 +19,7 @@ metadata:
 {{- end }}
 data:
   DD_ADMIN_USER: {{ .Values.admin.user | default "admin" }}
-  DD_ADMIN_MAIL: {{ .Values.admin.Mail | default "admin@defectdojo.local" }}
+  DD_ADMIN_MAIL: {{ .Values.admin.Mail | default "admin@exposurex.local" }}
   DD_ADMIN_FIRST_NAME: {{ .Values.admin.FirstName | default "Admin" }}
   DD_ADMIN_LAST_NAME: {{ .Values.admin.LastName | default "User" }}
   DD_ALLOWED_HOSTS: {{ include "django.allowed_hosts" . }}
@@ -42,9 +42,9 @@ data:
   DD_DATABASE_USER: {{ .Values.postgresql.auth.username }}
   DD_DATABASE_NAME: {{ .Values.postgresql.auth.database }}
   DD_INITIALIZE: '{{ .Values.initializer.run }}'
-  DD_UWSGI_ENDPOINT: /run/defectdojo/uwsgi.sock
+  DD_UWSGI_ENDPOINT: /run/exposurex/uwsgi.sock
   DD_UWSGI_HOST: localhost
-  DD_UWSGI_PASS: unix:///run/defectdojo/uwsgi.sock
+  DD_UWSGI_PASS: unix:///run/exposurex/uwsgi.sock
   DD_UWSGI_NUM_OF_PROCESSES: '{{ .Values.django.uwsgi.appSettings.processes | default 4 }}'
   DD_UWSGI_NUM_OF_THREADS: '{{ .Values.django.uwsgi.appSettings.threads | default 4 }}'
   DD_UWSGI_MAX_FD: '{{ .Values.django.uwsgi.appSettings.maxFd }}'

@@ -1,15 +1,15 @@
 {{- if .Values.initializer.run }}
-{{- $fullName := include "defectdojo.fullname" . -}}
+{{- $fullName := include "exposurex.fullname" . -}}
 apiVersion: batch/v1
 kind: Job
 metadata:
   name: {{ template "initializer.jobname" . }}
   labels:
-    defectdojo.org/component: initializer
-    app.kubernetes.io/name: {{ include "defectdojo.name" . }}
+    exposurex.org/component: initializer
+    app.kubernetes.io/name: {{ include "exposurex.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
-    helm.sh/chart: {{ include "defectdojo.chart" . }}
+    helm.sh/chart: {{ include "exposurex.chart" . }}
     {{- with .Values.extraLabels }}
       {{- toYaml . | nindent 4 }}
     {{- end }}
@@ -24,8 +24,8 @@ spec:
   template:
     metadata:
       labels:
-        defectdojo.org/component: initializer
-        app.kubernetes.io/name: {{ include "defectdojo.name" . }}
+        exposurex.org/component: initializer
+        app.kubernetes.io/name: {{ include "exposurex.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
         {{- with .Values.extraLabels }}
           {{- toYaml . | nindent 8 }}
@@ -38,7 +38,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
     spec:
-      serviceAccountName: {{ include "defectdojo.serviceAccountName" . }}
+      serviceAccountName: {{ include "exposurex.serviceAccountName" . }}
       {{- if .Values.imagePullSecrets }}
       imagePullSecrets:
       - name: {{ .Values.imagePullSecrets }}

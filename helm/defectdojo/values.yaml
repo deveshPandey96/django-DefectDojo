@@ -1,10 +1,10 @@
 ---
 # Global settings
-# create defectdojo specific secret
+# create exposurex specific secret
 createSecret: false
-# create redis secret in defectdojo chart, outside of redis chart
+# create redis secret in exposurex chart, outside of redis chart
 createRedisSecret: false
-# create postgresql secret in defectdojo chart, outside of postgresql chart
+# create postgresql secret in exposurex chart, outside of postgresql chart
 createPostgresqlSecret: false
 # Track configuration (trackConfig): will automatically respin application pods in case of config changes detection
 # can be:
@@ -24,17 +24,17 @@ networkPolicy:
   # ingressExtend:
   #  - podSelector:
   #      matchLabels:
-  #      app.kubernetes.io/instance: defectdojo-prometheus
+  #      app.kubernetes.io/instance: exposurex-prometheus
   # For more detailed configuration with ports and peers. It will ignore ingressExtend
   ingress: []
   # ingress:
   #  - from:
   #     - podSelector:
   #         matchLabels:
-  #           app.kubernetes.io/instance: defectdojo
+  #           app.kubernetes.io/instance: exposurex
   #     - podSelector:
   #         matchLabels:
-  #           app.kubernetes.io/instance: defectdojo-prometheus
+  #           app.kubernetes.io/instance: exposurex-prometheus
   #    ports:
   #    - protocol: TCP
   #      port: 8443
@@ -49,22 +49,22 @@ networkPolicy:
   annotations: {}
 
 # Primary hostname of instance
-host: defectdojo.default.minikube.local
+host: exposurex.default.minikube.local
 
-# The full URL to your defectdojo instance, depends on the domain where DD is deployed, it also affects links in Jira
+# The full URL to your exposurex instance, depends on the domain where DD is deployed, it also affects links in Jira
 # siteUrl: 'https://<yourdomain>'
 
 # optional list of alternative hostnames to use that gets appended to
 # DD_ALLOWED_HOSTS. This is necessary when your local hostname does not match
 # the global hostname.
 # alternativeHosts:
-#  - defectdojo.example.com
+#  - exposurex.example.com
 imagePullPolicy: Always
-# Where to pull the defectDojo images from. Defaults to "defectdojo/*" repositories on hub.docker.com
-repositoryPrefix: defectdojo
+# Where to pull the defectDojo images from. Defaults to "exposurex/*" repositories on hub.docker.com
+repositoryPrefix: exposurex
 # When using a private registry, name of the secret that holds the registry secret (eg deploy token from gitlab-ci project)
-# Create secrets as: kubectl create secret docker-registry defectdojoregistrykey --docker-username=registry_username --docker-password=registry_password --docker-server='https://index.docker.io/v1/'
-# imagePullSecrets: defectdojoregistrykey
+# Create secrets as: kubectl create secret docker-registry exposurexregistrykey --docker-username=registry_username --docker-password=registry_password --docker-server='https://index.docker.io/v1/'
+# imagePullSecrets: exposurexregistrykey
 tag: latest
 
 # Additional labels to add to the pods:
@@ -123,7 +123,7 @@ admin:
   password:
   firstName: Administrator
   lastName: User
-  mail: admin@defectdojo.local
+  mail: admin@exposurex.local
   secretKey:
   credentialAes256Key:
   metricsHttpAuthPassword:
@@ -228,7 +228,7 @@ django:
     enabled: true
     ingressClassName: ""
     activateTLS: true
-    secretName: defectdojo-tls
+    secretName: exposurex-tls
     annotations: {}
       # Restricts the type of ingress controller that can interact with our chart (nginx, traefik, ...)
       # kubernetes.io/ingress.class: nginx
@@ -289,10 +289,10 @@ django:
     enableDebug: false  # this also requires DD_DEBUG to be set to True
     certificates:
     # includes additional CA certificate as volume, it refrences REQUESTS_CA_BUNDLE env varible
-    # to create configMap `kubectl create  cm defectdojo-ca-certs --from-file=ca.crt`
+    # to create configMap `kubectl create  cm exposurex-ca-certs --from-file=ca.crt`
     # NOTE: it reflects REQUESTS_CA_BUNDLE for celery workers, beats as well
       enabled: false
-      configName: defectdojo-ca-certs
+      configName: exposurex-ca-certs
       certMountPath: /certs/
       certFileName: ca.crt
 
@@ -399,8 +399,8 @@ initializer:
   # @type: array<map>
   extraVolumes: []
 
-  # staticName defines whether name of the job will be the same (e.g., "defectdojo-initializer")
-  # or different every time - generated based on current time (e.g., "defectdojo-initializer-2024-11-11-18-57")
+  # staticName defines whether name of the job will be the same (e.g., "exposurex-initializer")
+  # or different every time - generated based on current time (e.g., "exposurex-initializer-2024-11-11-18-57")
   # This might be handy for ArgoCD deployments
   staticName: false
 
@@ -410,10 +410,10 @@ postgresql:
   # postgresServer: "127.0.0.1"
   enabled: true
   auth:
-    username: defectdojo
+    username: exposurex
     password: ""
-    database: defectdojo
-    existingSecret: defectdojo-postgresql-specific
+    database: exposurex
+    existingSecret: exposurex-postgresql-specific
     secretKeys:
       adminPasswordKey: postgresql-postgres-password
       userPasswordKey: postgresql-password
@@ -485,7 +485,7 @@ redis:
     enabled: false
     params: ''
   auth:
-    existingSecret: defectdojo-redis-specific
+    existingSecret: exposurex-redis-specific
     existingSecretPasswordKey: redis-password
     password: ""
   architecture: standalone
@@ -522,7 +522,7 @@ extraConfigs: {}
 
 # To add code snippet which would extend setting functionality, you might add it here
 # It will be stored as ConfigMap and mounted `dojo/settings/local_settings.py`.
-# For more see: https://documentation.defectdojo.com/getting_started/configuration/
+# For more see: https://documentation.exposurex.com/getting_started/configuration/
 # For example:
 # localsettingspy: |
 #   INSTALLED_APPS += (
