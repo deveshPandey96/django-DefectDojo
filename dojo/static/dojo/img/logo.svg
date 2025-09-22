@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240" height="60" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- This is a placeholder SVG logo - in production this would be the actual ACPL logo -->
+  <rect width="240" height="60" fill="#003864" rx="5"/>
+  <text x="120" y="35" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold">ACPL LOGO</text>
+  <text x="120" y="50" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">(Placeholder - Replace with actual ACPL logo)</text>
+</svg>
