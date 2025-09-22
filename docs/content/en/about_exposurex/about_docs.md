@@ -69,7 +69,7 @@ If you run into trouble with an Open Source install, we highly recommend asking 
 
 ### Online Demo
 
-A running example of ExposureX (Open-Source Edition) is available on [our demo server](https://#), using the credentials `admin` / `1Defectdojo@demo#appsec`. The demo server is refreshed regularly and provisioned with some sample data.
+A running example of ExposureX (Open-Source Edition) is available on [our demo server](https://#), using the credentials `admin` / `1ExposureX@demo#appsec`. The demo server is refreshed regularly and provisioned with some sample data.
 
 ## 🟧 ExposureX Pro Edition
 

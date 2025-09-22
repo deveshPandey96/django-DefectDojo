@@ -290,7 +290,7 @@ This ensures the file is closed at the end of the with statement, even if an exc
 
 ### Test database
 
-Django uses a separate test database for running unit tests called `test_defectdojo`. It's automatically created and initialized with a basic set of test data.
+Django uses a separate test database for running unit tests called `test_exposurex`. It's automatically created and initialized with a basic set of test data.
 
 ### Run your tests
 
