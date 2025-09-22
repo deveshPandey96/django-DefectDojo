@@ -182,6 +182,21 @@ a:hover {
 
 .navbar-brand > img {
     display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive logo sizing */
+@media (max-width: 767px) {
+    .navbar-brand > img {
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 479px) {
+    .navbar-brand > img {
+        max-width: 140px;
+    }
 }
 
 .row {
@@ -1119,6 +1134,27 @@ li#minimize-menu-li {
 div.custom-search-form {
     height: 21px;
     width: 265px;
+}
+
+/* Prevent navbar overlap on smaller screens */
+@media (max-width: 767px) {
+    .navbar-header {
+        width: 50%;
+    }
+    
+    .navbar-top-links {
+        width: 50%;
+    }
+    
+    div.custom-search-form {
+        width: 200px;
+    }
+}
+
+@media (max-width: 479px) {
+    div.custom-search-form {
+        width: 150px;
+    }
 }
 
 .announcement-banner {
