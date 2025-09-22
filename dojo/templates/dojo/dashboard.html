@@ -8,12 +8,19 @@
     .chart {height: 300px}
     .status .panel {min-height: 140px;background-color: #f5f5f5;}
     #punchcard {height: 350px}
+    /* Dashboard specific spacing improvements */
+    .dashboard-section {
+        margin-bottom: 20px;
+    }
+    .status {
+        margin-top: 15px;
+    }
 {% endblock %}
 
 {% block content %}
     {{ block.super }}
     {% block finding_stats_tiles %}
-        <div class="row status">
+        <div class="row status dashboard-section">
             {% block active_engagements %}
                 <div class="col-lg-3 col-md-6">
                     <div class="panel panel-blue">
@@ -113,7 +120,7 @@
         </div>
     {% endblock %}
     {% block graph_row %}
-        <div class="row">
+        <div class="row dashboard-section">
             {% block historical_finding_severity %}
                 <div class="col-lg-6">
                     <div class="panel panel-default">

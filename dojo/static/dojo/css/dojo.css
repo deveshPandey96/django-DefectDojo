@@ -176,12 +176,26 @@ a:hover {
 }
 
 .navbar-brand {
-    padding: 5px 5px;
+    padding: 10px 15px;
     margin-left: 0px;
+    max-width: 250px;
+    overflow: hidden;
 }
 
 .navbar-brand > img {
     display: inline-block;
+    max-height: 40px;
+    width: auto;
+}
+
+/* Ensure proper navbar height and alignment */
+.navbar-fixed-top {
+    min-height: 50px;
+}
+
+.navbar-default {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
 }
 
 .row {
@@ -1143,6 +1157,7 @@ div.custom-search-form {
 @media (min-width: 320px) {
     #page-wrapper {
         margin: 75px 0 0 0;
+        padding: 15px;
     }
 
     #footer-wrapper {
@@ -1153,6 +1168,7 @@ div.custom-search-form {
 @media (min-width: 359px) {
     #page-wrapper {
         margin: 100px 0 0 0;
+        padding: 15px;
     }
 
     #footer-wrapper {
@@ -1162,7 +1178,8 @@ div.custom-search-form {
 
 @media (min-width: 600px) {
     #page-wrapper {
-        margin: 50px 0 0 0;
+        margin: 60px 0 0 0;
+        padding: 15px;
     }
 
     #footer-wrapper {
@@ -1176,7 +1193,8 @@ div.custom-search-form {
     }
 
     #page-wrapper {
-        margin: 0 0 0 175px;
+        margin: 60px 0 0 175px;
+        padding-top: 10px;
     }
 
     #footer-wrapper {
