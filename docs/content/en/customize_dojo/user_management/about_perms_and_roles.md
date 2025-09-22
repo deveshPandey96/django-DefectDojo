@@ -1,26 +1,26 @@
 ---
-title: "Permissions in ExposureX"
-description: "Summary of all ExposureX permission options, in detail"
+title: "Permissions in DefectDojo"
+description: "Summary of all DefectDojo permission options, in detail"
 weight: 2
 ---
 
-If you have a team of users working in ExposureX, it's important to set up Role\-Based Access Control (RBAC) appropriately so that users can only access specific data. Security data is highly sensitive, and ExposureX's options for access control allow you to be specific about each team member’s access to information.
+If you have a team of users working in DefectDojo, it's important to set up Role\-Based Access Control (RBAC) appropriately so that users can only access specific data. Security data is highly sensitive, and DefectDojo's options for access control allow you to be specific about each team member’s access to information.
 
-This article is an overview of how permissions in ExposureX work.  If you would prefer to see a detailed breakdown of **each action** that can be controlled by Permissions, see our **[Permissions Chart](../user_permission_chart/)** article.
+This article is an overview of how permissions in DefectDojo work.  If you would prefer to see a detailed breakdown of **each action** that can be controlled by Permissions, see our **[Permissions Chart](../user_permission_chart/)** article.
 
 ## Types of Permissions
 
-ExposureX manages four different kinds of permissions:
+DefectDojo manages four different kinds of permissions:
 
-* Users can be assigned as **Members** to **Products or Product Types**. A Product Membership comes with a **Role** which allows your users to view and interact with Data Types (Product Types, Products, Engagements, Tests and Findings) in ExposureX. Users can have multiple Product or Product Type memberships, with different levels of access.   
+* Users can be assigned as **Members** to **Products or Product Types**. A Product Membership comes with a **Role** which allows your users to view and interact with Data Types (Product Types, Products, Engagements, Tests and Findings) in DefectDojo. Users can have multiple Product or Product Type memberships, with different levels of access.   
 ​
-* Users can also have **Configuration Permissions** assigned, which allow them to access configuration pages in ExposureX. Configuration Permissions are not related to Products or Product Types, and are not associated with Roles.  
+* Users can also have **Configuration Permissions** assigned, which allow them to access configuration pages in DefectDojo. Configuration Permissions are not related to Products or Product Types, and are not associated with Roles.  
 ​
 * Users can be assigned **Global Roles**, which give them a standardized level of access to all Products and Product Types.  
 ​
-* Users can be set up as **Superusers**: administrator level roles which give them control and access to all ExposureX data and configuration.
+* Users can be set up as **Superusers**: administrator level roles which give them control and access to all DefectDojo data and configuration.
 
-Each of these Permission types can also be assigned to **User** **Group**. If you have a large number of users in ExposureX, such as a dedicated testing team for a particular Product, Groups allow you to set up and maintain permissions quickly.
+Each of these Permission types can also be assigned to **User** **Group**. If you have a large number of users in DefectDojo, such as a dedicated testing team for a particular Product, Groups allow you to set up and maintain permissions quickly.
 
 ## Product/Product Type Membership \& Roles
 
@@ -40,13 +40,13 @@ Users can be assigned a role of Reader, Writer, Maintainer, Owner or API Importe
 ​
 * **Owner Users** have the greatest amount of control over a Product or Product Type. They can designate other Owners, and can also Delete the Products or Product Types they’re assigned to.  
 ​
-* **API Importer** **Users** have limited abilities. This Role allows limited API access without exposing the majority of the API endpoints, so is useful for automation or users who are meant to be ‘external’ to ExposureX. They can view underlying data, Add / Edit Engagements, and Import Scan Data.
+* **API Importer** **Users** have limited abilities. This Role allows limited API access without exposing the majority of the API endpoints, so is useful for automation or users who are meant to be ‘external’ to DefectDojo. They can view underlying data, Add / Edit Engagements, and Import Scan Data.
 
 For detailed information on Roles, please see our **[Role Permission Chart](../user_permission_chart/)**.
 
 ### Global Roles
 
-Users with **Global Roles** can view and interact with any Data Type (Product Types, Products, Engagements, Tests and Findings) in ExposureX depending on their assigned Role.
+Users with **Global Roles** can view and interact with any Data Type (Product Types, Products, Engagements, Tests and Findings) in DefectDojo depending on their assigned Role.
 
 ### Group Memberships
 
@@ -66,9 +66,9 @@ User Groups can be added as Members of a Product or Product Type. Users who are 
 
 ## Superusers
 
-Superusers (Admins) have no limitations in the system. They can change all settings, manage users and have read / write access to all data. They can also change access rules for all users in ExposureX. Superusers will also receive notifications for all system issues and alerts.
+Superusers (Admins) have no limitations in the system. They can change all settings, manage users and have read / write access to all data. They can also change access rules for all users in DefectDojo. Superusers will also receive notifications for all system issues and alerts.
 
-By default, the first account created on a new ExposureX instance will have Superuser permissions. That user will be able to edit permissions for all subsequent ExposureX users. Only an existing Superuser can add another superuser, or add a Global Role to a user. 
+By default, the first account created on a new DefectDojo instance will have Superuser permissions. That user will be able to edit permissions for all subsequent DefectDojo users. Only an existing Superuser can add another superuser, or add a Global Role to a user. 
 
 ## Configuration Permissions
 

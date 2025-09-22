@@ -8,7 +8,7 @@ class KICSParser:
 
     """A class that can be used to parse the KICS JSON report file"""
 
-    # table to match KICS severity to ExposureX severity
+    # table to match KICS severity to DefectDojo severity
     SEVERITY = {
         "HIGH": "High",
         "MEDIUM": "Medium",

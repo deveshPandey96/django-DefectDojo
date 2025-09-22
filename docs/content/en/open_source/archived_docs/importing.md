@@ -1,6 +1,6 @@
 ---
 title: "Importing"
-description: "How ExposureX imports and reimports security tool reports."
+description: "How DefectDojo imports and reimports security tool reports."
 draft: false
 weight: 1
 exclude_search: true
@@ -9,7 +9,7 @@ exclude_search: true
 ## Import
 
 The importers analyze each report and create new Findings for each item
-reported. ExposureX collapses duplicate Findings by capturing the
+reported. DefectDojo collapses duplicate Findings by capturing the
 individual hosts vulnerable.
 
 ![Import Form](images/imp_1.png)
@@ -18,12 +18,12 @@ This approach will create a new Test for each upload. This can result in a lot o
 
 ## Reimport
 
-Additionally, ExposureX allows for re-imports of previously uploaded
+Additionally, DefectDojo allows for re-imports of previously uploaded
 reports. This greatly reduces the amount of findings as no duplicates are created for findings that already exist.
 
 ![Reimport menu](images/reupload_menu1.png)
 
-ExposureX will attempt to capture the deltas between the
+DefectDojo will attempt to capture the deltas between the
 original and new import and automatically add or mitigate findings as
 appropriate.
 
@@ -40,16 +40,16 @@ Clicking on a reimport changset will show the affected findings, as well as a st
 ### Triage-less scanners
 Some scanners might not include triage information in their reports (e.g. tfsec). They simply scan code or dependencies, flag issues, and return everything. Removing some findings requires you to add comments in your code perhaps, but there is no simple way to filter out findings from the reports.
 
-That is why ExposureX also includes a "Do not reactivate" checkbox in uploading reports (also in the reimport API), so you can persist the triages that have been done in Defectdojo without reactivating Findings on every upload.
+That is why DefectDojo also includes a "Do not reactivate" checkbox in uploading reports (also in the reimport API), so you can persist the triages that have been done in Defectdojo without reactivating Findings on every upload.
 
-For context, see [#6892](https://github.com/ExposureX/django-ExposureX/issues/6892)
+For context, see [#6892](https://github.com/DefectDojo/django-DefectDojo/issues/6892)
 
 # API
 This section focuses on Import and Reimport via the API. Please see the [full documentation details of all API Endpoints](/en/api/api-v2-docs/) for more details.
 Reimport is actually the easiest way to get started as it will create any entities on the fly if needed and it will automatically detect if it is a first time upload or a re-upload.
 
 ## Import
-Importing via the API is performed via the [import-scan](https://#/api/v2/doc/) endpoint.
+Importing via the API is performed via the [import-scan](https://demo.defectdojo.org/api/v2/doc/) endpoint.
 
 As described in the [Product Hierarchy](/en/working_with_findings/organizing_engagements_tests/product_hierarchy), a test gets created inside an Engagement, inside a Product, inside a Product Type.
 
@@ -87,7 +87,7 @@ A classic way of importing a scan is by specifying the ID of the engagement inst
 
 
 ## Reimport
-ReImporting via the API is performed via the [reimport-scan](https://#/api/v2/doc/) endpoint.
+ReImporting via the API is performed via the [reimport-scan](https://demo.defectdojo.org/api/v2/doc/) endpoint.
 
 A reimport can be performed by specifying the names of these entities in the API request:
 
@@ -129,7 +129,7 @@ A classic way of reimporting a scan is by specifying the ID of the test instead:
 
 ## Using the Scan Completion Date (API: `scan_date`) field
 
-ExposureX offers a plethora of supported scanner reports, but not all of them contain the
+DefectDojo offers a plethora of supported scanner reports, but not all of them contain the
 information most important to a user. The `scan_date` field is a flexible smart feature that
 allows users to set the completion date of the a given scan report, and have it propagate
 down to all the findings imported. This field is **not** mandatory, but the default value for

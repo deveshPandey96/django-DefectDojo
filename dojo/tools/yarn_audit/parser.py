@@ -79,7 +79,7 @@ class YarnAuditParser:
                 dojo_finding.component_name = value
         return items
 
-    def get_items_auditci(self, tree, test):  # https://github.com/ExposureX/django-ExposureX/issues/6495
+    def get_items_auditci(self, tree, test):  # https://github.com/DefectDojo/django-DefectDojo/issues/6495
         items = []
         for element in tree.get("advisories"):
             findings = "**findings:** " + str(tree.get("advisories").get(element).get("findings"))

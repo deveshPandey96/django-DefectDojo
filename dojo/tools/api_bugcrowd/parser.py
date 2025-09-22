@@ -177,7 +177,7 @@ class ApiBugcrowdParser:
         return self.convert_log_timestamp(entry["timestamp"])
 
     def include_finding(self, entry):
-        """Determine whether this finding should be imported to ExposureX"""
+        """Determine whether this finding should be imported to DefectDojo"""
         # Valid states from the Bugcrowd API
         # "new" "out-of-scope" "not-applicable" "not-reproducible" "triaged" "unresolved" "resolved" "informational"
 
@@ -202,7 +202,7 @@ class ApiBugcrowdParser:
         raise ValueError(msg)
 
     def convert_log_timestamp(self, timestamp):
-        """Convert a log entry's timestamp to a ExposureX date"""
+        """Convert a log entry's timestamp to a DefectDojo date"""
         date_obj = datetime.strptime(timestamp, "%Y-%m-%dT%H:%M:%S.%fZ")
         return date_obj.strftime("%Y-%m-%d")
 

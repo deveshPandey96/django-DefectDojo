@@ -9,9 +9,9 @@ exclude_search: true
 
 Note: This is an experimental Open-Source feature - results may vary.
 
-Functionality might generate breaking changes in following ExposureX releases and might not be considered final.
+Functionality might generate breaking changes in following DefectDojo releases and might not be considered final.
 
-Webhooks are HTTP requests coming from the ExposureX instance towards a user-defined webserver which expects this kind of incoming traffic.
+Webhooks are HTTP requests coming from the DefectDojo instance towards a user-defined webserver which expects this kind of incoming traffic.
 
 ## Events
 

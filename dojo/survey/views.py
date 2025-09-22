@@ -87,7 +87,7 @@ def delete_engagement_survey(request, eid, sid):
         title="Delete " + survey.survey.name + " Questionnaire",
         top_level=False,
         request=request)
-    return render(request, "exposureX-engagement-survey/delete_questionnaire.html", {
+    return render(request, "defectDojo-engagement-survey/delete_questionnaire.html", {
         "survey": survey,
         "form": form,
         "engagement": engagement,
@@ -153,7 +153,7 @@ def answer_questionnaire(request, eid, sid):
         title="Answer " + survey.survey.name + " Survey",
         top_level=False,
         request=request)
-    return render(request, "exposureX-engagement-survey/answer_survey.html", {
+    return render(request, "defectDojo-engagement-survey/answer_survey.html", {
         "survey": survey,
         "engagement": engagement,
         "questions": questions,
@@ -175,7 +175,7 @@ def assign_questionnaire(request, eid, sid):
             return HttpResponseRedirect(reverse("view_engagement", args=(engagement.id,)))
 
     add_breadcrumb(title="Assign Questionnaire", top_level=False, request=request)
-    return render(request, "exposureX-engagement-survey/assign_survey.html", {
+    return render(request, "defectDojo-engagement-survey/assign_survey.html", {
         "survey": survey,
         "form": form,
     })
@@ -191,7 +191,7 @@ def view_questionnaire(request, eid, sid):
         title=survey.survey.name + " Questionnaire Responses",
         top_level=False,
         request=request)
-    return render(request, "exposureX-engagement-survey/view_survey.html", {
+    return render(request, "defectDojo-engagement-survey/view_survey.html", {
         "survey": survey,
         "user": request.user,
         "engagement": engagement,
@@ -249,7 +249,7 @@ def add_questionnaire(request, eid):
 
     form.fields["survey"].queryset = surveys
     add_breadcrumb(title="Add Questionnaire", top_level=False, request=request)
-    return render(request, "exposureX-engagement-survey/add_survey.html", {
+    return render(request, "defectDojo-engagement-survey/add_survey.html", {
         "surveys": surveys,
         "user": user,
         "form": form,
@@ -302,7 +302,7 @@ def edit_questionnaire(request, sid):
                 extra_tags="alert-danger")
 
     add_breadcrumb(title="Edit Questionnaire", top_level=False, request=request)
-    return render(request, "exposureX-engagement-survey/create_questionnaire.html", {
+    return render(request, "defectDojo-engagement-survey/create_questionnaire.html", {
         "survey": survey,
         "form": form,
         "name": "Edit Questionnaire",
@@ -333,7 +333,7 @@ def delete_questionnaire(request, sid):
                 return HttpResponseRedirect(reverse("questionnaire"))
 
     add_breadcrumb(title="Delete Questionnaire", top_level=False, request=request)
-    return render(request, "exposureX-engagement-survey/delete_questionnaire.html", {
+    return render(request, "defectDojo-engagement-survey/delete_questionnaire.html", {
         "survey": survey,
         "form": form,
         "rels": rels,
@@ -364,7 +364,7 @@ def create_questionnaire(request):
             extra_tags="alert-danger")
 
     add_breadcrumb(title="Create Questionnaire", top_level=False, request=request)
-    return render(request, "exposureX-engagement-survey/create_questionnaire.html", {
+    return render(request, "defectDojo-engagement-survey/create_questionnaire.html", {
         "survey": survey,
         "form": form,
         "name": "Create Survey",
@@ -412,7 +412,7 @@ def edit_questionnaire_questions(request, sid):
             extra_tags="alert-success")
 
     add_breadcrumb(title="Update Questionnaire Questions", top_level=False, request=request)
-    return render(request, "exposureX-engagement-survey/edit_survey_questions.html", {
+    return render(request, "defectDojo-engagement-survey/edit_survey_questions.html", {
         "survey": survey,
         "form": form,
         "name": "Update Survey Questions",
@@ -430,7 +430,7 @@ def questionnaire(request):
             survey.delete()
 
     add_breadcrumb(title="Questionnaires", top_level=True, request=request)
-    return render(request, "exposureX-engagement-survey/list_surveys.html", {
+    return render(request, "defectDojo-engagement-survey/list_surveys.html", {
         "surveys": paged_surveys,
         "filtered": surveys,
         "general": general_surveys,
@@ -444,7 +444,7 @@ def questions(request):
     questions = QuestionFilter(request.GET, queryset=questions)
     paged_questions = get_page_items(request, questions.qs, 25)
     add_breadcrumb(title="Questions", top_level=False, request=request)
-    return render(request, "exposureX-engagement-survey/list_questions.html", {
+    return render(request, "defectDojo-engagement-survey/list_questions.html", {
         "questions": paged_questions,
         "filtered": questions,
         "name": "Questions",
@@ -511,7 +511,7 @@ def create_question(request):
                 return HttpResponse(resp)
 
     add_breadcrumb(title="Add Question", top_level=False, request=request)
-    return render(request, "exposureX-engagement-survey/create_related_question.html", {
+    return render(request, "defectDojo-engagement-survey/create_related_question.html", {
         "name": "Add Question",
         "form": form,
         "textForm": textQuestionForm,
@@ -576,7 +576,7 @@ def edit_question(request, qid):
             return HttpResponseRedirect(reverse("questions"))
 
     add_breadcrumb(title="Edit Question", top_level=False, request=request)
-    return render(request, "exposureX-engagement-survey/edit_question.html", {
+    return render(request, "defectDojo-engagement-survey/edit_question.html", {
         "name": "Edit Question",
         "question": question,
         "form": form,
@@ -603,7 +603,7 @@ def add_choices(request):
                 resp += '<script type="text/javascript">window.close();</script>'
                 return HttpResponse(resp)
     add_breadcrumb(title="Add Choice", top_level=False, request=request)
-    return render(request, "exposureX-engagement-survey/add_choices.html", {
+    return render(request, "defectDojo-engagement-survey/add_choices.html", {
         "name": "Add Choice",
         "form": form,
     })
@@ -638,7 +638,7 @@ def add_empty_questionnaire(request):
 
     form.fields["survey"].queryset = surveys
     add_breadcrumb(title="Add Empty Questionnaire", top_level=False, request=request)
-    return render(request, "exposureX-engagement-survey/add_survey.html", {
+    return render(request, "defectDojo-engagement-survey/add_survey.html", {
         "surveys": surveys,
         "user": user,
         "form": form,
@@ -655,7 +655,7 @@ def view_empty_survey(request, esid):
         title=survey.survey.name + " Questionnaire Responses",
         top_level=False,
         request=request)
-    return render(request, "exposureX-engagement-survey/view_survey.html", {
+    return render(request, "defectDojo-engagement-survey/view_survey.html", {
         "survey": survey,
         "user": request.user,
         "engagement": engagement,
@@ -696,7 +696,7 @@ def delete_empty_questionnaire(request, esid):
         title="Delete " + survey.survey.name + " Questionnaire",
         top_level=False,
         request=request)
-    return render(request, "exposureX-engagement-survey/delete_questionnaire.html", {
+    return render(request, "defectDojo-engagement-survey/delete_questionnaire.html", {
         "survey": survey,
         "form": form,
         "engagement": engagement,
@@ -731,7 +731,7 @@ def delete_general_questionnaire(request, esid):
         title="Delete " + survey.survey.name + " Questionnaire",
         top_level=False,
         request=request)
-    return render(request, "exposureX-engagement-survey/delete_questionnaire.html", {
+    return render(request, "defectDojo-engagement-survey/delete_questionnaire.html", {
         "survey": survey,
         "form": form,
         "engagement": engagement,
@@ -815,7 +815,7 @@ def answer_empty_survey(request, esid):
         request=request)
     if survey is None:
         survey = engagement_survey
-    return render(request, "exposureX-engagement-survey/answer_survey.html", {
+    return render(request, "defectDojo-engagement-survey/answer_survey.html", {
         "survey": survey,
         "engagement": engagement,
         "questions": questions,
@@ -854,7 +854,7 @@ def engagement_empty_survey(request, esid):
         title="Link Questionnaire to new Engagement",
         top_level=False,
         request=request)
-    return render(request, "exposureX-engagement-survey/add_engagement.html", {"form": form})
+    return render(request, "defectDojo-engagement-survey/add_engagement.html", {"form": form})
 
 
 class ExistingEngagementEmptySurveyView(View):
@@ -908,4 +908,4 @@ class ExistingEngagementEmptySurveyView(View):
         return ExistingEngagementForm
 
     def get_template(self):
-        return "exposureX-engagement-survey/existing_engagement.html"
+        return "defectDojo-engagement-survey/existing_engagement.html"

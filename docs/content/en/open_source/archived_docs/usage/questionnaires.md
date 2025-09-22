@@ -1,13 +1,13 @@
 ---
 title: "Questionnaires"
-description: "Collect information from people internal or external to ExposureX."
+description: "Collect information from people internal or external to DefectDojo."
 weight: 3
 draft: false
 ---
 
 ## Questionnaires
 
-Questionnaires provide a means for collecting information from developers and respective stakeholders. ExposureX includes functionality to create new questionnaires with custom questions, open questionnaires to receive responses for certain time periods from insiders or outsiders, and connect questionnaires with new or existing engagements.
+Questionnaires provide a means for collecting information from developers and respective stakeholders. DefectDojo includes functionality to create new questionnaires with custom questions, open questionnaires to receive responses for certain time periods from insiders or outsiders, and connect questionnaires with new or existing engagements.
 
 ## Creating a New Questionnaire
 
@@ -27,7 +27,7 @@ Questionnaires have a name and description, as well as an activity status, which
 
 ![Create New Questionnaire](images/questionnaires-create-new.png)
 
-To add questions to a questionnaire, select the dropdown titled _Select as many Questions as applicable_, which will open all of the existing questions within ExposureX. Once the desired questions are selected from the list, the dropdown can be closed, and the _Update Questionnaire Questions_ can be selected to save the newly created questionnaire.
+To add questions to a questionnaire, select the dropdown titled _Select as many Questions as applicable_, which will open all of the existing questions within DefectDojo. Once the desired questions are selected from the list, the dropdown can be closed, and the _Update Questionnaire Questions_ can be selected to save the newly created questionnaire.
 
 _Note_: New questions may also be added at the time of questionnaire creation by selecting the plus located next to the questions dropdown.
 
@@ -35,7 +35,7 @@ _Note_: New questions may also be added at the time of questionnaire creation by
 
 ## Creating New Questions
 
-The questions dashboard displays all of the questions that may exist as part of questionnaires within ExposureX. Similar to questionnaires, to quickly find a question, the filters may be used to search for optional status, or snippets within the question name and/or description. Two types of questions exist within ExposureX questionnaires: _Text Questions_ and _Multiple Choice Questions_. To add a new question, select the _Create Question_ button located in the top right of the questions dashboard.
+The questions dashboard displays all of the questions that may exist as part of questionnaires within DefectDojo. Similar to questionnaires, to quickly find a question, the filters may be used to search for optional status, or snippets within the question name and/or description. Two types of questions exist within DefectDojo questionnaires: _Text Questions_ and _Multiple Choice Questions_. To add a new question, select the _Create Question_ button located in the top right of the questions dashboard.
 
 ![Questionnaire Questions](images/questionnaires-questions.png)
 
@@ -78,7 +78,7 @@ Once a questionnaire is published, a link to share it can be retrieved by select
 
 ## Unassigned Questionnaires
 
-When a questionnaire's response window has closed, all of the responses will be saved, and the questionnaire will be listed as an _Unassigned Answered Engagement Questionnaire_ on the ExposureX dashboard.
+When a questionnaire's response window has closed, all of the responses will be saved, and the questionnaire will be listed as an _Unassigned Answered Engagement Questionnaire_ on the DefectDojo dashboard.
 
 There are three actions that may be taken when a questionnaire's response window has closed: _View Responses_, _Create Engagement_, and _Assign User_.
 
@@ -92,7 +92,7 @@ To view the questionnaire responses, select the _View Responses_ action. All of 
 
 #### Create an Engagement From a Questionnaire
 
-To link the questionnaire to a product via an engagement, select the _Create Engagement_ action. Once a product is selected from the dropdown, select _Create Engagement_. This will link the questionnaire results with a new engagement under the selected product, which can then be given specific details similar to other engagements in ExposureX, such as _Description_, _Version_, _Status_, _Tags_, etc.
+To link the questionnaire to a product via an engagement, select the _Create Engagement_ action. Once a product is selected from the dropdown, select _Create Engagement_. This will link the questionnaire results with a new engagement under the selected product, which can then be given specific details similar to other engagements in DefectDojo, such as _Description_, _Version_, _Status_, _Tags_, etc.
 
 ![Link Questionnaire to Engagement](images/questionnaires-new-engagement.png)
 
@@ -120,6 +120,6 @@ Once prompted, select a questionnaire from the available surveys list to link it
 
 ## Anonymous Questionnaires
 
-Questionnaires, by default, are only accessible by ExposureX users. To allow outside responses to ExposureX questionnaires, ensure the _Allow Anonymous Survey Reponses_ option within the _System Settings_ is selected. To share a questionnaire with anonymous users, use the questionnaire's _Share Link_.
+Questionnaires, by default, are only accessible by DefectDojo users. To allow outside responses to DefectDojo questionnaires, ensure the _Allow Anonymous Survey Reponses_ option within the _System Settings_ is selected. To share a questionnaire with anonymous users, use the questionnaire's _Share Link_.
 
 ![Anonymous Survey Reponses](images/questionnaires-system-settings.png)

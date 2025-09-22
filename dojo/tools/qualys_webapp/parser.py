@@ -475,7 +475,7 @@ class QualysWebAppParser:
         - payload: Set to payload from Qualys Webapp Scanner.
         - active: Set to true or false based on finding status.
         - title: Set to title from Qualys Webapp Scanner.
-        - severity: Set to severity from Qualys Webapp Scanner translated into ExposureX formant.
+        - severity: Set to severity from Qualys Webapp Scanner translated into DefectDojo formant.
         - description: Custom description made from description and data from Qualys Webapp Scanner.
         - impact: Set to title from Qualys Webapp Scanner.
         - mitigation: Set to solution from Qualys Webapp Scanner.

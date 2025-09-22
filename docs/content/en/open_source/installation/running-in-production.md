@@ -7,19 +7,19 @@ weight: 4
 
 ## Production Use (with Docker compose)
 
-The docker-compose.yml file in this repository is fully functional to evaluate ExposureX in your local environment.
+The docker-compose.yml file in this repository is fully functional to evaluate DefectDojo in your local environment.
 
-Although Docker Compose is one of the supported installation methods to deploy a containerized ExposureX in a production environment, the docker-compose.yml file is not intended for production use without first customizing it to your particular situation.
+Although Docker Compose is one of the supported installation methods to deploy a containerized DefectDojo in a production environment, the docker-compose.yml file is not intended for production use without first customizing it to your particular situation.
 
-See [Running with Docker Compose](https://github.com/ExposureX/django-ExposureX/blob/master/readme-docs/DOCKER.md) for more information how to run ExposureX with Docker Compose.
+See [Running with Docker Compose](https://github.com/DefectDojo/django-DefectDojo/blob/master/readme-docs/DOCKER.md) for more information how to run DefectDojo with Docker Compose.
 
 ### System Requirements
 
-It is recommended to use a dedicated database server and not the preconfigured PostgreSQL database. This will improve the performance of ExposureX significantly.
+It is recommended to use a dedicated database server and not the preconfigured PostgreSQL database. This will improve the performance of DefectDojo significantly.
 
 #### Instance Size
 
-With a separate database, the minimum recommendations to run ExposureX are:
+With a separate database, the minimum recommendations to run DefectDojo are:
 
 -   2 vCPUs
 -   8 GB of RAM

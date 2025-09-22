@@ -8,7 +8,7 @@ class DockleParser:
 
     """A class that can be used to parse the Dockle JSON report files"""
 
-    # table to match Dockle severity to ExposureX severity
+    # table to match Dockle severity to DefectDojo severity
     SEVERITY = {
         "INFO": "Low",
         "WARN": "Medium",

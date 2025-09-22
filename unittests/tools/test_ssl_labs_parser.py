@@ -18,8 +18,8 @@ class TestSslLabsParser(DojoTestCase):
             for endpoint in finding.unsaved_endpoints:
                 endpoint.clean()
         self.assertEqual(1, len(findings))
-        self.assertEqual(findings[0].title, "TLS Grade 'A+' for exposurex.mevitae.com")
-        self.assertEqual(findings[0].unsaved_endpoints[0].host, "exposurex.mevitae.com")
+        self.assertEqual(findings[0].title, "TLS Grade 'A+' for defectdojo.mevitae.com")
+        self.assertEqual(findings[0].unsaved_endpoints[0].host, "defectdojo.mevitae.com")
         self.assertEqual(findings[0].cwe, 310)
         self.assertEqual(findings[0].severity, "Info")
         self.assertIn("TLS", findings[0].description)
@@ -87,9 +87,9 @@ class TestSslLabsParser(DojoTestCase):
             self.assertIn("TLS", finding.description)
             self.assertEqual(finding.cwe, 310)
             if finding.severity == "Info":
-                self.assertEqual(finding.title, "TLS Grade 'A+' for exposurex.mevitae.com")
+                self.assertEqual(finding.title, "TLS Grade 'A+' for defectdojo.mevitae.com")
                 self.assertEqual(len(finding.unsaved_endpoints), 4)
-                self.assertEqual(finding.unsaved_endpoints[0].host, "exposurex.mevitae.com")
+                self.assertEqual(finding.unsaved_endpoints[0].host, "defectdojo.mevitae.com")
                 foundInfo = True
             elif finding.severity == "Medium":
                 self.assertEqual(finding.title, "TLS Grade 'B' for dh1024.badssl.com")

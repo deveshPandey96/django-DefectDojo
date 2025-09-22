@@ -11,7 +11,7 @@ class SemgrepParser:
 
         Fields:
         - title: Set to the check_id value outputted by the Semgrep Scanner.
-        - severity: Set to severity from Semgrep Scanner that has been converted to ExposureX format.
+        - severity: Set to severity from Semgrep Scanner that has been converted to DefectDojo format.
         - description: Custom description made from elements outputted by Semgrep Scanner.
         - file_path: Set to filepath from Semgrep Scanner.
         - line: Set to line from Semgrep Scanner.
@@ -218,7 +218,7 @@ class SemgrepParser:
         if snippet is not None:
             if "<![" in snippet:
                 snippet = snippet.replace("<![", "<! [")
-                description += f"**Snippet:** ***Caution:*** Please remove the space between `!` and `[` to have the real value due to a workaround to circumvent [#8435](https://github.com/ExposureX/django-ExposureX/issues/8435).\n```{snippet}```\n"
+                description += f"**Snippet:** ***Caution:*** Please remove the space between `!` and `[` to have the real value due to a workaround to circumvent [#8435](https://github.com/DefectDojo/django-DefectDojo/issues/8435).\n```{snippet}```\n"
             else:
                 description += f"**Snippet:**\n```{snippet}```\n"
 

@@ -1097,7 +1097,7 @@ class ImportReimportMixin:
     # for the UI tests this also works as the default is True in the (re)import methods in this test class
     # - reimport should mitigate the zap1
     def test_import_reimport_without_close_old_findings(self):
-        # https://github.com/ExposureX/django-ExposureX/pull/12837
+        # https://github.com/DefectDojo/django-DefectDojo/pull/12837
         logger.debug("reimporting updated zap xml report and using default value for close_old_findings (True)")
 
         import1 = self.import_scan_with_params(self.zap_sample1_filename)

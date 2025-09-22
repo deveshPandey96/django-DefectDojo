@@ -20,7 +20,7 @@ In "Add API Scan Configuration"
     be the SonarQube project key, which can be found by navigating to a specific project and
     selecting the value from the url
     `https://<sonarqube_host>/dashboard?id=key`.
-    When you do not provide a SonarQube project key, ExposureX will
+    When you do not provide a SonarQube project key, DefectDojo will
     use the name of the Product as the project key in SonarQube. If you would like to
     import findings from multiple projects, you can specify multiple keys as
     separated `API Scan Configuration` in the `Product` settings.
@@ -31,7 +31,7 @@ In "Add API Scan Configuration"
 
 In the import or re-import dialog you can select which `API Scan
 Configuration` shall be used. If you do not choose
-any, ExposureX will use the `API Scan Configuration` of the Product if there is
+any, DefectDojo will use the `API Scan Configuration` of the Product if there is
 only one defined or the SonarQube `Tool Configuration` if there is only one.
 
 ## Multi Branch Scanning
@@ -43,4 +43,4 @@ does not exist. If a branch name is not supplied during import/re-import, the de
 of the SonarQube project will be used.
 
 **Note:**: If `https` is used for the SonarQube, the certificate must be
-trusted by the ExposureX instance.
+trusted by the DefectDojo instance.

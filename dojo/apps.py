@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 
 class DojoAppConfig(AppConfig):
     name = "dojo"
-    verbose_name = "ExposureX"
+    verbose_name = "Defect Dojo"
 
     def ready(self):
         # we need to initializer waston here because in models.py is to early if we want add extra fields to index

@@ -368,7 +368,7 @@ class TestSonarQubeParser(DojoTestCase):
     def test_detailed_parse_file_with_vuln_issue_3725(self):
         """
         SonarQube Scan detailed - report that crash
-        see: https://github.com/ExposureX/django-ExposureX/issues/3725
+        see: https://github.com/DefectDojo/django-DefectDojo/issues/3725
         """
         my_file_handle, _product, _engagement, test = self.init(get_unit_tests_scans_path("sonarqube") / "sonar.html")
         parser = SonarQubeParser()

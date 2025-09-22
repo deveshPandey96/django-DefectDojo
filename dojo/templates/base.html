@@ -19,7 +19,7 @@
             {% elif product_tab.title %}
                 {{ product_tab.title }} |
             {% endif %}
-            ExposureX
+            DefectDojo
         </title>
         {% block add_css_before %}
         {% endblock %}
@@ -116,7 +116,7 @@
                         </button>
                         <a class="navbar-brand" href="{% url 'home' %}">
                         {% block header_logo %}
-                                <img src="{% static "dojo/img/logo.svg" %}" alt="ExposureX Logo" class="navbar-logo"/>
+                                <img src="{% static "dojo/img/logo.svg" %}" alt="DefectDojo Logo" class="navbar-logo"/>
                         {% endblock %}
                         </a>
 
@@ -199,10 +199,9 @@
                                     {% endif %}
                                     {% if CREATE_CLOUD_BANNER %}
                                         <li>
-                                            <a href="#">
+                                            <a href="https://cloud.defectdojo.com/accounts/onboarding/plg_step_1">
                                                 <i class="fa-solid fa-level-up fa-fw"></i>
                                                 {% trans "Try Pro for Free!" %}
-                                            </a>
                                             </a>
                                         </li>
                                     {% endif %}
@@ -1098,23 +1097,23 @@
                             <div class="col-md-12 text-center text-">
                                 <p>
                                     <a href="{% url 'home' %}">
-                                        <img class="logo" src="{% static "dojo/img/logo.svg" %}" alt="{% trans "ExposureX Logo" %}"/>
+                                        <img class="logo" src="{% static "dojo/img/logo.svg" %}" alt="{% trans "DefectDojo Logo" %}"/>
                                     </a>
                                     <br/>
                                     <br/>
                                     {% dojo_version %} ( {% dojo_current_hash %} )
                                 </p>
                                 <p>
-                                    Detailed ExposureX documentation can be found in our <a
+                                    Detailed DefectDojo documentation can be found in our <a
                                         href="{% dojo_docs_url %}">GitHub Pages</a>.
                                 </p>
                                 <p>
-                                    ExposureX is licensed under the <a
-                                        href="LICENSE.md">3-Clause BSD
-                            License</a>. | <a href="NOTICE"> Dependencies Notice.</a>
+                                    DefectDojo is licensed under the <a
+                                        href="https://github.com/DefectDojo/django-DefectDojo/blob/master/LICENSE.md">3-Clause BSD
+                            License</a>. | <a href="https://github.com/DefectDojo/django-DefectDojo/blob/master/NOTICE"> Dependencies Notice.</a>
                                 </p>
                                 <p>
-                                    &copy; 2015-{% now "Y" %} ExposureX, Inc. All rights reserved. ExposureX is trademark of ExposureX, Inc.
+                                    &copy; 2015-{% now "Y" %} DefectDojo, Inc. All rights reserved. DefectDojo is trademark of DefectDojo, Inc.
                                 </p>
                             </div>
                         </div>

@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='system_settings',
             name='enable_deduplication',
-            field=models.BooleanField(default=False, help_text='With this setting turned on, ExposureX deduplicates findings by comparing endpoints, cwe fields, and titles. If two findings share a URL and have the same CWE or title, ExposureX marks the recent finding as a duplicate. When deduplication is enabled, a list of deduplicated findings is added to the engagement view.', verbose_name='Deduplicate findings'),
+            field=models.BooleanField(default=False, help_text='With this setting turned on, DefectDojo deduplicates findings by comparing endpoints, cwe fields, and titles. If two findings share a URL and have the same CWE or title, DefectDojo marks the recent finding as a duplicate. When deduplication is enabled, a list of deduplicated findings is added to the engagement view.', verbose_name='Deduplicate findings'),
         ),
     ]

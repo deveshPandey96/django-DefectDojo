@@ -316,7 +316,7 @@ class TestFindingModel(DojoTestCase):
         finding.references = "URL: [https://www.example.com](https://www.example.com)"
         self.assertEqual("URL: [https://www.example.com](https://www.example.com)", finding.get_references_with_links())
 
-    # See https://github.com/ExposureX/django-ExposureX/issues/8264
+    # See https://github.com/DefectDojo/django-DefectDojo/issues/8264
     # Capturing current behavior which might not be the desired one yet
     # This test saves vectors without any validation. This is capturing current behavior.
     def test_cvssv3(self):

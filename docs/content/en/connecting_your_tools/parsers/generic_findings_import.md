@@ -4,7 +4,7 @@ toc_hide: true
 weight: 2
 ---
 
-You can use Generic Findings Import as a method to ingest JSON or CSV files into ExposureX which are not already in the supported parsers list.
+You can use Generic Findings Import as a method to ingest JSON or CSV files into DefectDojo which are not already in the supported parsers list.
 
 Files uploaded using Generic Findings Import must conform to the accepted format with respect to CSV column headers / JSON attributes.
 
@@ -108,7 +108,7 @@ Example:
 This parser supports some additional attributes to be able to define custom `TestTypes` as well as influencing some meta fields on the `Test`:
 
 - `name`: The internal name of the tool you are using. This is primarily informational, and used for reading the report manually.
-- `type`: The name of the test type to create in ExposureX with the suffix of `(Generic Findings Import)`. The suffix is an important identifier for future users attempting to identify the test type to supply when importing new reports. This value is very important when fetching the correct test type to import findings into, so be sure to keep the `type` consistent from import to import! As an example, a report submitted with a `type` of `Internal Company Tool` will produce a test type in ExposureX with the title `Internal Company Tool (Generic Findings Import)`. With this newly created test type, you can define custom `HASHCODE_FIELDS` or `DEDUPLICATION_ALGORITHM` in the settings.
+- `type`: The name of the test type to create in DefectDojo with the suffix of `(Generic Findings Import)`. The suffix is an important identifier for future users attempting to identify the test type to supply when importing new reports. This value is very important when fetching the correct test type to import findings into, so be sure to keep the `type` consistent from import to import! As an example, a report submitted with a `type` of `Internal Company Tool` will produce a test type in DefectDojo with the title `Internal Company Tool (Generic Findings Import)`. With this newly created test type, you can define custom `HASHCODE_FIELDS` or `DEDUPLICATION_ALGORITHM` in the settings.
 - `version`: The version of the tool you are using. This is primarily informational, and is used for reading the report manually and tracking format changes from version to version.
 - `description`: A brief description of the test. This could be an explanation of what the tool is reporting, where the tools is maintained, who the point of contact is for the tool when issues arise, or anything in between.
 - `static_tool`: Dictates that tool used is running static analysis methods to discover vulnerabilities.
@@ -133,4 +133,4 @@ Example:
 
 ### Sample Scan Data
 
-Sample Generic Findings Import scans can be found [here](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/generic).
+Sample Generic Findings Import scans can be found [here](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/generic).

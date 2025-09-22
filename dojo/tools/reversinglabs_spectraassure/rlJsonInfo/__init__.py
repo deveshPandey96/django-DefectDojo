@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 Note:
 This is all ReversingLabs terminology.
-ExposureX also has `components`,
+DefectDojo also has `components`,
 but that reflects to purl's of rl:components or rl:dependencies depending on where the cve was detected.
 
 A description of  the `rl.json report` but cut up in usable parts.

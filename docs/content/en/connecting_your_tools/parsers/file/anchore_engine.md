@@ -4,7 +4,7 @@ toc_hide: true
 ---
 
 ### File Types
-ExposureX parser accepts a .json file.
+DefectDojo parser accepts a .json file.
 
 You can generate vulnerability data using the Anchore Enterprise CLI tool, [Anchorectl](https://docs.anchore.com/current/docs/using/cli_usage/images/inspecting_image_content/), or through the Enterprise UI. 
 
@@ -17,7 +17,7 @@ Using the Anchore UI: Navigate to the desired image in the Anchore Enterprise UI
 
 ### Acceptable JSON Format
 
-All properties are strings and are required by the parser. As the parser evolved, two anchore engine parser JSON formats are present till now. Both ([old](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/anchore_engine/many_vulns.json) / [new](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/anchore_engine/new_format_issue_11552.json)) are supported.
+All properties are strings and are required by the parser. As the parser evolved, two anchore engine parser JSON formats are present till now. Both ([old](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/anchore_engine/many_vulns.json) / [new](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/anchore_engine/new_format_issue_11552.json)) are supported.
 
 ~~~
 
@@ -40,10 +40,10 @@ All properties are strings and are required by the parser. As the parser evolved
 
 
 ### Sample Scan Data
-Sample Anchore-Engine scans can be found [here](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/anchore_engine)
+Sample Anchore-Engine scans can be found [here](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/anchore_engine)
 
 ### Default Deduplication Hashcode Fields
-By default, ExposureX identifies duplicate Findings using these [hashcode fields](https://docs.exposurex.com/en/working_with_findings/finding_deduplication/about_deduplication/):
+By default, DefectDojo identifies duplicate Findings using these [hashcode fields](https://docs.defectdojo.com/en/working_with_findings/finding_deduplication/about_deduplication/):
 
 - title
 - severity

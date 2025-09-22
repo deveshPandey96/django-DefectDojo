@@ -1,6 +1,6 @@
 ---
-title: "☁️ ExposureX Cloud"
-description: "Manage Your ExposureX subscription"
+title: "☁️ DefectDojo Cloud"
+description: "Manage Your DefectDojo subscription"
 summary: ""
 date: 2023-09-07T16:06:50+02:00
 lastmod: 2023-09-07T16:06:50+02:00

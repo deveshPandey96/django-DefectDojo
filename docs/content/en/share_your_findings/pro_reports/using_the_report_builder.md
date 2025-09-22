@@ -4,7 +4,7 @@ description: "Build and publish custom reports for external audiences, or your o
 weight: 1
 ---
 
-ExposureX allows you to create Custom Reports for external audiences, which summarize the Findings or Endpoints that you wish to report on. Custom Reports can include branding and boilerplate text, and can also be used as **[Templates](https://docs.exposurex.com/en/pro_reports/working-with-generated-reports/)** for future reports.
+DefectDojo allows you to create Custom Reports for external audiences, which summarize the Findings or Endpoints that you wish to report on. Custom Reports can include branding and boilerplate text, and can also be used as **[Templates](https://docs.defectdojo.com/en/pro_reports/working-with-generated-reports/)** for future reports.
 
 ## Opening the Report Builder
 
@@ -29,7 +29,7 @@ From the Report Options section, you can take the following actions:
 
 ### Select a header image for your report
 
-To add an image to the top of your report, click the **Choose File** button and upload an image to ExposureX.
+To add an image to the top of your report, click the **Choose File** button and upload an image to DefectDojo.
 
 The image will automatically resize to fit the document, and will render directly above your **Report Name**.
 
@@ -37,7 +37,7 @@ The image will automatically resize to fit the document, and will render directl
 
 ## Step 2: Add content to your report with Widgets
 
-Once you have set your Report Options, you can begin to design your report using ExposureX’s widgets.
+Once you have set your Report Options, you can begin to design your report using DefectDojo’s widgets.
 
 Widgets are content elements of a report which can be added by dragging and dropping them into the Report Format column. The final Report will be generated based on the position of each Widget, with the **Report Name** and **Header Image** rendered at the top.
 
@@ -60,7 +60,7 @@ Once your report has generated, you can view it by either clicking on the **Stat
 
 ## Step 4: Exporting a Report
 
-Only ExposureX users will have access to Reports stored in the software, but Reports are set up in a way where they can be exported or printed easily.
+Only DefectDojo users will have access to Reports stored in the software, but Reports are set up in a way where they can be exported or printed easily.
 
 The easiest method to use is to Print To PDF \- with an HTML Report open, open a **Print** dialog in your browser and set **Save To PDF** as the **Print Destination**.
 

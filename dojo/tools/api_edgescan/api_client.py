@@ -52,7 +52,7 @@ class EdgescanAPI:
         return {
             "X-API-TOKEN": self.api_key,
             "Content-Type": "application/json",
-            "User-Agent": "ExposureX",
+            "User-Agent": "DefectDojo",
         }
 
     def get_proxies(self):

@@ -47,7 +47,7 @@ JSON reports have the following structure:
 
 They offer a list of "sanitizers" that is the list of scanned resources in the cluster. At the same time, each sanitizer will have a list of issues, in this case the issues names will match to specific resources of the cluster (pods, roles, clusterroles, etc.) where each one will have inside a list of specific findings for that resource (issue in the report).
 
-This parser goes through every finding inside the issues of every sanitizer looking for the ones with level 1 (Info), 2 (Warning) or 3 (Error) to be created as findings in ExposureX.
+This parser goes through every finding inside the issues of every sanitizer looking for the ones with level 1 (Info), 2 (Warning) or 3 (Error) to be created as findings in DefectDojo.
 
 ## Findings severity matching.
 
@@ -58,17 +58,17 @@ Popeye scan findings don't match to public vulnerabilities, it just looks for po
 - Severity 2: Warning
 - Severity 3: Error 
 
-To match it to ExposureX severity formula, Secerity 0 (Ok) findings from Popeye will be ignored as those are checks that does not need an action to be resolved. For the rest:
+To match it to DefectDojo severity formula, Secerity 0 (Ok) findings from Popeye will be ignored as those are checks that does not need an action to be resolved. For the rest:
 
-- Severity 1 (Info) Popeye findings will be created as Severity "Info" findings in ExposureX.
-- Severity 2 (Warning) Popeye findings will be created as Severity "Low" findings in ExposureX.
-- Severity 3 (Errors) Popeye findings will be created as Severity "High" findingsi in ExposureX.
+- Severity 1 (Info) Popeye findings will be created as Severity "Info" findings in DefectDojo.
+- Severity 2 (Warning) Popeye findings will be created as Severity "Low" findings in DefectDojo.
+- Severity 3 (Errors) Popeye findings will be created as Severity "High" findingsi in DefectDojo.
 
 ### Sample Scan Data
-Sample Popeye scans can be found [here](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/popeye).
+Sample Popeye scans can be found [here](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/popeye).
 
 ### Default Deduplication Hashcode Fields
-By default, ExposureX identifies duplicate Findings using these [hashcode fields](https://docs.exposurex.com/en/working_with_findings/finding_deduplication/about_deduplication/):
+By default, DefectDojo identifies duplicate Findings using these [hashcode fields](https://docs.defectdojo.com/en/working_with_findings/finding_deduplication/about_deduplication/):
 
 - title
 - description

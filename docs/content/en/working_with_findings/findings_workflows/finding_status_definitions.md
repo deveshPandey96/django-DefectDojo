@@ -4,7 +4,7 @@ description: "A quick reference to Finding status: Open, Verified, Accepted.."
 weight: 2
 ---
 
-Each Finding created in ExposureX has a Status which communicates relevant information. Statuses help your team keep track of their progress in resolving issues.
+Each Finding created in DefectDojo has a Status which communicates relevant information. Statuses help your team keep track of their progress in resolving issues.
 
 Each Finding status has a context\-specific meaning which will need to be defined by your own team. These are our suggestions, but your team's usage may vary.
 
@@ -17,13 +17,13 @@ Please note that Open/Closed are not **explicit** Status types for Findings.  Ce
 
 Once a Finding is **Active**, it will be labeled as an **Open** Finding, regardless of whether or not it has been **Verified.**
 
-Open Findings can be seen from the **Findings \> Open Findings** view of ExposureX.
+Open Findings can be seen from the **Findings \> Open Findings** view of DefectDojo.
 
 ### **Active Findings**
 
 ‘This Finding has been discovered by a scanning tool.’
 
-By default, any new Finding created in ExposureX will be labeled as **Active**. Active in this case means ‘this is a new Finding that ExposureX has not recorded on a past import’. If a Finding has been Mitigated in the past, but appears in a scan again in the future, the status of that Finding will reopen to reflect that the vulnerability has returned.
+By default, any new Finding created in DefectDojo will be labeled as **Active**. Active in this case means ‘this is a new Finding that DefectDojo has not recorded on a past import’. If a Finding has been Mitigated in the past, but appears in a scan again in the future, the status of that Finding will reopen to reflect that the vulnerability has returned.
 
 ### **Verified Findings**
 
@@ -33,7 +33,7 @@ Just because a tool records a problem does not necessarily mean the Finding requ
 
 If you’re able to confirm that the Finding does exist, you can mark it as **Verified**.
 
-Certain ExposureX functions require Findings to be Active and Verified.  If you don’t need to manually verify each Finding, you can deactivate the Verified requirement for any or all of these functions from the **System Settings** page (**Classic UI: Configuration > System Settings**, **Pro UI: Settings > Pro Settings > System Settings**).
+Certain DefectDojo functions require Findings to be Active and Verified.  If you don’t need to manually verify each Finding, you can deactivate the Verified requirement for any or all of these functions from the **System Settings** page (**Classic UI: Configuration > System Settings**, **Pro UI: Settings > Pro Settings > System Settings**).
 
 ![image](images/verified_status_toggle.png)
 
@@ -47,7 +47,7 @@ These Verified Statuses are required for
 
 'The Vulnerability recorded here is no longer active’.
 
-Once the work on a Finding is complete, you can manually Close it from the Close Findings option. Alternatively, if a scan is re-imported into ExposureX which does not contain a previously-recorded Finding, the previously-recorded Finding will automatically close.
+Once the work on a Finding is complete, you can manually Close it from the Close Findings option. Alternatively, if a scan is re-imported into DefectDojo which does not contain a previously-recorded Finding, the previously-recorded Finding will automatically close.
 
 ## **Inactive**
 
@@ -87,4 +87,4 @@ If you have a testing and remediation effort related to a specific aspect of you
 
 Once you’ve reviewed a Finding, you might discover that the vulnerability reported does not actually exist. The False Positive status will be maintained by reimport and prevent matching findings from being opened or closed, which assists with noise reduction.  
 
-If a different scanning tool finds a similar Finding, it will not be recorded as a False Positive. ExposureX can only compare Findings within the same tool to determine if a Finding has already been recorded.
+If a different scanning tool finds a similar Finding, it will not be recorded as a False Positive. DefectDojo can only compare Findings within the same tool to determine if a Finding has already been recorded.

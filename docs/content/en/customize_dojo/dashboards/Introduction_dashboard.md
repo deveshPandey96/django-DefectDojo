@@ -1,10 +1,10 @@
 ---
-title: "ExposureX Main Dashboard"
-description: "Working with the front page of ExposureX"
+title: "DefectDojo Main Dashboard"
+description: "Working with the front page of DefectDojo"
 weight: 1
 ---
 
-The Dashboard is likely the first page you'll see when you open ExposureX. It summarizes your team’s performance, and provides tracking tools to monitor specific areas of your vulnerability tracking environment.
+The Dashboard is likely the first page you'll see when you open DefectDojo. It summarizes your team’s performance, and provides tracking tools to monitor specific areas of your vulnerability tracking environment.
 
 ![image](images/Introduction_to_Dashboard_Features.png)
 
@@ -13,11 +13,11 @@ The Dashboard is likely the first page you'll see when you open ExposureX. It su
 * **Customizable Dashboard Tiles**, which you can use to visualize the metrics which are relevant to you.
 * **Pre\-built Dashboard Charts**, which visualize your team’s overall performance.
 
-Each team member shares a single dashboard, but the results of the dashboard are restricted by their role and Product Membership. Team members will only see calculated stats for the Products, Engagements, Findings or other objects that they have access to. For more information, see our guides on [User Permissions and Roles](https://docs.exposurex.com/en/user_management/about-permissions--roles/).
+Each team member shares a single dashboard, but the results of the dashboard are restricted by their role and Product Membership. Team members will only see calculated stats for the Products, Engagements, Findings or other objects that they have access to. For more information, see our guides on [User Permissions and Roles](https://docs.defectdojo.com/en/user_management/about-permissions--roles/).
 
 ### Dashboard Tiles
 
-Tiles are designed to provide relevant information and speed up navigation within ExposureX. 
+Tiles are designed to provide relevant information and speed up navigation within DefectDojo. 
 
 ![image](images/Introduction_to_Dashboard_Features_2.png)
 
@@ -33,7 +33,7 @@ To learn how to add and use dashboard tiles, see our [guide](../about_custom_das
 
 ### Dashboard Charts
 
-Located beneath Dashboard Tiles, ExposureX has five pre\-built charts:
+Located beneath Dashboard Tiles, DefectDojo has five pre\-built charts:
 
 * **Historical Finding Severity** pie\-chart
 * **Reported Finding Severity** histogram, by month
@@ -41,11 +41,11 @@ Located beneath Dashboard Tiles, ExposureX has five pre\-built charts:
 * **Top 10 Graded Products** table
 * **Bottom 10 Graded Products** table
 
-These charts can be added or removed from the dashboard via **[Dashboard Configuration](https://docs.exposurex.com/en/dashboard/how-to-edit-dashboard-configuration/)**.
+These charts can be added or removed from the dashboard via **[Dashboard Configuration](https://docs.defectdojo.com/en/dashboard/how-to-edit-dashboard-configuration/)**.
 
 #### Historical Finding Severity
 
-This chart organizes all Findings created in ExposureX by Severity, so that you can see the overall distribution of vulnerability levels in your environment.
+This chart organizes all Findings created in DefectDojo by Severity, so that you can see the overall distribution of vulnerability levels in your environment.
 
 ![image](images/Introduction_to_Dashboard_Features_3.png)
 

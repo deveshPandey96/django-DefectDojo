@@ -4,10 +4,10 @@ toc_hide: true
 ---
 
 ### File Types
-ExposureX parser accepts a .json file from [Wazuh](https://wazuh.com). The export from Wazuh can be done via 2 ways. Choose the one which you prefer.
+DefectDojo parser accepts a .json file from [Wazuh](https://wazuh.com). The export from Wazuh can be done via 2 ways. Choose the one which you prefer.
 
-- export the Wazuh findings from API and upload them to ExposureX. This method may be the easiest one but does export all known vulnerabilities at once. It is not possible to sort them after clients or any other categories. You will receive all vulnerabilities in one engagement. It also does not output the endpoint of a finding.
-- export the findings via the script [available here](https://github.com/quirinziessler/wazuh-findings-exporter). The script fetches the findings by Wazuh client groups and saves them as json, ready for upload. You will receive one file per group allowing you to separate the clients via engagements in Wazuh. It also exports the endpoints hostname and displays them in ExposureX UI.
+- export the Wazuh findings from API and upload them to DefectDojo. This method may be the easiest one but does export all known vulnerabilities at once. It is not possible to sort them after clients or any other categories. You will receive all vulnerabilities in one engagement. It also does not output the endpoint of a finding.
+- export the findings via the script [available here](https://github.com/quirinziessler/wazuh-findings-exporter). The script fetches the findings by Wazuh client groups and saves them as json, ready for upload. You will receive one file per group allowing you to separate the clients via engagements in Wazuh. It also exports the endpoints hostname and displays them in DefectDojo UI.
 
 Independent of your above choice: Have in mind to adjust the max file size via "DD_SCAN_FILE_MAX_SIZE" if you see files larger than the default value of 100MB. Depending on the amount and category of integrated devices, the file size jumps rapidly.
 
@@ -49,10 +49,10 @@ Parser expects a .json file structured as below.
 ~~~
 
 ### Sample Scan Data
-Sample Wazuh Scanner scans can be found [here](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/wazuh).
+Sample Wazuh Scanner scans can be found [here](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/wazuh).
 
 ### Default Deduplication Hashcode Fields
-By default, ExposureX identifies duplicate Findings using these [hashcode fields](https://docs.exposurex.com/en/working_with_findings/finding_deduplication/about_deduplication/):
+By default, DefectDojo identifies duplicate Findings using these [hashcode fields](https://docs.defectdojo.com/en/working_with_findings/finding_deduplication/about_deduplication/):
 
 - title
 - cwe

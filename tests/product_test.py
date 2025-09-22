@@ -68,7 +68,7 @@ class ProductTest(BaseTestCase):
         driver = self.driver
         # Navigate to the product page
         self.goto_product_overview(driver)
-        # list products which will make sure there are no javascript errors such as before in https://github.com/ExposureX/django-ExposureX/issues/2050
+        # list products which will make sure there are no javascript errors such as before in https://github.com/DefectDojo/django-DefectDojo/issues/2050
 
     @on_exception_html_source_logger
     def test_list_components(self):

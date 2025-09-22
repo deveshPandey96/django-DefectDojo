@@ -1,6 +1,6 @@
 ---
 title: "API Pull"
-description: "Report pulled to ExposureX via API exposed by scanning service"
+description: "Report pulled to DefectDojo via API exposed by scanning service"
 weight: 4
 chapter: true
 sidebar:

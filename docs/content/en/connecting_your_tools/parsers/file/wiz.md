@@ -8,7 +8,7 @@ weight: 1
 
 ## Overview
 
-The [Wiz](https://www.wiz.io/) parser for ExposureX supports imports from both Wiz Scanner Standard and SCA (Software Composition Analysis) .csv output from Wiz.io. This document details the parsing of both formats into ExposureX field mappings, unmapped fields, and location of each field's parsing code for easier troubleshooting and analysis.
+The [Wiz](https://www.wiz.io/) parser for DefectDojo supports imports from both Wiz Scanner Standard and SCA (Software Composition Analysis) .csv output from Wiz.io. This document details the parsing of both formats into DefectDojo field mappings, unmapped fields, and location of each field's parsing code for easier troubleshooting and analysis.
 
 ## Supported File Types
 
@@ -36,7 +36,7 @@ To generate these files, export the findings from the Wiz platform by:
 | ----------- | -------------------------- | ------------------------------- | ------------- | -------------------------------------------------------------------------------------------------------- |
 | 1           | Created At                 | date                            | 68            | Parsed using the parse_wiz_datetime function to convert to datetime object                               |
 | 2           | Title                      | title                           | 67            | Direct mapping to Finding title                                                                          |
-| 3           | Severity                   | severity                        | 69            | Converted to lowercase then capitalized to match ExposureX's severity format                            |
+| 3           | Severity                   | severity                        | 69            | Converted to lowercase then capitalized to match DefectDojo's severity format                            |
 | 4           | Status                     | active, is_mitigated, mitigated | 65            | Converted through WizcliParsers.convert_status function to determine active status and mitigation status |
 | 5           | Description                | description (partial)           | 79-81         | Added to description with "Description:" prefix                                                          |
 | 6           | Resource Type              | description (partial)           | 79-81         | Added to description with "Resource Type:" prefix                                                        |
@@ -93,7 +93,7 @@ To generate these files, export the findings from the Wiz platform by:
 | 5           | HasExploit                                  | description                    | 150-154       | Added to description with "Has Exploit" prefix                                     |
 | 6           | HasCisaKevExploit                           | description                    | 150-154       | Added to description with "Has Cisa Kev Exploit" prefix                            |
 | 7           | FindingStatus                               | active, is_mitigated           | 180           | Mapped through convert_status function to determine active state                   |
-| 8           | VendorSeverity                              | severity                       | 181           | Mapped through \_validate_severities to convert to ExposureX severity format      |
+| 8           | VendorSeverity                              | severity                       | 181           | Mapped through \_validate_severities to convert to DefectDojo severity format      |
 | 9           | FirstDetected                               | date                           | 185           | Parsed into date object using date_parser                                          |
 | 10          | LastDetected                                | Not parsed                     | -             | Not used in mapping                                                                |
 | 11          | ResolvedAt                                  | Not parsed                     | -             | Not used in mapping                                                                |
@@ -172,7 +172,7 @@ To generate these files, export the findings from the Wiz platform by:
 
 ### Sample Scan Data
 
-Sample Wiz Scanner scans can be found in the [sample scan data folder](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/wiz).
+Sample Wiz Scanner scans can be found in the [sample scan data folder](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/wiz).
 
 ## Link To Tool
 
@@ -180,7 +180,7 @@ Sample Wiz Scanner scans can be found in the [sample scan data folder](https://g
 - [Wiz Documentation](https://docs.wiz.io/)
 
 ### Default Deduplication Hashcode Fields
-By default, ExposureX identifies duplicate Findings using these [hashcode fields](https://docs.exposurex.com/en/working_with_findings/finding_deduplication/about_deduplication/):
+By default, DefectDojo identifies duplicate Findings using these [hashcode fields](https://docs.defectdojo.com/en/working_with_findings/finding_deduplication/about_deduplication/):
 
 - title
 - description

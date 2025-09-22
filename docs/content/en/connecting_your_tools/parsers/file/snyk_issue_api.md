@@ -15,10 +15,10 @@ GET https://api.snyk.io/rest/orgs/{org_id}/issues?version=2025-08-02&type=code
 For more details see: https://docs.snyk.io/snyk-api/reference/issues#get-orgs-org_id-issues
 
 ### Sample Scan Data
-Sample Snyk Issue API scans can be found [here](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/snyk_issue_api).
+Sample Snyk Issue API scans can be found [here](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/snyk_issue_api).
 
 ### Field Mapping
-The parser maps fields from the Snyk Issue API response to ExposureX's Finding model as follows:
+The parser maps fields from the Snyk Issue API response to DefectDojo's Finding model as follows:
 
 | Finding Field | Snyk Issue API Field | Notes |
 |--------------|---------------------|-------|
@@ -57,7 +57,7 @@ The impact field combines multiple pieces of information:
 - Line numbers: Only the starting line is stored in the Finding model, but both start and end lines are included in the impact field for reference
 
 ### Default Deduplication Hashcode Fields
-By default, ExposureX identifies duplicate Findings using these [hashcode fields](https://docs.exposurex.com/en/working_with_findings/finding_deduplication/about_deduplication/):
+By default, DefectDojo identifies duplicate Findings using these [hashcode fields](https://docs.defectdojo.com/en/working_with_findings/finding_deduplication/about_deduplication/):
 
 - unique id from tool
 - file path

@@ -1,6 +1,6 @@
 ---
 title: "Architecture (Open-Source)"
-description: "The ExposureX platform consists of several components that work together closely."
+description: "The DefectDojo platform consists of several components that work together closely."
 draft: false
 weight: 1
 ---
@@ -15,7 +15,7 @@ images, JavaScript files or CSS files.
 ## uWSGI
 
 [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/) is the application server
-that runs the ExposureX platform, written in Python/Django, to serve all
+that runs the DefectDojo platform, written in Python/Django, to serve all
 dynamic content.
 
 ## Message Broker
@@ -32,7 +32,7 @@ Worker.
 ## Celery Beat
 
 In order to identify and notify users about things like upcoming engagements,
-ExposureX runs scheduled tasks. These tasks are scheduled and run using Celery
+DefectDojo runs scheduled tasks. These tasks are scheduled and run using Celery
 Beat.
 
 ## Initializer
@@ -43,4 +43,4 @@ itself down after all tasks are performed.
 
 ## Database
 
-The Database stores all the application data of ExposureX. Currently only [PostgreSQL](https://www.postgresql.org/) is supported.
+The Database stores all the application data of DefectDojo. Currently only [PostgreSQL](https://www.postgresql.org/) is supported.

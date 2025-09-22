@@ -1,12 +1,12 @@
 ## :warning: Pre-Approval check :warning:
 
 We don't want to waste your time, so if you're unsure whether your hypothetical enhancement meets the criteria for approval, please file an issue to get pre-approval before beginning work on a PR.
-Learn more here: https://github.com/ExposureX/django-ExposureX/blob/master/readme-docs/CONTRIBUTING.md#submission-pre-approval
+Learn more here: https://github.com/DefectDojo/django-DefectDojo/blob/master/readme-docs/CONTRIBUTING.md#submission-pre-approval
 
 **Description**
 
 Describe the feature / bug fix implemented by this PR.
-If this is a new parser, [the parser guide](https://docs.exposurex.com/en/open_source/contributing/how-to-write-a-parser/) may be worth (re)reading.
+If this is a new parser, [the parser guide](https://docs.defectdojo.com/en/open_source/contributing/how-to-write-a-parser/) may be worth (re)reading.
 
 **Test results**
 
@@ -15,7 +15,7 @@ Alternatively, describe what you have and haven't tested.
 
 **Documentation**
 
-Please update any documentation when needed in the [documentation folder](https://github.com/ExposureX/django-ExposureX/tree/dev/docs))
+Please update any documentation when needed in the [documentation folder](https://github.com/DefectDojo/django-DefectDojo/tree/dev/docs))
 
 **Checklist**
 
@@ -27,7 +27,7 @@ This checklist is for your information.
 - [ ] Give a meaningful name to your PR, as it may end up being used in the release notes.
 - [ ] Your code is flake8 compliant.
 - [ ] Your code is python 3.11 compliant.
-- [ ] If this is a new feature and not a bug fix, you've included the proper documentation in the docs at https://github.com/ExposureX/django-ExposureX/tree/dev/docs as part of this PR.
+- [ ] If this is a new feature and not a bug fix, you've included the proper documentation in the docs at https://github.com/DefectDojo/django-DefectDojo/tree/dev/docs as part of this PR.
 - [ ] Model changes must include the necessary migrations in the dojo/db_migrations folder.
 - [ ] Add applicable tests to the unit tests.
 - [ ] Add the proper label to categorize your PR.

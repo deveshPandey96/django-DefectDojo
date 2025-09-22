@@ -1,11 +1,11 @@
-# noqa: N999 - see https://github.com/ExposureX/django-ExposureX/pull/11647
+# noqa: N999 - see https://github.com/DefectDojo/django-DefectDojo/pull/11647
 #########################################################################################################
 # It is not recommended to edit file 'settings.dist.py', for production deployments.                        #
 # Any customization of variables need to be done via environmental variables or in 'local_settings.py'. #
-# For more information check https://documentation.exposurex.com/getting_started/configuration/        #
+# For more information check https://documentation.defectdojo.com/getting_started/configuration/        #
 #########################################################################################################
 
-# Django settings for ExposureX
+# Django settings for DefectDojo
 import json
 import logging
 import os
@@ -55,7 +55,7 @@ env = environ.FileAwareEnv(
     DD_TIME_ZONE=(str, "UTC"),
     DD_LANG=(str, "en-us"),
     DD_TEAM_NAME=(str, "Security Team"),
-    DD_ADMINS=(str, "ExposureX:dojo@localhost,Admin:admin@localhost"),
+    DD_ADMINS=(str, "DefectDojo:dojo@localhost,Admin:admin@localhost"),
     DD_WHITENOISE=(bool, False),
     DD_TRACK_MIGRATIONS=(bool, True),
     DD_SECURE_PROXY_SSL_HEADER=(bool, False),
@@ -92,12 +92,12 @@ env = environ.FileAwareEnv(
     DD_MAX_TAG_LENGTH=(int, 25),
     DD_DATABASE_ENGINE=(str, "django.db.backends.postgresql"),
     DD_DATABASE_HOST=(str, "postgres"),
-    DD_DATABASE_NAME=(str, "exposurex"),
+    DD_DATABASE_NAME=(str, "defectdojo"),
     # default django database name for testing is test_<dbname>
     DD_TEST_DATABASE_NAME=(str, "test_defectdojo"),
-    DD_DATABASE_PASSWORD=(str, "exposurex"),
+    DD_DATABASE_PASSWORD=(str, "defectdojo"),
     DD_DATABASE_PORT=(int, 3306),
-    DD_DATABASE_USER=(str, "exposurex"),
+    DD_DATABASE_USER=(str, "defectdojo"),
     DD_SECRET_KEY=(str, ""),
     DD_CREDENTIAL_AES_256_KEY=(str, "."),
     DD_DATA_UPLOAD_MAX_MEMORY_SIZE=(int, 8388608),  # Max post size set to 8mb
@@ -171,7 +171,7 @@ env = environ.FileAwareEnv(
     # Force Authentication to make SSO possible with SAML2
     DD_SAML2_FORCE_AUTH=(bool, True),
     DD_SAML2_LOGIN_BUTTON_TEXT=(str, "Login with SAML"),
-    # Optional: display the idp SAML Logout URL in ExposureX
+    # Optional: display the idp SAML Logout URL in DefectDojo
     DD_SAML2_LOGOUT_URL=(str, ""),
     # Metadata is required for SAML, choose either remote url or local file path
     DD_SAML2_METADATA_AUTO_CONF_URL=(str, ""),
@@ -206,8 +206,8 @@ env = environ.FileAwareEnv(
     # `RemoteUser` is usually used behind AuthN proxy and users should not know about this mechanism from Swagger because it is not usable by users.
     # It should be hidden by default.
     DD_AUTH_REMOTEUSER_VISIBLE_IN_SWAGGER=(bool, False),
-    # if somebody is using own documentation how to use ExposureX in his own company
-    DD_DOCUMENTATION_URL=(str, "https://documentation.exposurex.com"),
+    # if somebody is using own documentation how to use DefectDojo in his own company
+    DD_DOCUMENTATION_URL=(str, "https://documentation.defectdojo.com"),
     # merging findings doesn't always work well with dedupe and reimport etc.
     # disable it if you see any issues (and report them on github)
     DD_DISABLE_FINDING_MERGE=(bool, False),
@@ -230,7 +230,7 @@ env = environ.FileAwareEnv(
     DD_JIRA_SSL_VERIFY=(bool, True),
     DD_JIRA_DESCRIPTION_MAX_LENGTH=(int, 32767),
     # When interacting with jira tickets that attached finding groups, we should no be opening any findings
-    # on the ExposureX side because jira has no way of knowing if a finding really should be reopened or not
+    # on the DefectDojo side because jira has no way of knowing if a finding really should be reopened or not
     DD_JIRA_WEBHOOK_ALLOW_FINDING_GROUP_REOPEN=(bool, False),
     # You can set extra Jira issue types via a simple env var that supports a csv format, like "Work Item,Vulnerability"
     DD_JIRA_EXTRA_ISSUE_TYPES=(str, ""),
@@ -246,7 +246,7 @@ env = environ.FileAwareEnv(
     DD_QUALYS_WAS_WEAKNESS_IS_VULN=(bool, False),
     # regular expression to exclude one or more parsers
     # could be usefull to limit parser allowed
-    # AWS Scout2 Scan Parser is deprecated (see https://github.com/ExposureX/django-ExposureX/pull/5268)
+    # AWS Scout2 Scan Parser is deprecated (see https://github.com/DefectDojo/django-DefectDojo/pull/5268)
     DD_PARSER_EXCLUDE=(str, ""),
     # when enabled in sytem settings,  every minute a job run to delete excess duplicates
     # we limit the amount of duplicates that can be deleted in a single run of that job
@@ -765,7 +765,7 @@ SESSION_EXPIRE_WARNING = env("DD_SESSION_EXPIRE_WARNING")
 SESSION_COOKIE_AGE = env("DD_SESSION_COOKIE_AGE")
 
 # ------------------------------------------------------------------------------
-# EXPOSUREX SPECIFIC
+# DEFECTDOJO SPECIFIC
 # ------------------------------------------------------------------------------
 
 # Credential Key
@@ -823,8 +823,8 @@ if API_TOKENS_ENABLED:
     REST_FRAMEWORK["DEFAULT_AUTHENTICATION_CLASSES"] += ("rest_framework.authentication.TokenAuthentication",)
 
 SPECTACULAR_SETTINGS = {
-    "TITLE": "ExposureX API v2",
-    "DESCRIPTION": "ExposureX - Open Source vulnerability Management made easy. Prefetch related parameters/responses not yet in the schema.",
+    "TITLE": "DefectDojo API v2",
+    "DESCRIPTION": "DefectDojo - Open Source vulnerability Management made easy. Prefetch related parameters/responses not yet in the schema.",
     "VERSION": __version__,
     "SCHEMA_PATH_PREFIX": "/api/v2",
     # OTHER SETTINGS
@@ -1463,9 +1463,9 @@ DEDUPE_ALGOS = [
 # Allows to deduplicate with endpoints if endpoints is not included in the hashcode.
 # Possible values are: scheme, host, port, path, query, fragment, userinfo, and user. For a details description see https://hyperlink.readthedocs.io/en/latest/api.html#attributes.
 # Example:
-# Finding A and B have the same hashcode. Finding A has endpoint http://exposurex.com and finding B has endpoint https://exposurex.com/finding.
+# Finding A and B have the same hashcode. Finding A has endpoint http://defectdojo.com and finding B has endpoint https://defectdojo.com/finding.
 # - An empyt list ([]) means, no fields are used. B is marked as duplicated of A.
-# - Host (['host']) means: B is marked as duplicate of A because the host (exposurex.com) is the same.
+# - Host (['host']) means: B is marked as duplicate of A because the host (defectdojo.com) is the same.
 # - Host and path (['host', 'path']) means: A and B stay untouched because the path is different.
 #
 # If a finding has more than one endpoint, only one endpoint pair must match to mark the finding as duplicate.
@@ -1595,7 +1595,7 @@ DEDUPLICATION_ALGORITHM_PER_PARSER = {
     "MobSF Scorecard Scan": DEDUPE_ALGO_HASH_CODE,
     "OSV Scan": DEDUPE_ALGO_HASH_CODE,
     "Nosey Parker Scan": DEDUPE_ALGO_UNIQUE_ID_FROM_TOOL_OR_HASH_CODE,
-    # The bearer fingerprint is not unique across multiple scans, so it shouldn't be used for deduplication (https://github.com/ExposureX/django-ExposureX/pull/12346#issuecomment-2841561634)
+    # The bearer fingerprint is not unique across multiple scans, so it shouldn't be used for deduplication (https://github.com/DefectDojo/django-DefectDojo/pull/12346#issuecomment-2841561634)
     "Bearer CLI": DEDUPE_ALGO_HASH_CODE,
     "Wiz Scan": DEDUPE_ALGO_UNIQUE_ID_FROM_TOOL_OR_HASH_CODE,
     "Deepfence Threatmapper Report": DEDUPE_ALGO_HASH_CODE,

@@ -2,7 +2,7 @@ from crum import get_current_request
 
 # Attribution: This code has been taken from https://github.com/anexia-it/django-request-cache, which has
 # been published under the MIT License. Since this project hasn't been updated for more than a year,
-# the code has been copied to ExposureX, to be able to fix issues ourselves.
+# the code has been copied to DefectDojo, to be able to fix issues ourselves.
 
 
 def get_request_cache():
