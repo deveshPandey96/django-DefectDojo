@@ -1,5 +1,5 @@
 ---
-title: "Open Source DefectDojo"
+title: "Open Source ExposureX"
 description: ""
 summary: ""
 date: 2023-09-07T16:12:03+02:00

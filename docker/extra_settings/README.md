@@ -1,4 +1,4 @@
-A local_settings.py file can be placed here to override/extend the settings bundled with DefectDojo.
+A local_settings.py file can be placed here to override/extend the settings bundled with ExposureX.
 This folders is ignore by git and docker.
 
 If a file if placed here, it will be copied on startup to `dojo/settings/local_settings.py`.

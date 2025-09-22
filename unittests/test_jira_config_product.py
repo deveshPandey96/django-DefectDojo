@@ -21,8 +21,8 @@ class JIRAConfigProductTest(DojoTestCase):
     data_jira_instance = {
             "configuration_name": "something_jira",
             "url": "https://127.0.0.1",
-            "username": "defectdojo",
-            "password": "defectdojo-password",
+            "username": "exposurex",
+            "password": "exposurex-password",
             "default_issue_type": "Bug",
             "epic_name_id": 1,
             "open_status_key": 1,

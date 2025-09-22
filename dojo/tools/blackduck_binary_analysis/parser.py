@@ -10,7 +10,7 @@ from .importer import BlackduckBinaryAnalysisImporter
 class BlackduckBinaryAnalysisParser:
 
     """
-    Report type(s) from Blackduck Binary Analysis compatible with DefectDojo:
+    Report type(s) from Blackduck Binary Analysis compatible with ExposureX:
     - Single CSV file containing vulnerable components
     """
 

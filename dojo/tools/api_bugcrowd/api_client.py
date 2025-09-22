@@ -11,7 +11,7 @@ class BugcrowdAPI:
     bugcrowd_api_url = "https://api.bugcrowd.com"
     default_headers = {
         "Accept": "application/vnd.bugcrowd+json",
-        "User-Agent": "DefectDojo",
+        "User-Agent": "ExposureX",
         "Bugcrowd-Version": "2021-10-28",
     }
 

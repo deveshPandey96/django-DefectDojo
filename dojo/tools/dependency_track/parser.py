@@ -86,9 +86,9 @@ class DependencyTrackParser:
 
     def _convert_dependency_track_severity_to_dojo_severity(self, dependency_track_severity):
         """
-        Converts a Dependency Track severity to a DefectDojo severity.
+        Converts a Dependency Track severity to a ExposureX severity.
         :param dependency_track_severity: The severity from Dependency Track
-        :return: A DefectDojo severity if a mapping can be found; otherwise a null value is returned
+        :return: A ExposureX severity if a mapping can be found; otherwise a null value is returned
         """
         severity = dependency_track_severity.lower()
         if severity == "critical":
@@ -105,11 +105,11 @@ class DependencyTrackParser:
 
     def _convert_dependency_track_finding_to_dojo_finding(self, dependency_track_finding, test):
         """
-        Converts a Dependency Track finding to a DefectDojo finding
+        Converts a Dependency Track finding to a ExposureX finding
 
         :param dependency_track_finding: A dictionary representing a single finding from a Dependency Track Finding Packaging Format (FPF) export
-        :param test: The test that the DefectDojo finding should be associated to
-        :return: A DefectDojo Finding model
+        :param test: The test that the ExposureX finding should be associated to
+        :return: A ExposureX Finding model
         """
         # Validation of required fields
         if "vulnerability" not in dependency_track_finding:
@@ -156,7 +156,7 @@ class DependencyTrackParser:
             vulnerability_id = list(set_of_ids)
         else:
             # The vulnId is not always a CVE (e.g. if the vulnerability is not from the NVD source)
-            # So here we set the cve for the DefectDojo finding to null unless the source of the
+            # So here we set the cve for the ExposureX finding to null unless the source of the
             # Dependency Track vulnerability is NVD
             vulnerability_id = [vuln_id] if source is not None and source.upper() == "NVD" else None
 
@@ -182,7 +182,7 @@ class DependencyTrackParser:
             component_purl = dependency_track_finding["component"]["purl"]
             vulnerability_description += f"\nThe purl of the affected component is: {component_purl}."
             # there is no file_path in the report, but defect dojo needs it otherwise it skips deduplication:
-            # see https://github.com/DefectDojo/django-DefectDojo/issues/3647
+            # see https://github.com/ExposureX/django-ExposureX/issues/3647
             # might be no longer needed in the future, and is not needed if people use the default
             # hash code dedupe config for this parser
             file_path = component_purl
@@ -199,7 +199,7 @@ class DependencyTrackParser:
         if "uuid" in dependency_track_finding["vulnerability"] and dependency_track_finding["vulnerability"]["uuid"] is not None:
             vuln_id_from_tool = dependency_track_finding["vulnerability"]["uuid"]
 
-        # Get severity according to Dependency Track and convert it to a severity DefectDojo understands
+        # Get severity according to Dependency Track and convert it to a severity ExposureX understands
         dependency_track_severity = dependency_track_finding["vulnerability"]["severity"]
         vulnerability_severity = self._convert_dependency_track_severity_to_dojo_severity(dependency_track_severity)
         if vulnerability_severity is None:
@@ -287,9 +287,9 @@ class DependencyTrackParser:
         # If we have gotten this far then there should be one or more findings
         # Loop through each finding from Dependency Track
         for dependency_track_finding in findings_export_dict["findings"]:
-            # Convert a Dependency Track finding to a DefectDojo finding
+            # Convert a Dependency Track finding to a ExposureX finding
             dojo_finding = self._convert_dependency_track_finding_to_dojo_finding(dependency_track_finding, test)
 
-            # Append DefectDojo finding to list
+            # Append ExposureX finding to list
             items.append(dojo_finding)
         return items

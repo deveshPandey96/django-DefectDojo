@@ -14,14 +14,14 @@ class RiskReconAPI:
             msg = (
                 "Please supply a Risk Recon API key. \n"
                 "This can be generated in the system admin panel. \n"
-                "See https://documentation.defectdojo.com/integrations/import/#risk-recon-api-importer \n"
+                "See https://documentation.exposurex.com/integrations/import/#risk-recon-api-importer \n"
             )
             raise Exception(msg)
         if not self.url:
             msg = (
                 "Please supply a Risk Recon API url. \n"
                 "A general url is https://api.riskrecon.com/v1/ \n"
-                "See https://documentation.defectdojo.com/integrations/import/#risk-recon-api-importer \n"
+                "See https://documentation.exposurex.com/integrations/import/#risk-recon-api-importer \n"
             )
             raise Exception(msg)
         if self.url.endswith("/"):

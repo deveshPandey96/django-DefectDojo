@@ -58,7 +58,7 @@ def empty_list(self, *args, **kwargs):
 
 
 class TestSonarqubeImporterNoSQToolConfig(DojoTestCase):
-    # Testing case no 1. https://github.com/DefectDojo/django-DefectDojo/pull/4676
+    # Testing case no 1. https://github.com/ExposureX/django-ExposureX/pull/4676
     fixtures = [
         "unit_sonarqube_toolType.json",
         "unit_sonarqube_product.json",
@@ -75,7 +75,7 @@ class TestSonarqubeImporterNoSQToolConfig(DojoTestCase):
 
 
 class TestSonarqubeImporterOneSQToolConfig(DojoTestCase):
-    # Testing case no 2. https://github.com/DefectDojo/django-DefectDojo/pull/4676
+    # Testing case no 2. https://github.com/ExposureX/django-ExposureX/pull/4676
     fixtures = [
         "unit_sonarqube_toolType.json",
         "unit_sonarqube_toolConfig1.json",
@@ -93,7 +93,7 @@ class TestSonarqubeImporterOneSQToolConfig(DojoTestCase):
 
 
 class TestSonarqubeImporterMultipleSQToolConfig(DojoTestCase):
-    # Testing case no 3. https://github.com/DefectDojo/django-DefectDojo/pull/4676
+    # Testing case no 3. https://github.com/ExposureX/django-ExposureX/pull/4676
     fixtures = [
         "unit_sonarqube_toolType.json",
         "unit_sonarqube_toolConfig1.json",
@@ -112,7 +112,7 @@ class TestSonarqubeImporterMultipleSQToolConfig(DojoTestCase):
 
 
 class TestSonarqubeImporterOneSQConfigNoKey(DojoTestCase):
-    # Testing case no 4. https://github.com/DefectDojo/django-DefectDojo/pull/4676 without Project key
+    # Testing case no 4. https://github.com/ExposureX/django-ExposureX/pull/4676 without Project key
     fixtures = [
         "unit_sonarqube_toolType.json",
         "unit_sonarqube_toolConfig1.json",
@@ -138,7 +138,7 @@ class TestSonarqubeImporterOneSQConfigNoKey(DojoTestCase):
 
 
 class TestSonarqubeImporterOneSQConfigWithKey(DojoTestCase):
-    # Testing case no 5. https://github.com/DefectDojo/django-DefectDojo/pull/4676 without Project key
+    # Testing case no 5. https://github.com/ExposureX/django-ExposureX/pull/4676 without Project key
     fixtures = [
         "unit_sonarqube_toolType.json",
         "unit_sonarqube_toolConfig1.json",
@@ -164,7 +164,7 @@ class TestSonarqubeImporterOneSQConfigWithKey(DojoTestCase):
 
 
 class TestSonarqubeImporterMultipleSQConfigs(DojoTestCase):
-    # Testing case no 6. https://github.com/DefectDojo/django-DefectDojo/pull/4676 without Project key
+    # Testing case no 6. https://github.com/ExposureX/django-ExposureX/pull/4676 without Project key
     fixtures = [
         "unit_sonarqube_toolType.json",
         "unit_sonarqube_toolConfig1.json",
@@ -185,7 +185,7 @@ class TestSonarqubeImporterMultipleSQConfigs(DojoTestCase):
 
 
 class TestSonarqubeImporterSelectedSQConfigsNoKey(DojoTestCase):
-    # Testing case no 7. https://github.com/DefectDojo/django-DefectDojo/pull/4676 without Project key
+    # Testing case no 7. https://github.com/ExposureX/django-ExposureX/pull/4676 without Project key
     fixtures = [
         "unit_sonarqube_toolType.json",
         "unit_sonarqube_toolConfig1.json",
@@ -215,7 +215,7 @@ class TestSonarqubeImporterSelectedSQConfigsNoKey(DojoTestCase):
 
 
 class TestSonarqubeImporterSelectedSQConfigsWithKey(DojoTestCase):
-    # Testing case no 8. https://github.com/DefectDojo/django-DefectDojo/pull/4676 without Project key
+    # Testing case no 8. https://github.com/ExposureX/django-ExposureX/pull/4676 without Project key
     fixtures = [
         "unit_sonarqube_toolType.json",
         "unit_sonarqube_toolConfig1.json",
@@ -294,7 +294,7 @@ class TestSonarqubeImporterExternalRule(DojoTestCase):
 
 
 class TestSonarqubeImporterTwoIssuesNoHotspots(DojoTestCase):
-    # Testing case no 9. https://github.com/DefectDojo/django-DefectDojo/pull/4107
+    # Testing case no 9. https://github.com/ExposureX/django-ExposureX/pull/4107
     fixtures = [
         "unit_sonarqube_toolType.json",
         "unit_sonarqube_toolConfig1.json",
@@ -319,7 +319,7 @@ class TestSonarqubeImporterTwoIssuesNoHotspots(DojoTestCase):
 
 
 class TestSonarqubeImporterNoIssuesOneHotspot(DojoTestCase):
-    # Testing case no 9. https://github.com/DefectDojo/django-DefectDojo/pull/4107
+    # Testing case no 9. https://github.com/ExposureX/django-ExposureX/pull/4107
     fixtures = [
         "unit_sonarqube_toolType.json",
         "unit_sonarqube_toolConfig1.json",
@@ -344,7 +344,7 @@ class TestSonarqubeImporterNoIssuesOneHotspot(DojoTestCase):
 
 
 class TestSonarqubeImporterNoIssuesTwoHotspots(DojoTestCase):
-    # Testing case no 11. https://github.com/DefectDojo/django-DefectDojo/pull/4107
+    # Testing case no 11. https://github.com/ExposureX/django-ExposureX/pull/4107
     fixtures = [
         "unit_sonarqube_toolType.json",
         "unit_sonarqube_toolConfig1.json",
@@ -369,7 +369,7 @@ class TestSonarqubeImporterNoIssuesTwoHotspots(DojoTestCase):
 
 
 class TestSonarqubeImporterTwoIssuesTwoHotspots(DojoTestCase):
-    # Testing case no 12. https://github.com/DefectDojo/django-DefectDojo/pull/4107
+    # Testing case no 12. https://github.com/ExposureX/django-ExposureX/pull/4107
     fixtures = [
         "unit_sonarqube_toolType.json",
         "unit_sonarqube_toolConfig1.json",
@@ -394,7 +394,7 @@ class TestSonarqubeImporterTwoIssuesTwoHotspots(DojoTestCase):
 
 
 class TestSonarqubeImporterValidateHotspotData(DojoTestCase):
-    # Testing case no 13. https://github.com/DefectDojo/django-DefectDojo/pull/4107
+    # Testing case no 13. https://github.com/ExposureX/django-ExposureX/pull/4107
     fixtures = [
         "unit_sonarqube_toolType.json",
         "unit_sonarqube_toolConfig1.json",
@@ -465,7 +465,7 @@ class TestSonarqubeImporterValidateHotspotData(DojoTestCase):
 
 
 class TestSonarqubeImporterHotspotRule_WO_Risk_Description(DojoTestCase):
-    # Testing case no 14. https://github.com/DefectDojo/django-DefectDojo/issues/6506
+    # Testing case no 14. https://github.com/ExposureX/django-ExposureX/issues/6506
     fixtures = [
         "unit_sonarqube_toolType.json",
         "unit_sonarqube_toolConfig1.json",

@@ -76,7 +76,7 @@ deduplicationLogger = logging.getLogger("dojo.specific-loggers.deduplication")
 WEEKDAY_FRIDAY = 4  # date.weekday() starts with 0
 
 """
-Helper functions for DefectDojo
+Helper functions for ExposureX
 """
 
 

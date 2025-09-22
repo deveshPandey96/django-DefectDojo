@@ -14,7 +14,7 @@ class SnykParser:
 
         Fields:
         - title: Made from vulnerability and vulnerability title.
-        - severity: Set to cvssScore from Snyk Scanner and translated into DefectDojo format.
+        - severity: Set to cvssScore from Snyk Scanner and translated into ExposureX format.
         - severity_justification: Made from combining data about the cvssScore.
         - description: Made from details on vulnerability.
         - mitigation: Made from combining data about the cvssScore.

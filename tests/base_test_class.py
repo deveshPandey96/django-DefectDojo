@@ -401,7 +401,7 @@ class BaseTestCase(unittest.TestCase):
         """
         for entry in WebdriverOnlyNewLogFacade(self.driver).get_log("browser"):
             """
-            Images are now working after https://github.com/DefectDojo/django-DefectDojo/pull/3954,
+            Images are now working after https://github.com/ExposureX/django-ExposureX/pull/3954,
             but http://localhost:8080/static/dojo/img/zoom-in.cur still produces a 404
 
             The addition of the trigger exception is due to the Report Builder tests.
@@ -411,8 +411,8 @@ class BaseTestCase(unittest.TestCase):
 
             if entry["level"] == "SEVERE":
                 # TODO: actually this seems to be the previous url
-                # self.driver.save_screenshot("C:\\Data\\django-DefectDojo\\tests\\javascript-errors.png")
-                # with open("C:\\Data\\django-DefectDojo\\tests\\javascript-errors.html", "w") as f:
+                # self.driver.save_screenshot("C:\\Data\\django-ExposureX\\tests\\javascript-errors.png")
+                # with open("C:\\Data\\django-ExposureX\\tests\\javascript-errors.html", "w") as f:
                 #    f.write(self.driver.page_source)
 
                 logger.info(entry)
@@ -429,7 +429,7 @@ class BaseTestCase(unittest.TestCase):
                     )
                 elif re.search(accepted_javascript_messages, entry["message"]):
                     logger.warning(
-                        "skipping javascript errors related to known issues images, see https://github.com/DefectDojo/django-DefectDojo/blob/master/tests/base_test_class.py#L324",
+                        "skipping javascript errors related to known issues images, see https://github.com/ExposureX/django-ExposureX/blob/master/tests/base_test_class.py#L324",
                     )
                 else:
                     self.assertNotEqual(entry["level"], "SEVERE")

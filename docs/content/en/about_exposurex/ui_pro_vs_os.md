@@ -1,16 +1,16 @@
 ---
 title: "🎨 Pro UI Changes"
-description: "Working with different UIs in DefectDojo"
+description: "Working with different UIs in ExposureX"
 draft: "false"
 weight: 5
 pro-feature: true
 ---
 
-<span style="background-color:rgba(242, 86, 29, 0.3)">Note: The Pro UI and associated features are only available in DefectDojo Pro.</span>
+<span style="background-color:rgba(242, 86, 29, 0.3)">Note: The Pro UI and associated features are only available in ExposureX Pro.</span>
 
-In late 2023, DefectDojo Inc. released a new UI for DefectDojo Pro, which has since been in Pro for Pro customers to test and experiment with.
+In late 2023, ExposureX Inc. released a new UI for ExposureX Pro, which has since been in Pro for Pro customers to test and experiment with.
 
-The Pro UI brings the following enhancements to DefectDojo:
+The Pro UI brings the following enhancements to ExposureX:
 
 - Modern and sleek design, built using Vue.js
 - Optimized data delivery and load times, especially for large datasets
@@ -33,7 +33,7 @@ To access the Pro UI, open your User Options menu from the top-right hand corner
 
 3. The **Manage** section allows you to view different objects in the [Product Hierarchy](/en/working_with_findings/organizing_engagements_tests/product_hierarchy/), with views for Product Types, Products, Engagements, Tests, Findings, Risk Acceptances, Endpoints and Components.
 
-4. The **Settings** section allows you to configure your DefectDojo instance, including your License, Cloud Settings, Users, Feature Configuration and admin-level Enterprise Settings.
+4. The **Settings** section allows you to configure your ExposureX instance, including your License, Cloud Settings, Users, Feature Configuration and admin-level Enterprise Settings.
 
 The Enterprise settings section contains the System Settings, Jira Instances, Deduplication Settings, SAML, OAuth, Login and MFA forms.
 

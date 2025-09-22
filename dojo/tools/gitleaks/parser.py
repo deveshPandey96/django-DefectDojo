@@ -63,7 +63,7 @@ class GitleaksParser:
         return "Import Gitleaks Scan findings in JSON format."
 
     def get_findings(self, filename, test):
-        """Converts a Gitleaks report to DefectDojo findings"""
+        """Converts a Gitleaks report to ExposureX findings"""
         issues = json.load(filename)
         # empty report are just null object
         if issues is None:

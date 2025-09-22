@@ -53,7 +53,7 @@ def webhook_responser_handler(
 def webhook(request, secret=None):
     """
     For examples of incoming json, see the unit tests for the webhook:
-        https://github.com/DefectDojo/django-DefectDojo/blob/master/unittests/test_jira_webhook.py
+        https://github.com/ExposureX/django-ExposureX/blob/master/unittests/test_jira_webhook.py
     or the officials docs (which are not always clear):
         https://developer.atlassian.com/server/jira/platform/webhooks/
 
@@ -98,7 +98,7 @@ def webhook(request, secret=None):
             try:
                 jissue = JIRA_Issue.objects.get(jira_id=jid)
             except JIRA_Instance.DoesNotExist:
-                return webhook_responser_handler("info", f"JIRA issue {jid} is not linked to a DefectDojo Finding")
+                return webhook_responser_handler("info", f"JIRA issue {jid} is not linked to a ExposureX Finding")
             findings = None
             # Determine what type of object we will be working with
             if jissue.finding:
@@ -229,7 +229,7 @@ def check_for_and_create_comment(parsed_json):
     try:
         jissue = JIRA_Issue.objects.get(jira_id=jid)
     except JIRA_Instance.DoesNotExist:
-        return webhook_responser_handler("info", f"JIRA issue {jid} is not linked to a DefectDojo Finding")
+        return webhook_responser_handler("info", f"JIRA issue {jid} is not linked to a ExposureX Finding")
     logger.debug(f"Received issue comment for {jissue.jira_key}")
     logger.debug("jissue: %s", vars(jissue))
 
@@ -237,7 +237,7 @@ def check_for_and_create_comment(parsed_json):
     for jira_user_id in jira_usernames:
         # logger.debug('incoming username: %s jira config username: %s', commenter.lower(), jira_user_id.lower())
         if jira_user_id.lower() == commenter.lower():
-            return webhook_responser_handler("debug", f"skipping incoming JIRA comment as the user id of the comment in JIRA {commenter.lower()} matches the JIRA username in DefectDojo {jira_user_id.lower()}")
+            return webhook_responser_handler("debug", f"skipping incoming JIRA comment as the user id of the comment in JIRA {commenter.lower()} matches the JIRA username in ExposureX {jira_user_id.lower()}")
 
     findings = None
     if jissue.finding:
@@ -257,7 +257,7 @@ def check_for_and_create_comment(parsed_json):
     entry = f"({commenter_display_name} ({commenter})): {comment_text}"
     # Iterate (potentially) over each of the findings the note should be added to
     for finding in findings:
-        # Determine if the same note body was created by either DefectDojo or Jira
+        # Determine if the same note body was created by either ExposureX or Jira
         existing_notes = finding.notes.filter(
             Q(entry__icontains=comment_text_without_defectdojo_user) | Q(entry__icontains=entry),
             date__gte=(timezone.now() - datetime.timedelta(seconds=30)),

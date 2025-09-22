@@ -112,7 +112,7 @@ class ApiCobaltParser:
         return self.convert_log_timestamp(entry["timestamp"])
 
     def include_finding(self, resource):
-        """Determine whether this finding should be imported to DefectDojo"""
+        """Determine whether this finding should be imported to ExposureX"""
         allowed_states = [
             "carried_over",  # Finding from a previous pentest
             "check_fix",  # Fix for finding is being verified
@@ -129,7 +129,7 @@ class ApiCobaltParser:
         return resource["state"] in allowed_states
 
     def convert_endpoints(self, affected_targets):
-        """Convert Cobalt affected_targets into DefectDojo endpoints"""
+        """Convert Cobalt affected_targets into ExposureX endpoints"""
         endpoints = []
         for affected_target in affected_targets:
             endpoint = Endpoint.from_uri(affected_target)
@@ -137,7 +137,7 @@ class ApiCobaltParser:
         return endpoints
 
     def convert_log_timestamp(self, timestamp):
-        """Convert a log entry's timestamp to a DefectDojo date"""
+        """Convert a log entry's timestamp to a ExposureX date"""
         date_obj = datetime.strptime(timestamp, "%Y-%m-%dT%H:%M:%S.%fZ")
         return date_obj.strftime("%Y-%m-%d")
 

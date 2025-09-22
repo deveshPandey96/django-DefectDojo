@@ -99,7 +99,7 @@ class CheckmarxOsaParser:
     def get_vunlerabilities(self, tree):
         return tree[0]
 
-    # Translate checkmarx quotation of confidence to defectdojo one Checkmarx: ref
+    # Translate checkmarx quotation of confidence to exposurex one Checkmarx: ref
     # https://checkmarx.atlassian.net/wiki/spaces/CCOD/pages/968622682/Generating+a+CxOSA+Scan+Results+Report
     # "Filename Match - with confidence level 70%' "Exact Match - with confidence level 100%" -> checkmarx has a
     # quotation from 0->100 with 100 highest confidence
@@ -108,7 +108,7 @@ class CheckmarxOsaParser:
     #   1->2 = Certain (0 is like null)
     #   3->5 = Firm
     #   >=6 : Tentative
-    #   -> defectdojo has a quotation from 1->(say)11 with 1 the highest confidence
+    #   -> exposurex has a quotation from 1->(say)11 with 1 the highest confidence
 
     # 100% = Certain
     # 70% = Firm

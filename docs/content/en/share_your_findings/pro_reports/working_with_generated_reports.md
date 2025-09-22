@@ -4,7 +4,7 @@ description: "Use a report as a template, or re-run an existing report with upda
 weight: 2
 ---
 
-Once you have created one or more **Reports** in DefectDojo you can take further actions, including:
+Once you have created one or more **Reports** in ExposureX you can take further actions, including:
 
 * Using a report as a template for subsequent reports
 
@@ -16,7 +16,7 @@ Once you have created one or more **Reports** in DefectDojo you can take further
 
 ## Use a report as a Template
 
-DefectDojo allows you to easily create Report templates with your team logo, boilerplate text and a standardized content order.
+ExposureX allows you to easily create Report templates with your team logo, boilerplate text and a standardized content order.
 
 If you want to change the way a report is set up, or create a new one with a similar layout, you can re\-open the Report Builder by selecting **View Template** from the **⋮** menu next to the report you wish to use as a template.
 
@@ -35,7 +35,7 @@ Every time you make changes to a template or previous report, the result will be
 
 ## Re\-Running a Report
 
-DefectDojo Reports are ‘frozen in time’ \- to keep your records consistent, they do not update automatically when DefectDojo experiences data changes.
+ExposureX Reports are ‘frozen in time’ \- to keep your records consistent, they do not update automatically when ExposureX experiences data changes.
 
 However, if you want to create an updated version of a previously created report, you can do so by selecting **Re\-run Report** from the **⋮** menu next to the report you wish to generate.
 

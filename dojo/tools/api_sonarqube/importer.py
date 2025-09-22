@@ -60,7 +60,7 @@ class SonarQubeApiImporter:
         if test.api_scan_configuration:
             config = (
                 test.api_scan_configuration
-            )  # https://github.com/DefectDojo/django-DefectDojo/pull/4676 case no. 7 and 8
+            )  # https://github.com/ExposureX/django-ExposureX/pull/4676 case no. 7 and 8
             # Double check of config
             if config.product != product:
                 msg = (
@@ -75,11 +75,11 @@ class SonarQubeApiImporter:
             )
             if (
                 sqqs.count() == 1
-            ):  # https://github.com/DefectDojo/django-DefectDojo/pull/4676 case no. 4
+            ):  # https://github.com/ExposureX/django-ExposureX/pull/4676 case no. 4
                 config = sqqs.first()
             elif (
                 sqqs.count() > 1
-            ):  # https://github.com/DefectDojo/django-DefectDojo/pull/4676 case no. 6
+            ):  # https://github.com/ExposureX/django-ExposureX/pull/4676 case no. 6
                 msg = (
                     "More than one Product API Scan Configuration has been configured, but none of them has been "
                     "chosen. Please specify which one should be used. "
@@ -88,7 +88,7 @@ class SonarQubeApiImporter:
                 raise ValidationError(msg)
             else:
                 # We are not handling cases no. 1-3 anymore -
-                # https://github.com/DefectDojo/django-DefectDojo/pull/4676
+                # https://github.com/ExposureX/django-ExposureX/pull/4676
                 msg = (
                     "There are no API Scan Configurations for this Product.\n"
                     "Please add at least one API Scan Configuration for SonarQube to this Product. "

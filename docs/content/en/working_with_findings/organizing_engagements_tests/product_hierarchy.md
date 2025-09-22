@@ -4,9 +4,9 @@ description: "Understand Product Types, Products, Engagements, Tests and Finding
 weight: 1
 ---
 
-DefectDojo uses five main data classes to organize your work: **Product Types, Products**, **Engagements**, **Tests**, and **Findings**.
+ExposureX uses five main data classes to organize your work: **Product Types, Products**, **Engagements**, **Tests**, and **Findings**.
 
-DefectDojo is made to be flexible to conform to your team, rather than making your team conform to the tool. You'll be able to design a robust, adaptable workspace once you understand how these data classes can be used to organize your work.
+ExposureX is made to be flexible to conform to your team, rather than making your team conform to the tool. You'll be able to design a robust, adaptable workspace once you understand how these data classes can be used to organize your work.
 
 ### Product Hierarchy Diagram
 ![image](images/dd-hierarchy.png)
@@ -14,7 +14,7 @@ DefectDojo is made to be flexible to conform to your team, rather than making yo
 
 ## **Product Types**
 
-The first category of data you'll need to set up in DefectDojo is a Product Type. Product Types are intended to categorize Products in a specific way. This could be:
+The first category of data you'll need to set up in ExposureX is a Product Type. Product Types are intended to categorize Products in a specific way. This could be:
 
 * by business domain
 * by development team
@@ -29,11 +29,11 @@ Product Types can have Role\-Based Access Control rules applied, which limit tea
 ​
 * You also might consider using Product Types to represent stages in your software development process: one Product Type for 'In Development', one Product Type for 'In Production', etc.  
 ​
-* Ultimately, it's your decision how you wish to organize your Products, and what you Product Type to represent. Your DefectDojo hierarchy may need to change to fit your security teams' needs.
+* Ultimately, it's your decision how you wish to organize your Products, and what you Product Type to represent. Your ExposureX hierarchy may need to change to fit your security teams' needs.
 
 ## **Products**
 
-A **Product** in DefectDojo is intended to represent any project, program, or product that you are currently testing. The Product hosts all of the security work and testing history related to the underlying goal.
+A **Product** in ExposureX is intended to represent any project, program, or product that you are currently testing. The Product hosts all of the security work and testing history related to the underlying goal.
 
 ![image](images/Product_Hierarchy_Overview_2.png)
 
@@ -44,15 +44,15 @@ A **Product** in DefectDojo is intended to represent any project, program, or pr
 
 Products can be as broad or as specific in scope as you wish. By default, Products are completely separate objects in the hierarchy, but they can be grouped together by **Product Type**.
 
-Products are 'walled\-off' and do not interact with other Products. DefectDojo's Smart Features, such as **Deduplication**, only apply within the context of a single Product.
+Products are 'walled\-off' and do not interact with other Products. ExposureX's Smart Features, such as **Deduplication**, only apply within the context of a single Product.
 
 Like **Product Types**, **Products** can have Role\-Based Access Control rules applied, which limit team members' ability to view and interact with them (as well as any underlying Engagement, Test and Finding data). For more information on user roles, see our **Introduction To Roles** article.
 
 #### What can a Product represent?
 
-DefectDojo's concept of a 'Product' will not necessarily correspond 1:1 to what your organization would refer to as a 'Product'. Software development is complex, and security needs can vary greatly even within the scope of a single piece of software.
+ExposureX's concept of a 'Product' will not necessarily correspond 1:1 to what your organization would refer to as a 'Product'. Software development is complex, and security needs can vary greatly even within the scope of a single piece of software.
 
-The following scenarios are good reasons to consider creating a separate DefectDojo Product:
+The following scenarios are good reasons to consider creating a separate ExposureX Product:
 
 * "**ExampleProduct**" has a Windows version, a Mac version, and a Cloud version
 * "**ExampleProduct 1\.0**" uses completely different software components from "**ExampleProduct 2\.0**", and both versions are actively supported by your company.
@@ -77,7 +77,7 @@ There are two types of Engagement: **Interactive** and **CI/CD**.
 * An **Interactive Engagement** is typically run by an engineer. Interactive Engagements are focused on testing the application while the app is running, using an automated test, human tester, or any activity “interacting” with the application functionality. See [OWASP's definition of IAST](https://owasp.org/www-project-devsecops-guideline/latest/02c-Interactive-Application-Security-Testing#:~:text=Interactive%20Application%20Security%20Testing,interacting%E2%80%9D%20with%20the%20application%20functionality.).
 * A **CI/CD Engagement** is for automated integration with a CI/CD pipeline. CI/CD Engagements are meant to import data as an automated action, triggered by a step in the release process.
 
-Engagements can be tracked using DefectDojo's **Calendar** view. 
+Engagements can be tracked using ExposureX's **Calendar** view. 
 
 #### What can an Engagement represent?
 
@@ -120,9 +120,9 @@ Tests can be created in different ways.  Tests can be automatically created when
 
 ### **Test Types**
 
-DefectDojo supports two categories of Test Types:
+ExposureX supports two categories of Test Types:
 
-1. **Parser-based Test Types**: These correspond to specific security scanners that produce output in formats like XML, JSON, or CSV. When importing scan results, DefectDojo uses specialized parsers to convert the scanner output into Findings.
+1. **Parser-based Test Types**: These correspond to specific security scanners that produce output in formats like XML, JSON, or CSV. When importing scan results, ExposureX uses specialized parsers to convert the scanner output into Findings.
 
 2. **Non-parser Test Types**: These are used for manually created findings not imported from a scan files. 
 The following Test Types appear in the "Scan Type" dropdown when creating a new test, but will not appear when selecting "Import Scan":
@@ -138,11 +138,11 @@ Non-parser Test Types should be used when you need to manually create findings t
 
 #### **How do Tests interact with each other?**
 
-Tests take your testing data and group it into Findings. Generally, security teams will be running the same testing effort repeatedly, and Tests in DefectDojo allow you to handle this process in an elegant way.
+Tests take your testing data and group it into Findings. Generally, security teams will be running the same testing effort repeatedly, and Tests in ExposureX allow you to handle this process in an elegant way.
 
-**Previously imported tests can be reimported** \- If you're running the same type of test within the same Engagement context, you can Reimport the test results after each completed scan. DefectDojo will compare the Reimported data to the existing result, and will not create new Findings if duplicates exist in the scan data.
+**Previously imported tests can be reimported** \- If you're running the same type of test within the same Engagement context, you can Reimport the test results after each completed scan. ExposureX will compare the Reimported data to the existing result, and will not create new Findings if duplicates exist in the scan data.
 
-**Tests can be imported separately** \- If you run the same test on a Product within separate Engagements, DefectDojo will still compare the data with previous Tests to find duplicate Findings. This allows you to keep track of previously mitigated or risk\-accepted Findings.
+**Tests can be imported separately** \- If you run the same test on a Product within separate Engagements, ExposureX will still compare the data with previous Tests to find duplicate Findings. This allows you to keep track of previously mitigated or risk\-accepted Findings.
 
 If a Test is added directly to a Product without an Engagement, a generic Engagement will be created automatically to contain the Test. This allows for ad\-hoc data imports.
 
@@ -176,7 +176,7 @@ Findings can be added through a data import, but they can also be added manually
 
 ## **Endpoints**
 
-Scan data generally will contain references to the hosts or endpoints affected by a given Finding.  DefectDojo automatically aggregates Findings per-endpoint, so you can use the Endpoint view to look at all Findings that affect a given Endpoint or Hostname.
+Scan data generally will contain references to the hosts or endpoints affected by a given Finding.  ExposureX automatically aggregates Findings per-endpoint, so you can use the Endpoint view to look at all Findings that affect a given Endpoint or Hostname.
 
 Examples:
 -   https://www.example.com

@@ -497,7 +497,7 @@ class JIRAImportAndPushTestApi(DojoVCRAPITestCase):
 
         # Only Finding Groups will have their priority synced on updates.
         # For Findings we resepect any priority change made in JIRA
-        # https://github.com/DefectDojo/django-DefectDojo/pull/9571 and https://github.com/DefectDojo/django-DefectDojo/pull/12475
+        # https://github.com/ExposureX/django-ExposureX/pull/9571 and https://github.com/ExposureX/django-ExposureX/pull/12475
         with self.subTest("Changing priority of a finding should NOT be reflected in JIRA"):
             pre_jira_priority = self.get_jira_issue_priority(new_finding_json["id"])
             self.patch_finding_api(new_finding_json["id"], {"severity": "Medium"})

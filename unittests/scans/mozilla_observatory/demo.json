@@ -59,7 +59,7 @@
             "output": {
                 "data": {
                     "csrftoken": {
-                        "domain": "demo.defectdojo.org",
+                        "domain": "#",
                         "expires": 1651651042,
                         "httponly": true,
                         "max-age": null,
@@ -110,12 +110,12 @@
             "expectation": "redirection-to-https",
             "name": "redirection",
             "output": {
-                "destination": "https://demo.defectdojo.org/login?next=/",
+                "destination": "https://#/login?next=/",
                 "redirects": true,
                 "route": [
-                    "http://demo.defectdojo.org/",
-                    "https://demo.defectdojo.org/",
-                    "https://demo.defectdojo.org/login?next=/"
+                    "http://#/",
+                    "https://#/",
+                    "https://#/login?next=/"
                 ],
                 "status_code": 200
             },

@@ -4,11 +4,11 @@ weight: 1
 chapter: true
 ---
 
-Webhooks are HTTP requests coming from the DefectDojo instance towards a user-defined webserver which expects this kind of incoming traffic.
+Webhooks are HTTP requests coming from the ExposureX instance towards a user-defined webserver which expects this kind of incoming traffic.
 
 ## Transition graph:
 
-It is not unusual that in some cases a webhook can not be delivered. It is usually connected to network issues, server misconfiguration, or running upgrades on the server. DefectDojo needs to react to these outages. It might temporarily or permanently disable related endpoints. The following graph shows how it might change the status of the webhook definition based on HTTP responses (or manual user interaction).
+It is not unusual that in some cases a webhook can not be delivered. It is usually connected to network issues, server misconfiguration, or running upgrades on the server. ExposureX needs to react to these outages. It might temporarily or permanently disable related endpoints. The following graph shows how it might change the status of the webhook definition based on HTTP responses (or manual user interaction).
 
 ```kroki {type=mermaid}
 flowchart TD
@@ -55,13 +55,13 @@ Examples of bodies are on pages related to each event (see below).
 Each request contains the following headers. They might be useful for better handling of events by the server receiving them.
 
 ```yaml
-User-Agent: DefectDojo-<version of DD>
-X-DefectDojo-Event: <name of the event>
-X-DefectDojo-Instance: <Base URL for DD instance>
+User-Agent: ExposureX-<version of DD>
+X-ExposureX-Event: <name of the event>
+X-ExposureX-Instance: <Base URL for DD instance>
 ```
 ## Disclaimer
 
-This functionality is new and in experimental mode. This means functionality might generate breaking changes in following DefectDojo releases and might not be considered final.
+This functionality is new and in experimental mode. This means functionality might generate breaking changes in following ExposureX releases and might not be considered final.
 
 However, the community is open to feedback to make this functionality better and get it stable as soon as possible.
 

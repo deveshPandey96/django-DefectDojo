@@ -1,14 +1,14 @@
 ---
 title: "Deduplication Tuning (Pro)"
-description: "Configure how DefectDojo identifies and manages duplicate findings"
+description: "Configure how ExposureX identifies and manages duplicate findings"
 weight: 4
 ---
 
-Deduplication Tuning is a DefectDojo Pro feature that gives you fine-grained control over how findings are deduplicated, allowing you to optimize duplicate detection for your specific security testing workflow.
+Deduplication Tuning is a ExposureX Pro feature that gives you fine-grained control over how findings are deduplicated, allowing you to optimize duplicate detection for your specific security testing workflow.
 
 ## Deduplication Settings
 
-In DefectDojo Pro, you can access Deduplication Tuning through:
+In ExposureX Pro, you can access Deduplication Tuning through:
 **Settings > Pro Settings > Deduplication Settings**
 
 ![image](images/deduplication_tuning.png)
@@ -31,7 +31,7 @@ To adjust Same Tool Deduplication:
 
 ### Available Deduplication Algorithms
 
-DefectDojo Pro offers three deduplication methods for same-tool deduplication:
+ExposureX Pro offers three deduplication methods for same-tool deduplication:
 
 #### Hash Code
 Uses a combination of selected fields to generate a unique hash. When selected, a third dropdown will appear showing the fields being used to calculate the hash.

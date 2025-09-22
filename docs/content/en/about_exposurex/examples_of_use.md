@@ -6,12 +6,12 @@ weight: 2
 chapter: true
 ---
 
-This article is based on DefectDojo Inc's February 2025 Office Hours: "Tackling Common-Use Cases".
+This article is based on ExposureX Inc's February 2025 Office Hours: "Tackling Common-Use Cases".
 <iframe width="560" height="315" src="https://www.youtube.com/embed/44vv-KspHBs?si=ilRBlfo-wvX5DPVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Examples of Use-Cases
 
-DefectDojo is designed handle any security implementation: no matter your security team size, IT complexity level, or reporting volume.  These stories are intended as jumping-off points for your own needs, but they're based on real examples from our community and DefectDojo Pro team.
+ExposureX is designed handle any security implementation: no matter your security team size, IT complexity level, or reporting volume.  These stories are intended as jumping-off points for your own needs, but they're based on real examples from our community and ExposureX Pro team.
 
 ### Large Enterprise: RBAC and Engagements
 
@@ -32,7 +32,7 @@ BigCorp handles security data from many sources:
 - Third-party Pen testing for certain Products
 - PCI compliance auditing for certain Products
 
-Each of these report categories can be handled by a separate Engagement, with a separate Test for each kind of test in DefectDojo.
+Each of these report categories can be handled by a separate Engagement, with a separate Test for each kind of test in ExposureX.
 
 ![image](images/example_product_hierarchy_bigcorp.png)
 
@@ -46,8 +46,8 @@ Each of these report categories can be handled by a separate Engagement, with a 
 #### RBAC Model
 
 - Each BISO has Reader access assigned for each business unit (Product Type) that they're in charge of.
-- Each Product Owner has Writer access for the Product that they're in charge of.  Within their Product, these Product Owners can interact with DefectDojo - they can keep notes, set up [CI/CD pipelines](/en/connecting_your_tools/import_scan_files/api_pipeline_modelling/), create Risk Acceptances or use other features.
-- Developers at BigCorp have no access to DefectDojo at all, and they don't need it - the Product Owner can push Jira tickets directly from DefectDojo which contain all of the relevant vulnerability information.  The developers are already using Jira, so they don't have to track remediation any differently than a different development task.
+- Each Product Owner has Writer access for the Product that they're in charge of.  Within their Product, these Product Owners can interact with ExposureX - they can keep notes, set up [CI/CD pipelines](/en/connecting_your_tools/import_scan_files/api_pipeline_modelling/), create Risk Acceptances or use other features.
+- Developers at BigCorp have no access to ExposureX at all, and they don't need it - the Product Owner can push Jira tickets directly from ExposureX which contain all of the relevant vulnerability information.  The developers are already using Jira, so they don't have to track remediation any differently than a different development task.
 
 ### Embedded Systems: Version-Controlled Reporting
 
@@ -81,18 +81,18 @@ Assigning software versions to Products, rather than Engagements allows Cyber Ro
 
 The AppSec team here has Global Roles assigned that govern their level of interaction.
 
-- The Chief Product Officer has Global Reader access to DefectDojo, as with the CISO in BigCorp.
-- Individual Product Owners have Global Reader access to any Product in DefectDojo, as well as Writer access to the Product that they own.
+- The Chief Product Officer has Global Reader access to ExposureX, as with the CISO in BigCorp.
+- Individual Product Owners have Global Reader access to any Product in ExposureX, as well as Writer access to the Product that they own.
 
 On the Support side:
 
-- Support Personnel are temporarily granted Reader access to specific Products that they're assigned to maintain, but they do not have access to all DefectDojo data.
+- Support Personnel are temporarily granted Reader access to specific Products that they're assigned to maintain, but they do not have access to all ExposureX data.
 
 ### Dynamic IT environments and microservices: Cloud Services company
 
 Kate's Cloud Service operates a rapidly changing environment that uses Kubernetes, microservices, and automation.  Kate's Cloud Service has a VP of Cloud that oversees Cloud Security issues.  They also have a CISO who manages the software development on offer, but for this example we will focus specifically on their Cloud security concerns.
 
-Kate's Cloud Service has fully automated all of their reporting, and ingests data into DefectDojo as soon as reports are produced.
+Kate's Cloud Service has fully automated all of their reporting, and ingests data into ExposureX as soon as reports are produced.
 
 Key Concerns for Kate's Cloud Service:
 
@@ -101,11 +101,11 @@ Key Concerns for Kate's Cloud Service:
 
 #### Tagging Shared Services
 
-Because Kate's model contains many shared services that can impact other Products, the team [Tags](/en/working_with_findings/organizing_engagements_tests/tagging_objects/) the results to indicate which cloud offerings rely on those services.  This allows any issues with shared services to be traced back to the relevant teams, and reports in DefectDojo.  Each of these Shared Services are in a single Product Type that separates them from the main Cloud offerings.
+Because Kate's model contains many shared services that can impact other Products, the team [Tags](/en/working_with_findings/organizing_engagements_tests/tagging_objects/) the results to indicate which cloud offerings rely on those services.  This allows any issues with shared services to be traced back to the relevant teams, and reports in ExposureX.  Each of these Shared Services are in a single Product Type that separates them from the main Cloud offerings.
 
 ![image](images/example_product_hierarchy_microservices.png)
 
-Because the company is rapidly growing, with frequently changing tech leads, Kate can use Tags to track which tech lead is currently responsible for each cloud product, avoiding the need for constant manual updates to their DefectDojo system.  These Tech Lead associations are tracked by a service that's external to DefectDojo and can govern the import pipelines or call the DefectDojo API.
+Because the company is rapidly growing, with frequently changing tech leads, Kate can use Tags to track which tech lead is currently responsible for each cloud product, avoiding the need for constant manual updates to their ExposureX system.  These Tech Lead associations are tracked by a service that's external to ExposureX and can govern the import pipelines or call the ExposureX API.
 
 For more information on Tagging, see our guide to [Tags](/en/working_with_findings/organizing_engagements_tests/tagging_objects/).
 
@@ -113,7 +113,7 @@ For more information on Tagging, see our guide to [Tags](/en/working_with_findin
 
 On the Security/Compliance side:
 
-- The Product Security Team that owns DefectDojo has admin access to the entire system.
+- The Product Security Team that owns ExposureX has admin access to the entire system.
 - Analysts working for the VP of Cloud are granted read-only access across the system, allowing them to generate the necessary reports and metrics for the VP to assess the security of various cloud offerings.
 
 On the development side:
@@ -123,7 +123,7 @@ On the development side:
 
 ### Onboarding New Acquisitions: SaaSy Software
 
-SaaSy software is a rapidly growing firm which frequently acquires other software companies.  Every time a new company is acquired, the Director Of Quality engineering and the AppSec team is suddenly in charge of many new code repos, developers and processes.  Their DefectDojo model ensures that they can get up to speed as soon as possible.
+SaaSy software is a rapidly growing firm which frequently acquires other software companies.  Every time a new company is acquired, the Director Of Quality engineering and the AppSec team is suddenly in charge of many new code repos, developers and processes.  Their ExposureX model ensures that they can get up to speed as soon as possible.
 
 Key Concerns for SaaSy Software:
 
@@ -149,10 +149,10 @@ By applying this model consistently, SaaSy has a model that they can apply to an
 
 On the Security/Compliance side:
 
-- The AppSec team at SaaSy software owns DefectDojo and has full admin access to the software.
+- The AppSec team at SaaSy software owns ExposureX and has full admin access to the software.
 - QE and Compliance teams have read-only access to the entire system, to pull reports and dive into data if required.
 
 On the development side:
 
-- Each Product Owner has Writer access to the Product they own in DefectDojo, which allows them to write Risk Acceptances and view metrics for the Product.
+- Each Product Owner has Writer access to the Product they own in ExposureX, which allows them to write Risk Acceptances and view metrics for the Product.
 - Developers have read-only access to each Product they work on.  They can Request Peer Reviews on Findings or issues they are trying to remediate.

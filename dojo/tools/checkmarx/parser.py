@@ -248,15 +248,15 @@ class CheckmarxParser:
             if queryId not in vuln_ids_from_tool[aggregateKeys]:
                 vuln_ids_from_tool[aggregateKeys].append(queryId)
             # If at least one of the findings in the aggregate is exploitable,
-            # the defectdojo finding should not be "false positive"
+            # the exposurex finding should not be "false positive"
             if false_p == "False":
                 dupes[aggregateKeys].false_p = False
             # If at least one of the findings in the aggregate is active, the
-            # defectdojo finding should be active
+            # exposurex finding should be active
             if active:
                 dupes[aggregateKeys].active = True
             # If at least one of the findings in the aggregate is verified, the
-            # defectdojo finding should be verified
+            # exposurex finding should be verified
             if verified:
                 dupes[aggregateKeys].verified = True
 

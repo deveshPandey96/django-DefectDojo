@@ -9,7 +9,7 @@ From: https://www.cyclonedx.org/
 Example with Anchore Grype:
 
 {{< highlight bash >}}
-./grype defectdojo/defectdojo-django:1.13.1 -o cyclonedx > report.xml
+./grype exposurex/exposurex-django:1.13.1 -o cyclonedx > report.xml
 {{< /highlight >}}
 
 Example with `cyclonedx-bom` tool:
@@ -28,10 +28,10 @@ cyclonedx-py
 {{< /highlight >}}
 
 ### Sample Scan Data
-Sample CycloneDX scans can be found [here](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/cyclonedx).
+Sample CycloneDX scans can be found [here](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/cyclonedx).
 
 ### Default Deduplication Hashcode Fields
-By default, DefectDojo identifies duplicate Findings using these [hashcode fields](https://docs.defectdojo.com/en/working_with_findings/finding_deduplication/about_deduplication/):
+By default, ExposureX identifies duplicate Findings using these [hashcode fields](https://docs.exposurex.com/en/working_with_findings/finding_deduplication/about_deduplication/):
 
 - vuln id from tool
 - component name

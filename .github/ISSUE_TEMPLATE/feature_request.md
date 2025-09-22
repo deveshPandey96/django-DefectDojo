@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest an idea for DefectDojo
+about: Suggest an idea for ExposureX
 title: ''
 labels: enhancement
 assignees: ''
@@ -8,8 +8,8 @@ assignees: ''
 ---
 ## :warning: Note on feature completeness :warning:
 
-We are narrowing the scope of acceptable enhancements to DefectDojo. Learn more here:
-https://github.com/DefectDojo/django-DefectDojo/blob/master/readme-docs/CONTRIBUTING.md
+We are narrowing the scope of acceptable enhancements to ExposureX. Learn more here:
+https://github.com/ExposureX/django-ExposureX/blob/master/readme-docs/CONTRIBUTING.md
 
 **Is your feature request related to a problem? Please describe**
 A clear and concise description of what the problem is.

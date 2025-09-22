@@ -2,7 +2,7 @@
 title: Kiuwan Scanner (SCA i.e. "Insights")
 toc_hide: true
 ---
-Import Kiuwan Insights Scan in JSON format. Export via API endpoint `insights/analysis/security` as json and create a file for importing to DefectDojo.
+Import Kiuwan Insights Scan in JSON format. Export via API endpoint `insights/analysis/security` as json and create a file for importing to ExposureX.
 
 ### Example Code
 
@@ -23,10 +23,10 @@ saveFile("result.json", json.dumps(data, indent=2))
 ```
 
 ### Sample Scan Data
-Sample Kiuwan Scanner scans can be found [here](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/kiuwan_sca).
+Sample Kiuwan Scanner scans can be found [here](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/kiuwan_sca).
 
 ### Default Deduplication Hashcode Fields
-By default, DefectDojo identifies duplicate Findings using these [hashcode fields](https://docs.defectdojo.com/en/working_with_findings/finding_deduplication/about_deduplication/):
+By default, ExposureX identifies duplicate Findings using these [hashcode fields](https://docs.exposurex.com/en/working_with_findings/finding_deduplication/about_deduplication/):
 
 - title
 - cwe

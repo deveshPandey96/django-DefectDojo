@@ -13,11 +13,11 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='jira_instance',
             name='password',
-            field=models.CharField(help_text='Password, API Token, or Personal Access Token, see DefectDojo documentation for more information.', max_length=2000, verbose_name='Password/Token'),
+            field=models.CharField(help_text='Password, API Token, or Personal Access Token, see ExposureX documentation for more information.', max_length=2000, verbose_name='Password/Token'),
         ),
         migrations.AlterField(
             model_name='jira_instance',
             name='username',
-            field=models.CharField(help_text='Username or Email Address, see DefectDojo documentation for more information.', max_length=2000, verbose_name='Username/Email'),
+            field=models.CharField(help_text='Username or Email Address, see ExposureX documentation for more information.', max_length=2000, verbose_name='Username/Email'),
         ),
     ]

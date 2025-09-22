@@ -1,9 +1,9 @@
 ---
 title: "Product Health Grade"
-description: "How DefectDojo calculates a Product Health Grade"
+description: "How ExposureX calculates a Product Health Grade"
 ---
 
-DefectDojo can calculate a grade for your Products based on the amount of Findings contained within. Grades are ranked from A \- F.
+ExposureX can calculate a grade for your Products based on the amount of Findings contained within. Grades are ranked from A \- F.
 
 Note that only Active \& Verified Findings contribute to a Product Grade \- unverified Findings will not have an impact.
 

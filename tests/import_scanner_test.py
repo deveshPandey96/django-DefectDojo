@@ -24,7 +24,7 @@ class ScannerTest(BaseTestCase):
         if self.repo_path.is_dir():
             shutil.rmtree(self.repo_path)
         self.repo_path.mkdir()
-        git.Repo.clone_from("https://github.com/DefectDojo/sample-scan-files", self.repo_path)
+        git.Repo.clone_from("https://github.com/ExposureX/sample-scan-files", self.repo_path)
         self.remove_items = ["__init__.py", "__init__.pyc", "factory.py", "factory.pyc",
                         "factory.py", "LICENSE", "README.md", ".gitignore", ".git", "__pycache__"]
         tool_path = dir_path.parent / "dojo" / "tools"
@@ -53,7 +53,7 @@ class ScannerTest(BaseTestCase):
             logger.info("The following scanners are missing test cases or incorrectly named")
             logger.info("Names must match those listed in /dojo/tools")
             logger.info("Test cases can be added/modified here:")
-            logger.info("https://github.com/DefectDojo/sample-scan-files\n")
+            logger.info("https://github.com/ExposureX/sample-scan-files\n")
             for test in missing_tests:
                 logger.info(test)
         self.assertEqual(len(missing_tests), 0)
@@ -90,7 +90,7 @@ class ScannerTest(BaseTestCase):
             logger.info("The following scanners are missing forms")
             logger.info("Names must match those listed in /dojo/tools")
             logger.info("forms can be added here:")
-            logger.info("https://github.com/DefectDojo/django-DefectDojo/blob/master/dojo/forms.py\n")
+            logger.info("https://github.com/ExposureX/django-ExposureX/blob/master/dojo/forms.py\n")
             for tool in missing_forms:
                 logger.info(tool)
         self.assertEqual(len(missing_forms), 0)
@@ -130,7 +130,7 @@ class ScannerTest(BaseTestCase):
             logger.info("The following scanners are missing templates")
             logger.info("Names must match those listed in /dojo/tools")
             logger.info("templates can be added here:")
-            logger.info("https://github.com/DefectDojo/django-DefectDojo/blob/master/dojo/templates/dojo/import_scan_results.html\n")
+            logger.info("https://github.com/ExposureX/django-ExposureX/blob/master/dojo/templates/dojo/import_scan_results.html\n")
             for tool in missing_templates:
                 logger.info(tool)
         self.assertEqual(len(missing_templates), 0)
@@ -213,7 +213,7 @@ class ScannerTest(BaseTestCase):
             logger.info("The following scan imports produced errors")
             logger.info("Names of tests must match those listed in /dojo/tools")
             logger.info("Tests can be added/modified here:")
-            logger.info("https://github.com/DefectDojo/sample-scan-files\n")
+            logger.info("https://github.com/ExposureX/sample-scan-files\n")
             for test in failed_tests:
                 logger.info(test)
         self.assertEqual(len(failed_tests), 0)

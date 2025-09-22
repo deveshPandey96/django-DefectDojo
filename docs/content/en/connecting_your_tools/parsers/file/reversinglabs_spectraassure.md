@@ -97,7 +97,7 @@ If no mapping is matched, the default severity is `Info`.
 
 ### Sample Scan Data or Unit Tests
 
-- [Sample Scan Data Folder](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/reversinglabs_spectraassure)
+- [Sample Scan Data Folder](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/reversinglabs_spectraassure)
 
 ### Link To Tool
 

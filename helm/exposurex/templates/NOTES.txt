@@ -1,5 +1,5 @@
-{{- $fullName := include "defectdojo.fullname" . -}}
-DefectDojo has been installed.
+{{- $fullName := include "exposurex.fullname" . -}}
+ExposureX has been installed.
 {{ if .Values.django.ingress.enabled }}
 To use it, go to <https://{{ .Values.host }}>.
 {{ else }}
@@ -15,12 +15,12 @@ the localhost IP address, e.g. by adding the following two lines to /etc/hosts:
     ::1       {{ .Values.host }}
     127.0.0.1 {{ .Values.host }}
 {{ end }}
-To access DefectDojo, go to <http://{{ .Values.host }}:8080>.
+To access ExposureX, go to <http://{{ .Values.host }}:8080>.
 {{ end }}
 Log in with username {{ .Values.admin.user}}.
 To find out the password, run the following command:
 
-    echo "DefectDojo {{ .Values.admin.user}} password: $(kubectl \
+    echo "ExposureX {{ .Values.admin.user}} password: $(kubectl \
       get secret {{ $fullName }} \
       --namespace={{ .Release.Namespace }} \
       --output jsonpath='{.data.DD_ADMIN_PASSWORD}' \

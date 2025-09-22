@@ -4,7 +4,7 @@ toc_hide: true
 ---
 
 ### File Types
-DefectDojo parser accepts a .json file.  
+ExposureX parser accepts a .json file.  
 JSON reports are created from the Threagile tool (default name `risks.json`) using the following command: 
 
 ```shell
@@ -85,10 +85,10 @@ Parser expects an array of finding.  All properties are strings. Required fields
 ~~~
 
 ### Sample Scan Data
-Sample Threagile scans can be found [here](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/threagile).
+Sample Threagile scans can be found [here](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/threagile).
 
 ### Default Deduplication Hashcode Fields
-By default, DefectDojo identifies duplicate Findings using these [hashcode fields](https://docs.defectdojo.com/en/working_with_findings/finding_deduplication/about_deduplication/):
+By default, ExposureX identifies duplicate Findings using these [hashcode fields](https://docs.exposurex.com/en/working_with_findings/finding_deduplication/about_deduplication/):
 
 - title
 - cwe

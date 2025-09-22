@@ -6,15 +6,15 @@ weight: 8
 exclude_search: true
 ---
 
-**Please note - the Google Sheets feature has been removed in DefectDojo version 2.21.0 - these documents are for reference only.**
+**Please note - the Google Sheets feature has been removed in ExposureX version 2.21.0 - these documents are for reference only.**
 
-With the Google Sheets sync feature, DefectDojo allow the users to
+With the Google Sheets sync feature, ExposureX allow the users to
 export all the finding details of each test into a separate Google
 Spreadsheet. Users can review and edit finding details via Google
 Spreadsheets. Also, they can add new notes to findings and edit existing
 notes using the Google Spreadsheet. After reviewing and updating the
 finding details in the Google Spreadsheet, the user can import (sync)
-all the changes done via the Google Spreadsheet into DefectDojo
+all the changes done via the Google Spreadsheet into ExposureX
 database.
 
 ### Configuration
@@ -23,7 +23,7 @@ Creating a project and a Service Account
 
 1.  Go to the [Service Accounts
     page](https://console.developers.google.com/iam-admin/serviceaccounts/).
-2.  Create a new project for DefectDojo and select it.
+2.  Create a new project for ExposureX and select it.
 3.  Click **+CREATE SERVICE ACCOUNT**, enter a name and description
     for the service account. You can use the default service account
     ID, or choose a different, unique one. When done click Create.
@@ -42,7 +42,7 @@ Enabling the required APIs
 1.  Go to the [Google API
     Console](https://console.developers.google.com//).
 2.  From the projects list, select the project created for
-    DefectDojo.
+    ExposureX.
 3.  If the APIs & services page isn\'t already open, open the
     console left side menu and select **APIs & services**, and then
     select **Library**.
@@ -51,7 +51,7 @@ Enabling the required APIs
     finding the API, use the search field.
 5.  Click **ENABLE**.
 
-Configurations in DefectDojo
+Configurations in ExposureX
 
 1.  Click \'Configuration\' from the left hand menu.
 2.  Click \'Google Sheets Sync\'.
@@ -92,7 +92,7 @@ Configurations in DefectDojo
 
 4.  Click \'Submit\'.
 
-Admin has the privilege to revoke the access given to DefectDojo to
+Admin has the privilege to revoke the access given to ExposureX to
 access Google Sheets and Google Drive data by simply clicking the
 **Revoke Access** button.
 
@@ -114,4 +114,4 @@ If a Google Spreadsheet is already created for the Test:
 After creating a Google Spreadsheet, users can review and edit Finding
 details using the Google Sheet. If any change is done in the Google
 Sheet users can click the **Sync Google Sheet** button to get those
-changes into DefectDojo.
+changes into ExposureX.

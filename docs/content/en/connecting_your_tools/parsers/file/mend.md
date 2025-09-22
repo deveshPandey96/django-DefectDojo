@@ -7,7 +7,7 @@ toc_hide: true
 Accepts a JSON file, generated from the Mend* Unified Agent.  
 
 ### Sample Scan Data / Unit Tests
-Unit tests for Mend JSON files can be found at https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/mend
+Unit tests for Mend JSON files can be found at https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/mend
 
 ### Link To Tool
 See documentation: https://docs.mend.io/bundle/unified_agent/page/example_of_a_unified_agent_json_report.html
@@ -15,7 +15,7 @@ See documentation: https://docs.mend.io/bundle/unified_agent/page/example_of_a_u
 *Formerly known as Whitesource.*
 
 ### Default Deduplication Hashcode Fields
-By default, DefectDojo identifies duplicate Findings using these [hashcode fields](https://docs.defectdojo.com/en/working_with_findings/finding_deduplication/about_deduplication/):
+By default, ExposureX identifies duplicate Findings using these [hashcode fields](https://docs.exposurex.com/en/working_with_findings/finding_deduplication/about_deduplication/):
 
 - title
 - severity

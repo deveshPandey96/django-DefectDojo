@@ -48,7 +48,7 @@ Whether you're a Pro or an Open-Source user, we have many resources that can hel
 
 - We support a large amount of [security tool integrations](/en/connecting_your_tools/parsers/) to help fit ExposureX in your DevSecOps program.
 
-- Our team maintains a [YouTube Channel](https://www.youtube.com/@defectdojo) which hosts tutorials, archived Office Hours events and other content. New subscribers are always welcome!
+- Our team maintains a [YouTube Channel](https://www.youtube.com/@exposurex) which hosts tutorials, archived Office Hours events and other content. New subscribers are always welcome!
 
 ## Open-Source ExposureX
 
@@ -65,11 +65,11 @@ Other guides for working with an Open-Source install:
 - [Architecture](/en/open_source/installation/architecture/) gives you an overview of each service and component used by ExposureX.
 - [Running In Production](/en/open_source/installation/running-in-production/) provides system requirements, performance tweaks and maintenance processes for running ExposureX on a production server.  Note that this guide strictly covers Docker Compose installs, not Kubernetes.
 
-If you run into trouble with an Open Source install, we highly recommend asking questions on the [OWASP Slack](https://owasp.org/slack/invite). Our community members are active on the **# defectdojo** channel and can help you with issues you’re facing.
+If you run into trouble with an Open Source install, we highly recommend asking questions on the [OWASP Slack](https://owasp.org/slack/invite). Our community members are active on the **# exposurex** channel and can help you with issues you’re facing.
 
 ### Online Demo
 
-A running example of ExposureX (Open-Source Edition) is available on [our demo server](https://demo.defectdojo.org), using the credentials `admin` / `1Defectdojo@demo#appsec`. The demo server is refreshed regularly and provisioned with some sample data.
+A running example of ExposureX (Open-Source Edition) is available on [our demo server](https://#), using the credentials `admin` / `1Defectdojo@demo#appsec`. The demo server is refreshed regularly and provisioned with some sample data.
 
 ## 🟧 ExposureX Pro Edition
 
@@ -83,12 +83,12 @@ ExposureX Inc. hosts a commercial edition of this software, which includes:
 - cloud hosting, with regular backups, updates and maintenance
 - premium support and implementation guidance
 
-For more information, check out our Pricing page at [defectdojo.com](https://defectdojo.com/pricing).  After filling out a quick survey to assess your organization's needs we'll provide you with a custom quote for ExposureX.
+For more information, check out our Pricing page at [exposurex.com](https://exposurex.com/pricing).  After filling out a quick survey to assess your organization's needs we'll provide you with a custom quote for ExposureX.
 
 ExposureX Pro edition is available as a cloud-hosted SaaS offering but is also available for installation on-premises.
 
 ### Connect With Us
 
-* To get in touch with our team, you can always reach out to **info@defectdojo.com**.
+* To get in touch with our team, you can always reach out to **info@exposurex.com**.
 * Follow ExposureX Inc. on [LinkedIn](https://www.linkedin.com/company/33245534) for company updates.
-* ExposureX hosts online presentations for AppSec professionals that can be accessed live or on demand - check us out on our [Events page](https://defectdojo.com/events). Many of these are also available on our [YouTube Channel](https://www.youtube.com/@defectdojo).
+* ExposureX hosts online presentations for AppSec professionals that can be accessed live or on demand - check us out on our [Events page](https://exposurex.com/events). Many of these are also available on our [YouTube Channel](https://www.youtube.com/@exposurex).

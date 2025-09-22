@@ -8,29 +8,29 @@ weight: 2
 
 Individual users have four different kinds of permission that they can be assigned:
 
-* Users can be assigned as **Members to Products or Product Types**. This allows them to view and interact with Data Types (Product Types, Products, Engagements, Tests and Findings) in DefectDojo depending on the role they are assigned on the specific Product. Users can have multiple Product or Product Type memberships, with different levels of access.  
+* Users can be assigned as **Members to Products or Product Types**. This allows them to view and interact with Data Types (Product Types, Products, Engagements, Tests and Findings) in ExposureX depending on the role they are assigned on the specific Product. Users can have multiple Product or Product Type memberships, with different levels of access.  
 ​
-* Users can also have **Configuration Permissions** assigned, which allow them to access configuration pages in DefectDojo. Configuration Permissions are not related to Products or Product Types.  
+* Users can also have **Configuration Permissions** assigned, which allow them to access configuration pages in ExposureX. Configuration Permissions are not related to Products or Product Types.  
 ​
 * Users can be assigned **Global Roles**, which give them a standardized level of access to all Products and Product Types.  
 ​
-* Users can be set up as **Superusers**: administrator level roles which give them control and access to all DefectDojo data and configuration.
+* Users can be set up as **Superusers**: administrator level roles which give them control and access to all ExposureX data and configuration.
 
-You can also create Groups if you want to assign Product Membership, Configuration Permissions or Global Roles to a group of users at the same time. If you have a large number of users in DefectDojo, such as a dedicated testing team for a particular Product, Groups may be a more helpful feature. 
+You can also create Groups if you want to assign Product Membership, Configuration Permissions or Global Roles to a group of users at the same time. If you have a large number of users in ExposureX, such as a dedicated testing team for a particular Product, Groups may be a more helpful feature. 
 
 ## Superusers \& Global Roles
 
 Part of your Role\-Based Access Control (RBAC) configuration may require you to create additional Superusers, or users with Global Roles.
 
-* Superusers (Admins) have no limitations in the system. They can change all settings, manage users and have read / write access to all data. They can also change access rules for all users in DefectDojo. Superusers will also receive notifications for all system issues and alerts.
-* Users with Global Roles can view and interact with any Data Type (Product Types, Products, Engagements, Tests and Findings) in DefectDojo depending on their assigned Role. For more information about each Role and associated privileges, please refer to our Introduction to Roles article.
-* Users can also have specific Configuration Permissions assigned, allowing them to access certain DefectDojo configuration pages. Users have no Configuration Permissions by default.
+* Superusers (Admins) have no limitations in the system. They can change all settings, manage users and have read / write access to all data. They can also change access rules for all users in ExposureX. Superusers will also receive notifications for all system issues and alerts.
+* Users with Global Roles can view and interact with any Data Type (Product Types, Products, Engagements, Tests and Findings) in ExposureX depending on their assigned Role. For more information about each Role and associated privileges, please refer to our Introduction to Roles article.
+* Users can also have specific Configuration Permissions assigned, allowing them to access certain ExposureX configuration pages. Users have no Configuration Permissions by default.
 
-By default, the first account created on a new DefectDojo instance will have Superuser permissions. That user will be able to edit permissions for all subsequent DefectDojo users. Only an existing Superuser can add another superuser, or add a Global Role to a user.
+By default, the first account created on a new ExposureX instance will have Superuser permissions. That user will be able to edit permissions for all subsequent ExposureX users. Only an existing Superuser can add another superuser, or add a Global Role to a user.
 
 ### Add Superuser or Global Role status to an existing user
 
-1. Navigate to the 👤 Users \> Users page on the sidebar. You will see a list of all registered accounts on DefectDojo, along with each account's Active status, Global Roles, and other relevant User data.  
+1. Navigate to the 👤 Users \> Users page on the sidebar. You will see a list of all registered accounts on ExposureX, along with each account's Active status, Global Roles, and other relevant User data.  
 ​
 ![image](images/Set_a_User's_Permissions.png)
 ​
@@ -52,7 +52,7 @@ To assign a Global Role, select one from the dropdown Global Role menu at the bo
 
 ## Product \& Product Type Membership
 
-By default, any new account created on DefectDojo will not have permission to view any Product Level Data. They will need to be assigned membership to each Product they want to view and interact with.
+By default, any new account created on ExposureX will not have permission to view any Product Level Data. They will need to be assigned membership to each Product they want to view and interact with.
 
 * Product \& Product Type membership can only be configured by **Superusers, Maintainers or Owners**.
 * **Maintainers \& Owners** can only configure membership on Products / Product Types that they are already assigned to.
@@ -107,7 +107,7 @@ However, this does not work in reverse. If a User has a Product Type Role or Glo
 
 ## Configuration Permissions
 
-Many configuration dialogues and API endpoints can be enabled for users or groups of users, regardless of their superuser status. These Configuration Permissions allow regular users to access and contribute to parts of DefectDojo outside of their standard Product or Product Role assignment.
+Many configuration dialogues and API endpoints can be enabled for users or groups of users, regardless of their superuser status. These Configuration Permissions allow regular users to access and contribute to parts of ExposureX outside of their standard Product or Product Role assignment.
 
 Configuration Permissions are not related to a specific Product or Product Type \- users can have configuration permissions assigned without the need for other statuses or Product / Product Type Membership.  
 ​
@@ -136,7 +136,7 @@ Configuration Permissions are not related to a specific Product or Product Type 
 
 **Only Superusers can add Configuration Permissions to a User**.
 
-1. Navigate to the 👤 Users \> Users page on the sidebar. You will see a list of all registered accounts on DefectDojo, along with each account's Active status, Global Roles, and other relevant User data.  
+1. Navigate to the 👤 Users \> Users page on the sidebar. You will see a list of all registered accounts on ExposureX, along with each account's Active status, Global Roles, and other relevant User data.  
 ​
 ![image](images/Set_a_User's_Permissions_7.png)
 

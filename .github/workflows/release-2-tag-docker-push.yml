@@ -1,7 +1,7 @@
 name: "Release-2: Tag, Release, Push"
 
 env:
-  GIT_USERNAME: "DefectDojo release bot"
+  GIT_USERNAME: "ExposureX release bot"
   GIT_EMAIL: "dojo-release-bot@users.noreply.github.com"
 
 on:

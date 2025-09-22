@@ -46,8 +46,8 @@ class TestParsers(DojoTestCase):
                         self.assertRegex(content, "### Sample Scan Data",
                                         f"Documentation file '{doc_file}' does not contain ### Sample Scan Data",
                                         )
-                        self.assertRegex(content, "https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans",
-                                        f"Documentation file '{doc_file}' does not contain https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans",
+                        self.assertRegex(content, "https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans",
+                                        f"Documentation file '{doc_file}' does not contain https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans",
                                         )
 
             if parser_dir.name not in {

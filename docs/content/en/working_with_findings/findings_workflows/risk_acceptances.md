@@ -6,9 +6,9 @@ description: "Adding Simple and Full Risk Acceptances to your Findings"
 ‘Risk Accepted’ is a special status that can be applied to a Finding in two ways:
 
 * **Risk Accepted** can be freely applied as a Status **if ‘Simple Risk Acceptance’** is enabled.
-* You can also create **Full Risk Acceptances**, which are objects stored in DefectDojo to capture a risk acceptance decision made by your team.
+* You can also create **Full Risk Acceptances**, which are objects stored in ExposureX to capture a risk acceptance decision made by your team.
 
-A **Full Risk Acceptance** is a special object in DefectDojo, used when Active Findings are ‘backlogged’ by your team. Often, both security teams and developer teams will decide when a Risk Acceptance is appropriate. In DefectDojo, your team can create Risk Acceptances which capture the internal decision making process and can be used as a source of truth.
+A **Full Risk Acceptance** is a special object in ExposureX, used when Active Findings are ‘backlogged’ by your team. Often, both security teams and developer teams will decide when a Risk Acceptance is appropriate. In ExposureX, your team can create Risk Acceptances which capture the internal decision making process and can be used as a source of truth.
 
 ## About Full Risk Acceptances
 
@@ -16,7 +16,7 @@ Each Full Risk Acceptance can store details about the following:
 
 * The Security team’s recommendation to a Product owner or other stakeholder
 * Description of the decision made by stakeholders
-* The DefectDojo user involved in the decision making process
+* The ExposureX user involved in the decision making process
 * One or more Findings governed by the Risk Acceptance
 
 Findings can be added to a Risk Acceptance regardless of the Product, Test or Engagement they are in.
@@ -40,7 +40,7 @@ To create a New Risk Acceptance, complete the Add to New Risk Acceptance form on
 
 ![image](images/Risk_Acceptances_3.png)
 
-2. Select the **Owner** of the Risk Acceptance \- this is generally meant to be the DefectDojo team member responsible for the decision to Risk Accept the Finding.
+2. Select the **Owner** of the Risk Acceptance \- this is generally meant to be the ExposureX team member responsible for the decision to Risk Accept the Finding.
 3. Complete the **Optional Fields** with any relevant information. If you want to set an Expiration Date or a Warning for that Expiration Date, you can do so here as well. If you don’t specify a date, the Default Risk Acceptance / Default Risk Acceptance Expiration days will be used from the **System Settings** page.
 4. Select whether you want to **Reactivate** or **Restart SLAs** on any associated Findings once the Risk Acceptance expires.
 
@@ -56,6 +56,6 @@ With one or more Findings selected, open **Bulk Update Actions**. Navigate to **
 
 ## Locating Risk Accepted Findings
 
-The sidebar in DefectDojo allows you to quickly find any Risk Accepted Findings by opening **Manage \> Risk Acceptances.**  From here you can view the Risk Acceptance objects themselves, or view a list of Risk Accepted Findings.
+The sidebar in ExposureX allows you to quickly find any Risk Accepted Findings by opening **Manage \> Risk Acceptances.**  From here you can view the Risk Acceptance objects themselves, or view a list of Risk Accepted Findings.
 
 ![image](images/Risk_Acceptances_4.png)

@@ -22,7 +22,7 @@ class WizParserByTitle:
         """
         Parse the CSV with the assumed format of the link below.
 
-        test file: https://github.com/DefectDojo/django-DefectDojo/blob/master/unittests/scans/wiz/multiple_findings.csv
+        test file: https://github.com/ExposureX/django-ExposureX/blob/master/unittests/scans/wiz/multiple_findings.csv
         """
         findings = []
 
@@ -193,7 +193,7 @@ class WizParserByDetailedName:
         return [f"{key}: {value}" for key, value in tag_dict.items()]
 
     def _validate_severities(self, severity: str) -> str:
-        """Ensure the supplied severity fits what DefectDojo is expecting."""
+        """Ensure the supplied severity fits what ExposureX is expecting."""
         if severity not in SEVERITIES:
             logger.error(f"Severity is not supported: {severity}")
             # Default to Info severity

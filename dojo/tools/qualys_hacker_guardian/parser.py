@@ -17,7 +17,7 @@ class QualysHackerGuardianParser:
 
         Fields:
         - title: Set to Vuln Title from Qualys Hacker Guardian Scanner
-        - severity: Set to severity from Qualys Hacker Guardian Scanner translated into DefectDojo formant.
+        - severity: Set to severity from Qualys Hacker Guardian Scanner translated into ExposureX formant.
         - description: Custom description made from: category, threat, and result.
         - date: Set to date from Qualys Hacker Guardian Scanner.
         - impact: Set to impact from Qualys Hacker Guardian Scanner.
@@ -46,7 +46,7 @@ class QualysHackerGuardianParser:
 
         Fields:
         - title: Set to Vuln Title from Qualys Hacker Guardian Scanner
-        - severity: Set to severity from Qualys Hacker Guardian Scanner translated into DefectDojo formant.
+        - severity: Set to severity from Qualys Hacker Guardian Scanner translated into ExposureX formant.
         - description: Custom description made from: Category, Threat, and Result from Qualys Hacker Guardian scanner.
         """
         return [

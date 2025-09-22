@@ -11,10 +11,10 @@ logger = logging.getLogger(__name__)
 class SonarQubeApiUpdater:
 
     """
-    This class updates in SonarQube, a SonarQube issue previously imported as a DefectDojo Findings.
+    This class updates in SonarQube, a SonarQube issue previously imported as a ExposureX Findings.
      This class maps the finding status to a SQ issue status and later on it transitions the issue
      properly to a consistent status.
-     This way, findings marked as resolved, false positive or accepted in DefectDojo won't reappear
+     This way, findings marked as resolved, false positive or accepted in ExposureX won't reappear
      in future imports of SonarQube Scanner.
     """
 

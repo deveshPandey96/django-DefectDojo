@@ -20,13 +20,13 @@ Either of these commands will work:
 - \`npm audit fix --dry-run --json\`
 
 ### Sample Scan Data
-Sample NPM Audit scans can be found [here](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/npm_audit_7_plus).
+Sample NPM Audit scans can be found [here](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/npm_audit_7_plus).
 
 ### Link To Tool
 See NPM-Audit-Report on GitHub: https://github.com/npm/npm-audit-report/
 
 ### Default Deduplication Hashcode Fields
-By default, DefectDojo identifies duplicate Findings using these [hashcode fields](https://docs.defectdojo.com/en/working_with_findings/finding_deduplication/about_deduplication/):
+By default, ExposureX identifies duplicate Findings using these [hashcode fields](https://docs.exposurex.com/en/working_with_findings/finding_deduplication/about_deduplication/):
 
 - title
 - severity

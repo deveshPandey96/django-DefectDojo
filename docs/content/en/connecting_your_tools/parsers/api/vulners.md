@@ -12,8 +12,8 @@ In the `Product` settings select `Add API Scan Configuration` and select the pre
 
 After this is done, you can import the findings by selecting "Vulners" as the scan type.
 
-Detailed installation steps can be found in [vulners documentation](https://vulners.com/docs/plugins/defectdojo/).
+Detailed installation steps can be found in [vulners documentation](https://vulners.com/docs/plugins/exposurex/).
 
 Use following [instructions](https://vulners.com/docs/apikey/) to generate Vulners API Key.
 
-More details about DefectDojo-plugin integration can be found at [vulners integrations page](https://vulners.com/plugins).
+More details about ExposureX-plugin integration can be found at [vulners integrations page](https://vulners.com/plugins).

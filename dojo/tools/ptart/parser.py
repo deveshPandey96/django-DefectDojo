@@ -46,7 +46,7 @@ class PTARTParser:
             test.description = description
 
         # Setting the dates doesn't seem to want to work in reality :(
-        # Perhaps in a future version of DefectDojo?
+        # Perhaps in a future version of ExposureX?
         if "start_date" in data:
             test.target_start = ptart_tools.parse_date(
                 data["start_date"], "%Y-%m-%d",

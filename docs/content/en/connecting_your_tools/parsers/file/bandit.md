@@ -4,7 +4,7 @@ toc_hide: true
 ---
 
 ### File Types
-DefectDojo parser accepts a .json file.
+ExposureX parser accepts a .json file.
 
 To export a .json file from Bandit, you will need to install and run the .json report formatter from your Bandit instance.  
 See Bandit documentation: https://bandit.readthedocs.io/en/latest/formatters/index.html
@@ -64,10 +64,10 @@ All properties are expected as strings, except "metrics" properties, which are e
 ~~~
 
 ### Sample Scan Data
-Sample Bandit scans can be found [here](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/bandit).
+Sample Bandit scans can be found [here](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/bandit).
 
 ### Default Deduplication Hashcode Fields
-By default, DefectDojo identifies duplicate Findings using these [hashcode fields](https://docs.defectdojo.com/en/working_with_findings/finding_deduplication/about_deduplication/):
+By default, ExposureX identifies duplicate Findings using these [hashcode fields](https://docs.exposurex.com/en/working_with_findings/finding_deduplication/about_deduplication/):
 
 - file path
 - line

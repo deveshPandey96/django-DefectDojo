@@ -1,8 +1,8 @@
 We greatly appreciate all of our
-[contributors](https://github.com/DefectDojo/django-DefectDojo/graphs/contributors).
+[contributors](https://github.com/ExposureX/django-ExposureX/graphs/contributors).
 
 We would also like to highlight the contributions from Michael Dong and Fatimah
-Zohra who contributed to DefectDojo before it was open source.
+Zohra who contributed to ExposureX before it was open source.
 
 # Submitting an Issue
 
@@ -14,9 +14,9 @@ Please include your operating system name, your operating system version number 
 
 Bugs that do not have this information will be closed.
 
-# Contributing to DefectDojo
+# Contributing to ExposureX
 
-Here are a few things to keep in mind when making changes to DefectDojo.
+Here are a few things to keep in mind when making changes to ExposureX.
 
 ## Submission Pre-Approval
 
@@ -24,7 +24,7 @@ We don't want to waste your time, so if you're unsure whether your hypothetical 
 `enhancement-approved` label to your issue and you can begin building it out.
 
 Below are some representative examples of what we will and won't support going forward. If you have suggestions or other
-feedback, please let us know in the `#defectdojo` channel in [OWASP's Slack](https://owasp.org/slack/invite).
+feedback, please let us know in the `#exposurex` channel in [OWASP's Slack](https://owasp.org/slack/invite).
 
 **Acceptable examples:**
 
@@ -47,9 +47,9 @@ feedback, please let us know in the `#defectdojo` channel in [OWASP's Slack](htt
 
 ## Writing a New Parser
 
-Please see [the parser guide](https://docs.defectdojo.com/en/open_source/contributing/how-to-write-a-parser/) for guidance on how to write a parser.
+Please see [the parser guide](https://docs.exposurex.com/en/open_source/contributing/how-to-write-a-parser/) for guidance on how to write a parser.
 
-## Modifying DefectDojo and Testing
+## Modifying ExposureX and Testing
 
 Please use [these test scripts](../tests) to test your changes. These are the scripts we run in our [integration tests](DOCKER.md#run-the-tests-with-docker).
 
@@ -68,7 +68,7 @@ It requiers proper knowledge of [Django Migrations](https://docs.djangoproject.c
 ## Submitting Pull Requests
 
 The following are things to consider before submitting a pull request to
-DefectDojo.
+ExposureX.
 
 0. Base your PR against the `dev` or `bugfix` branch, unless discussed otherwise with the maintainers
 
@@ -84,7 +84,7 @@ DefectDojo.
 
 0. In dev branch, the code should be python 3.11 compliant.
 
-[dojo_settings]: /dojo/settings/settings.dist.py "DefectDojo settings file"
+[dojo_settings]: /dojo/settings/settings.dist.py "ExposureX settings file"
 [pep8]: https://www.python.org/dev/peps/pep-0008/ "PEP8"
 [flake8 built-in commit hooks]: https://flake8.pycqa.org/en/latest/user/using-hooks.html#built-in-hook-integration
 

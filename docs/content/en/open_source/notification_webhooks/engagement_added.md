@@ -6,7 +6,7 @@ exclude_search: true
 
 ## Event HTTP header
 ```yaml
-X-DefectDojo-Event: engagement_added
+X-ExposureX-Event: engagement_added
 ```
 
 ## Event HTTP body
@@ -36,7 +36,7 @@ X-DefectDojo-Event: engagement_added
     "url_ui": "http://localhost:8080/engagement/7",
     "user": {
         "id": 1,
-        "email": "admin@defectdojo.local",
+        "email": "admin@exposurex.local",
         "first_name": "Admin",
         "last_name": "User",
         "username": "admin",

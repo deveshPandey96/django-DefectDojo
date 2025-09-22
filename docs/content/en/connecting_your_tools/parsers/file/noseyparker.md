@@ -28,10 +28,10 @@ The parser only accepts .jsonl reports. Each line of the JSON Lines file from No
 
 
 ### Sample Scan Data
-Sample scan data for testing purposes can be found [here](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/noseyparker).
+Sample scan data for testing purposes can be found [here](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/noseyparker).
 
 ### Default Deduplication Hashcode Fields
-By default, DefectDojo identifies duplicate Findings using these [hashcode fields](https://docs.defectdojo.com/en/working_with_findings/finding_deduplication/about_deduplication/):
+By default, ExposureX identifies duplicate Findings using these [hashcode fields](https://docs.exposurex.com/en/working_with_findings/finding_deduplication/about_deduplication/):
 
 - title
 - cwe

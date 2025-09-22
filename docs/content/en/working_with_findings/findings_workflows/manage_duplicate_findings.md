@@ -4,13 +4,13 @@ description: "How to discover and correct redundancies in your workflow - using 
 weight: 3
 ---
 
-One of DefectDojo’s strengths is that the data model can accommodate many different use\-cases and applications. You’ll likely change your approach as you master the software and discover ways to optimize your workflow.
+One of ExposureX’s strengths is that the data model can accommodate many different use\-cases and applications. You’ll likely change your approach as you master the software and discover ways to optimize your workflow.
 
-By default, DefectDojo does not delete any duplicate Findings that are created. Each Finding is considered to be a separate instance of a vulnerability. So in this case, **Duplicate Findings** can be an indicator that a process change is required to your workflow.
+By default, ExposureX does not delete any duplicate Findings that are created. Each Finding is considered to be a separate instance of a vulnerability. So in this case, **Duplicate Findings** can be an indicator that a process change is required to your workflow.
 
 ## Step 1: Clean up your excess Duplicates
 
-Fortunately, DefectDojo’s Deduplication settings allow you to mass\-delete duplicates once a certain threshold has been crossed. This feature makes the cleanup process easier. To learn more about this process, see our article on **Finding Deduplication** \<\-link will go here.
+Fortunately, ExposureX’s Deduplication settings allow you to mass\-delete duplicates once a certain threshold has been crossed. This feature makes the cleanup process easier. To learn more about this process, see our article on **Finding Deduplication** \<\-link will go here.
 
 ## Step 2: Evaluate your Engagements for redundancies
 
@@ -32,9 +32,9 @@ Engagements store one or more Tests for a particular testing context. That conte
 
 If you discover that separate Tests have been created which capture the same testing context, this may be an indicator that these tests can be consolidated into a single Reimport.
 
-DefectDojo has two methods for importing test data to create Findings: **Import** and **Reimport**. Both of these methods are very similar, but the key difference between the two is that **Import** always creates a new Test, while **Reimport** can add new data to an existing Test. It’s also worth noting that **Reimport** does not create duplicate Findings within that Test.
+ExposureX has two methods for importing test data to create Findings: **Import** and **Reimport**. Both of these methods are very similar, but the key difference between the two is that **Import** always creates a new Test, while **Reimport** can add new data to an existing Test. It’s also worth noting that **Reimport** does not create duplicate Findings within that Test.
 
-Each time you import new vulnerability reports into DefectDojo, those reports will be stored in a Test object. A Test object can be created by a user ahead of time to hold a future **Import**. If a user wants to import data without specifying a Test destination, a new Test will be created to store the incoming report.
+Each time you import new vulnerability reports into ExposureX, those reports will be stored in a Test object. A Test object can be created by a user ahead of time to hold a future **Import**. If a user wants to import data without specifying a Test destination, a new Test will be created to store the incoming report.
 
 Tests are flexible objects, and although they can only hold one *kind* of report, they can handle multiple instances of that same report through the **Reimport** method. To learn more about Reimport, see our **[article](/en/connecting_your_tools/import_scan_files/using_reimport)** on this topic.
 

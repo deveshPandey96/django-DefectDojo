@@ -63,7 +63,7 @@ class ReversinglabsSpectraassureParser:
             nb_occurences=1,
             hash_code=key,  # sha256 on title
             references=None,  # future: urls
-            active=True,  # this is the DefectDojo active field, nothing to do with node.active field
+            active=True,  # this is the ExposureX active field, nothing to do with node.active field
             test=test,
             static_finding=True,
             dynamic_finding=False,

@@ -1,13 +1,13 @@
 apiVersion: v2
 appVersion: "2.50.2"
-description: A Helm chart for Kubernetes to install DefectDojo
+description: A Helm chart for Kubernetes to install ExposureX
 name: exposurex
 version: 1.6.207
 icon: https://www.exposurex.org/img/favicon.ico
 maintainers:
   - name: madchap
     email: exposurex-project@owasp.org
-    url: https://github.com/DefectDojo/django-DefectDojo
+    url: https://github.com/ExposureX/django-ExposureX
 dependencies:
   - name: postgresql
     version: ~16.7.0

@@ -7,7 +7,7 @@ There are two ways to retrieve findings from SonarQube. You can either use the [
 Both ways (**SonarQube REST API** and **Soprasteria**) are depicted below. 
 
 ### Sample Scan Data
-Sample SonarQube scans can be found [here](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/sonarqube).
+Sample SonarQube scans can be found [here](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/sonarqube).
 
 ## SonarQube REST API 
 You can retrieve the JSON directly from SonarQube if you use one of the following REST API endpoint:  
@@ -15,10 +15,10 @@ You can retrieve the JSON directly from SonarQube if you use one of the followin
 - `<sonarqubeurl>/api/hotspots/search?projectKey=<projectkey>`
 
 ### JSON
-The REST API JSON output can be uploaded to DefectDojo with "SonarQube Scan". 
+The REST API JSON output can be uploaded to ExposureX with "SonarQube Scan". 
 
 ### ZIP
-If you have too many findings in one project, you can implement a small script to handle pagination and put all JSON files in a .zip file. This zip file can also be parsed from DefectDojo with "SonarQube Scan". 
+If you have too many findings in one project, you can implement a small script to handle pagination and put all JSON files in a .zip file. This zip file can also be parsed from ExposureX with "SonarQube Scan". 
 
 ## Soprasteria
 ### Soprasteria SonarQube Scan (Aggregates findings per cwe, title, description, file\_path.)
@@ -42,7 +42,7 @@ Version: \>= 1.1.0.
 Recommend version for both format \>= 3.1.2
 
 ### Default Deduplication Hashcode Fields
-By default, DefectDojo identifies duplicate Findings using these [hashcode fields](https://docs.defectdojo.com/en/working_with_findings/finding_deduplication/about_deduplication/):
+By default, ExposureX identifies duplicate Findings using these [hashcode fields](https://docs.exposurex.com/en/working_with_findings/finding_deduplication/about_deduplication/):
 
 - cwe
 - severity

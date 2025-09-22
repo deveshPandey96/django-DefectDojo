@@ -4,7 +4,7 @@ description: "How to make Dashboard Tiles work for you, with examples"
 weight: 2
 ---
 
-Dashboard Tiles are customizable sets of filters for your DefectDojo instance, which can be added to your 🏠 **Home** dashboard. Tiles are designed to provide relevant information and speed up navigation within DefectDojo.
+Dashboard Tiles are customizable sets of filters for your ExposureX instance, which can be added to your 🏠 **Home** dashboard. Tiles are designed to provide relevant information and speed up navigation within ExposureX.
 
 ![image](images/About_Custom_Dashboard_Tiles.png)
 
@@ -101,7 +101,7 @@ The number on the tile represents the count of objects (Products, Engagement or 
 
 #### Example: Monitoring Engagements In Progress
 
-If you want to create a list of your In\-Progress Engagements in DefectDojo, you can set up an Engagement tile which filters for that condition.
+If you want to create a list of your In\-Progress Engagements in ExposureX, you can set up an Engagement tile which filters for that condition.
 
 * Create an Engagement tile, and from the Tile Filters set **Engagement Status** to **In Progress**.
 * To make sure your Tile is accurately labeled, set the Header of your tile to ‘**Engagements In Progress**’.
@@ -171,7 +171,7 @@ Using filter parameters you can track Findings in a particular state or time per
 
 #### Example: Monitoring Critical Findings
 
-If you wanted to be able to quickly access all of your Critical Findings in DefectDojo, you could do this by creating a tile.
+If you wanted to be able to quickly access all of your Critical Findings in ExposureX, you could do this by creating a tile.
 
 * Create a Finding tile, and from the Tile Filters set **Severity** to **Critical**.
 * To make sure your Tile is accurately labeled, set the Header of the tile to ‘**Critical Findings**’.
@@ -239,7 +239,7 @@ If you need to keep track of particular Endpoints, you can set up a Tile to quic
 
 ![image](images/About_Custom_Dashboard_Tiles_7.png)
 
-Clicking the footer on this tile brings us to a filtered list of Endpoints which displays their status. DefectDojo will only create and track Endpoints with related vulnerabilities, so this will not include any Endpoints which have no vulnerabilities reported.
+Clicking the footer on this tile brings us to a filtered list of Endpoints which displays their status. ExposureX will only create and track Endpoints with related vulnerabilities, so this will not include any Endpoints which have no vulnerabilities reported.
 
 #### Example: Monitor All Endpoints With Same Host
 

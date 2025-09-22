@@ -48,7 +48,7 @@ class EndpointTest(BaseTestCase):
         # Assert ot the query to dtermine status of failure
         self.assertTrue(self.is_success_message_present(text="Endpoint added successfully"))
 
-        # we add 5 endpoints to be able to test the fix for https://github.com/DefectDojo/django-DefectDojo/issues/12295 later in test_view_host
+        # we add 5 endpoints to be able to test the fix for https://github.com/ExposureX/django-ExposureX/issues/12295 later in test_view_host
 
         driver.get(self.base_url + "endpoint")
         # "Click" the dropdown button to see options
