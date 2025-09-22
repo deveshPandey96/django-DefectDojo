@@ -178,10 +178,31 @@ a:hover {
 .navbar-brand {
     padding: 5px 5px;
     margin-left: 0px;
+    height: 50px; /* Fixed navbar height */
+    display: flex;
+    align-items: center;
 }
 
 .navbar-brand > img {
     display: inline-block;
+    max-height: 40px; /* Constrain logo height to fit navbar */
+    width: auto; /* Maintain aspect ratio */
+    max-width: 200px; /* Prevent logo from being too wide */
+}
+
+/* Responsive logo sizing */
+@media (max-width: 767px) {
+    .navbar-brand > img {
+        max-width: 150px; /* Smaller on mobile */
+        max-height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-brand > img {
+        max-width: 120px; /* Even smaller on very small screens */
+        max-height: 30px;
+    }
 }
 
 .row {
@@ -954,9 +975,37 @@ input[type="checkbox"] {
     font-size: x-small
 }
 
+/* Logo styling classes */
+.navbar-logo {
+    max-height: 40px;
+    width: auto;
+    max-width: 200px;
+}
+
+.report-logo {
+    max-width: 240px;
+    height: auto;
+    width: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .report-logo {
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .report-logo {
+        max-width: 150px;
+    }
+}
+
 .footer img.logo {
-    width: 5%;
-    height: 5%;
+    max-width: 120px; /* Fixed maximum width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 45px; /* Maintain reasonable height */
+    width: auto; /* Let width adjust automatically */
 }
 
 td .fa-fw {

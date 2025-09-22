@@ -116,9 +116,7 @@
                         </button>
                         <a class="navbar-brand" href="{% url 'home' %}">
                         {% block header_logo %}
-                            <div style="padding: 10px;">
-                                <img src="{% static "dojo/img/logo.svg" %}" alt="DefectDojo Logo" width="240"/>
-                            </div>
+                                <img src="{% static "dojo/img/logo.svg" %}" alt="DefectDojo Logo" class="navbar-logo"/>
                         {% endblock %}
                         </a>
 
@@ -1099,7 +1097,7 @@
                             <div class="col-md-12 text-center text-">
                                 <p>
                                     <a href="{% url 'home' %}">
-                                        <img class="logo" src="{% static "dojo/img/logo.svg" %}" alt="{% trans "DefectDojo Logo" %}" height="45"/>
+                                        <img class="logo" src="{% static "dojo/img/logo.svg" %}" alt="{% trans "DefectDojo Logo" %}"/>
                                     </a>
                                     <br/>
                                     <br/>
