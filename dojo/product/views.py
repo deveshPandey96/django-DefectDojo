@@ -944,7 +944,7 @@ def new_product(request, ptid=None):
                         # Create appropriate labels in the repo
                         logger.info("Create label in repo: " + github_pkey.git_project)
 
-                        description = _("This label is automatically applied to all issues created by DefectDojo")
+                        description = _("This label is automatically applied to all issues created by ExposureX")
                         try:
                             g = Github(github_pkey.git_conf.api_key)
                             repo = g.get_repo(github_pkey.git_project)

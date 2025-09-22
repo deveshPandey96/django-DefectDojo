@@ -1,7 +1,7 @@
 name: "Release-1: Create PR for master"
 
 env:
-  GIT_USERNAME: "DefectDojo release bot"
+  GIT_USERNAME: "ExposureX release bot"
   GIT_EMAIL: "dojo-release-bot@users.noreply.github.com"
 on:
   workflow_dispatch:
@@ -66,26 +66,26 @@ jobs:
         run: |
           sed -ri 's/__version__ = ".*"/__version__ = "${{ inputs.release_number }}"/' dojo/__init__.py
           sed -ri 's/"version": ".*"/"version": "${{ inputs.release_number }}"/' components/package.json
-          sed -ri 's/appVersion: ".*"/appVersion: "${{ inputs.release_number }}"/' helm/defectdojo/Chart.yaml
+          sed -ri 's/appVersion: ".*"/appVersion: "${{ inputs.release_number }}"/' helm/exposurex/Chart.yaml
 
-          if grep "\-dev" helm/defectdojo/Chart.yaml; then
+          if grep "\-dev" helm/exposurex/Chart.yaml; then
               echo "x.y.z-dev found in Chart.yaml, probably releasing a new minor version"
               echo "removing the -dev suffix"
-              sed -e "s/\-dev//" -i helm/defectdojo/Chart.yaml
+              sed -e "s/\-dev//" -i helm/exposurex/Chart.yaml
           else
               echo "x.y.z without -dev found in Chart.yaml, probably releasing a new bug fix version"
-              CURRENT_CHART_VERSION=$(grep -oP 'version: (\K\S*)?' helm/defectdojo/Chart.yaml | head -1)
+              CURRENT_CHART_VERSION=$(grep -oP 'version: (\K\S*)?' helm/exposurex/Chart.yaml | head -1)
               NEW_CHART_VERSION=$(echo "version: $CURRENT_CHART_VERSION" | awk -F. -v OFS=. 'NF==1{print ++$NF}; NF>1{$NF=sprintf("%0*d", length($NF), ($NF+1)); print}')
               echo "bumping the chart version from $CURRENT_CHART_VERSION to $NEW_CHART_VERSION"
-              sed -ri "0,/version/s/version: \S+/$NEW_CHART_VERSION/" helm/defectdojo/Chart.yaml
+              sed -ri "0,/version/s/version: \S+/$NEW_CHART_VERSION/" helm/exposurex/Chart.yaml
           fi
 
       - name: Check version numbers
         run: |
           grep -H version dojo/__init__.py
           grep -H version components/package.json
-          grep -H appVersion helm/defectdojo/Chart.yaml
-          grep -H version helm/defectdojo/Chart.yaml
+          grep -H appVersion helm/exposurex/Chart.yaml
+          grep -H version helm/exposurex/Chart.yaml
 
       - name: Push version changes
         uses: stefanzweifel/git-auto-commit-action@778341af668090896ca464160c2def5d1d1a3eb0 # v6.0.1
@@ -103,7 +103,7 @@ jobs:
           script: |
             github.rest.pulls.create({
               owner: '${{ env.GITHUB_ORG }}',
-              repo: 'django-DefectDojo',
+              repo: 'django-ExposureX',
               title: 'Release: Merge release into master from: ${{ env.NEW_BRANCH }}',
               body: `Release triggered by \`${ process.env.GITHUB_ACTOR }\``,
               head: '${{ env.NEW_BRANCH }}',

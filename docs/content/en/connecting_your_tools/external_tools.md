@@ -1,21 +1,21 @@
 ---
-title: "External Tools: Universal Importer & DefectDojo-CLI (Pro)"
-description: "Import files to DefectDojo from the command line"
+title: "External Tools: Universal Importer & ExposureX-CLI (Pro)"
+description: "Import files to ExposureX from the command line"
 draft: false
 weight: 2
 ---
 
-<span style="background-color:rgba(242, 86, 29, 0.3)">Note: The following external tools are DefectDojo Pro-only features. These binaries will not work unless they are connected to an instance with a DefectDojo Pro license.</span>
+<span style="background-color:rgba(242, 86, 29, 0.3)">Note: The following external tools are ExposureX Pro-only features. These binaries will not work unless they are connected to an instance with a ExposureX Pro license.</span>
 
 ## About External Tools
 
-`defectdojo-cli` and `universal-importer` are command-line tools designed to seamlessly upload scan results into DefectDojo. They streamline both the import and re-import processes of findings and associated objects. These tools are flexible and support importing and re-importing scan results, making it ideal for users who want to quickly set up these interactions with the DefectDojo API.
+`exposurex-cli` and `universal-importer` are command-line tools designed to seamlessly upload scan results into ExposureX. They streamline both the import and re-import processes of findings and associated objects. These tools are flexible and support importing and re-importing scan results, making it ideal for users who want to quickly set up these interactions with the ExposureX API.
 
-DefectDojo-CLI has the same functionality as Universal Importer, but also includes the ability to export Findings from DefectDojo to JSON or CSV.
+ExposureX-CLI has the same functionality as Universal Importer, but also includes the ability to export Findings from ExposureX to JSON or CSV.
 
 ## Installation
 
-1. Use the DefectDojo UI to download the appropriate binary for your operating system from the platform.
+1. Use the ExposureX UI to download the appropriate binary for your operating system from the platform.
 
 2. Locate “External Tools” from your User Profile menu:
 
@@ -24,27 +24,27 @@ DefectDojo-CLI has the same functionality as Universal Importer, but also includ
 3. Extract the downloaded archive within a directory of your choice.
 Optional: Add the directory containing the extracted binary to your system's $PATH for repeat access.
 
-**Note that Macintosh users may be blocked from running DefectDojo-CLI or Universal Importer as they are apps from an unidentified developer.  See [Apple Support](https://support.apple.com/en-ca/guide/mac-help/mh40616/mac) for instructions on how to override the block from Apple.**  
+**Note that Macintosh users may be blocked from running ExposureX-CLI or Universal Importer as they are apps from an unidentified developer.  See [Apple Support](https://support.apple.com/en-ca/guide/mac-help/mh40616/mac) for instructions on how to override the block from Apple.**  
 
 **Windows Users: If you receive the "Couldn't download - virus detected" error, disabling Smartscreen may work. Otherwise, use a different browser to download the tool from the Cloud portal.**
 
 ## Configuration
 
-Universal Importer & DefectDojo-CLI can be configured using flags, environment variables, or a configuration file. The most important configuration is the API token, which must be set as an environment variable:
+Universal Importer & ExposureX-CLI can be configured using flags, environment variables, or a configuration file. The most important configuration is the API token, which must be set as an environment variable:
 
 1. Add your API key to your environment variables. 
-You can retrieve your API key from: `https://YOUR_INSTANCE.cloud.defectdojo.com/api/key-v2`
+You can retrieve your API key from: `https://YOUR_INSTANCE.#/api/key-v2`
 
 or 
 
-Via the DefectDojo user interface 
+Via the ExposureX user interface 
 in the user dropdown in the top-right corner:
 
 ![image](images/api-token.png)
 
 2. Set your environment variable for the API token.
 
-**For DefectDojo-CLI:**
+**For ExposureX-CLI:**
 	`export DD_CLI_API_TOKEN=YOUR_API_KEY`
 
 **For Universal Importer:**
@@ -59,7 +59,7 @@ Note: On Windows, use `set` instead of `export`.
    - **Temporary:**
      ```powershell
      $env:DD_IMPORTER_DOJO_API_TOKEN = "[VALUE_FROM_DEFECTDOJO_API]"
-     $env:DD_IMPORTER_DEFECTDOJO_URL=”[e.g. http://localhost:8080/defectdojo]”
+     $env:DD_IMPORTER_DEFECTDOJO_URL=”[e.g. http://localhost:8080/exposurex]”
      ```
    - **Permanent:**
      ```powershell
@@ -78,12 +78,12 @@ Note: On Windows, use `set` instead of `export`.
    - **Temporary:**
      ```cmd
      set DD_IMPORTER_DOJO_API_TOKEN = "[VALUE_FROM_DEFECTDOJO_API]"
-     set DD_IMPORTER_DEFECTDOJO_URL=”[e.g. http://localhost:8080/defectdojo]”
+     set DD_IMPORTER_DEFECTDOJO_URL=”[e.g. http://localhost:8080/exposurex]”
      ```
    - **Permanent:**
      ```cmd
      setx DD_IMPORTER_DOJO_API_TOKEN = "[VALUE_FROM_DEFECTDOJO_API]"
-     setx DD_IMPORTER_DEFECTDOJO_URL=”[e.g. http://localhost:8080/defectdojo]”
+     setx DD_IMPORTER_DEFECTDOJO_URL=”[e.g. http://localhost:8080/exposurex]”
      ```
 
 ### Using Windows Settings (Non-Administrative Accounts)
@@ -103,15 +103,15 @@ Note: On Windows, use `set` instead of `export`.
    echo %DD_IMPORTER_DEFECTDOJO_URL%
    ```
 
-## DefectDojo-CLI
+## ExposureX-CLI
 
-`defectdojo-cli` seamlessly integrates scan results into DefectDojo, streamlining the import and reimport processes of Findings and associated objects. Designed for ease of use, the tool supports various endpoints, catering to both initial imports and subsequent reimports — ideal for users requiring robust and flexible interaction with the DefectDojo API. DefectDojo-CLI can perform the same functions as `universal-importer`, and adds export functionality for Findings.
+`exposurex-cli` seamlessly integrates scan results into ExposureX, streamlining the import and reimport processes of Findings and associated objects. Designed for ease of use, the tool supports various endpoints, catering to both initial imports and subsequent reimports — ideal for users requiring robust and flexible interaction with the ExposureX API. ExposureX-CLI can perform the same functions as `universal-importer`, and adds export functionality for Findings.
 
 ### Commands
 
-- [`import`](./#import)       Imports findings into DefectDojo.
-- [`reimport`](./#reimport)     Reimports findings into DefectDojo.
-- [`export`](./#export)	Exports findings from DefectDojo.
+- [`import`](./#import)       Imports findings into ExposureX.
+- [`reimport`](./#reimport)     Reimports findings into ExposureX.
+- [`export`](./#export)	Exports findings from ExposureX.
 - [`interactive`](./#interactive)   Starts an interactive mode to configure the import and reimport process, step by 
 
 ### Global Options
@@ -135,16 +135,16 @@ Enable verbose output. (default: false) `[$DD_CLI_VERBOSE]`
 
 ### Import
 
-Use the import command to import new findings into DefectDojo.
+Use the import command to import new findings into ExposureX.
 
 #### Usage
 
 ```
-defectdojo-cli [global options] import <required flags> [optional flags]
-	or: defectdojo-cli [global options] import  --config ./config-file-path
-	or: defectdojo-cli import [-h | --help]
-	or: defectdojo-cli import example [subcommand options]
-	or: defectdojo-cli import example [-h | --help]
+exposurex-cli [global options] import <required flags> [optional flags]
+	or: exposurex-cli [global options] import  --config ./config-file-path
+	or: exposurex-cli import [-h | --help]
+	or: exposurex-cli import example [subcommand options]
+	or: exposurex-cli import example [-h | --help]
 
 >> The API token must be set in the environment variable `DD_CLI_API_TOKEN`.
 ```
@@ -165,7 +165,7 @@ In this scenario a new Test will be created inside the Engagement.
 * Provide engagement-name
 * Optionally provide product-type-name
 
-In this scenario DefectDojo will look up the Engagement by the provided details.
+In this scenario ExposureX will look up the Engagement by the provided details.
 
 When using names you can let the importer automatically create Engagements, Products and Product-types by using `auto-create-context=true`.
 You can use `deduplication-on-engagement` to restrict deduplication for imported Findings to the newly created Engagement.
@@ -173,13 +173,13 @@ You can use `deduplication-on-engagement` to restrict deduplication for imported
 
 **Import Basic syntax:**
 ```
-defectdojo-cli import [options]
+exposurex-cli import [options]
 ```
 
 #### **Import Example:**
 ```
-defectdojo-cli import \
---defectdojo-url "https://YOUR_INSTANCE.cloud.defectdojo.com/" \
+exposurex-cli import \
+--exposurex-url "https://YOUR_INSTANCE.#/" \
 --scan-type "burp scan" \
 --report-path "./examples/burp_findings.xml" \
 --product-name "dev" \
@@ -262,9 +262,9 @@ defectdojo-cli import \
 
 `--config value, -c value`          
 * The path to the TOML configuration file is used to set values for the options. If the option is set in the configuration file and the CLI, the option will take the value set from the CLI. `[$DD_CLI_CONFIG_FILE]`
-`--defectdojo-url value, -u value`
-* The URL of the DefectDojo instance to import findings into. (required). `[$DD_CLI_DEFECTDOJO_URL]`
-* --insecure-tls, --no-tls          ignore TLS validation errors when connecting to the provided DefectDojo instance. Most users should not enable this flag. (default: false) `[$DD_CLI_INSECURE_TLS]`
+`--exposurex-url value, -u value`
+* The URL of the ExposureX instance to import findings into. (required). `[$DD_CLI_DEFECTDOJO_URL]`
+* --insecure-tls, --no-tls          ignore TLS validation errors when connecting to the provided ExposureX instance. Most users should not enable this flag. (default: false) `[$DD_CLI_INSECURE_TLS]`
 
 ### Reimport
 
@@ -284,7 +284,7 @@ By Names:
 - Provide engagement-name
 - Optional: Provide test-name
 
-In this scenario DefectDojo will look up the Test by the provided details. If no test-name is provided, the latest test inside the engagement will be chosen based on scan-type.
+In this scenario ExposureX will look up the Test by the provided details. If no test-name is provided, the latest test inside the engagement will be chosen based on scan-type.
 
 When using names you can let the importer automatically create Engagements, Products and Product-types by using `auto-create-context=true`.
 You can use `deduplication-on-engagement` to restrict deduplication for imported Findings to the newly created Engagement.
@@ -292,11 +292,11 @@ You can use `deduplication-on-engagement` to restrict deduplication for imported
 #### Usage
 
 ```
-defectdojo-cli [global options] reimport <required flags> [optional flags]
-   or: defectdojo-cli [global options] reimport  --config ./config-file-path
-   or: defectdojo-cli reimport [-h | --help]
-   or: defectdojo-cli reimport example [subcommand options]
-   or: defectdojo-cli reimport example [-h | --help]
+exposurex-cli [global options] reimport <required flags> [optional flags]
+   or: exposurex-cli [global options] reimport  --config ./config-file-path
+   or: exposurex-cli reimport [-h | --help]
+   or: exposurex-cli reimport example [subcommand options]
+   or: exposurex-cli reimport example [-h | --help]
 
 >> The API token must be set in the environment variable `DD_CLI_API_TOKEN`.
 ```
@@ -304,8 +304,8 @@ defectdojo-cli [global options] reimport <required flags> [optional flags]
 #### **Reimport Example:**
 
 ```
-defectdojo-cli reimport \
---defectdojo-url "https://YOUR_INSTANCE.cloud.defectdojo.com/" \
+exposurex-cli reimport \
+--exposurex-url "https://YOUR_INSTANCE.#/" \
 --scan-type "Nancy Scan" \
 --report-path "./examples/nancy_findings.json" \
 --test-id 11 \
@@ -388,42 +388,42 @@ example, x  Shows an example of required and optional flags for reimport operati
 `--config value, -c value`
 * The path to the TOML configuration file is used to set values for the options. If the option is set in the configuration file and the CLI, the option will take the value set from the CLI. `[$DD_CLI_CONFIG_FILE]`
 
-`--defectdojo-url value, -u value`  
-* The URL of the DefectDojo instance to import findings into. (required). `[$DD_CLI_DEFECTDOJO_URL]`
+`--exposurex-url value, -u value`  
+* The URL of the ExposureX instance to import findings into. (required). `[$DD_CLI_DEFECTDOJO_URL]`
 
 `--insecure-tls, --no-tls`
-* ignore TLS validation errors when connecting to the provided DefectDojo instance. Most users should not enable this flag. (default: false) `[$DD_CLI_INSECURE_TLS]`
+* ignore TLS validation errors when connecting to the provided ExposureX instance. Most users should not enable this flag. (default: false) `[$DD_CLI_INSECURE_TLS]`
 
 ### Export
 
 #### Usage
 
 ```
-defectdojo-cli export <required options> [optional options]
-	or: defectdojo-cli [global options] export --defectdojo-url <https://YOUR_INSTANCE.cloud.defectdojo.com/> --json ./output_file_path.json [optional filters]
-	or: defectdojo-cli [global options] export --defectdojo-url <https://YOUR_INSTANCE.cloud.defectdojo.com/> --csv ./output_file_path.csv [optional filters]
-	or: defectdojo-cli [global options] export --defectdojo-url <https://YOUR_INSTANCE.cloud.defectdojo.com/> --json ./output_file_path.json --csv ./output_file_path.csv [optional filters]
-	or: defectdojo-cli [global options] export --config ./config-file-path
-	or: defectdojo-cli [global options] export --config ./config-file-path --json ./output_file_path.json
-	or: defectdojo-cli [global options] export --config ./config-file-path --csv ./output_file_path.csv
-	or: defectdojo-cli export [-h | --help]
-	or: defectdojo-cli export example [subcommand options]
-	or: defectdojo-cli export example [-h | --help]
+exposurex-cli export <required options> [optional options]
+	or: exposurex-cli [global options] export --exposurex-url <https://YOUR_INSTANCE.#/> --json ./output_file_path.json [optional filters]
+	or: exposurex-cli [global options] export --exposurex-url <https://YOUR_INSTANCE.#/> --csv ./output_file_path.csv [optional filters]
+	or: exposurex-cli [global options] export --exposurex-url <https://YOUR_INSTANCE.#/> --json ./output_file_path.json --csv ./output_file_path.csv [optional filters]
+	or: exposurex-cli [global options] export --config ./config-file-path
+	or: exposurex-cli [global options] export --config ./config-file-path --json ./output_file_path.json
+	or: exposurex-cli [global options] export --config ./config-file-path --csv ./output_file_path.csv
+	or: exposurex-cli export [-h | --help]
+	or: exposurex-cli export example [subcommand options]
+	or: exposurex-cli export example [-h | --help]
 
 >> The API token must be set in the environment variable `DD_CLI_API_TOKEN`.
 ```
 
-To export Findings from DefectDojo-CLI, you will need to supply a configuration file which contains details explaining which Findings you wish to export.  This is similar to the GET Findings method via the API.
+To export Findings from ExposureX-CLI, you will need to supply a configuration file which contains details explaining which Findings you wish to export.  This is similar to the GET Findings method via the API.
 
-For assistance use `defectdojo-cli export --help`.
+For assistance use `exposurex-cli export --help`.
 
 #### **Export Example**
 
 This example specifies the URL, export format and a few filter parameters to create a list of Findings.
 
 ```
-defectdojo-cli export \
---defectdojo-url "https://your-dojo-instance.cloud.defectdojo.com/"
+exposurex-cli export \
+--exposurex-url "https://your-dojo-instance.#/"
 --json "./path/to/findings.json" \
 --active "true" \
 --created "Past 90 days"
@@ -558,17 +558,17 @@ defectdojo-cli export \
 `--config value, -c value`
 The path to the TOML configuration file is used to set values for the options. If the option is set in the configuration file and the CLI, the option will take the value set from the CLI. `[$DD_CLI_CONFIG_FILE]`
 
-`--defectdojo-url value, -u value`
-The URL of the DefectDojo instance to import findings into. (required). `[$DD_CLI_DEFECTDOJO_URL]`
+`--exposurex-url value, -u value`
+The URL of the ExposureX instance to import findings into. (required). `[$DD_CLI_DEFECTDOJO_URL]`
 
 `--insecure-tls, --no-tls`
-ignore TLS validation errors when connecting to the provided DefectDojo instance. Most users should not enable this flag. (default: false) `[$DD_CLI_INSECURE_TLS]`
+ignore TLS validation errors when connecting to the provided ExposureX instance. Most users should not enable this flag. (default: false) `[$DD_CLI_INSECURE_TLS]`
 
 #### Export Example:
 
 ```
-defectdojo-cli export \
---defectdojo-url "https://your-dojo-instance.cloud.defectdojo.com/"
+exposurex-cli export \
+--exposurex-url "https://your-dojo-instance.#/"
 ```
 
 ### Interactive
@@ -578,9 +578,9 @@ Interactive mode allows you to configure import and reimport process, step-by-st
 #### Usage
 
 ```
-defectdojo-cli interactive
-	or: defectdojo-cli interactive  [--skip-intro] [--no-full-screen] [--log-path]
-	or: defectdojo-cli interactive [-h | --help]
+exposurex-cli interactive
+	or: exposurex-cli interactive  [--skip-intro] [--no-full-screen] [--log-path]
+	or: exposurex-cli interactive [-h | --help]
 ```
 
 #### Options
@@ -599,14 +599,14 @@ defectdojo-cli interactive
 
 ## Universal Importer
 
-`universal-importer` seamlessly integrates scan results into DefectDojo, streamlining both the import and reimport processes of findings and associated objects. Designed for ease of use, the tool supports various endpoints, catering to both initial imports and subsequent reimports — ideal for users requiring robust and flexible interaction with the DefectDojo API.
+`universal-importer` seamlessly integrates scan results into ExposureX, streamlining both the import and reimport processes of findings and associated objects. Designed for ease of use, the tool supports various endpoints, catering to both initial imports and subsequent reimports — ideal for users requiring robust and flexible interaction with the ExposureX API.
 
-Usage of Universal Importer is similar to DefectDojo-CLI, however Universal Importer does not have the Export functionality, and environment variables are encoded differently.
+Usage of Universal Importer is similar to ExposureX-CLI, however Universal Importer does not have the Export functionality, and environment variables are encoded differently.
 
 ### Commands
 
-- [`import`](./#import-1)       Imports findings into DefectDojo.
-- [`reimport`](./#reimport-1)     Reimports findings into DefectDojo.
+- [`import`](./#import-1)       Imports findings into ExposureX.
+- [`reimport`](./#reimport-1)     Reimports findings into ExposureX.
 - [`interactive`](./#interactive-1)   Starts an interactive mode to configure the import and reimport process, step by 
 
 ### Global Options
@@ -630,7 +630,7 @@ Usage of Universal Importer is similar to DefectDojo-CLI, however Universal Impo
 
 ### Import
 
-Use the import command to import new findings into DefectDojo.
+Use the import command to import new findings into ExposureX.
 
 #### Usage
 
@@ -660,7 +660,7 @@ In this scenario a new Test will be created inside the Engagement.
 * Provide engagement-name
 * Optionally provide product-type-name
 
-In this scenario DefectDojo will look up the Engagement by the provided details.
+In this scenario ExposureX will look up the Engagement by the provided details.
 
 When using names you can let the importer automatically create Engagements, Products and Product-types by using `auto-create-context=true`.
 You can use `deduplication-on-engagement` to restrict deduplication for imported Findings to the newly created Engagement.
@@ -676,7 +676,7 @@ universal-importer import [options]
 
 ```
 universal-importer import \
---defectdojo-url "https://YOUR_INSTANCE.cloud.defectdojo.com/" \
+--exposurex-url "https://YOUR_INSTANCE.#/" \
 --scan-type "burp scan" \
 --report-path "./examples/burp_findings.xml" \
 --product-name "dev" \
@@ -760,9 +760,9 @@ universal-importer import \
 
 `--config value, -c value`          
 * The path to the TOML configuration file is used to set values for the options. If the option is set in the configuration file and the CLI, the option will take the value set from the CLI. `[$DD_IMPORTER_CONFIG_FILE]`
-`--defectdojo-url value, -u value`
-* The URL of the DefectDojo instance to import findings into. (required). `[$DD_IMPORTER_DEFECTDOJO_URL]`
-* --insecure-tls, --no-tls          ignore TLS validation errors when connecting to the provided DefectDojo instance. Most users should not enable this flag. (default: false) `[$DD_IMPORTER_INSECURE_TLS]`
+`--exposurex-url value, -u value`
+* The URL of the ExposureX instance to import findings into. (required). `[$DD_IMPORTER_DEFECTDOJO_URL]`
+* --insecure-tls, --no-tls          ignore TLS validation errors when connecting to the provided ExposureX instance. Most users should not enable this flag. (default: false) `[$DD_IMPORTER_INSECURE_TLS]`
 
 ### Reimport
 
@@ -782,7 +782,7 @@ By Names:
 - Provide engagement-name
 - Optional: Provide test-name
 
-In this scenario DefectDojo will look up the Test by the provided details. If no test-name is provided, the latest test inside the engagement will be chosen based on scan-type.
+In this scenario ExposureX will look up the Test by the provided details. If no test-name is provided, the latest test inside the engagement will be chosen based on scan-type.
 
 When using names you can let the importer automatically create Engagements, Products and Product-types by using `auto-create-context=true`.
 You can use `deduplication-on-engagement` to restrict deduplication for imported Findings to the newly created Engagement.
@@ -803,7 +803,7 @@ universal-importer [global options] reimport <required flags> [optional flags]
 
 ```
 universal-importer reimport \
---defectdojo-url "https://YOUR_INSTANCE.cloud.defectdojo.com/" \
+--exposurex-url "https://YOUR_INSTANCE.#/" \
 --scan-type "Nancy Scan" \
 --report-path "./examples/nancy_findings.json" \
 --test-id 11 \
@@ -885,11 +885,11 @@ example, x  Shows an example of required and optional flags for reimport operati
 `--config value, -c value`
 * The path to the TOML configuration file is used to set values for the options. If the option is set in the configuration file and the CLI, the option will take the value set from the CLI. `[$DD_IMPORTER_CONFIG_FILE]`
 
-`--defectdojo-url value, -u value`  
-* The URL of the DefectDojo instance to import findings into. (required). `[$DD_IMPORTER_DEFECTDOJO_URL]`
+`--exposurex-url value, -u value`  
+* The URL of the ExposureX instance to import findings into. (required). `[$DD_IMPORTER_DEFECTDOJO_URL]`
 
 `--insecure-tls, --no-tls`
-* ignore TLS validation errors when connecting to the provided DefectDojo instance. Most users should not enable this flag. (default: false) `[$DD_IMPORTER_INSECURE_TLS]`
+* ignore TLS validation errors when connecting to the provided ExposureX instance. Most users should not enable this flag. (default: false) `[$DD_IMPORTER_INSECURE_TLS]`
 
 ### Interactive
 Interactive mode allows you to configure import and reimport process, step-by-step.
@@ -920,5 +920,5 @@ universal-importer interactive
 If you encounter any issues with these tools, please check the following:
 - Ensure you're using the correct binary for your operating system and CPU architecture.
 - Verify that the API key is set correctly in your environment variables.
-- Check that the DefectDojo URL is correct and accessible.
-- When importing, confirm that the report file exists and is in the supported format for the specified scan type.  You can review the supported scanners for DefectDojo on our [supported tools list](../parsers). 
+- Check that the ExposureX URL is correct and accessible.
+- When importing, confirm that the report file exists and is in the supported format for the specified scan type.  You can review the supported scanners for ExposureX on our [supported tools list](../parsers). 

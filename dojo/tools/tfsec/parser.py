@@ -8,7 +8,7 @@ class TFSecParser:
 
     """A class that can be used to parse the tfsec JSON report file"""
 
-    # table to match tfsec severity to DefectDojo severity
+    # table to match tfsec severity to ExposureX severity
     SEVERITY = {
         "CRITICAL": "Critical",
         "HIGH": "High",

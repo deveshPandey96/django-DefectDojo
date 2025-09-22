@@ -6,14 +6,14 @@ weight: 1
 pro-feature: true
 ---
 
-<span style="background-color:rgba(242, 86, 29, 0.3)">Note: The Universal Parser is only available in DefectDojo Pro.</span>
+<span style="background-color:rgba(242, 86, 29, 0.3)">Note: The Universal Parser is only available in ExposureX Pro.</span>
 
-The Universal Parser is currently in Beta.  See our [announcement presentation](https://community.defectdojo.com/universalparser) for more information.
+The Universal Parser is currently in Beta.  See our [announcement presentation](https://community.exposurex.com/universalparser) for more information.
 
 ## About Universal Parser
-DefectDojo has a large, regularly updated library of parsers to help security teams ingest data.  However, sometimes users have a tool that's unsupported by the parsers, or they may want to import data into the DefectDojo model differently from the way the parser does.
+ExposureX has a large, regularly updated library of parsers to help security teams ingest data.  However, sometimes users have a tool that's unsupported by the parsers, or they may want to import data into the ExposureX model differently from the way the parser does.
 
-DefectDojo's Universal Parser is meant to give our users with unsupported report types a path forward, to import and map **any JSON, CSV or XML file**.
+ExposureX's Universal Parser is meant to give our users with unsupported report types a path forward, to import and map **any JSON, CSV or XML file**.
 
 **The Universal Parser is:**
 
@@ -51,7 +51,7 @@ The parser name will be used when creating the Test_Type for this new parser. Yo
 
 ![image](images/universal_parser_3.png)
 
-After uploading an example scan file, selecting a parser name, and clicking "Next", the following page will let you configure the way this Universal Parser will populate finding fields when using this configuration to perform imports. On the right, you will find a selection of DefectDojo finding fields (output fields). Drop-down menus to the left of each output field allow you to select which item(s) (input fields) from your scan file's structure should be used to populate them.
+After uploading an example scan file, selecting a parser name, and clicking "Next", the following page will let you configure the way this Universal Parser will populate finding fields when using this configuration to perform imports. On the right, you will find a selection of ExposureX finding fields (output fields). Drop-down menus to the left of each output field allow you to select which item(s) (input fields) from your scan file's structure should be used to populate them.
 
 Example:
 
@@ -82,7 +82,7 @@ If you've uploaded a scan file in JSON format that looks like this:
 
 You'll see a hierarchical representation of the unique fields we detected based on the structure of the input file, with icons indicating the type of each field (if we can determine this). You can then select the "title" input field in the drop-down menu that populates the "Title" output field, the "description" input field can go with the "Description" output field, and so on. 
 
-Input field names don't have to match the names of output fields, and your scan file may not have an equivalent to all DefectDojo output fields.
+Input field names don't have to match the names of output fields, and your scan file may not have an equivalent to all ExposureX output fields.
 
 ### Required fields
 The following output fields require an input field mapping:
@@ -92,7 +92,7 @@ The following output fields require an input field mapping:
 * Description
 
 ### About severities
-A Universal Parser will accept any case variation of the DefectDojo severities - "CRITICAL", "Critical", "cRiTiCaL", etc. - and apply it to your findings. Any value that doesn't match a DefectDojo severity will be replaced with "Info". This mirrors how parsers and Connectors work today: unknown values are generally mapped to "Info".
+A Universal Parser will accept any case variation of the ExposureX severities - "CRITICAL", "Critical", "cRiTiCaL", etc. - and apply it to your findings. Any value that doesn't match a ExposureX severity will be replaced with "Info". This mirrors how parsers and Connectors work today: unknown values are generally mapped to "Info".
 
 ### Multi-select fields
 Some output fields will accept multiple input fields. If you decide to select more than one input field, we will provide that field's value under a header with that input field's name.
@@ -109,7 +109,7 @@ This was pulled from a field called "detailed_description" in the input file
 
 ## Step 3: Previewing your Findings
 
-Once you've selected your mappings from input fields to output fields, you can click the "Next" button to see a preview of what the Findings from your input file will look like once they are imported to DefectDojo with your chosen configuration. Some fields will have an "expand" button next to them to allow you to see the full, rendered MarkDown of what that field will look like. We will only render previews of the first 25 Findings from your input file, but you can also see how many findings were detected in the whole scan file.
+Once you've selected your mappings from input fields to output fields, you can click the "Next" button to see a preview of what the Findings from your input file will look like once they are imported to ExposureX with your chosen configuration. Some fields will have an "expand" button next to them to allow you to see the full, rendered MarkDown of what that field will look like. We will only render previews of the first 25 Findings from your input file, but you can also see how many findings were detected in the whole scan file.
 
 If the previews don't look like you expected, you can hit the "Back" button to tweak the mappings. Once you are satisfied with your configuration, click the "Submit" button to create your new Universal Parser. This will not perform an import automatically.
 
@@ -119,7 +119,7 @@ Once your Universal Parser is created, you'll be redirected to the "Add Findings
 
 ### Choosing the right input fields
 
-Each vendor may produce very different scan report formats, some of which will map more closely to DefectDojo's finding model than others. We allow for significant flexibility in what we will accept, but we must impose some structure to ensure that findings don't get garbled in the translation from input to output. While we can accommodate optional input fields, we don't accept "global" fields, or fields that occur a different number of times than the number of finding objects.
+Each vendor may produce very different scan report formats, some of which will map more closely to ExposureX's finding model than others. We allow for significant flexibility in what we will accept, but we must impose some structure to ensure that findings don't get garbled in the translation from input to output. While we can accommodate optional input fields, we don't accept "global" fields, or fields that occur a different number of times than the number of finding objects.
 
 #### Example
 

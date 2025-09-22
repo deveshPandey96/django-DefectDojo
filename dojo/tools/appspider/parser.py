@@ -27,7 +27,7 @@ class AppSpiderParser:
         if "VulnSummary" not in str(root.tag):
             msg = (
                 "Please ensure that you are uploading AppSpider's VulnerabilitiesSummary.xml file."
-                "At this time it is the only file that is consumable by DefectDojo."
+                "At this time it is the only file that is consumable by ExposureX."
             )
             raise ValueError(msg)
 

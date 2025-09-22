@@ -4,13 +4,13 @@ description: "Share and maintain permissions for many users"
 weight: 3
 ---
 
-If you have a significant number of DefectDojo users, you may want to create one or more **Groups**, in order to set the same Role\-Based Access Control (RBAC) rules for many users simultaneously. Only Superusers can create User Groups.
+If you have a significant number of ExposureX users, you may want to create one or more **Groups**, in order to set the same Role\-Based Access Control (RBAC) rules for many users simultaneously. Only Superusers can create User Groups.
 
 Groups can work in multiple ways:
 
 * Set one, or many different Product or Product Type level Roles for all Group Members, allowing specific control over which Products or Product Types can be accessed and edited by the Group.
 * Set a Global Role for all Group Members, giving them visibility and access to all Product or Product Types.
-* Set Configuration Permissions for a Group, allowing them to change specific functionality around DefectDojo.
+* Set Configuration Permissions for a Group, allowing them to change specific functionality around ExposureX.
 
 For more information on Roles, please refer to our **Introduction To Roles** article.
 
@@ -21,7 +21,7 @@ From the sidebar, navigate to 👤**Users \> Groups** to see a list of all activ
 ![image](images/Create_a_User_Group_for_shared_permissions.png)
 From here, you can create, delete or view your individual Group pages.
 
-For <span style="background-color:rgba(242, 86, 29, 0.3)">DefectDojo Pro</span> users, the Pro UI's All Groups has a few additional options.
+For <span style="background-color:rgba(242, 86, 29, 0.3)">ExposureX Pro</span> users, the Pro UI's All Groups has a few additional options.
 * You can filter this table by Group Name, Description, E-mail Address, Global Role, as well as the total number of Users, Product Types, and Products associated with the Group.
 * You can also adjust a Group's Permissions or other settings by clicking the "⋮" button next to the Group you wish to edit.
 
@@ -31,7 +31,7 @@ For <span style="background-color:rgba(242, 86, 29, 0.3)">DefectDojo Pro</span> 
 
 Viewing a group displays all Group information, such as ID, name, description, global role, etc. The Group Members, Product Types, and Products associated with the group are also displayed. Additionally, configuration permissions tied to a Group can be updated directly from the “View Group” page.
 
-For <span style="background-color:rgba(242, 86, 29, 0.3)">DefectDojo Pro</span> users, the Pro UI's Group View allows you to assign Configuration Permission adjustments in a slightly different way.
+For <span style="background-color:rgba(242, 86, 29, 0.3)">ExposureX Pro</span> users, the Pro UI's Group View allows you to assign Configuration Permission adjustments in a slightly different way.
 
 ![image](images/group_view_pro_ui.png)
 
@@ -54,7 +54,7 @@ For <span style="background-color:rgba(242, 86, 29, 0.3)">DefectDojo Pro</span> 
 
 3. This will take you to a page where you can create a new Group. Set the Name for this Group, and add a Description if you wish.  
   
-You can also select a Global Role that you wish to apply to this Group, if you wish. Adding a Global Role to the Group will give all Group Members access to all DefectDojo data, along with a limited amount of edit access depending on the Global Role you choose. See our **Introduction To Roles** article for more information.
+You can also select a Global Role that you wish to apply to this Group, if you wish. Adding a Global Role to the Group will give all Group Members access to all ExposureX data, along with a limited amount of edit access depending on the Global Role you choose. See our **Introduction To Roles** article for more information.
 
 The account that initially creates a Group will have an Owner Role for the Group by Default.
 
@@ -126,7 +126,7 @@ Groups cannot be assigned to Products or Product Types without a Role. If you're
 
 ### **Assign Configuration Permissions to a Group**
 
-If you want the Members in your Group to access Configuration functions, and control certain aspects of DefectDojo, you can assign these responsibilities from the Group page. 
+If you want the Members in your Group to access Configuration functions, and control certain aspects of ExposureX, you can assign these responsibilities from the Group page. 
 
 Assign View, Add, Edit or Delete roles from the menu in the bottom\-right hand corner. Checking off a Configuration Permission will immediately give the Group access to this particular function.
 

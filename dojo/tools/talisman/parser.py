@@ -21,7 +21,7 @@ class TalismanParser:
         return "Import Talisman Scan findings in JSON format."
 
     def get_findings(self, filename, test):
-        """Converts a Talisman JSON report to DefectDojo findings"""
+        """Converts a Talisman JSON report to ExposureX findings"""
         if filename is None:
             return []
 

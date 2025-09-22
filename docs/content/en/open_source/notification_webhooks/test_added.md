@@ -7,7 +7,7 @@ exclude_search: true
 
 ## Event HTTP header
 ```yaml
-X-DefectDojo-Event: test_added
+X-ExposureX-Event: test_added
 ```
 
 ## Event HTTP body
@@ -43,7 +43,7 @@ X-DefectDojo-Event: test_added
     "url_ui": "http://localhost:8080/test/90",
     "user": {
         "id": 1,
-        "email": "admin@defectdojo.local",
+        "email": "admin@exposurex.local",
         "first_name": "Admin",
         "last_name": "User",
         "username": "admin",

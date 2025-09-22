@@ -24,13 +24,13 @@ See NPM's issue on GitHub for more information.  https://github.com/npm/npm-audi
 Attempting to import a file from a later version of NPM Audit will raise an error message.
 
 ### Sample Scan Data
-Sample NPM Audit scans can be found [here](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/npm_audit).
+Sample NPM Audit scans can be found [here](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/npm_audit).
 
 ### Link To Tool
 See NPM-Audit-Report on GitHub: https://github.com/npm/npm-audit-report/
 
 ### Default Deduplication Hashcode Fields
-By default, DefectDojo identifies duplicate Findings using these [hashcode fields](https://docs.defectdojo.com/en/working_with_findings/finding_deduplication/about_deduplication/):
+By default, ExposureX identifies duplicate Findings using these [hashcode fields](https://docs.exposurex.com/en/working_with_findings/finding_deduplication/about_deduplication/):
 
 - title
 - severity

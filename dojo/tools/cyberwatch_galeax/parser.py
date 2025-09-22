@@ -19,7 +19,7 @@ class CyberwatchGaleaxParser:
         return "Cyberwatch scan (Galeax)"
 
     def get_description_for_scan_types(self, scan_type):
-        return "Import Cyberwatch Cve and Security Issue data in JSON format, you can get the json from this tool : https://github.com/Galeax/Cyberwatch-API-DefectDojo"
+        return "Import Cyberwatch Cve and Security Issue data in JSON format, you can get the json from this tool : https://github.com/Galeax/Cyberwatch-API-ExposureX"
 
     def get_findings(self, filename, test):
         logger.debug(f"Starting get_findings with filename: {filename}")

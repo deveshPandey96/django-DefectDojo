@@ -5,10 +5,10 @@ toc_hide: true
 Import Semgrep Pro findings in JSON format.
 
 ### Sample Scan Data
-Sample Semgrep Pro JSON Report scans can be found [here](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/semgrep_pro).
+Sample Semgrep Pro JSON Report scans can be found [here](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/semgrep_pro).
 
 ### Default Deduplication
-By default, DefectDojo uses the `match_based_id` from Semgrep Pro for deduplication. If this is not available, it falls back to using a combination of:
+By default, ExposureX uses the `match_based_id` from Semgrep Pro for deduplication. If this is not available, it falls back to using a combination of:
 - title
 - file path
 - line number

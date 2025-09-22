@@ -22,8 +22,8 @@ class HackerOneVulnerabilityDisclosureProgram:
     """Vulnerability Disclosure Program HackerOne reports"""
 
     def get_vulnerability_disclosure_json_findings(self, tree, test):
-        """Converts a HackerOne reports to a DefectDojo finding"""
-        # Convert JSON  report to DefectDojo format
+        """Converts a HackerOne reports to a ExposureX finding"""
+        # Convert JSON  report to ExposureX format
         dupes = {}
         for content in tree["data"]:
             # Get all relevant data

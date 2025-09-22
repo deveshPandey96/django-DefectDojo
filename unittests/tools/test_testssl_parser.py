@@ -29,11 +29,11 @@ class TestTestsslParser(DojoTestCase):
                     endpoint.clean()
             self.assertEqual(100, len(findings))
             # finding 8
-            # "cipherlist_AVERAGE","www.defectdojo.org/185.199.110.153","443","LOW","offered","","CWE-310"
+            # "cipherlist_AVERAGE","www.exposurex.org/185.199.110.153","443","LOW","offered","","CWE-310"
             finding = findings[8]
             self.assertEqual("Low", finding.severity)
             self.assertEqual(310, finding.cwe)
-            # "LUCKY13","www.defectdojo.org/185.199.110.153","443","LOW","potentially vulnerable, uses TLS CBC ciphers","CVE-2013-0169","CWE-310"
+            # "LUCKY13","www.exposurex.org/185.199.110.153","443","LOW","potentially vulnerable, uses TLS CBC ciphers","CVE-2013-0169","CWE-310"
             finding = findings[50]
             self.assertEqual("Low", finding.severity)
             self.assertEqual(310, finding.cwe)

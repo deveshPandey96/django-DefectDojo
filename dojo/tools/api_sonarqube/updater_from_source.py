@@ -16,7 +16,7 @@ class SonarQubeApiUpdaterFromSource:
     The responsibility of this class is to update the Finding status if current SonarQube issue status doesn't match.
 
     This way, findings will be updated based on SonarQube information when SonarQube is updated manually and
-    already imported in DefectDojo.
+    already imported in ExposureX.
     """
 
     @staticmethod
@@ -49,7 +49,7 @@ class SonarQubeApiUpdaterFromSource:
                 current_status not in {"OPEN", current_finding_status}
             ):
                 logger.info(
-                    f"Original SonarQube issue '{sonarqube_issue}' has changed. Updating DefectDojo finding '{finding}'...",
+                    f"Original SonarQube issue '{sonarqube_issue}' has changed. Updating ExposureX finding '{finding}'...",
                 )
                 self.update_finding_status(finding, current_status)
 

@@ -39,7 +39,7 @@ class TestArachniParser(DojoTestCase):
                 tzinfo=datetime.timezone(datetime.timedelta(seconds=3600))), finding.date)
             self.assertEqual(1, len(finding.unsaved_endpoints))
             endpoint = finding.unsaved_endpoints[0]
-            self.assertEqual("demo.defectdojo.org", endpoint.host)
+            self.assertEqual("#", endpoint.host)
             self.assertEqual(443, endpoint.port)
             self.assertEqual("https", endpoint.protocol)
             # finding 2

@@ -40,7 +40,7 @@ class WhiteHatSentinelParser:
             msg = "collection key not present or there were not findings present."
             raise ValueError(msg)
 
-        # Convert a WhiteHat Vuln with Attack Vectors to a list of DefectDojo
+        # Convert a WhiteHat Vuln with Attack Vectors to a list of ExposureX
         # findings
         return self._convert_whitehat_sentinel_vulns_to_dojo_finding(
             findings_collection["collection"], test,
@@ -49,18 +49,18 @@ class WhiteHatSentinelParser:
         # # Loop through each vuln from WhiteHat
         # for whitehat_vuln in findings_collection['collection']:
         #
-        #     # Append DefectDojo findings to list
+        #     # Append ExposureX findings to list
         #     dojo_findings.append(dojo_finding)
 
     def _convert_whitehat_severity_id_to_dojo_severity(
         self, whitehat_severity_id: int,
     ) -> str | None:
         """
-        Converts a WhiteHat Sentinel numerical severity to a DefectDojo severity.
+        Converts a WhiteHat Sentinel numerical severity to a ExposureX severity.
 
         Args:
             whitehat_severity_id: The WhiteHat Severity ID (called risk_id in the API)
-        Returns: A DefectDojo severity if a mapping can be found; otherwise a null value is returned
+        Returns: A ExposureX severity if a mapping can be found; otherwise a null value is returned
 
         """
         severities = [
@@ -94,7 +94,7 @@ class WhiteHatSentinelParser:
 
     def _parse_description(self, whitehat_sentinel_description: dict):
         """
-        Manually converts the HTML description to a DefectDojo-friendly format.
+        Manually converts the HTML description to a ExposureX-friendly format.
 
         Args:
             whitehat_sentinel_description: The description section of the WhiteHat Sentinel vulnerability dict
@@ -188,12 +188,12 @@ class WhiteHatSentinelParser:
         self, whitehat_sentinel_vulns: [dict], test: str,
     ):
         """
-        Converts a WhiteHat Sentinel vuln to a DefectDojo finding
+        Converts a WhiteHat Sentinel vuln to a ExposureX finding
 
         Args:
             whitehat_sentinel_vulns: The vuln dictionary from WhiteHat Sentinel vuln API
-            test: The test ID that the DefectDojo finding should be associated with
-        Returns: A DefectDojo Finding object
+            test: The test ID that the ExposureX finding should be associated with
+        Returns: A ExposureX Finding object
 
         """
         dupes = {}

@@ -13,8 +13,8 @@
     {% endif %}
     "sections": [
         {
-            "activityTitle": "DefectDojo",
-            "activityImage": "https://raw.githubusercontent.com/DefectDojo/django-DefectDojo/master/dojo/static/dojo/img/logo.svg",
+            "activityTitle": "ExposureX",
+            "activityImage": "https://raw.githubusercontent.com/ExposureX/django-ExposureX/master/dojo/static/dojo/img/logo.svg",
             {% if risk_acceptance.is_expired %}
                 "text": "{% blocktranslate with accepted_findings=risk_acceptance.accepted_findings.all|length exp_date=risk_acceptance.expiration_date_handled|date %}Risk acceptance {{ risk_acceptance }} with {{ accepted_findings }} has expired {{ exp_date }}{% endblocktranslate %}",
             {% else %}

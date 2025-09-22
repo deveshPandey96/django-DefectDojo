@@ -122,7 +122,7 @@ class FalsePositiveHistoryTest(BaseTestCase):
         self.assert_is_false_positive(finding_2)
         # Reactivate second finding
         # PROBLEM: Upon saving of finding_2 it will be maked a false positive againm that's why this test case is skipped for now
-        # https://github.com/DefectDojo/django-DefectDojo/issues/8977
+        # https://github.com/ExposureX/django-ExposureX/issues/8977
         self.edit_toggle_false_positive(finding_2)
         # Assert that both findings are active again
         self.assert_is_active(finding_1)
@@ -168,7 +168,7 @@ def suite():
     # success and failure is output by the test
     suite.addTest(ProductTest("test_create_product"))
     # SKIP this test as the implemented logic will always mark finding1 and finding2 as false positive as long as at least one of them is false positive
-    # https://github.com/DefectDojo/django-DefectDojo/issues/8977
+    # https://github.com/ExposureX/django-ExposureX/issues/8977
     # suite.addTest(FalsePositiveHistoryTest("test_retroactive_edit_finding"))
     suite.addTest(ProductTest("test_create_product"))
     suite.addTest(FalsePositiveHistoryTest("test_retroactive_bulk_edit_finding"))

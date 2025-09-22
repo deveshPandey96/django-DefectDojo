@@ -8,8 +8,8 @@
     "summary": "{% trans "Test added" %}",
     "sections": [
         {
-            "activityTitle": "DefectDojo",
-            "activityImage": "https://raw.githubusercontent.com/DefectDojo/django-DefectDojo/master/dojo/static/dojo/img/logo.svg",
+            "activityTitle": "ExposureX",
+            "activityImage": "https://raw.githubusercontent.com/ExposureX/django-ExposureX/master/dojo/static/dojo/img/logo.svg",
             "text": "{% trans "A new test has been added" %}.",
             "facts": [
                 {

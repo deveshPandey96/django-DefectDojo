@@ -14,7 +14,7 @@ class AnchoreGrypeParser:
     """
     Anchore Grype JSON report format generated with `-o json` option.
 
-    command: `grype defectdojo/defectdojo-django:1.13.1 -o json > many_vulns.json`
+    command: `grype exposurex/exposurex-django:1.13.1 -o json > many_vulns.json`
     """
 
     def get_scan_types(self):
@@ -168,7 +168,7 @@ class AnchoreGrypeParser:
                 finding_cvss3 = self.get_cvss(vuln_cvss)
             if not finding_cvss3 and rel_cvss:
                 finding_cvss3 = self.get_cvss(rel_cvss)
-            # https://github.com/DefectDojo/django-DefectDojo/issues/12819
+            # https://github.com/ExposureX/django-ExposureX/issues/12819
             # the parser seems focues on only parsing the first related vulnerability
             # this fixes the mentioned github issue, but a more thorough rewrite might be needed
             # if the problem persists / we get more real world sample reports.

@@ -20,7 +20,7 @@ class GgshieldParser:
         return "Import Ggshield Scan findings in JSON format."
 
     def get_findings(self, filename, test):
-        """Converts a Ggshield report to DefectDojo findings"""
+        """Converts a Ggshield report to ExposureX findings"""
         json_data = json.load(filename)
         issues = json_data.get("scans")
         dupes = {}

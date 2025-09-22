@@ -8,10 +8,10 @@ This parser helps to parse Microsoft Defender Findings and supports two types of
 <br>However, if you have a fast changing environment with a huge number of vulnerabilities and endpoints, it is recommended to leave the folder machines/ empty. Then, for stability reasons the machine info is skipped and only the machineID is added to the finding.
 
 ### Sample Scan Data
-Sample MS Defender Parser scans can be found [here](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/ms_defender).
+Sample MS Defender Parser scans can be found [here](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/ms_defender).
 
 ### Default Deduplication Hashcode Fields
-By default, DefectDojo identifies duplicate Findings using these [hashcode fields](https://docs.defectdojo.com/en/working_with_findings/finding_deduplication/about_deduplication/):
+By default, ExposureX identifies duplicate Findings using these [hashcode fields](https://docs.exposurex.com/en/working_with_findings/finding_deduplication/about_deduplication/):
 
 - title
 - description

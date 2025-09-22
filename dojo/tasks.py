@@ -204,7 +204,7 @@ def evaluate_pro_proposition(*args, **kwargs):
         entry in announcement.message
         for entry in [
             "",
-            "DefectDojo Pro Cloud and On-Premise Subscriptions Now Available!",
+            "ExposureX Pro Cloud and On-Premise Subscriptions Now Available!",
             "Findings/Endpoints in their systems",
         ]
     ):
@@ -215,7 +215,7 @@ def evaluate_pro_proposition(*args, **kwargs):
     if object_count < 100000:
         return
     # Update the announcement
-    announcement.message = f'Only professionals have {object_count:,} Findings and Endpoints in their systems... <a href="https://www.defectdojo.com/pricing" target="_blank">Get DefectDojo Pro</a> today!'
+    announcement.message = f'Only professionals have {object_count:,} Findings and Endpoints in their systems... <a href="https://www.exposurex.com/pricing" target="_blank">Get ExposureX Pro</a> today!'
     announcement.save()
 
 

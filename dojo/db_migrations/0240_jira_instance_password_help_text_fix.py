@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='jira_instance',
             name='password',
-            field=models.CharField(help_text='Password or API Token, see DefectDojo documentation for more information.', max_length=2000, verbose_name='Password/Token'),
+            field=models.CharField(help_text='Password or API Token, see ExposureX documentation for more information.', max_length=2000, verbose_name='Password/Token'),
         ),
     ]

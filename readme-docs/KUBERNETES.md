@@ -1,6 +1,6 @@
-# DefectDojo on Kubernetes
+# ExposureX on Kubernetes
 
-DefectDojo Kubernetes utilizes [Helm](https://helm.sh/), a
+ExposureX Kubernetes utilizes [Helm](https://helm.sh/), a
 package manager for Kubernetes. Helm Charts help you define, install, and
 upgrade even the most complex Kubernetes application.
 
@@ -11,7 +11,7 @@ this [guide](https://helm.sh/docs/using_helm/#installing-helm).
 
 ## Supported Kubernetes Versions
 
-The tests cover the deployment on the lastest [kubernetes version](https://kubernetes.io/releases/) and the oldest supported [version from AWS](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html#available-versions). The assumption is that version in between do not have significant differences. Current tested versions can looks up in the [github k8s workflow](https://github.com/DefectDojo/django-DefectDojo/blob/master/.github/workflows/k8s-tests.yml).
+The tests cover the deployment on the lastest [kubernetes version](https://kubernetes.io/releases/) and the oldest supported [version from AWS](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html#available-versions). The assumption is that version in between do not have significant differences. Current tested versions can looks up in the [github k8s workflow](https://github.com/ExposureX/django-ExposureX/blob/master/.github/workflows/k8s-tests.yml).
 
 ## Helm chart
 
@@ -20,7 +20,7 @@ Starting with version 1.14.0, a helm chart will be pushed onto the `helm-charts`
 To use it, you can add our repo.
 
 ```
-$ helm repo add defectdojo 'https://raw.githubusercontent.com/DefectDojo/django-DefectDojo/helm-charts'
+$ helm repo add exposurex 'https://raw.githubusercontent.com/ExposureX/django-ExposureX/helm-charts'
 
 $ helm repo update
 ```
@@ -28,9 +28,9 @@ $ helm repo update
 You should now be able to see the chart.
 
 ```
-$ helm search repo defectdojo
+$ helm search repo exposurex
 NAME                      	CHART VERSION	APP VERSION	DESCRIPTION
-defectdojo/defectdojo   1.6.153         2.39.0          A Helm chart for Kubernetes to install DefectDojo
+exposurex/exposurex   1.6.153         2.39.0          A Helm chart for Kubernetes to install ExposureX
 ```
 
 ## Kubernetes Local Quickstart
@@ -39,11 +39,11 @@ Requirements:
 
 1. Helm installed locally
 2. Minikube installed locally
-3. Latest cloned copy of DefectDojo
+3. Latest cloned copy of ExposureX
 
 ```zsh
-git clone https://github.com/DefectDojo/django-DefectDojo
-cd django-DefectDojo
+git clone https://github.com/ExposureX/django-ExposureX
+cd django-ExposureX
 
 minikube start
 minikube addons enable ingress
@@ -59,7 +59,7 @@ helm repo update
 Then pull the dependent charts:
 
 ```zsh
-helm dependency update ./helm/defectdojo
+helm dependency update ./helm/exposurex
 ```
 
 Now, install the helm chart into minikube.
@@ -94,8 +94,8 @@ Helm >= v3:
 
 ```zsh
 helm install \
-  defectdojo \
-  ./helm/defectdojo \
+  exposurex \
+  ./helm/exposurex \
   --set django.ingress.enabled=${DJANGO_INGRESS_ENABLED} \
   --set django.ingress.activateTLS=${DJANGO_INGRESS_ACTIVATE_TLS} \
   --set createSecret=true \
@@ -108,34 +108,34 @@ status of the containers can be viewed by starting up `minikube dashboard`.
 Note: If the containers are not cached locally the services will start once the
 containers have been pulled locally.
 
-To be able to access DefectDojo, set up an ingress or access the service
+To be able to access ExposureX, set up an ingress or access the service
 directly by running the following command:
 
 ```zsh
 kubectl port-forward --namespace=default \
-service/defectdojo-django 8080:80
+service/exposurex-django 8080:80
 ```
 
-As you set your host value to defectdojo.default.minikube.local, make sure that
+As you set your host value to exposurex.default.minikube.local, make sure that
 it resolves to the localhost IP address, e.g. by adding the following two lines
 to /etc/hosts:
 
 ```zsh
-::1       defectdojo.default.minikube.local
-127.0.0.1 defectdojo.default.minikube.local
+::1       exposurex.default.minikube.local
+127.0.0.1 exposurex.default.minikube.local
 ```
 
 To find out the password, run the following command:
 
 ```zsh
-echo "DefectDojo admin password: $(kubectl \
-  get secret defectdojo \
+echo "ExposureX admin password: $(kubectl \
+  get secret exposurex \
   --namespace=default \
   --output jsonpath='{.data.DD_ADMIN_PASSWORD}' \
   | base64 --decode)"
 ```
 
-To access DefectDojo, go to <http://defectdojo.default.minikube.local:8080>.
+To access ExposureX, go to <http://exposurex.default.minikube.local:8080>.
 Log in with username admin and the password from the previous command.
 
 ### Minikube with locally built containers
@@ -151,7 +151,7 @@ Use the same commands as before but add:
 
 ### Installing from a private registry
 
-If you have stored your images in a private registry, you can install defectdojo chart with (helm 3).
+If you have stored your images in a private registry, you can install exposurex chart with (helm 3).
 
 - First create a secret named "defectdojoregistrykey" based on the credentials that can pull from the registry: see https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
 - Then install the chart with the same commands as before but adding:
@@ -165,14 +165,14 @@ If you have stored your images in a private registry, you can install defectdojo
 
 ```zsh
 # Build images
-docker build -t defectdojo/defectdojo-django -f Dockerfile.django .
-docker build -t defectdojo/defectdojo-nginx -f Dockerfile.nginx .
+docker build -t exposurex/exposurex-django -f Dockerfile.django .
+docker build -t exposurex/exposurex-nginx -f Dockerfile.nginx .
 ```
 
 ```zsh
 # Build images behind proxy
-docker build --build-arg http_proxy=http://myproxy.com:8080 --build-arg https_proxy=http://myproxy.com:8080 -t defectdojo/defectdojo-django -f Dockerfile.django .
-docker build --build-arg http_proxy=http://myproxy.com:8080 --build-arg https_proxy=http://myproxy.com:8080 -t defectdojo/defectdojo-nginx -f Dockerfile.nginx .
+docker build --build-arg http_proxy=http://myproxy.com:8080 --build-arg https_proxy=http://myproxy.com:8080 -t exposurex/exposurex-django -f Dockerfile.django .
+docker build --build-arg http_proxy=http://myproxy.com:8080 --build-arg https_proxy=http://myproxy.com:8080 -t exposurex/exposurex-nginx -f Dockerfile.nginx .
 ```
 
 ### Upgrade the chart
@@ -180,8 +180,8 @@ docker build --build-arg http_proxy=http://myproxy.com:8080 --build-arg https_pr
 If you want to change kubernetes configuration of use an updated docker image (evolution of defectDojo code), upgrade the application:
 
 ```
-kubectl delete job defectdojo-initializer
-helm upgrade  defectdojo ./helm/defectdojo/ \
+kubectl delete job exposurex-initializer
+helm upgrade  exposurex ./helm/exposurex/ \
    --set django.ingress.enabled=${DJANGO_INGRESS_ENABLED} \
    --set django.ingress.activateTLS=${DJANGO_INGRESS_ACTIVATE_TLS}
 ```
@@ -194,17 +194,17 @@ In case of issue or in any other situation where you need to re-install the char
 
 ```zsh
 # helm 3
-helm uninstall defectdojo
+helm uninstall exposurex
 helm install \
-  defectdojo \
-  ./helm/defectdojo \
+  exposurex \
+  ./helm/exposurex \
   --set django.ingress.enabled=${DJANGO_INGRESS_ENABLED} \
   --set django.ingress.activateTLS=${DJANGO_INGRESS_ACTIVATE_TLS}
 ```
 
 ## Kubernetes Production
 
-When running defectdojo in production be aware that you understood the full setup and always have a backup.
+When running exposurex in production be aware that you understood the full setup and always have a backup.
 
 ### Encryption to Kubernetes
 
@@ -217,7 +217,7 @@ described [here](https://github.com/hendrikhalkow/k8s-docs/blob/master/tls.md).
 # Create a TLS secret called minikube-tls as mentioned above, e.g.
 K8S_NAMESPACE="default"
 TLS_CERT_DOMAIN="${K8S_NAMESPACE}.minikube.local"
-kubectl --namespace "${K8S_NAMESPACE}" create secret tls defectdojo-tls \
+kubectl --namespace "${K8S_NAMESPACE}" create secret tls exposurex-tls \
   --key <(openssl rsa \
     -in "${CA_DIR}/private/${TLS_CERT_DOMAIN}.key.pem" \
     -passin "pass:${TLS_CERT_PASSWORD}") \
@@ -236,7 +236,7 @@ Be aware that the traffic to the database and celery broker are unencrypted at t
 
 ### Media persistent volume
 
-By default, DefectDojo helm installation doesn't support persistent storage for storing images (dynamically uploaded by users). By default, it uses emptyDir, which is ephemeral by its nature and doesn't support multiple replicas of django pods, so should not be in use for production.
+By default, ExposureX helm installation doesn't support persistent storage for storing images (dynamically uploaded by users). By default, it uses emptyDir, which is ephemeral by its nature and doesn't support multiple replicas of django pods, so should not be in use for production.
 
 To enable persistence of the media storage that supports R/W many, should be in use as backend storage like S3, NFS, glusterfs, etc
 
@@ -257,17 +257,17 @@ mediaPersistentVolume:
     storageClassName:
 ```
 
-In the example above, we want the media content to be preserved to `pvc` as `persistentVolumeClaim` k8s resource and what we are basically doing is enabling the pvc to be created conditionally if the user wants to create it using the chart (in this case the pvc name 'defectdojo-media' will be inherited from template file used to deploy the pvc). By default the volume type is emptyDir which does not require a pvc. But when the type is set to pvc then we need a kubernetes Persistent Volume Claim and this is where the django.mediaPersistentVolume.persistentVolumeClaim.name comes into play.
+In the example above, we want the media content to be preserved to `pvc` as `persistentVolumeClaim` k8s resource and what we are basically doing is enabling the pvc to be created conditionally if the user wants to create it using the chart (in this case the pvc name 'exposurex-media' will be inherited from template file used to deploy the pvc). By default the volume type is emptyDir which does not require a pvc. But when the type is set to pvc then we need a kubernetes Persistent Volume Claim and this is where the django.mediaPersistentVolume.persistentVolumeClaim.name comes into play.
 
 The accessMode is set to ReadWriteMany by default to accommodate using more than one replica. Ensure storage support ReadWriteMany before setting this option, otherwise set accessMode to ReadWriteOnce.
 
 NOTE: PersistrentVolume needs to be prepared in front before helm installation/update is triggered.
 
-For more detail how how to create proper PVC see [example](https://github.com/DefectDojo/Community-Contribs/tree/master/persistent-media)
+For more detail how how to create proper PVC see [example](https://github.com/ExposureX/Community-Contribs/tree/master/persistent-media)
 
 ### Installation
 
-**Important:** If you choose to create the secret on your own, you will need to create a secret named `defectdojo` and containing the following fields:
+**Important:** If you choose to create the secret on your own, you will need to create a secret named `exposurex` and containing the following fields:
 
 - DD_ADMIN_PASSWORD
 - DD_SECRET_KEY
@@ -279,10 +279,10 @@ Theses fields are required to get the stack running.
 ```zsh
 # Install Helm chart. Choose a host name that matches the certificate above
 helm install \
-  defectdojo \
-  ./helm/defectdojo \
+  exposurex \
+  ./helm/exposurex \
   --namespace="${K8S_NAMESPACE}" \
-  --set host="defectdojo.${TLS_CERT_DOMAIN}" \
+  --set host="exposurex.${TLS_CERT_DOMAIN}" \
   --set django.ingress.secretName="minikube-tls" \
   --set createSecret=true \
   --set createRedisSecret=true \
@@ -290,10 +290,10 @@ helm install \
 
 # For high availability deploy multiple instances of Django, Celery and Redis
 helm install \
-  defectdojo \
-  ./helm/defectdojo \
+  exposurex \
+  ./helm/exposurex \
   --namespace="${K8S_NAMESPACE}" \
-  --set host="defectdojo.${TLS_CERT_DOMAIN}" \
+  --set host="exposurex.${TLS_CERT_DOMAIN}" \
   --set django.ingress.secretName="minikube-tls" \
   --set django.replicas=3 \
   --set celery.worker.replicas=3 \
@@ -305,10 +305,10 @@ helm install \
 # Run highly available PostgreSQL cluster
 # for production environment.
 helm install \
-  defectdojo \
-  ./helm/defectdojo \
+  exposurex \
+  ./helm/exposurex \
   --namespace="${K8S_NAMESPACE}" \
-  --set host="defectdojo.${TLS_CERT_DOMAIN}" \
+  --set host="exposurex.${TLS_CERT_DOMAIN}" \
   --set django.replicas=3 \
   --set celery.worker.replicas=3 \
   --set redis.replicas=3 \
@@ -320,14 +320,14 @@ helm install \
   --set createRedisSecret=true \
   --set createPostgresqlSecret=true
 
-# Note: If you run `helm install defectdojo before, you will get an error
-# message like `Error: release defectdojo failed: secrets "defectdojo" already
+# Note: If you run `helm install exposurex before, you will get an error
+# message like `Error: release exposurex failed: secrets "exposurex" already
 # exists`. This is because the secret is kept across installations.
 # To prevent recreating the secret, add --set createSecret=false` to your
 # command.
 
 # Run test.
-helm test defectdojo
+helm test exposurex
 
 # Navigate to <YOUR_INGRESS_ENDPOINT>.
 ```
@@ -348,15 +348,15 @@ Set this to your `https://<yourdomain>` in values.yaml
 Django requires a list of all hostnames that are valid for requests.
 You can add additional hostnames via helm or values file as an array.
 This helps if you have a local service submitting reports to defectDojo using
-the namespace name (say defectdojo.scans) instead of the TLD name used in a browser.
+the namespace name (say exposurex.scans) instead of the TLD name used in a browser.
 
 In your helm install simply pass them as a defined array, for example:
 
-`--set "alternativeHosts={defectdojo.default,localhost,defectdojo.example.com}"`
+`--set "alternativeHosts={exposurex.default,localhost,exposurex.example.com}"`
 
 This will also work with shell inserted variables:
 
-`--set "alternativeHosts={defectdojo.${TLS_CERT_DOMAIN},localhost}"`
+`--set "alternativeHosts={exposurex.${TLS_CERT_DOMAIN},localhost}"`
 
 You will still need to set a host value as well.
 
@@ -384,14 +384,14 @@ extraEnv:
 
 ### How to use an external PostgreSQL DB with Defectdojo
 
-#### Step 1: Create a Namespace for DefectDojo
+#### Step 1: Create a Namespace for ExposureX
 
-To begin, create a dedicated namespace for DefectDojo to isolate its resources:
-`kubectl create ns defectdojo`
+To begin, create a dedicated namespace for ExposureX to isolate its resources:
+`kubectl create ns exposurex`
 
 #### Step 2: Create a Secret for PostgreSQL Credentials
 
-Set up a Kubernetes Secret to securely store the PostgreSQL user password and database connection URL, which are essential for establishing a secure connection between DefectDojo and your PostgreSQL instance. Apply the secret using the following command: `kubectl apply -f secret.yaml -n defectdojo`. This secret will be referenced within the `extraEnv` section of the DefectDojo Helm values file.
+Set up a Kubernetes Secret to securely store the PostgreSQL user password and database connection URL, which are essential for establishing a secure connection between ExposureX and your PostgreSQL instance. Apply the secret using the following command: `kubectl apply -f secret.yaml -n exposurex`. This secret will be referenced within the `extraEnv` section of the ExposureX Helm values file.
 
 Sample secret template (replace the placeholders with your PostgreSQL credentials):
 
@@ -399,7 +399,7 @@ Sample secret template (replace the placeholders with your PostgreSQL credential
 apiversion: v1
 kind: Secret
 metadata:  
-  name: defectdojo-postgresql-specific  
+  name: exposurex-postgresql-specific  
 type: Opaque
 stringData:  # I chose stringData for better visualization of the credentials for debugging
   password: <user-password>
@@ -407,43 +407,43 @@ stringData:  # I chose stringData for better visualization of the credentials fo
 
 #### Step 2.5: Install PostgreSQL (Optional)
 
-If you need to simulate a PostgreSQL database external to DefectDojo, you can install PostgreSQL using the following Helm command:
+If you need to simulate a PostgreSQL database external to ExposureX, you can install PostgreSQL using the following Helm command:
 
 ```bash
 helm repo add bitnami https://charts.bitnami.com/bitnami 
 helm repo update
-helm install defectdojo-postgresql bitnami/postgresql -n defectdojo -f postgresql/values.yaml
+helm install exposurex-postgresql bitnami/postgresql -n exposurex -f postgresql/values.yaml
 ```
 
 Sample `values.yaml` file for PostgreSQL configuration:
 
 ```YAML
 auth:
-  username: defectdojo
+  username: exposurex
   password: <user-password>
   postgresPassword: <admin-password>
-  database: defectdojo
+  database: exposurex
   primary:
     persistence:
     size: 10Gi
 ```
 
-#### Step 3: Modify DefectDojo helm values
+#### Step 3: Modify ExposureX helm values
 
-Before installing the DefectDojo Helm chart, it's important to customize the `values.yaml` file. Key areas to modify include specifying the PostgreSQL connection details & the extraEnv block:
+Before installing the ExposureX Helm chart, it's important to customize the `values.yaml` file. Key areas to modify include specifying the PostgreSQL connection details & the extraEnv block:
 
 ```yaml
 postgresql:
   enabled: false # Disable the creation of the database in the cluster
   postgresServer: "127.0.0.1" # Required to skip certain tests not useful on external instances
   auth:
-    username: defectdojo # your database user
-    database: defectdojo # your database name
+    username: exposurex # your database user
+    database: exposurex # your database name
     secretKeys: 
       adminPasswordKey: password # the name of the field containing the password value
       userPasswordKey: password # the name of the field containing the password value
       replicationPasswordKey: password # the name of the field containing the password value
-    existingSecret: defectdojo-postgresql-specific # the secret containing your database password
+    existingSecret: exposurex-postgresql-specific # the secret containing your database password
 
 extraEnv:
 # Overwrite the database endpoint
@@ -454,12 +454,12 @@ extraEnv:
   value: <YOUR_POSTGRES_PORT>
 ```
 
-#### Step 4: Deploy DefectDojo
+#### Step 4: Deploy ExposureX
 
-After modifying the `values.yaml` file as needed, deploy DefectDojo using Helm. This command also generates the required secrets for the DefectDojo admin UI and Redis:
+After modifying the `values.yaml` file as needed, deploy ExposureX using Helm. This command also generates the required secrets for the ExposureX admin UI and Redis:
 
 ```bash
-helm install defectdojo defectdojo -f values.yaml -n defectdojo --set createSecret=true --set createRedisSecret=true
+helm install exposurex exposurex -f values.yaml -n exposurex --set createSecret=true --set createRedisSecret=true
 ```
 
 
@@ -470,17 +470,17 @@ helm install defectdojo defectdojo -f values.yaml -n defectdojo --set createSecr
 
 ```zsh
 # View logs of a specific pod
-kubectl logs $(kubectl get pod --selector=defectdojo.org/component=${POD} \
+kubectl logs $(kubectl get pod --selector=exposurex.org/component=${POD} \
   -o jsonpath="{.items[0].metadata.name}") -f
 
 # Open a shell in a specific pod
-kubectl exec -it $(kubectl get pod --selector=defectdojo.org/component=${POD} \
+kubectl exec -it $(kubectl get pod --selector=exposurex.org/component=${POD} \
   -o jsonpath="{.items[0].metadata.name}") -- /bin/bash
 # Or:
-kubectl exec defectdojo-django-<xxx-xxx> -c uwsgi -it /bin/sh
+kubectl exec exposurex-django-<xxx-xxx> -c uwsgi -it /bin/sh
 
 # Open a Python shell in a specific pod
-kubectl exec -it $(kubectl get pod --selector=defectdojo.org/component=${POD} \
+kubectl exec -it $(kubectl get pod --selector=exposurex.org/component=${POD} \
   -o jsonpath="{.items[0].metadata.name}") -- python manage.py shell
 ```
 
@@ -489,13 +489,13 @@ kubectl exec -it $(kubectl get pod --selector=defectdojo.org/component=${POD} \
 Helm >= v3
 
 ```
-helm uninstall defectdojo
+helm uninstall exposurex
 ```
 
 To remove persistent objects not removed by uninstall (this will remove any database):
 
 ```
-kubectl delete secrets defectdojo defectdojo-redis-specific defectdojo-postgresql-specific
-kubectl delete serviceAccount defectdojo
-kubectl delete pvc data-defectdojo-redis-0 data-defectdojo-postgresql-0
+kubectl delete secrets exposurex exposurex-redis-specific exposurex-postgresql-specific
+kubectl delete serviceAccount exposurex
+kubectl delete pvc data-exposurex-redis-0 data-exposurex-postgresql-0
 ```

@@ -3,7 +3,7 @@ title: "Anchore Grype"
 toc_hide: true
 ---
 ### File Types
-DefectDojo parser accepts a .json file.
+ExposureX parser accepts a .json file.
 
 Anchore Grype JSON files are created using the Grype CLI, using the '--output=json' option.  See: https://github.com/anchore/grype
 
@@ -194,10 +194,10 @@ All properties are expected as strings and are required by the parser.
 ~~~
 
 ### Sample Scan Data
-Sample Grype scans can be found [here](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/anchore_grype).
+Sample Grype scans can be found [here](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/anchore_grype).
 
 ### Default Deduplication Hashcode Fields
-By default, DefectDojo identifies duplicate Findings using these [hashcode fields](https://docs.defectdojo.com/en/working_with_findings/finding_deduplication/about_deduplication/):
+By default, ExposureX identifies duplicate Findings using these [hashcode fields](https://docs.exposurex.com/en/working_with_findings/finding_deduplication/about_deduplication/):
 
 - title
 - severity

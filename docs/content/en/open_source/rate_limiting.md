@@ -5,7 +5,7 @@ draft: false
 weight: 11
 ---
 
-DefectDojo has protection against brute force attacks through rate limiting.
+ExposureX has protection against brute force attacks through rate limiting.
 
 ## Configuration
 

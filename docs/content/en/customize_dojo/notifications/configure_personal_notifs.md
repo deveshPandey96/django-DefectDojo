@@ -9,7 +9,7 @@ Personal Notifications are sent in addition to System\-Wide Notifications, and w
 
 ![image](images/Configure_System_&_Personal_Notifications.png)
 
-System notifications are set by a DefectDojo Superuser and cannot be opted out of by an individual user.
+System notifications are set by a ExposureX Superuser and cannot be opted out of by an individual user.
 
 1. Start from the Notifications page (⚙️**Configuration \> Notifications** in the sidebar).
 2. From the **Scope** drop down menu, you can select which set of notifications you wish to edit.
@@ -20,14 +20,14 @@ Personal Notifications cannot be sent via Microsoft Teams, as Teams only allows 
 
 ### Receive Personal notifications for a specific Product
 
-In addition to standard personal notifications, DefectDojo Users can also receive notifications for activity on a specific Product. This is helpful when there are certain Products which a user needs to monitor more closely.
+In addition to standard personal notifications, ExposureX Users can also receive notifications for activity on a specific Product. This is helpful when there are certain Products which a user needs to monitor more closely.
 
 ![image](images/Configure_System_&_Personal_Notifications_3.png)
 
-This configuration can be changed from the **Notifications** section on the **Product** page: e.g. `your-instance.defectdojo.com/product/{id}`.
+This configuration can be changed from the **Notifications** section on the **Product** page: e.g. `your-instance.exposurex.com/product/{id}`.
 
 From here, you can set whether you want to receive **🔔 Alert**, **Mail** or **Slack** notifications for actions taken on this particular Product. These notifications apply in addition to any system\-wide notifications you are already receiving. 
 
 Microsoft Teams cannot send personal notifications of any kind, so Teams notifications cannot be chosen from this menu.
 
-Personal email notifications will always be sent to the email associated with your DefectDojo login. To set up a personal Slack account to receive notifications, see our [Guide](../email_slack_teams/#send-personal-notifications-to-slack).
+Personal email notifications will always be sent to the email associated with your ExposureX login. To set up a personal Slack account to receive notifications, see our [Guide](../email_slack_teams/#send-personal-notifications-to-slack).

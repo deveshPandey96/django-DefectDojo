@@ -4,7 +4,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 """
-Here we collect info that can be easily mapped to a DefectDojo Finding
+Here we collect info that can be easily mapped to a ExposureX Finding
 """
 
 

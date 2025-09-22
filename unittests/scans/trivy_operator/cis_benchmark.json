@@ -3472,7 +3472,7 @@
                             "remediation": "Set 'set containers[].securityContext.allowPrivilegeEscalation' to 'false'.",
                             "severity": "MEDIUM",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-celery-worker-589cbb9cb9",
+                            "target": "default/replicaset-exposurex-celery-worker-589cbb9cb9",
                             "title": "Can elevate its own privileges"
                         },
                         {
@@ -3784,7 +3784,7 @@
                             "remediation": "Set 'set containers[].securityContext.allowPrivilegeEscalation' to 'false'.",
                             "severity": "MEDIUM",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-django-56b5647554",
+                            "target": "default/replicaset-exposurex-django-56b5647554",
                             "title": "Can elevate its own privileges"
                         },
                         {
@@ -3797,7 +3797,7 @@
                             "remediation": "Set 'set containers[].securityContext.allowPrivilegeEscalation' to 'false'.",
                             "severity": "MEDIUM",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-django-56b5647554",
+                            "target": "default/replicaset-exposurex-django-56b5647554",
                             "title": "Can elevate its own privileges"
                         },
                         {
@@ -3849,7 +3849,7 @@
                             "remediation": "Set 'set containers[].securityContext.allowPrivilegeEscalation' to 'false'.",
                             "severity": "MEDIUM",
                             "success": false,
-                            "target": "default/statefulset-defectdojo-rabbitmq",
+                            "target": "default/statefulset-exposurex-rabbitmq",
                             "title": "Can elevate its own privileges"
                         },
                         {
@@ -4031,7 +4031,7 @@
                             "remediation": "Set 'set containers[].securityContext.allowPrivilegeEscalation' to 'false'.",
                             "severity": "MEDIUM",
                             "success": false,
-                            "target": "default/statefulset-defectdojo-postgresql",
+                            "target": "default/statefulset-exposurex-postgresql",
                             "title": "Can elevate its own privileges"
                         },
                         {
@@ -4096,7 +4096,7 @@
                             "remediation": "Set 'set containers[].securityContext.allowPrivilegeEscalation' to 'false'.",
                             "severity": "MEDIUM",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-celery-beat-6d4687458f",
+                            "target": "default/replicaset-exposurex-celery-beat-6d4687458f",
                             "title": "Can elevate its own privileges"
                         },
                         {
@@ -4416,7 +4416,7 @@
                             "remediation": "Set 'containers[].securityContext.runAsNonRoot' to true.",
                             "severity": "MEDIUM",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-celery-worker-589cbb9cb9",
+                            "target": "default/replicaset-exposurex-celery-worker-589cbb9cb9",
                             "title": "Runs as root user"
                         },
                         {
@@ -4650,7 +4650,7 @@
                             "remediation": "Set 'containers[].securityContext.runAsNonRoot' to true.",
                             "severity": "MEDIUM",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-django-56b5647554",
+                            "target": "default/replicaset-exposurex-django-56b5647554",
                             "title": "Runs as root user"
                         },
                         {
@@ -4663,7 +4663,7 @@
                             "remediation": "Set 'containers[].securityContext.runAsNonRoot' to true.",
                             "severity": "MEDIUM",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-django-56b5647554",
+                            "target": "default/replicaset-exposurex-django-56b5647554",
                             "title": "Runs as root user"
                         },
                         {
@@ -4871,7 +4871,7 @@
                             "remediation": "Set 'containers[].securityContext.runAsNonRoot' to true.",
                             "severity": "MEDIUM",
                             "success": false,
-                            "target": "default/statefulset-defectdojo-postgresql",
+                            "target": "default/statefulset-exposurex-postgresql",
                             "title": "Runs as root user"
                         },
                         {
@@ -4923,7 +4923,7 @@
                             "remediation": "Set 'containers[].securityContext.runAsNonRoot' to true.",
                             "severity": "MEDIUM",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-celery-beat-6d4687458f",
+                            "target": "default/replicaset-exposurex-celery-beat-6d4687458f",
                             "title": "Runs as root user"
                         },
                         {
@@ -5381,7 +5381,7 @@
                             "remediation": "Add 'ALL' to containers[].securityContext.capabilities.drop.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-celery-worker-589cbb9cb9",
+                            "target": "default/replicaset-exposurex-celery-worker-589cbb9cb9",
                             "title": "Default capabilities: some containers do not drop all"
                         },
                         {
@@ -5667,7 +5667,7 @@
                             "remediation": "Add 'ALL' to containers[].securityContext.capabilities.drop.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-django-56b5647554",
+                            "target": "default/replicaset-exposurex-django-56b5647554",
                             "title": "Default capabilities: some containers do not drop all"
                         },
                         {
@@ -5680,7 +5680,7 @@
                             "remediation": "Add 'ALL' to containers[].securityContext.capabilities.drop.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-django-56b5647554",
+                            "target": "default/replicaset-exposurex-django-56b5647554",
                             "title": "Default capabilities: some containers do not drop all"
                         },
                         {
@@ -5732,7 +5732,7 @@
                             "remediation": "Add 'ALL' to containers[].securityContext.capabilities.drop.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/statefulset-defectdojo-rabbitmq",
+                            "target": "default/statefulset-exposurex-rabbitmq",
                             "title": "Default capabilities: some containers do not drop all"
                         },
                         {
@@ -5836,7 +5836,7 @@
                             "remediation": "Add 'ALL' to containers[].securityContext.capabilities.drop.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/statefulset-defectdojo-postgresql",
+                            "target": "default/statefulset-exposurex-postgresql",
                             "title": "Default capabilities: some containers do not drop all"
                         },
                         {
@@ -5901,7 +5901,7 @@
                             "remediation": "Add 'ALL' to containers[].securityContext.capabilities.drop.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-celery-beat-6d4687458f",
+                            "target": "default/replicaset-exposurex-celery-beat-6d4687458f",
                             "title": "Default capabilities: some containers do not drop all"
                         },
                         {
@@ -6536,7 +6536,7 @@
                             "remediation": "Specify seccomp either by annotation or by seccomp profile type having allowed values as per pod security standards",
                             "severity": "MEDIUM",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-celery-worker-589cbb9cb9",
+                            "target": "default/replicaset-exposurex-celery-worker-589cbb9cb9",
                             "title": "Seccomp policies disabled"
                         },
                         {
@@ -7056,7 +7056,7 @@
                             "remediation": "Specify seccomp either by annotation or by seccomp profile type having allowed values as per pod security standards",
                             "severity": "MEDIUM",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-django-56b5647554",
+                            "target": "default/replicaset-exposurex-django-56b5647554",
                             "title": "Seccomp policies disabled"
                         },
                         {
@@ -7069,7 +7069,7 @@
                             "remediation": "Specify seccomp either by annotation or by seccomp profile type having allowed values as per pod security standards",
                             "severity": "MEDIUM",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-django-56b5647554",
+                            "target": "default/replicaset-exposurex-django-56b5647554",
                             "title": "Seccomp policies disabled"
                         },
                         {
@@ -7121,7 +7121,7 @@
                             "remediation": "Specify seccomp either by annotation or by seccomp profile type having allowed values as per pod security standards",
                             "severity": "MEDIUM",
                             "success": false,
-                            "target": "default/statefulset-defectdojo-rabbitmq",
+                            "target": "default/statefulset-exposurex-rabbitmq",
                             "title": "Seccomp policies disabled"
                         },
                         {
@@ -7329,7 +7329,7 @@
                             "remediation": "Specify seccomp either by annotation or by seccomp profile type having allowed values as per pod security standards",
                             "severity": "MEDIUM",
                             "success": false,
-                            "target": "default/statefulset-defectdojo-postgresql",
+                            "target": "default/statefulset-exposurex-postgresql",
                             "title": "Seccomp policies disabled"
                         },
                         {
@@ -7394,7 +7394,7 @@
                             "remediation": "Specify seccomp either by annotation or by seccomp profile type having allowed values as per pod security standards",
                             "severity": "MEDIUM",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-celery-beat-6d4687458f",
+                            "target": "default/replicaset-exposurex-celery-beat-6d4687458f",
                             "title": "Seccomp policies disabled"
                         },
                         {
@@ -7948,7 +7948,7 @@
                             "remediation": "Set 'containers[].securityContext.runAsGroup' to an integer \u003e 10000.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-celery-worker-589cbb9cb9",
+                            "target": "default/replicaset-exposurex-celery-worker-589cbb9cb9",
                             "title": "Runs with GID \u003c= 10000"
                         },
                         {
@@ -8520,7 +8520,7 @@
                             "remediation": "Set 'containers[].securityContext.runAsGroup' to an integer \u003e 10000.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-django-56b5647554",
+                            "target": "default/replicaset-exposurex-django-56b5647554",
                             "title": "Runs with GID \u003c= 10000"
                         },
                         {
@@ -8533,7 +8533,7 @@
                             "remediation": "Set 'containers[].securityContext.runAsGroup' to an integer \u003e 10000.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-django-56b5647554",
+                            "target": "default/replicaset-exposurex-django-56b5647554",
                             "title": "Runs with GID \u003c= 10000"
                         },
                         {
@@ -8585,7 +8585,7 @@
                             "remediation": "Set 'containers[].securityContext.runAsGroup' to an integer \u003e 10000.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/statefulset-defectdojo-rabbitmq",
+                            "target": "default/statefulset-exposurex-rabbitmq",
                             "title": "Runs with GID \u003c= 10000"
                         },
                         {
@@ -8845,7 +8845,7 @@
                             "remediation": "Set 'containers[].securityContext.runAsGroup' to an integer \u003e 10000.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/statefulset-defectdojo-postgresql",
+                            "target": "default/statefulset-exposurex-postgresql",
                             "title": "Runs with GID \u003c= 10000"
                         },
                         {
@@ -8923,7 +8923,7 @@
                             "remediation": "Set 'containers[].securityContext.runAsGroup' to an integer \u003e 10000.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-celery-beat-6d4687458f",
+                            "target": "default/replicaset-exposurex-celery-beat-6d4687458f",
                             "title": "Runs with GID \u003c= 10000"
                         },
                         {
@@ -9547,7 +9547,7 @@
                             "remediation": "Set 'containers[].securityContext.runAsUser' to an integer \u003e 10000.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-celery-worker-589cbb9cb9",
+                            "target": "default/replicaset-exposurex-celery-worker-589cbb9cb9",
                             "title": "Runs with UID \u003c= 10000"
                         },
                         {
@@ -10119,7 +10119,7 @@
                             "remediation": "Set 'containers[].securityContext.runAsUser' to an integer \u003e 10000.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-django-56b5647554",
+                            "target": "default/replicaset-exposurex-django-56b5647554",
                             "title": "Runs with UID \u003c= 10000"
                         },
                         {
@@ -10132,7 +10132,7 @@
                             "remediation": "Set 'containers[].securityContext.runAsUser' to an integer \u003e 10000.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-django-56b5647554",
+                            "target": "default/replicaset-exposurex-django-56b5647554",
                             "title": "Runs with UID \u003c= 10000"
                         },
                         {
@@ -10184,7 +10184,7 @@
                             "remediation": "Set 'containers[].securityContext.runAsUser' to an integer \u003e 10000.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/statefulset-defectdojo-rabbitmq",
+                            "target": "default/statefulset-exposurex-rabbitmq",
                             "title": "Runs with UID \u003c= 10000"
                         },
                         {
@@ -10431,7 +10431,7 @@
                             "remediation": "Set 'containers[].securityContext.runAsUser' to an integer \u003e 10000.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/statefulset-defectdojo-postgresql",
+                            "target": "default/statefulset-exposurex-postgresql",
                             "title": "Runs with UID \u003c= 10000"
                         },
                         {
@@ -10509,7 +10509,7 @@
                             "remediation": "Set 'containers[].securityContext.runAsUser' to an integer \u003e 10000.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-celery-beat-6d4687458f",
+                            "target": "default/replicaset-exposurex-celery-beat-6d4687458f",
                             "title": "Runs with UID \u003c= 10000"
                         },
                         {
@@ -11107,7 +11107,7 @@
                             "remediation": "Specify seccomp either by annotation or by seccomp profile type having allowed values as per pod security standards",
                             "severity": "MEDIUM",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-celery-worker-589cbb9cb9",
+                            "target": "default/replicaset-exposurex-celery-worker-589cbb9cb9",
                             "title": "Seccomp policies disabled"
                         },
                         {
@@ -11627,7 +11627,7 @@
                             "remediation": "Specify seccomp either by annotation or by seccomp profile type having allowed values as per pod security standards",
                             "severity": "MEDIUM",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-django-56b5647554",
+                            "target": "default/replicaset-exposurex-django-56b5647554",
                             "title": "Seccomp policies disabled"
                         },
                         {
@@ -11640,7 +11640,7 @@
                             "remediation": "Specify seccomp either by annotation or by seccomp profile type having allowed values as per pod security standards",
                             "severity": "MEDIUM",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-django-56b5647554",
+                            "target": "default/replicaset-exposurex-django-56b5647554",
                             "title": "Seccomp policies disabled"
                         },
                         {
@@ -11692,7 +11692,7 @@
                             "remediation": "Specify seccomp either by annotation or by seccomp profile type having allowed values as per pod security standards",
                             "severity": "MEDIUM",
                             "success": false,
-                            "target": "default/statefulset-defectdojo-rabbitmq",
+                            "target": "default/statefulset-exposurex-rabbitmq",
                             "title": "Seccomp policies disabled"
                         },
                         {
@@ -11900,7 +11900,7 @@
                             "remediation": "Specify seccomp either by annotation or by seccomp profile type having allowed values as per pod security standards",
                             "severity": "MEDIUM",
                             "success": false,
-                            "target": "default/statefulset-defectdojo-postgresql",
+                            "target": "default/statefulset-exposurex-postgresql",
                             "title": "Seccomp policies disabled"
                         },
                         {
@@ -11965,7 +11965,7 @@
                             "remediation": "Specify seccomp either by annotation or by seccomp profile type having allowed values as per pod security standards",
                             "severity": "MEDIUM",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-celery-beat-6d4687458f",
+                            "target": "default/replicaset-exposurex-celery-beat-6d4687458f",
                             "title": "Seccomp policies disabled"
                         },
                         {
@@ -12329,7 +12329,7 @@
                             "remediation": "Set 'spec.securityContext.seccompProfile.type', 'spec.containers[*].securityContext.seccompProfile' and 'spec.initContainers[*].securityContext.seccompProfile' to 'RuntimeDefault' or undefined.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-celery-worker-589cbb9cb9",
+                            "target": "default/replicaset-exposurex-celery-worker-589cbb9cb9",
                             "title": "Runtime/Default Seccomp profile not set"
                         },
                         {
@@ -12576,7 +12576,7 @@
                             "remediation": "Set 'spec.securityContext.seccompProfile.type', 'spec.containers[*].securityContext.seccompProfile' and 'spec.initContainers[*].securityContext.seccompProfile' to 'RuntimeDefault' or undefined.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-django-56b5647554",
+                            "target": "default/replicaset-exposurex-django-56b5647554",
                             "title": "Runtime/Default Seccomp profile not set"
                         },
                         {
@@ -12615,7 +12615,7 @@
                             "remediation": "Set 'spec.securityContext.seccompProfile.type', 'spec.containers[*].securityContext.seccompProfile' and 'spec.initContainers[*].securityContext.seccompProfile' to 'RuntimeDefault' or undefined.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/statefulset-defectdojo-rabbitmq",
+                            "target": "default/statefulset-exposurex-rabbitmq",
                             "title": "Runtime/Default Seccomp profile not set"
                         },
                         {
@@ -12732,7 +12732,7 @@
                             "remediation": "Set 'spec.securityContext.seccompProfile.type', 'spec.containers[*].securityContext.seccompProfile' and 'spec.initContainers[*].securityContext.seccompProfile' to 'RuntimeDefault' or undefined.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/statefulset-defectdojo-postgresql",
+                            "target": "default/statefulset-exposurex-postgresql",
                             "title": "Runtime/Default Seccomp profile not set"
                         },
                         {
@@ -12797,7 +12797,7 @@
                             "remediation": "Set 'spec.securityContext.seccompProfile.type', 'spec.containers[*].securityContext.seccompProfile' and 'spec.initContainers[*].securityContext.seccompProfile' to 'RuntimeDefault' or undefined.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-celery-beat-6d4687458f",
+                            "target": "default/replicaset-exposurex-celery-beat-6d4687458f",
                             "title": "Runtime/Default Seccomp profile not set"
                         },
                         {
@@ -13000,7 +13000,7 @@
                             "remediation": "Set 'metadata.namespace' to a non-default namespace.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-celery-worker-589cbb9cb9",
+                            "target": "default/replicaset-exposurex-celery-worker-589cbb9cb9",
                             "title": "Workloads in the default namespace"
                         },
                         {
@@ -13026,7 +13026,7 @@
                             "remediation": "Set 'metadata.namespace' to a non-default namespace.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-django-56b5647554",
+                            "target": "default/replicaset-exposurex-django-56b5647554",
                             "title": "Workloads in the default namespace"
                         },
                         {
@@ -13039,7 +13039,7 @@
                             "remediation": "Set 'metadata.namespace' to a non-default namespace.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/statefulset-defectdojo-rabbitmq",
+                            "target": "default/statefulset-exposurex-rabbitmq",
                             "title": "Workloads in the default namespace"
                         },
                         {
@@ -13052,7 +13052,7 @@
                             "remediation": "Set 'metadata.namespace' to a non-default namespace.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/statefulset-defectdojo-postgresql",
+                            "target": "default/statefulset-exposurex-postgresql",
                             "title": "Workloads in the default namespace"
                         },
                         {
@@ -13065,7 +13065,7 @@
                             "remediation": "Set 'metadata.namespace' to a non-default namespace.",
                             "severity": "LOW",
                             "success": false,
-                            "target": "default/replicaset-defectdojo-celery-beat-6d4687458f",
+                            "target": "default/replicaset-exposurex-celery-beat-6d4687458f",
                             "title": "Workloads in the default namespace"
                         }
                     ],

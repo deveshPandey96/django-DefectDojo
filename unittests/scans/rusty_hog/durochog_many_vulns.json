@@ -30,7 +30,7 @@
        "stringsFound":[
           "password: \"\""
        ],
-       "path":"/scan_folder/helm/defectdojo/values.yaml",
+       "path":"/scan_folder/helm/exposurex/values.yaml",
        "reason":"password (Password)",
        "linenum":274,
        "diff":"    password: \"\""

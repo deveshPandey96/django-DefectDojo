@@ -1,6 +1,6 @@
 AWS Security Hub consolidates findings from a multitude of sources. For a detailed list of integrations with AWS Services and third-party products, please refer to its [official documentation](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-providers.html).
 
-Given the variety of finding contents, DefectDojo offers varying degrees of support for each provider. However, it should at least import basic information without errors.
+Given the variety of finding contents, ExposureX offers varying degrees of support for each provider. However, it should at least import basic information without errors.
 
 This directory contains sample reports from Security Hub. They are meant as test cases.
 

@@ -5,11 +5,11 @@ draft: false
 weight: 1
 ---
 
-All commands assume that you're located at the root of the django-DefectDojo cloned repo.
+All commands assume that you're located at the root of the django-ExposureX cloned repo.
 
 ## Pre-requisites
 
-- You have forked https://github.com/DefectDojo/django-DefectDojo and cloned locally.
+- You have forked https://github.com/ExposureX/django-ExposureX and cloned locally.
 - Checkout `dev` and make sure you're up to date with the latest changes.
 - It's advised that you create a dedicated branch for your development, such as `git checkout -b parser-name`.
 
@@ -18,7 +18,7 @@ Set up your environment to use the dev environment:
 
 `$ docker/setEnv.sh dev`
 
-Please have a look at [DOCKER.md](https://github.com/DefectDojo/django-DefectDojo/blob/master/readme-docs/DOCKER.md) for more details.
+Please have a look at [DOCKER.md](https://github.com/ExposureX/django-ExposureX/blob/master/readme-docs/DOCKER.md) for more details.
 
 ### Docker images
 
@@ -94,23 +94,23 @@ class MyToolParser(object):
 
 ## API Parsers
 
-DefectDojo has a limited number of API parsers. While we won't remove these connectors, adding API connectors has been problematic and thus we cannot accept new API parsers / connectors from the community at this time for supportability reasonsing. To maintain a high quality API connector, it is necessary to have a license to the tool. To get that license requires partnership with the author or vendor. We're close to announcing a new program to help address this and bring API connectors to DefectDojo.
+ExposureX has a limited number of API parsers. While we won't remove these connectors, adding API connectors has been problematic and thus we cannot accept new API parsers / connectors from the community at this time for supportability reasonsing. To maintain a high quality API connector, it is necessary to have a license to the tool. To get that license requires partnership with the author or vendor. We're close to announcing a new program to help address this and bring API connectors to ExposureX.
 
 ## Template Generator
 
-Use the [template](https://github.com/DefectDojo/cookiecutter-scanner-parser)  parser to quickly generate the files required. To get started you will need to install [cookiecutter](https://github.com/cookiecutter/cookiecutter).
+Use the [template](https://github.com/ExposureX/cookiecutter-scanner-parser)  parser to quickly generate the files required. To get started you will need to install [cookiecutter](https://github.com/cookiecutter/cookiecutter).
 
 {{< highlight bash >}}
 $ pip install cookiecutter
 {{< /highlight >}}
 
-Then generate your scanner parser from the root of django-DefectDojo:
+Then generate your scanner parser from the root of django-ExposureX:
 
 {{< highlight bash >}}
-$ cookiecutter https://github.com/DefectDojo/cookiecutter-scanner-parser
+$ cookiecutter https://github.com/ExposureX/cookiecutter-scanner-parser
 {{< /highlight >}}
 
-Read [more](https://github.com/DefectDojo/cookiecutter-scanner-parser) on the template configuration variables.
+Read [more](https://github.com/ExposureX/cookiecutter-scanner-parser) on the template configuration variables.
 
 ## Things to pay attention to
 
@@ -143,7 +143,7 @@ Very bad example:
 ```
 
 ### Use the right libraries to parse information
-Various file formats are handled through libraries. In order to keep DefectDojo slim and also don't extend the attack surface, keep the number of libraries used minimal and take other parsers as an example.
+Various file formats are handled through libraries. In order to keep ExposureX slim and also don't extend the attack surface, keep the number of libraries used minimal and take other parsers as an example.
 
 #### defusedXML in favour of lxml
 As xml is by default an unsecure format, the information parsed from various xml output has to be parsed in a secure way. Within an evaluation, we determined that defusedXML is the library which we will use in the future to parse xml files in parsers as this library is rated more secure. Thus, we will only accept PRs with the defusedxml library.
@@ -241,7 +241,7 @@ Do not do something like this:
 
 ## Deduplication algorithm
 
-By default a new parser uses the 'legacy' deduplication algorithm documented at https://docs.defectdojo.com/en/open_source/archived_docs/usage/features/#deduplication
+By default a new parser uses the 'legacy' deduplication algorithm documented at https://docs.exposurex.com/en/open_source/archived_docs/usage/features/#deduplication
 
 Please use a pre-defined deduplication algorithm where applicable. When using the `unique_id_from_tool` or `vuln_id_from_tool` fields in the hash code configuration, it's important that these are uqniue for the finding and constant over time across subsequent scans. If this is not the case, the values can still be useful to set on the finding model without using them for deduplication.
 The values must be coming from the report directly and must not be something that is calculated by the parser internally.
@@ -290,7 +290,7 @@ This ensures the file is closed at the end of the with statement, even if an exc
 
 ### Test database
 
-Django uses a separate test database for running unit tests called `test_defectdojo`. It's automatically created and initialized with a basic set of test data.
+Django uses a separate test database for running unit tests called `test_exposurex`. It's automatically created and initialized with a basic set of test data.
 
 ### Run your tests
 
@@ -322,7 +322,7 @@ If you want to run all parser unit tests, simply run `$ docker-compose exec uwsg
 
 ### Endpoint validation
 
-Some types of parsers create a list of endpoints that are vulnerable (they are stored in `finding.unsaved_endpoints`). DefectDojo requires storing endpoints in a specific format (which follow RFCs). Endpoints that do not follow this format can be stored but they will be marked as broken (red flag 🚩in UI). To be sure your parse store endpoints in the correct format run the `.clean()` function for all endpoints in unit tests
+Some types of parsers create a list of endpoints that are vulnerable (they are stored in `finding.unsaved_endpoints`). ExposureX requires storing endpoints in a specific format (which follow RFCs). Endpoints that do not follow this format can be stored but they will be marked as broken (red flag 🚩in UI). To be sure your parse store endpoints in the correct format run the `.clean()` function for all endpoints in unit tests
 
 ```python
 findings = parser.get_findings(testfile, Test())
@@ -361,7 +361,7 @@ Of course, nothing prevents you from having more files than the `parser.py` file
 
 ## Pull request examples
 
-If you want to take a look at previous parsers that are now part of DefectDojo, take a look at https://github.com/DefectDojo/django-DefectDojo/pulls?q=is%3Apr+sort%3Aupdated-desc+label%3A%22Import+Scans%22+is%3Aclosed
+If you want to take a look at previous parsers that are now part of ExposureX, take a look at https://github.com/ExposureX/django-ExposureX/pulls?q=is%3Apr+sort%3Aupdated-desc+label%3A%22Import+Scans%22+is%3Aclosed
 
 ## Update the import page documentation
 
@@ -372,4 +372,4 @@ Please add a new .md file in [`docs/content/en/connecting_your_tools/parsers`] w
 * A link to the relevant unit tests folder so that users can quickly navigate there from Documentation.
 * A link to the scanner itself - (e.g. GitHub or vendor link)
 
-Here is an example of a completed Parser documentation page: [https://github.com/DefectDojo/django-DefectDojo/blob/master/docs/content/en/connecting_your_tools/parsers/file/acunetix.md](https://github.com/DefectDojo/django-DefectDojo/blob/master/docs/content/en/connecting_your_tools/parsers/file/acunetix.md)
+Here is an example of a completed Parser documentation page: [https://github.com/ExposureX/django-ExposureX/blob/master/docs/content/en/connecting_your_tools/parsers/file/acunetix.md](https://github.com/ExposureX/django-ExposureX/blob/master/docs/content/en/connecting_your_tools/parsers/file/acunetix.md)

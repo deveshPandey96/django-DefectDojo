@@ -22,27 +22,27 @@ The generic upgrade method for docker compose are as follows:
 -   Pull the latest version
 
     ``` {.sourceCode .bash}
-    docker pull defectdojo/defectdojo-django:latest
-    docker pull defectdojo/defectdojo-nginx:latest
+    docker pull exposurex/exposurex-django:latest
+    docker pull exposurex/exposurex-nginx:latest
     ```
 
 -   If you would like to use a version other than the latest, specify the version (tag) you want to upgrade to:
 
     ``` {.sourceCode .bash}
-    docker pull defectdojo/defectdojo-django:1.10.2
-    docker pull defectdojo/defectdojo-nginx:1.10.2
+    docker pull exposurex/exposurex-django:1.10.2
+    docker pull exposurex/exposurex-nginx:1.10.2
     ```
 
 -   If you would like to use alpine based images, you specify the version (tag) you want to upgrade to:
 
     ``` {.sourceCode .bash}
-    docker pull defectdojo/defectdojo-django:1.10.2-alpine
-    docker pull defectdojo/defectdojo-nginx:1.10.2-alpine
+    docker pull exposurex/exposurex-django:1.10.2-alpine
+    docker pull exposurex/exposurex-nginx:1.10.2-alpine
     ```
 
 -   Go to the directory where your docker-compose.yml file lives
--   Stop DefectDojo: `docker compose stop`
--   Re-start DefectDojo, allowing for container recreation: `docker compose up -d`
+-   Stop ExposureX: `docker compose stop`
+-   Re-start ExposureX, allowing for container recreation: `docker compose up -d`
 -   Database migrations will be run automatically by the initializer.
     Check the output via `docker compose logs initializer` or relevant k8s command
 -   If you have the initializer disabled (or if you want to be on the
@@ -54,7 +54,7 @@ The generic upgrade method for docker compose are as follows:
 If you build your images locally and do not use the ones from DockerHub,
 the instructions are the same, with the caveat that you must build your images
 first.
--   Pull the latest DefectDojo changes
+-   Pull the latest ExposureX changes
 
     ``` {.sourceCode .bash}
     git fetch
@@ -66,4 +66,4 @@ Then replace the first step of the above generic upgrade method for docker compo
 
 ## godojo installations
 
-If you have installed DefectDojo on "iron" and wish to upgrade the installation, please see the [instructions in the repo](https://github.com/DefectDojo/godojo/blob/master/docs-and-scripts/upgrading.md).
+If you have installed ExposureX on "iron" and wish to upgrade the installation, please see the [instructions in the repo](https://github.com/ExposureX/godojo/blob/master/docs-and-scripts/upgrading.md).

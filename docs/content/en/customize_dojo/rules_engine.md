@@ -4,9 +4,9 @@ description: "Working with Rules Engine Automation"
 weight: 1
 ---
 
-<span style="background-color:rgba(242, 86, 29, 0.3)">Note: Rules Engine is a DefectDojo Pro-only feature.</span>
+<span style="background-color:rgba(242, 86, 29, 0.3)">Note: Rules Engine is a ExposureX Pro-only feature.</span>
 
-DefectDojo's Rules Engine allows you to build custom workflows and bulk actions to handle Findings and other objects.  Rules Engine allows you to build automated actions that are triggered when an object matches a Rule.
+ExposureX's Rules Engine allows you to build custom workflows and bulk actions to handle Findings and other objects.  Rules Engine allows you to build automated actions that are triggered when an object matches a Rule.
 
 Rules Engine can only be accessed through the [Pro UI](/en/about_defectdojo/ui_pro_vs_os/).
 
@@ -22,7 +22,7 @@ Each Rule can apply one or more of these changes to a Finding when it is trigger
 * Assign a Group as Owners for a Finding
 * Add Tags to a Finding
 * Add a Note to a Finding
-* Create an Alert in DefectDojo with custom text
+* Create an Alert in ExposureX with custom text
 
 ### Filter conditions
 Rules are automatically triggered when a Finding meets specific Filter conditions. For more information on Filters that can be used to create Rule Actions, see the [Filter Index](/en/working_with_findings/organizing_engagements_tests/filter_index/) page.

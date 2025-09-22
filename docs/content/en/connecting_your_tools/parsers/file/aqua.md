@@ -4,7 +4,7 @@ toc_hide: true
 ---
 
 ### File Types
-DefectDojo parser accepts JSON report format.
+ExposureX parser accepts JSON report format.
 
 See Aqua documention: https://docs.aquasec.com
 
@@ -32,13 +32,13 @@ curl -X GET <aquaseceurl>/api/v1/scanner/registry/<registryName>/image/<imageNam
 curl -X GET <aquaseceurl>/api/v2/risks/vulnerabilities?show_negligible=true&image_name_exact_match=true&registry_name=<registryName>&image_name=<imageName> > report.json
 ```
 
-Those JSON files will only list vulnerabilities. Thus, DefectDojo parser will not retrieve findings such as sensitive datas.
+Those JSON files will only list vulnerabilities. Thus, ExposureX parser will not retrieve findings such as sensitive datas.
 
 ### Sample Scan Data
-Sample Aqua scans can be found [here](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/aqua).
+Sample Aqua scans can be found [here](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/aqua).
 
 ### Default Deduplication Hashcode Fields
-By default, DefectDojo identifies duplicate Findings using these [hashcode fields](https://docs.defectdojo.com/en/working_with_findings/finding_deduplication/about_deduplication/):
+By default, ExposureX identifies duplicate Findings using these [hashcode fields](https://docs.exposurex.com/en/working_with_findings/finding_deduplication/about_deduplication/):
 
 - severity
 - vulnerability ids

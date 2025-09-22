@@ -16,10 +16,10 @@ _Include instructions on how to create or export the acceptable file format from
 
 ### Total Fields in [File Format]
 Total data fields:  _Total number of fields contained in the security tool's export file._
-Total data fields parsed:  _Total number of fields parsed into DefectDojo finding._
-Total data fields NOT parsed: _Total number of fields NOT parsed into DefectDojo finding._
+Total data fields parsed:  _Total number of fields parsed into ExposureX finding._
+Total data fields NOT parsed: _Total number of fields NOT parsed into ExposureX finding._
 
-_Using the format below, provide a brief description of each field and how it maps to DefectDojo's data model._
+_Using the format below, provide a brief description of each field and how it maps to ExposureX's data model._
 _Include all fields found in the security tool's export tile, in order of appearance, and noting any fields that are not parsed._
 
 Fields in order of appearance:
@@ -38,7 +38,7 @@ _For each finding created, include details of how the parser parses specific dat
 
 ### Sample Scan Data or Unit Tests
 _Add a link to the unit tests or sample scan data folder in the GitHub repository. For example:_
-- [Sample Scan Data Folder](https://github.com/DefectDojo/django-DefectDojo/tree/master/unittests/scans/[parser-name])
+- [Sample Scan Data Folder](https://github.com/ExposureX/django-ExposureX/tree/master/unittests/scans/[parser-name])
 
 ### Link To Tool
 _Provide a link to the scanner or tool itself (e.g., GitHub repository, vendor website, or documentation). For example:_

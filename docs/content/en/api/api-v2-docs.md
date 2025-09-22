@@ -1,19 +1,19 @@
 ---
-title: "DefectDojo API v2"
-description: "DefectDojo's API lets you automate tasks, e.g. uploading scan reports in CI/CD pipelines."
+title: "ExposureX API v2"
+description: "ExposureX's API lets you automate tasks, e.g. uploading scan reports in CI/CD pipelines."
 draft: false
 weight: 2
 ---
 
-DefectDojo\'s API is created using [Django Rest
+ExposureX\'s API is created using [Django Rest
 Framework](http://www.django-rest-framework.org/). The documentation of
-each endpoint is available within each DefectDojo installation at
-[`/api/v2/oa3/swagger-ui`](https://demo.defectdojo.org/api/v2/oa3/swagger-ui/) and can be accessed by choosing the API v2
+each endpoint is available within each ExposureX installation at
+[`/api/v2/oa3/swagger-ui`](https://#/api/v2/oa3/swagger-ui/) and can be accessed by choosing the API v2
 Docs link on the user drop down menu in the header. 
 
 ![image](images/api_v2_1.png)
 
-The documentation is generated using [drf-spectacular](https://drf-spectacular.readthedocs.io/) at [`/api/v2/oa3/swagger-ui/`](https://demo.defectdojo.org/api/v2/oa3/swagger-ui/), and is
+The documentation is generated using [drf-spectacular](https://drf-spectacular.readthedocs.io/) at [`/api/v2/oa3/swagger-ui/`](https://#/api/v2/oa3/swagger-ui/), and is
 interactive. On the top of API v2 docs is a link that generates an OpenAPI v3 spec.
 
 To interact with the documentation, a valid Authorization header value
@@ -42,8 +42,8 @@ For example: :
 
 ### Alternative authentication method
 
-If you use [an alternative authentication method](en/customize_dojo/user_management/configure_sso/ for users, you may want to disable DefectDojo API tokens because it could bypass your authentication concept. \
-Using of DefectDojo API tokens can be disabled by specifying the environment variable `DD_API_TOKENS_ENABLED` to `False`.
+If you use [an alternative authentication method](en/customize_dojo/user_management/configure_sso/ for users, you may want to disable ExposureX API tokens because it could bypass your authentication concept. \
+Using of ExposureX API tokens can be disabled by specifying the environment variable `DD_API_TOKENS_ENABLED` to `False`.
 Or only `api/v2/api-token-auth/` endpoint can be disabled by setting `DD_API_TOKEN_AUTH_ENDPOINT_ENABLED` to `False`.
 
 ## Sample Code
@@ -64,7 +64,7 @@ for key, value in r.__dict__.items():
   print('------------------')
 {{< /highlight >}}
 
-This code will return the list of all the users defined in DefectDojo.
+This code will return the list of all the users defined in ExposureX.
 The json object result looks like : :
 
 {{< highlight json >}}
@@ -171,11 +171,11 @@ Example for importing a scan result:
 
 | Wrapper                      | Status                   | Notes |
 | -----------------------------| ------------------------| ------------------------|
-| [Specific python wrapper](https://github.com/DefectDojo/defectdojo_api)      | working (2021-01-21)    | API Wrapper including scripts for continous CI/CD uploading. Is lagging behind a bit on latest API features as we plan to revamp the API wrapper |
-| [Openapi python wrapper](https://github.com/alles-klar/defectdojo-api-v2-client)       | | proof of concept only where we found out the the OpenAPI spec is not perfect yet |
-| [Java library](https://github.com/secureCodeBox/defectdojo-client-java)                 | working (2021-08-30)    | Created by the kind people of [SecureCodeBox](https://github.com/secureCodeBox/secureCodeBox) |
-| [Image using the Java library](https://github.com/SDA-SE/defectdojo-client) | working (2021-08-30)    | |
-| [.Net/C# library](https://www.nuget.org/packages/DefectDojo.Api/)              | working (2021-06-08)    | |
+| [Specific python wrapper](https://github.com/ExposureX/defectdojo_api)      | working (2021-01-21)    | API Wrapper including scripts for continous CI/CD uploading. Is lagging behind a bit on latest API features as we plan to revamp the API wrapper |
+| [Openapi python wrapper](https://github.com/alles-klar/exposurex-api-v2-client)       | | proof of concept only where we found out the the OpenAPI spec is not perfect yet |
+| [Java library](https://github.com/secureCodeBox/exposurex-client-java)                 | working (2021-08-30)    | Created by the kind people of [SecureCodeBox](https://github.com/secureCodeBox/secureCodeBox) |
+| [Image using the Java library](https://github.com/SDA-SE/exposurex-client) | working (2021-08-30)    | |
+| [.Net/C# library](https://www.nuget.org/packages/ExposureX.Api/)              | working (2021-06-08)    | |
 | [dd-import](https://github.com/MaibornWolff/dd-import)                    | working (2021-08-24)    | dd-import is not directly an API wrapper. It offers some convenience functions to make it easier to import findings and language data from CI/CD pipelines. |
 
-Some of the api wrappers contain quite a bit of logic to ease scanning and importing in CI/CD environments. We are in the process of simplifying this by making the DefectDojo API smarter (so api wrappers / script can be dumber).
+Some of the api wrappers contain quite a bit of logic to ease scanning and importing in CI/CD environments. We are in the process of simplifying this by making the ExposureX API smarter (so api wrappers / script can be dumber).

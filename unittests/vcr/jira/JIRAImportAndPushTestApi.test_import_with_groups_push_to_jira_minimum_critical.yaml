@@ -24,10 +24,10 @@ interactions:
       Content-Type:
       - application/json
       User-Agent:
-      - DefectDojo-2.48.4
-      X-DefectDojo-Event:
+      - ExposureX-2.48.4
+      X-ExposureX-Event:
       - test_added
-      X-DefectDojo-Instance:
+      X-ExposureX-Instance:
       - http://localhost:8080
     method: POST
     uri: http://webhook.endpoint:8080/post
@@ -38,7 +38,7 @@ interactions:
         [\n      \"Token xxx\"\n    ],\n    \"Connection\": [\n      \"keep-alive\"\n
         \   ],\n    \"Content-Length\": [\n      \"849\"\n    ],\n    \"Content-Type\":
         [\n      \"application/json\"\n    ],\n    \"Host\": [\n      \"webhook.endpoint:8080\"\n
-        \   ],\n    \"User-Agent\": [\n      \"DefectDojo-2.48.4\"\n    ],\n    \"X-Defectdojo-Event\":
+        \   ],\n    \"User-Agent\": [\n      \"ExposureX-2.48.4\"\n    ],\n    \"X-Defectdojo-Event\":
         [\n      \"test_added\"\n    ],\n    \"X-Defectdojo-Instance\": [\n      \"http://localhost:8080\"\n
         \   ]\n  },\n  \"method\": \"POST\",\n  \"origin\": \"10.250.1.7\",\n  \"url\":
         \"http://webhook.endpoint:8080/post\",\n  \"data\": \"{\\\"description\\\":
@@ -126,10 +126,10 @@ interactions:
       Content-Type:
       - application/json
       User-Agent:
-      - DefectDojo-2.48.4
-      X-DefectDojo-Event:
+      - ExposureX-2.48.4
+      X-ExposureX-Event:
       - scan_added
-      X-DefectDojo-Instance:
+      X-ExposureX-Instance:
       - http://localhost:8080
     method: POST
     uri: http://webhook.endpoint:8080/post
@@ -140,7 +140,7 @@ interactions:
         [\n      \"Token xxx\"\n    ],\n    \"Connection\": [\n      \"keep-alive\"\n
         \   ],\n    \"Content-Length\": [\n      \"2378\"\n    ],\n    \"Content-Type\":
         [\n      \"application/json\"\n    ],\n    \"Host\": [\n      \"webhook.endpoint:8080\"\n
-        \   ],\n    \"User-Agent\": [\n      \"DefectDojo-2.48.4\"\n    ],\n    \"X-Defectdojo-Event\":
+        \   ],\n    \"User-Agent\": [\n      \"ExposureX-2.48.4\"\n    ],\n    \"X-Defectdojo-Event\":
         [\n      \"scan_added\"\n    ],\n    \"X-Defectdojo-Instance\": [\n      \"http://localhost:8080\"\n
         \   ]\n  },\n  \"method\": \"POST\",\n  \"origin\": \"10.250.1.7\",\n  \"url\":
         \"http://webhook.endpoint:8080/post\",\n  \"data\": \"{\\\"description\\\":

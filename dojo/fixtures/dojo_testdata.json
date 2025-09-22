@@ -2136,7 +2136,7 @@
     "model": "dojo.jira_instance",
     "fields": {
       "configuration_name": "Happy little JIRA 2",
-      "url": "https://defectdojo.atlassian.net/",
+      "url": "https://exposurex.atlassian.net/",
       "username": "[YOUR USERNAME]",
       "password": "[YOUR API TOKEN]",
       "default_issue_type": "Task",

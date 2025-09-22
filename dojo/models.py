@@ -301,10 +301,10 @@ class System_Settings(models.Model):
         default=False,
         blank=False,
         verbose_name=_("Deduplicate findings"),
-        help_text=_("With this setting turned on, DefectDojo deduplicates findings by "
+        help_text=_("With this setting turned on, ExposureX deduplicates findings by "
                   "comparing endpoints, cwe fields, and titles. "
                   "If two findings share a URL and have the same CWE or "
-                  "title, DefectDojo marks the recent finding as a duplicate. "
+                  "title, ExposureX marks the recent finding as a duplicate. "
                   "When deduplication is enabled, a list of "
                   "deduplicated findings is added to the engagement view."))
     delete_duplicates = models.BooleanField(default=False, blank=False, help_text=_("Requires next setting: maximum number of duplicates to retain."))
@@ -382,7 +382,7 @@ class System_Settings(models.Model):
                             verbose_name=_("Enable Webhook notifications"),
                             blank=False)
     webhooks_notifications_timeout = models.IntegerField(default=10,
-                                          help_text=_("How many seconds will DefectDojo waits for response from webhook endpoint"))
+                                          help_text=_("How many seconds will ExposureX waits for response from webhook endpoint"))
 
     enforce_verified_status = models.BooleanField(
         default=True,
@@ -417,7 +417,7 @@ class System_Settings(models.Model):
 
     false_positive_history = models.BooleanField(
         default=False, help_text=_(
-            "(EXPERIMENTAL) DefectDojo will automatically mark the finding as a "
+            "(EXPERIMENTAL) ExposureX will automatically mark the finding as a "
             "false positive if an equal finding (according to its dedupe algorithm) "
             "has been previously marked as a false positive on the same product. "
             "ATTENTION: Although the deduplication algorithm is used to determine "
@@ -434,7 +434,7 @@ class System_Settings(models.Model):
         ),
     )
 
-    url_prefix = models.CharField(max_length=300, default="", blank=True, help_text=_("URL prefix if DefectDojo is installed in it's own virtual subdirectory."))
+    url_prefix = models.CharField(max_length=300, default="", blank=True, help_text=_("URL prefix if ExposureX is installed in it's own virtual subdirectory."))
     team_name = models.CharField(max_length=100, default="", blank=True)
     enable_product_grade = models.BooleanField(default=False, verbose_name=_("Enable Product Grading"), help_text=_("Displays a grade letter next to a product to show the overall health."))
     product_grade = models.CharField(max_length=800, blank=True)
@@ -2447,7 +2447,7 @@ class Finding(models.Model):
                                  verbose_name=_("Active"),
                                  help_text=_("Denotes if this flaw is active or not."))
     # note that false positive findings cannot be verified
-    # in defectdojo verified means: "we have verified the finding and it turns out that it's not a false positive"
+    # in exposurex verified means: "we have verified the finding and it turns out that it's not a false positive"
     verified = models.BooleanField(default=False,
                                    verbose_name=_("Verified"),
                                    help_text=_("Denotes if this flaw has been manually verified by the tester."))
@@ -2601,7 +2601,7 @@ class Finding(models.Model):
     created = models.DateTimeField(auto_now_add=True,
                                    null=True,
                                    verbose_name=_("Created"),
-                                   help_text=_("The date the finding was created inside DefectDojo."))
+                                   help_text=_("The date the finding was created inside ExposureX."))
     scanner_confidence = models.IntegerField(null=True,
                                              blank=True,
                                              default=None,
@@ -3758,11 +3758,11 @@ class Risk_Acceptance(models.Model):
     decision = models.CharField(choices=TREATMENT_CHOICES, max_length=2, null=False, default=TREATMENT_ACCEPT, help_text=_("Risk treatment decision by risk owner"))
     decision_details = models.TextField(default=None, blank=True, null=True, help_text=_("If a compensating control exists to mitigate the finding or reduce risk, then list the compensating control(s)."))
 
-    accepted_by = models.CharField(max_length=200, default=None, null=True, blank=True, verbose_name=_("Accepted By"), help_text=_("The person that accepts the risk, can be outside of DefectDojo."))
+    accepted_by = models.CharField(max_length=200, default=None, null=True, blank=True, verbose_name=_("Accepted By"), help_text=_("The person that accepts the risk, can be outside of ExposureX."))
     path = models.FileField(upload_to="risk/%Y/%m/%d",
                             editable=True, null=True,
                             blank=True, verbose_name=_("Proof"))
-    owner = models.ForeignKey(Dojo_User, editable=True, on_delete=models.RESTRICT, help_text=_("User in DefectDojo owning this acceptance. Only the owner and staff users can edit the risk acceptance."))
+    owner = models.ForeignKey(Dojo_User, editable=True, on_delete=models.RESTRICT, help_text=_("User in ExposureX owning this acceptance. Only the owner and staff users can edit the risk acceptance."))
 
     expiration_date = models.DateTimeField(default=None, null=True, blank=True, help_text=_("When the risk acceptance expires, the findings will be reactivated (unless disabled below)."))
     expiration_date_warned = models.DateTimeField(default=None, null=True, blank=True, help_text=_("(readonly) Date at which notice about the risk acceptance expiration was sent."))
@@ -3925,9 +3925,9 @@ class GITHUB_PKey(models.Model):
 
 class JIRA_Instance(models.Model):
     configuration_name = models.CharField(max_length=2000, help_text=_("Enter a name to give to this configuration"), default="")
-    url = models.URLField(max_length=2000, verbose_name=_("JIRA URL"), help_text=_("For more information how to configure Jira, read the DefectDojo documentation."))
-    username = models.CharField(max_length=2000, verbose_name=_("Username/Email"), help_text=_("Username or Email Address, see DefectDojo documentation for more information."))
-    password = models.CharField(max_length=2000, verbose_name=_("Password/Token"), help_text=_("Password or API Token, see DefectDojo documentation for more information."))
+    url = models.URLField(max_length=2000, verbose_name=_("JIRA URL"), help_text=_("For more information how to configure Jira, read the ExposureX documentation."))
+    username = models.CharField(max_length=2000, verbose_name=_("Username/Email"), help_text=_("Username or Email Address, see ExposureX documentation for more information."))
+    password = models.CharField(max_length=2000, verbose_name=_("Password/Token"), help_text=_("Password or API Token, see ExposureX documentation for more information."))
 
     if hasattr(settings, "JIRA_ISSUE_TYPE_CHOICES_CONFIG"):
         default_issue_type_choices = settings.JIRA_ISSUE_TYPE_CHOICES_CONFIG
@@ -4034,7 +4034,7 @@ class JIRA_Project(models.Model):
                                                              verbose_name=_("Add vulnerability Id as a JIRA label"),
                                                              blank=False)
     push_all_issues = models.BooleanField(default=False, blank=True,
-         help_text=_("Automatically create JIRA tickets for verified findings, assuming enforce_verified_status is True, or for all findings otherwise. Once linked, the JIRA ticket will continue to sync, regardless of status in DefectDojo."))
+         help_text=_("Automatically create JIRA tickets for verified findings, assuming enforce_verified_status is True, or for all findings otherwise. Once linked, the JIRA ticket will continue to sync, regardless of status in ExposureX."))
     enable_engagement_epic_mapping = models.BooleanField(default=False,
                                                          blank=True)
     epic_issue_type_name = models.CharField(max_length=64, blank=True, default="Epic", help_text=_("The name of the of structure that represents an Epic"))

@@ -48,7 +48,7 @@ class GitlabAPIFuzzingParser:
 
     def normalise_severity(self, severity):
         """
-        Normalise GitLab's severity to DefectDojo's
+        Normalise GitLab's severity to ExposureX's
         (Critical, High, Medium, Low, Unknown, Info) -> (Critical, High, Medium, Low, Info)
         """
         if severity == "Unknown":

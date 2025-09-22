@@ -1,0 +1,15 @@
+{{- if  .Values.localsettingspy }}
+{{- $fullName := include "exposurex.fullname" . -}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ $fullName }}-localsettingspy
+  labels:
+    app.kubernetes.io/name: {{ include "exposurex.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    helm.sh/chart: {{ include "exposurex.chart" . }}
+data:
+  file: 
+    {{ toYaml .Values.localsettingspy | indent 4 }}
+{{- end }}

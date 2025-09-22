@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 class Command(BaseCommand):
 
     help = (
-        "Command to move data from some tables to other tables as part of https://github.com/DefectDojo/django-DefectDojo/pull/3200"
+        "Command to move data from some tables to other tables as part of https://github.com/ExposureX/django-ExposureX/pull/3200"
         "Should normally be handled by the migration in that PR, but if that causes errors, this command can help to get the data migrated anyway."
     )
 

@@ -997,7 +997,7 @@ def jira_project_tag(product_or_engagement, *, autoescape=True):
 @register.filter
 def full_name(user):
     # not in all templates we have access to a Dojo_User instance, so we use a filter
-    # see https://github.com/DefectDojo/django-DefectDojo/pull/3278
+    # see https://github.com/ExposureX/django-ExposureX/pull/3278
     return Dojo_User.generate_full_name(user)
 
 

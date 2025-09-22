@@ -1,6 +1,6 @@
 ---
 title: "Export Findings"
-description: "DefectDojo has the ability to export findings."
+description: "ExposureX has the ability to export findings."
 draft: false
 weight: 12
 ---

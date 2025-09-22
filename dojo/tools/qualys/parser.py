@@ -23,7 +23,7 @@ class QualysParser:
         - title: Set to gid and vulnerability name from Qualys Scanner
         - mitigation: Set to solution from Qualys Scanner
         - description: Custom description made from: description, category, QID, port, result evidence, first found, last found, and times found.
-        - severity: Set to severity from Qualys Scanner translated into DefectDojo formant.
+        - severity: Set to severity from Qualys Scanner translated into ExposureX formant.
         - impact: Set to impact from Qualys Scanner.
         - date: Set to datetime from Qualys Scanner.
         - vuln_id_from_tool: Set to gid from Qualys Scanner.
@@ -39,7 +39,7 @@ class QualysParser:
         - title: Set to gid and vulnerability name from Qualys Scanner
         - mitigation: Set to solution from Qualys Scanner
         - description: Custom description made from: description, category, QID, port, result evidence, first found, last found, and times found.
-        - severity: Set to severity from Qualys Scanner translated into DefectDojo formant.
+        - severity: Set to severity from Qualys Scanner translated into ExposureX formant.
         - impact: Set to impact from Qualys Scanner.
         - date: Set to datetime from Qualys Scanner.
         - vuln_id_from_tool: Set to gid from Qualys Scanner.
@@ -70,7 +70,7 @@ class QualysParser:
 
         Fields:
         - title: Set to gid and vulnerability name from Qualys Scanner
-        - severity: Set to severity from Qualys Scanner translated into DefectDojo formant.
+        - severity: Set to severity from Qualys Scanner translated into ExposureX formant.
 
         #NOTE: endpoints is not provided by parser
         """
@@ -263,7 +263,7 @@ def parse_finding(host, tree):
             cvss2 = vuln_details.findtext("CVSS_FINAL")
             if cvss2 is not None and cvss2 != "-":
                 split_cvss(cvss2, temp)
-                # DefectDojo does not support cvssv2
+                # ExposureX does not support cvssv2
                 temp["CVSS_vector"] = None
 
         search = f".//GLOSSARY/VULN_DETAILS_LIST/VULN_DETAILS[@id='{gid}']"
@@ -309,7 +309,7 @@ def parse_finding(host, tree):
                     cvss2 = vuln_item.findtext("CVSS_FINAL")
                     if cvss2 is not None and cvss2 != "-":
                         split_cvss(cvss2, temp)
-                        # DefectDojo does not support cvssv2
+                        # ExposureX does not support cvssv2
                         temp["CVSS_vector"] = None
 
             # CVE and LINKS

@@ -58,7 +58,7 @@ class Parser:
 class BaseImporter(ImporterOptions):
 
     """
-    A collection of utilities used by various importers within DefectDojo.
+    A collection of utilities used by various importers within ExposureX.
     Some of these commonalities may be fully used by children importers,
     or even extended
     """
@@ -422,7 +422,7 @@ class BaseImporter(ImporterOptions):
         try:
             test_import_finding_action.save()
         except IntegrityError as e:
-            # This try catch makes us look we don't know what we're doing, but in https://github.com/DefectDojo/django-DefectDojo/issues/6217 we decided that for now this is the best solution
+            # This try catch makes us look we don't know what we're doing, but in https://github.com/ExposureX/django-ExposureX/issues/6217 we decided that for now this is the best solution
             logger.warning("Error creating Test_Import_Finding_Action: %s", e)
             logger.debug("Error creating Test_Import_Finding_Action, finding marked as duplicate and deleted ?")
 
@@ -442,7 +442,7 @@ class BaseImporter(ImporterOptions):
         try:
             finding_or_endpoint.tags.add(tag)
         except IntegrityError as e:
-            # This try catch makes us look we don't know what we're doing, but in https://github.com/DefectDojo/django-DefectDojo/issues/6217 we decided that for now this is the best solution
+            # This try catch makes us look we don't know what we're doing, but in https://github.com/ExposureX/django-ExposureX/issues/6217 we decided that for now this is the best solution
             logger.warning("Error adding tag: %s", e)
             logger.debug("Error adding tag, finding marked as duplicate and deleted ?")
 

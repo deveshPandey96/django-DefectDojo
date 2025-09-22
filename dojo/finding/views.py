@@ -1139,7 +1139,7 @@ def close_finding(request, fid):
     if request.method == "POST":
         form = CloseFindingForm(request.POST, missing_note_types=missing_note_types)
 
-        close_external_issue(finding, "Closed by defectdojo", "github")
+        close_external_issue(finding, "Closed by exposurex", "github")
 
         if form.is_valid():
             now = timezone.now()
@@ -1357,7 +1357,7 @@ def reopen_finding(request, fid):
     if jira_helper.is_push_all_issues(finding) or jira_helper.is_keep_in_sync_with_jira(finding):
         jira_helper.push_to_jira(finding)
 
-    reopen_external_issue(finding, "re-opened by defectdojo", "github")
+    reopen_external_issue(finding, "re-opened by exposurex", "github")
 
     messages.add_message(
         request, messages.SUCCESS, "Finding Reopened.", extra_tags="alert-success",

@@ -7,7 +7,7 @@ from dojo.models import JIRA_Issue, Product, Product_Type, Tool_Type
 
 """
 Author: Aaron Weaver
-This script will identify duplicates in DefectDojo:
+This script will identify duplicates in ExposureX:
 """
 
 logger = logging.getLogger(__name__)

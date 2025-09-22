@@ -132,7 +132,7 @@ class QualysInfrascanWebguiParser:
         - title: Set to title from Qualys Infrastructure Webgui Scanner.
         - mitigation: Set to solution from Qualys Infrastructure Webgui Scanner.
         - description: Custom description made from: description, category, QID, port, and result evidence.
-        - severity: Set to severity from Qualys Infrastructure Webgui Scanner translated into DefectDojo formant.
+        - severity: Set to severity from Qualys Infrastructure Webgui Scanner translated into ExposureX formant.
         - impact: Set to consequence from Qualys Infrastructure Webgui Scanner.
         - vuln_id_from_tool: Set to gid from Qualys Infrastructure Webgui Scanner.
         - date: Set to datetime from Qualys Infrastructure Webgui Scanner.
@@ -153,7 +153,7 @@ class QualysInfrascanWebguiParser:
 
         Fields:
         - title: Set to title from Qualys Infrastructure Webgui Scanner.
-        - severity: Set to severity from Qualys Infrastructure Webgui Scanner translated into DefectDojo formant.
+        - severity: Set to severity from Qualys Infrastructure Webgui Scanner translated into ExposureX formant.
 
         NOTE: endpoints is not provided by parser
         """

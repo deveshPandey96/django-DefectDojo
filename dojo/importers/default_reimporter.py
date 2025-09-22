@@ -52,7 +52,7 @@ class DefaultReImporterOptions(ImporterOptions):
 class DefaultReImporter(BaseImporter, DefaultReImporterOptions):
 
     """
-    The classic reimporter process used by DefectDojo
+    The classic reimporter process used by ExposureX
 
     This importer is intended to be used when mitigation of
     vulnerabilities is the ultimate tool for getting a current
@@ -167,7 +167,7 @@ class DefaultReImporter(BaseImporter, DefaultReImporterOptions):
         # Even though the service values is used in the hash_code calculation,
         # we need to make sure there are no side effects such as closing findings
         # for findings with a different service value
-        # https://github.com/DefectDojo/django-DefectDojo/issues/12754
+        # https://github.com/ExposureX/django-ExposureX/issues/12754
         original_findings = self.test.finding_set.all().filter(service=self.service)
         logger.debug(f"original_findings_qyer: {original_findings.query}")
         self.original_items = list(original_findings)
@@ -539,7 +539,7 @@ class DefaultReImporter(BaseImporter, DefaultReImporterOptions):
             logger.debug("Reimported item matches a finding that is currently open.")
             if unsaved_finding.is_mitigated:
                 logger.debug("Reimported mitigated item matches a finding that is currently open, closing.")
-                # TODO: Implement a date comparison for opened defectdojo findings before closing them by reimporting,
+                # TODO: Implement a date comparison for opened exposurex findings before closing them by reimporting,
                 # as they could be force closed by the scanner but a DD user forces it open ?
                 logger.debug(
                     f"Closing: {existing_finding.id}: {existing_finding.title} "

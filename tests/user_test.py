@@ -70,7 +70,7 @@ class UserTest(BaseTestCase):
         driver.find_element(By.ID, "id_last_name").send_keys("Permission")
         # Email Address
         driver.find_element(By.ID, "id_email").clear()
-        driver.find_element(By.ID, "id_email").send_keys("permissionTest@defectdojo.local")
+        driver.find_element(By.ID, "id_email").send_keys("permissionTest@exposurex.local")
         # Select the role 'Reader'
         Select(driver.find_element(By.ID, "id_role")).select_by_visible_text("Writer")
         # "Click" the submit button to complete the transaction

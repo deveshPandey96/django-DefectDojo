@@ -37,7 +37,7 @@ The steps are identical for both release types, unless specified otherwise below
 - Remove existing draft releases with the same version number
 Due to the release drafter being a non-perfect match for our git flow based release process, we have to delete any draft that has already been created by the release drafter if it has the same versio number. This is probably not needed if you're doing a bugfix release.
 
-- Go to [Releases](https://github.com/DefectDojo/django-DefectDojo/releases) and delete any draft release that has the same version number as the release you are planning to release today.
+- Go to [Releases](https://github.com/ExposureX/django-ExposureX/releases) and delete any draft release that has the same version number as the release you are planning to release today.
 
 ![image](https://user-images.githubusercontent.com/4426050/149619158-a467170d-5c5a-4311-a0db-31a825e8d5dd.png)
 
@@ -70,7 +70,7 @@ Merge into `master` by *creating a merge commit*. Do NOT squash the commits!
 
 ![image](https://user-images.githubusercontent.com/4426050/149577269-d51fe1ee-ba0d-4a9b-94e7-ec286954b5e2.png)
 
-Go to [GitHub Actions](https://github.com/DefectDojo/django-DefectDojo/actions) and pray for them to become green.
+Go to [GitHub Actions](https://github.com/ExposureX/django-ExposureX/actions) and pray for them to become green.
 
 # Make the release and push docker images
 
@@ -84,18 +84,18 @@ This action will:
 - Create a new release based on this tag
 - Generate the helm chart for this release and upload it as a release asset
 - Update the `helm` repository stored in the `helm-charts` branch
-- Build the `django` and `nginx` docker images and push them to [Docker Hub](https://hub.docker.com/orgs/defectdojo/repositories)
+- Build the `django` and `nginx` docker images and push them to [Docker Hub](https://hub.docker.com/orgs/exposurex/repositories)
 
 Observe the output of the action to make sure there are no errors.
 
 Verify the results:
-- Go to [Release](https://github.com/DefectDojo/django-DefectDojo/releases) to check the new release
+- Go to [Release](https://github.com/ExposureX/django-ExposureX/releases) to check the new release
 - Check if the helm chart is attached:
 
 ![image](https://user-images.githubusercontent.com/4426050/149618426-9d2c145f-89f4-4d22-9cb6-b020e7bd2fc2.png)
 
 - We will populate the release notes in a later step
-- Check [Docker Hub](https://hub.docker.com/orgs/defectdojo/repositories) to see if the docker images have been uploaded
+- Check [Docker Hub](https://hub.docker.com/orgs/exposurex/repositories) to see if the docker images have been uploaded
 
 ![image](https://user-images.githubusercontent.com/4426050/149618481-51f4fa73-8611-4477-9ac4-3a6013778ab6.png)
 
@@ -167,7 +167,7 @@ As a finishing touch make sure the emoji in the release name is present. We have
 
 All should be good now, including the release notes. So let's publish!
 
-- Head over to [Release](https://github.com/DefectDojo/django-DefectDojo/releases)
+- Head over to [Release](https://github.com/ExposureX/django-ExposureX/releases)
 - Click on the 'edit' icon for the release you just created
 - Publish: 
 
@@ -175,4 +175,4 @@ All should be good now, including the release notes. So let's publish!
 
 # Shout on social media
 
-[@madchap](https://github.com/madchap) has created an automation pipeline that will post the new release on the #defectdojo Slack channel, on the DefectDojo twitter and on LinkedIn.
+[@madchap](https://github.com/madchap) has created an automation pipeline that will post the new release on the #exposurex Slack channel, on the ExposureX twitter and on LinkedIn.

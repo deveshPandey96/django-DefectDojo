@@ -4,9 +4,9 @@ description: ""
 weight: 2
 ---
 
-When a Test is created in DefectDojo (either in advance or by importing a scan file), the Test can be extended with new Finding data.
+When a Test is created in ExposureX (either in advance or by importing a scan file), the Test can be extended with new Finding data.
 
-For example, let’s say you have a CI/CD pipeline, which is designed to send a new report to DefectDojo every day. Rather than create a new Test or Engagement for each ‘run’ of the pipeline, you could have each report flow into the same Test using **Reimport**.
+For example, let’s say you have a CI/CD pipeline, which is designed to send a new report to ExposureX every day. Rather than create a new Test or Engagement for each ‘run’ of the pipeline, you could have each report flow into the same Test using **Reimport**.
 
 ## Reimport: Process Summary
 
@@ -22,7 +22,7 @@ The Test will track and separate each scan version via **Import History,** so th
 
 ## Reimport Logic: Create, Ignore, Close or Reopen
 
-When using Reimport, DefectDojo will compare the incoming scan data with the existing scan data, and then apply changes to the Findings contained within your Test as follows:
+When using Reimport, ExposureX will compare the incoming scan data with the existing scan data, and then apply changes to the Findings contained within your Test as follows:
 
 ### Create Findings
 
@@ -79,4 +79,4 @@ This header indicates the actions taken by an Import/Reimport.
 
 Note that the /reimport API endpoint can both **extend an existing Test** (apply the method in this article) **or create a new Test** with new data \- an initial call to `/import`, or setting up a Test in advance is not required.
 
-To learn more about creating an automated CI/CD pipeline using DefectDojo, see our guide [here](../api_pipeline_modelling).
+To learn more about creating an automated CI/CD pipeline using ExposureX, see our guide [here](../api_pipeline_modelling).

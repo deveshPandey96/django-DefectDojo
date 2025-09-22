@@ -6,7 +6,7 @@ from dojo.models import Finding
 
 class HuskyCIParser:
 
-    """Read JSON data from huskyCI compatible format and import it to DefectDojo"""
+    """Read JSON data from huskyCI compatible format and import it to ExposureX"""
 
     def get_scan_types(self):
         return ["HuskyCI Report"]

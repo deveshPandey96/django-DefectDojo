@@ -688,9 +688,9 @@ class TestNotificationWebhooks(DojoTestCase):
     def test_headers(self, mock):
         Product_Type.objects.create(name="notif prod type")
         self.assertEqual(mock.call_args.kwargs["headers"], {
-            "User-Agent": f"DefectDojo-{dd_version}",
-            "X-DefectDojo-Event": "product_type_added",
-            "X-DefectDojo-Instance": "http://localhost:8080",
+            "User-Agent": f"ExposureX-{dd_version}",
+            "X-ExposureX-Event": "product_type_added",
+            "X-ExposureX-Instance": "http://localhost:8080",
             "Accept": "application/json",
             "Auth": "Token xxx",
         })
@@ -700,7 +700,7 @@ class TestNotificationWebhooks(DojoTestCase):
         with self.subTest("ping"):
             manager = WebhookNotificationManger()
             manager._test_webhooks_notification(self.sys_wh)
-            self.assertEqual(mock.call_args.kwargs["headers"]["X-DefectDojo-Event"], "ping")
+            self.assertEqual(mock.call_args.kwargs["headers"]["X-ExposureX-Event"], "ping")
             self.maxDiff = None
             self.assertEqual(mock.call_args.kwargs["json"], {
                 "description": "Test webhook notification",
@@ -710,7 +710,7 @@ class TestNotificationWebhooks(DojoTestCase):
 
         with self.subTest("product_type_added"):
             prod_type = Product_Type.objects.create(name="notif prod type")
-            self.assertEqual(mock.call_args.kwargs["headers"]["X-DefectDojo-Event"], "product_type_added")
+            self.assertEqual(mock.call_args.kwargs["headers"]["X-ExposureX-Event"], "product_type_added")
             self.maxDiff = None
             self.assertEqual(mock.call_args.kwargs["json"], {
                 "description": "Product Type notif prod type has been created successfully.",
@@ -728,7 +728,7 @@ class TestNotificationWebhooks(DojoTestCase):
 
         with self.subTest("product_added"):
             prod = Product.objects.create(name="notif prod", prod_type=prod_type)
-            self.assertEqual(mock.call_args.kwargs["headers"]["X-DefectDojo-Event"], "product_added")
+            self.assertEqual(mock.call_args.kwargs["headers"]["X-ExposureX-Event"], "product_added")
             self.maxDiff = None
             self.assertEqual(mock.call_args.kwargs["json"], {
                 "description": "Product notif prod has been created successfully.",
@@ -752,7 +752,7 @@ class TestNotificationWebhooks(DojoTestCase):
 
         with self.subTest("engagement_added"):
             eng = Engagement.objects.create(name="notif eng", product=prod, target_start=timezone.now(), target_end=timezone.now())
-            self.assertEqual(mock.call_args.kwargs["headers"]["X-DefectDojo-Event"], "engagement_added")
+            self.assertEqual(mock.call_args.kwargs["headers"]["X-ExposureX-Event"], "engagement_added")
             self.maxDiff = None
             self.assertEqual(mock.call_args.kwargs["json"], {
                 "description": "Event engagement_added has occurred.",
@@ -791,7 +791,7 @@ class TestNotificationWebhooks(DojoTestCase):
                 url=reverse("view_test", args=(test.id,)),
                 url_api=reverse("test-detail", args=(test.id,)),
             )
-            self.assertEqual(mock.call_args.kwargs["headers"]["X-DefectDojo-Event"], "test_added")
+            self.assertEqual(mock.call_args.kwargs["headers"]["X-ExposureX-Event"], "test_added")
             self.maxDiff = None
             self.assertEqual(mock.call_args.kwargs["json"], {
                 "description": "Event test_added has occurred.",
@@ -830,7 +830,7 @@ class TestNotificationWebhooks(DojoTestCase):
                 environment=Development_Environment.objects.get_or_create(name="Development")[0],
                 scan_type="ZAP Scan",
             ).notify_scan_added(test, updated_count=0)
-            self.assertEqual(mock.call_args.kwargs["headers"]["X-DefectDojo-Event"], "scan_added_empty")
+            self.assertEqual(mock.call_args.kwargs["headers"]["X-ExposureX-Event"], "scan_added_empty")
             self.maxDiff = None
             self.assertEqual(mock.call_args.kwargs["json"], {
                 "description": "Event scan_added_empty has occurred.",
@@ -891,7 +891,7 @@ class TestNotificationWebhooks(DojoTestCase):
                     Finding.objects.create(test=test, title="Untouched Finding", severity="Info"),
                 ],
             )
-            self.assertEqual(mock.call_args.kwargs["headers"]["X-DefectDojo-Event"], "scan_added")
+            self.assertEqual(mock.call_args.kwargs["headers"]["X-ExposureX-Event"], "scan_added")
             self.maxDiff = None
             self.assertEqual(mock.call_args.kwargs["json"]["findings"], {
                 "new": [{
@@ -944,7 +944,7 @@ class TestNotificationWebhooks(DojoTestCase):
                     Finding.objects.create(test=test, title="'Quotation2' Untouched Finding", severity="Info"),
                 ],
             )
-            self.assertEqual(mock.call_args.kwargs["headers"]["X-DefectDojo-Event"], "scan_added")
+            self.assertEqual(mock.call_args.kwargs["headers"]["X-ExposureX-Event"], "scan_added")
             self.maxDiff = None
             self.assertEqual(mock.call_args.kwargs["json"]["findings"], {
                 "new": [{
@@ -985,7 +985,7 @@ class TestNotificationWebhooks(DojoTestCase):
         """
         manager = WebhookNotificationManger()
         manager._test_webhooks_notification(Notification_Webhooks.objects.filter(owner__isnull=False).first())
-        self.assertEqual(mock.call_args.kwargs["headers"]["X-DefectDojo-Event"], "ping")
+        self.assertEqual(mock.call_args.kwargs["headers"]["X-ExposureX-Event"], "ping")
         self.maxDiff = None
         self.assertEqual(
             mock.call_args.kwargs["json"],

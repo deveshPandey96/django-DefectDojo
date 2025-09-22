@@ -1,6 +1,6 @@
 ---
 name: New importer request
-about: Request a new importer (scanner) for DefectDojo
+about: Request a new importer (scanner) for ExposureX
 title: ''
 labels: Import Scans
 assignees: ''
