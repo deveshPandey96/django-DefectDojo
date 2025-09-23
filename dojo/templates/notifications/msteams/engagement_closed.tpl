@@ -7,7 +7,7 @@
     "summary": "{% trans "Engagement closed" %}",
     "sections": [
         {
-            "activityTitle": "DefectDojo",
+            "activityTitle": "ExposureX",
             "activityImage": "https://raw.githubusercontent.com/DefectDojo/django-DefectDojo/master/dojo/static/dojo/img/logo.svg",
             "text": "{% trans "An engagement has been closed" %}.",
             "facts": [
