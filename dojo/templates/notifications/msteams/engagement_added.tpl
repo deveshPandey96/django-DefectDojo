@@ -7,7 +7,7 @@
     "summary": "{% trans "Engagement added" %}",
     "sections": [
         {
-            "activityTitle": "DefectDojo",
+            "activityTitle": "ExposureX",
             "activityImage": "https://raw.githubusercontent.com/DefectDojo/django-DefectDojo/master/dojo/static/dojo/img/logo.svg",
             "text": "{% trans "A new engagement has been added" %}.",
             "facts": [

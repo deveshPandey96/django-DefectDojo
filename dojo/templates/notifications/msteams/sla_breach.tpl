@@ -8,7 +8,7 @@
         "summary": "{% trans "SLA breached" %}",
         "sections": [
             {
-                "activityTitle": "DefectDojo",
+                "activityTitle": "ExposureX",
                 "activityImage": "https://raw.githubusercontent.com/DefectDojo/django-DefectDojo/master/dojo/static/dojo/img/logo.svg",
                 "text": "{% trans "A SLA for a finding has been breached" %}.",
                 "facts": [

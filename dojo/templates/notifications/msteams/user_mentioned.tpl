@@ -7,7 +7,7 @@
     "summary": "{% trans "User Mentioned" %}",
     "sections": [
         {
-            "activityTitle": "DefectDojo",
+            "activityTitle": "ExposureX",
             "activityImage": "https://raw.githubusercontent.com/DefectDojo/django-DefectDojo/master/dojo/static/dojo/img/logo.svg",
             "text": "{% trans "A user has been mentioned" %}.",
             "facts": [

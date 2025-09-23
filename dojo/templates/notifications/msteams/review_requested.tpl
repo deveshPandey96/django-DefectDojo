@@ -7,7 +7,7 @@
     "summary": "{% trans "Review Requested" %}",
     "sections": [
         {
-            "activityTitle": "DefectDojo",
+            "activityTitle": "ExposureX",
             "activityImage": "https://raw.githubusercontent.com/DefectDojo/django-DefectDojo/master/dojo/static/dojo/img/logo.svg",
             "text": "{% trans "A user has requested that the following users review the finding below for accuracy" %}.",
             "facts": [

@@ -7,7 +7,7 @@
     "summary": "{% trans "Product Type Added" %}",
     "sections": [
         {
-            "activityTitle": "DefectDojo",
+            "activityTitle": "ExposureX",
             "activityImage": "https://raw.githubusercontent.com/DefectDojo/django-DefectDojo/master/dojo/static/dojo/img/logo.svg",
             "text": "{% trans "A new product type has been added" %}.",
             "facts": [

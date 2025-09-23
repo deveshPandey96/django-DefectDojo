@@ -44,7 +44,7 @@
                 {% if system_settings.team_name %}
                         {{ system_settings.team_name }}
                     {% else %}
-                        Defect Dojo
+                        ExposureX
                     {% endif %}
                 <br/>
                 <br/>
