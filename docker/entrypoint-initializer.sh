@@ -21,23 +21,9 @@ initialize_data()
 create_announcement_banner()
 {
 # Load the announcement banner
+# Cloud banner creation has been disabled to remove promotional messages
 if [ "$DD_CREATE_CLOUD_BANNER" = "True" ]; then
-echo "Creating Announcement Banner"
-cat <<EOD | python3 manage.py shell
-from dojo.models import Announcement, UserAnnouncement, Dojo_User
-announcement, created = Announcement.objects.get_or_create(id=1)
-announcement.message = '<a href="https://cloud.defectdojo.com/accounts/onboarding/plg_step_1" target="_blank">DefectDojo Pro Cloud and On-Premise Subscriptions Now Available! Create an account to try Pro for free!</a>'
-announcement.dismissable = True
-announcement.save()
-for dojo_user in Dojo_User.objects.all():
-    user_announcments = UserAnnouncement.objects.filter(
-        user=dojo_user,
-        announcement=announcement)
-    if user_announcments.count() == 0:
-        UserAnnouncement.objects.get_or_create(
-            user=dojo_user,
-            announcement=announcement)
-EOD
+echo "Cloud banner creation is disabled"
 fi
 }
 
