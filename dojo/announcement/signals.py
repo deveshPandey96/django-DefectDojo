@@ -15,7 +15,8 @@ def add_announcement_to_new_user(sender, instance, **kwargs):
             "DefectDojo Pro Cloud and On-Premise Subscriptions Now Available!"
             in announcement.message
         )
-        if not cloud_announcement or settings.CREATE_CLOUD_BANNER:
+        # Skip cloud announcements to prevent promotional messages
+        if not cloud_announcement:
             user_announcements = UserAnnouncement.objects.filter(
                 user=dojo_user, announcement=announcement,
             )
